@@ -1,0 +1,578 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2020"><meta name="DC.rights.owner" content="(C) Copyright 2020"><meta name="DC.type" content="concept"><meta name="description" content="A class mirroring the PVR Texture container format header, and which can in general represent any Texture asset. Contains accessors functions to facilitate using the Texture data in application code."><meta name="DC.relation" scheme="URI" content="../classes/pvr.html"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="pvrTextureHeader"><link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/devcss.css"><title>pvr::TextureHeader</title><head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="icon" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png" sizes="32x32" type="image/png">
+<link rel="shorcut icon" type="image/png" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png">
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head></head><body id="pvrTextureHeader"><header role="banner"><div class="ditasearch" data-searchroot="../"></div><header xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="navbar navbar-default wh_header" whc:version="21.0">
+    <div class="container-fluid  header-area">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="html5_logo_and_publication_title">
+		<a href="https://docs.imgtec.com" class="wh_logo hidden-xs">
+				<img src="https://www.imgtec.com/wp-content/uploads/2018/11/Imagination-logo-white.png"></img></a>
+		<p>Developer Documentation</p>
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <whc:webhelp_logo class="hidden-xs"></whc:webhelp_logo>
+                </div>
+                
+
+            </div>
+
+
+	
+
+		<whc:webhelp_search_input></whc:webhelp_search_input>
+        </div>
+
+		<!--<whc:webhelp_publication_title/>-->
+    </div>
+	</header></header><div class="container-fluid" id="content"><div class="row"><div class="wh_content_area doc_title"><h1>
+PVRCore Manual
+
+</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../PVRCore_intro.html">Introduction to PVRCore</a><ul><li><a href="../PVRCore_files.html">PVRCore Files</a></li><li><a href="../PVRCore_classes.html">PVRCore Classes</a><ul><li><a href="../classes/pvr.html">pvr</a><ul><li><a href="../classes/pvrtexture_xnb.html">pvr::texture_xnb</a></li><li><a href="../classes/pvrRefCountEntryIntrusive.html">pvr::RefCountEntryIntrusive</a></li><li><a href="../classes/pvreffect.html">pvr::effect</a></li><li><a href="../classes/pvrIsRefCountedType.html">pvr::IsRefCountedType</a></li><li><a href="../classes/pvrasync.html">pvr::async</a></li><li><a href="../classes/pvrplatform.html">pvr::platform</a></li><li><a href="../classes/pvrtexture_bmp.html">pvr::texture_bmp</a></li><li><a href="../classes/pvrPixelFormat.html">pvr::PixelFormat</a></li><li><a href="../classes/pvrtexture_dds.html">pvr::texture_dds</a></li><li><a href="../classes/pvrutils.html">pvr::utils</a></li><li><a href="../classes/pvrtexture_tga.html">pvr::texture_tga</a></li><li><a href="../classes/pvrtexture_ktx.html">pvr::texture_ktx</a></li><li><a href="../classes/pvrFreeValue.html">pvr::FreeValue</a></li><li><a href="../classes/pvrGpuDatatypesHelper.html">pvr::GpuDatatypesHelper</a></li><li><a href="../classes/pvrmath.html">pvr::math</a></li><li><a href="../classes/pvrtexture_legacy.html">pvr::texture_legacy</a></li><li><a href="../classes/pvrIAssetProvider.html">pvr::IAssetProvider</a></li><li><a href="../classes/pvrPvrError.html">pvr::PvrError</a></li><li><a href="../classes/pvrCameraAnimationController.html">pvr::CameraAnimationController</a></li><li><a href="../classes/pvrhashstdbasic_stringT.html">pvr::hash&lt;std::basic_string&lt;T&gt;&gt;</a></li><li><a href="../classes/pvrRefcountEntryHolder.html">pvr::RefcountEntryHolder</a></li><li><a href="../classes/pvrStencilState.html">pvr::StencilState</a></li><li><a href="../classes/pvrTypedMem.html">pvr::TypedMem</a></li><li><a href="../classes/pvrGenericExtent3D.html">pvr::GenericExtent3D</a></li><li><a href="../classes/pvrTPSOrbitCamera.html">pvr::TPSOrbitCamera</a></li><li><a href="../classes/pvrGeneratePixelType1.html">pvr::GeneratePixelType1</a></li><li><a href="../classes/pvrBlendingConfig.html">pvr::BlendingConfig</a></li><li><a href="../classes/pvrGenericOffset3D.html">pvr::GenericOffset3D</a></li><li><a href="../classes/pvrImageSubresourceLayers.html">pvr::ImageSubresourceLayers</a></li><li><a href="../classes/pvrImageLayersSize.html">pvr::ImageLayersSize</a></li><li><a href="../classes/pvrDisplayAttributes.html">pvr::DisplayAttributes</a></li><li><a href="../classes/pvrGeneratePixelType2.html">pvr::GeneratePixelType2</a></li><li><a href="../classes/pvrImageResolveRange.html">pvr::ImageResolveRange</a></li><li><a href="../classes/pvrIndexOutOfRange.html">pvr::IndexOutOfRange</a></li><li><a href="../classes/pvrLockedQueue.html">pvr::LockedQueue</a></li><li><a href="../classes/pvrImageSubresourceRange.html">pvr::ImageSubresourceRange</a></li><li><a href="../classes/pvrFPSCamera.html">pvr::FPSCamera</a></li><li><a href="../classes/pvrDereferenceable.html">pvr::Dereferenceable</a></li><li><a href="../classes/pvrFileNotFoundError.html">pvr::FileNotFoundError</a></li><li><a href="../classes/pvrUnsupportedOperationError.html">pvr::UnsupportedOperationError</a></li><li><a href="../classes/pvrEmbeddedRefCount.html">pvr::EmbeddedRefCount</a></li><li><a href="../classes/pvrRefCountedWeakReference.html">pvr::RefCountedWeakReference</a></li><li><a href="../classes/pvrIRefCountEntry.html">pvr::IRefCountEntry</a></li><li><a href="../classes/pvrGenericOffset2D.html">pvr::GenericOffset2D</a></li><li><a href="../classes/pvrFileStream.html">pvr::FileStream</a></li><li><a href="../classes/pvrInvalidOperationError.html">pvr::InvalidOperationError</a></li><li><a href="../classes/pvrGeneratePixelType4.html">pvr::GeneratePixelType4</a></li><li><a href="../classes/pvrEmbeddedRefCountedResource.html">pvr::EmbeddedRefCountedResource</a></li><li><a href="../classes/pvrVertexAttributeLayout.html">pvr::VertexAttributeLayout</a></li><li><a href="../classes/pvrRefCountEntry.html">pvr::RefCountEntry</a></li><li><a href="../classes/pvrTexture.html">pvr::Texture</a></li><li><a href="../classes/pvrRectangle.html">pvr::Rectangle</a></li><li><a href="../classes/pvrGenericExtent2D.html">pvr::GenericExtent2D</a></li><li><a href="../classes/pvrImageRange.html">pvr::ImageRange</a></li><li><a href="../classes/pvrImageSubresource.html">pvr::ImageSubresource</a></li><li><a href="../classes/pvrhasher_helperhashvalue,first.html">pvr::hasher_helper&lt;hashvalue,first&gt;</a></li><li><a href="../classes/pvrCameraKeyFrame.html">pvr::CameraKeyFrame</a></li><li><a href="../classes/pvrhashuint64_t.html">pvr::hash&lt;uint64_t&gt;</a></li><li><a href="../classes/pvrImageStorageFormat.html">pvr::ImageStorageFormat</a></li><li><a href="../classes/pvrCompressedImageDataFormat.html">pvr::CompressedImageDataFormat</a></li><li><a href="../classes/pvrRectangle3D.html">pvr::Rectangle3D</a></li><li><a href="../classes/pvrFilePath.html">pvr::FilePath</a></li><li><a href="../classes/pvrTime.html">pvr::Time</a></li><li><a href="../classes/pvrBufferStream.html">pvr::BufferStream</a></li><li><a href="../classes/pvrhashuint32_t.html">pvr::hash&lt;uint32_t&gt;</a></li><li><a href="../classes/pvrStream.html">pvr::Stream</a></li><li class="active"><a href="../classes/pvrTextureHeader.html">pvr::TextureHeader</a></li><li><a href="../classes/pvrTextureDecompressionError.html">pvr::TextureDecompressionError</a></li><li><a href="../classes/pvrWindowsResourceStream.html">pvr::WindowsResourceStream</a></li><li><a href="../classes/pvrFileEOFError.html">pvr::FileEOFError</a></li><li><a href="../classes/pvrTPSCamera.html">pvr::TPSCamera</a></li><li><a href="../classes/pvrPaletteExpander.html">pvr::PaletteExpander</a></li><li><a href="../classes/pvrhasher_helperhashvalue,first,dummy.html">pvr::hasher_helper&lt;hashvalue,first,dummy&gt;</a></li><li><a href="../classes/pvrInvalidDataError.html">pvr::InvalidDataError</a></li><li><a href="../classes/pvrInvalidArgumentError.html">pvr::InvalidArgumentError</a></li><li><a href="../classes/pvrhashint32_t.html">pvr::hash&lt;int32_t&gt;</a></li><li><a href="../classes/pvrHashCompileTime.html">pvr::HashCompileTime</a></li><li><a href="../classes/pvrhash.html">pvr::hash</a></li><li><a href="../classes/pvrRefCountedResource.html">pvr::RefCountedResource</a></li><li><a href="../classes/pvrFreeValueView.html">pvr::FreeValueView</a></li><li><a href="../classes/pvrhashint64_t.html">pvr::hash&lt;int64_t&gt;</a></li><li><a href="../classes/pvrTextureMetaData.html">pvr::TextureMetaData</a></li><li><a href="../classes/pvrRefcountEntryHoldervoid.html">pvr::RefcountEntryHolder&lt;void&gt;</a></li><li><a href="../classes/pvrGeneratePixelType3.html">pvr::GeneratePixelType3</a></li><li><a href="../classes/pvrPlane3d.html">pvr::Plane3d</a></li><li><a href="../classes/pvrStridedBuffer.html">pvr::StridedBuffer</a></li><li><a href="../classes/pvrSwizzleChannels.html">pvr::SwizzleChannels</a></li><li><a href="../classes/pvrFileIOError.html">pvr::FileIOError</a></li><li><a href="../classes/pvrOperationFailedError.html">pvr::OperationFailedError</a></li><li><a href="../classes/pvrStringHash.html">pvr::StringHash</a></li><li><a href="../classes/pvrImageStorageFormatCompressed.html">pvr::ImageStorageFormatCompressed</a></li><li><a href="../classes/pvrImageDataFormat.html">pvr::ImageDataFormat</a></li></ul></li><li><a href="../classes/Logger.html">Logger</a></li><li><a href="../classes/ILogger.html">ILogger</a></li></ul></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1">pvr::TextureHeader</h1>
+
+<div class="body conbody"><p class="shortdesc">A class mirroring the PVR Texture container format header, and which can in general represent any Texture asset. Contains accessors functions to facilitate using the Texture data in application code.</p>
+
+<p class="p">A class mirroring the PVR Texture container format header, and which can in general represent any Texture asset. Contains accessors functions to facilitate using the Texture data in application code.</p>
+<p class="p">Found in file: <a class="xref" href="../files/texture/TextureHeader.html" title="Information about an Image asset, excluding the actual image pixels and custom metadata.">TextureHeader.h</a></p>
+<table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Public Methods</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvrTextureHeader__entry__1">Return Type</th><th class="entry" id="pvrTextureHeader__entry__2">Name and Description</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">void</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">TextureHeader</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Default constructor for a TextureHeader. Returns an empty header.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">void</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">TextureHeader</strong>(<span class="ph code_type">uint32_t</span> numMetaData, <span class="ph code_type">TextureMetaData *</span> metaData)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Construct this from file header and meta data</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">metaData:</strong>	Array of meta data</li>
+
+<li class="li"><strong class="ph b">numMetaData:</strong>	Number of meta data in the array</li>
+
+<li class="li"><strong class="ph b">fileHeader:</strong>	File header to construct from</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">void</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">TextureHeader</strong>(<span class="ph code_type">PixelFormat</span> pixelFormat, <span class="ph code_type">uint32_t</span> width, <span class="ph code_type">uint32_t</span> height, <span class="ph code_type">uint32_t</span> depth, <span class="ph code_type">uint32_t</span> numMipMaps, <span class="ph code_type">ColorSpace</span> colorSpace, <span class="ph code_type">VariableType</span> channelType, <span class="ph code_type">uint32_t</span> numSurfaces, <span class="ph code_type">uint32_t</span> numFaces, <span class="ph code_type">uint32_t</span> flags, <span class="ph code_type">TextureMetaData *</span> metaData, <span class="ph code_type">uint32_t</span> metaDataSize)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Constructor.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">depth:</strong>	Texture depth</li>
+
+<li class="li"><strong class="ph b">pixelFormat:</strong>	Pixel format of the texture</li>
+
+<li class="li"><strong class="ph b">height:</strong>	Texture height</li>
+
+<li class="li"><strong class="ph b">colorSpace:</strong>	Texture color space (e.g sRGB, lRGB)</li>
+
+<li class="li"><strong class="ph b">numFaces:</strong>	Number of faces the texture has</li>
+
+<li class="li"><strong class="ph b">flags:</strong>	Additional provided flags</li>
+
+<li class="li"><strong class="ph b">width:</strong>	Texture width</li>
+
+<li class="li"><strong class="ph b">channelType:</strong>	Texture channel type</li>
+
+<li class="li"><strong class="ph b">metaData:</strong>	Texture meta data</li>
+
+<li class="li"><strong class="ph b">numMipMaps:</strong>	Number of mipmap in the texture</li>
+
+<li class="li"><strong class="ph b">numSurfaces:</strong>	Number of surfaces the texture has</li>
+
+<li class="li"><strong class="ph b">metaDataSize:</strong>	Texture meta data size</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">PixelFormat</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">getPixelFormat</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Gets the pixel type ID of the texture.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">uint32_t</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">getBitsPerPixel</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Gets the bits per pixel of the texture format.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">void</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">getMinDimensionsForFormat</strong>(<span class="ph code_type">uint32_t &amp;</span> minX, <span class="ph code_type">uint32_t &amp;</span> minY, <span class="ph code_type">uint32_t &amp;</span> minZ)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the minimum dimensions that the texture format of this header can be.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">minZ:</strong>	Minimum depth of the texture format.</li>
+
+<li class="li"><strong class="ph b">minY:</strong>	Minimum height of the texture format.</li>
+
+<li class="li"><strong class="ph b">minX:</strong>	Minimum width of the texture format.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">ColorSpace</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">getColorSpace</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the color space of the texture.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">VariableType</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">getChannelType</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the channel type that the texture's data is stored in.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">uint32_t</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">getWidth</strong>(<span class="ph code_type">uint32_t</span> uiMipMapLevel)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Gets the width of the user specified MIP-Map level for the texture.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">uiMipMapLevel:</strong>	MIP level that user is interested in.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">TextureMetaData::AxisOrientation</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">getOrientation</strong>(<span class="ph code_type">TextureMetaData::Axis</span> axis)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Gets the data orientation for this texture.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">axis:</strong>	The axis to examine.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">uint32_t</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">getHeight</strong>(<span class="ph code_type">uint32_t</span> uiMipMapLevel)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Gets the height of the user specified MIP-Map level for the texture.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">uiMipMapLevel:</strong>	MIP level that user is interested in.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">uint32_t</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">getDepth</strong>(<span class="ph code_type">uint32_t</span> mipLevel)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Gets the depth of the user specified MIP-Map level for the texture.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">mipLevel:</strong>	MIP level that user is interested in.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">uint32_t</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">getTextureSize</strong>(<span class="ph code_type">int32_t</span> mipMapLevel, <span class="ph code_type">bool</span> allSurfaces, <span class="ph code_type">bool</span> allFaces)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Gets the size in PIXELS of the texture, given various input parameters.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">mipMapLevel:</strong>	Specifies a MIP level to check, 'c_pvrTextureAllMIPMapLevels' can be passed to Get the size of all MIP levels.</li>
+
+<li class="li"><strong class="ph b">allFaces:</strong>	The Size of all faces is calculated if true, only a single face if false.</li>
+
+<li class="li"><strong class="ph b">allSurfaces:</strong>	The Size of all surfaces is calculated if true, only a single surface if false.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">uint32_t</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">getDataSize</strong>(<span class="ph code_type">int32_t</span> mipLevel, <span class="ph code_type">bool</span> allSurfaces, <span class="ph code_type">bool</span> allFaces)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Gets the size in BYTES of the texture, given various input parameters.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">allFaces:</strong>	The Size of all faces is calculated if true, only a single face if false.</li>
+
+<li class="li"><strong class="ph b">mipLevel:</strong>	Specifies a mip level to check, 'c_pvrTextureAllMIPMapLevels' can be passed to Get the size of all MIP levels.</li>
+
+<li class="li"><strong class="ph b">allSurfaces:</strong>	The Size of all surfaces is calculated if true, only a single surface if false.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">ptrdiff_t</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">getDataOffset</strong>(<span class="ph code_type">uint32_t</span> mipMapLevel, <span class="ph code_type">uint32_t</span> arrayMember, <span class="ph code_type">uint32_t</span> face)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get a offset in the data</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">mipMapLevel:</strong>	The mip map level of the offset</li>
+
+<li class="li"><strong class="ph b">face:</strong>	The face of the offset</li>
+
+<li class="li"><strong class="ph b">arrayMember:</strong>	The array index of the offset</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">uint32_t</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">getNumArrayMembers</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Gets the number of array members stored in this texture.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">const std::map&lt;uint32_t, std::map&lt;uint32_t, TextureMetaData&gt; &gt; *</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">getMetaDataMap</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get a pointer directly to the Meta Data Map, to allow users to read out data.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">uint32_t</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">getNumMipMapLevels</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Gets the number of MIP-Map levels stored in this texture.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">uint32_t</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">getNumFaces</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Gets the number of faces stored in this texture.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">const std::string</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">getCubeMapOrder</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Gets the cube map face order.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">bool</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">isFileCompressed</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Returns whether or not the texture is compressed using PVRTexLib's FILE compression - this is independent of any texture compression.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">bool</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">isPreMultiplied</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Check whether or not the texture's color has been pre-multiplied by the alpha values.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">uint32_t</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">getMetaDataSize</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the total size of the meta data stored in the header. This includes the size of all information stored in all CPVRMetaDataBlocks.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">bool</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">getDirect3DFormat</strong>(<span class="ph code_type">uint32_t &amp;</span> outD3dFormat)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Gets the Direct3D equivalent format enumeration for this texture.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">outD3dFormat:</strong>	Returned d3d format</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">bool</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">getDirectXGIFormat</strong>(<span class="ph code_type">uint32_t &amp;</span> outDxgiFormat, <span class="ph code_type">bool &amp;</span> notAlpha)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Gets the DirectXGI equivalent format enumeration for this texture.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">outDxgiFormat:</strong>	Returned dxgi format</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">void</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">setPixelFormat</strong>(<span class="ph code_type">PixelFormat</span> uPixelFormat)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Sets the pixel format for this texture.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">uPixelFormat:</strong>	The format of the pixel.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">void</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">setColorSpace</strong>(<span class="ph code_type">ColorSpace</span> newColorSpace)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Sets the color space for this texture. Default is lRGB.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">colorSpace:</strong>	A color space of the texture.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">void</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">setChannelType</strong>(<span class="ph code_type">VariableType</span> newChannelType)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Sets the channel type of this texture.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">channelType:</strong>	Texture's channel type</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">void</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">setBumpMap</strong>(<span class="ph code_type">float</span> bumpScale, <span class="ph code_type">std::string</span> bumpOrder)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Sets a texture's bump map data.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">bumpOrder:</strong>	Up to 4 character std::string, with values x,y,z,h in some combination.</li>
+
+<li class="li"><strong class="ph b">bumpScale:</strong>	Floating point "height" value to scale the bump map.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">bool</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">isBumpMap</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Check if this texture is bumpmap</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">void</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">setWidth</strong>(<span class="ph code_type">uint32_t</span> newWidth)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Sets the texture width.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">newWidth:</strong>	The new width.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">void</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">setHeight</strong>(<span class="ph code_type">uint32_t</span> newHeight)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Sets the texture height.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">newHeight:</strong>	The new height.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">void</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">setDepth</strong>(<span class="ph code_type">uint32_t</span> newDepth)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Sets the texture depth.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">newDepth:</strong>	The new depth.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">void</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">setNumArrayMembers</strong>(<span class="ph code_type">uint32_t</span> numNewMembers)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Sets the number of arrays in this texture</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">numNewMembers:</strong>	The new number of members in this array.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">void</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">setNumMipMapLevels</strong>(<span class="ph code_type">uint32_t</span> numNewMipMapLevels)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Sets the number of MIP-Map levels in this texture.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">numNewMipMapLevels:</strong>	New number of MIP-Map levels.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">void</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">setNumFaces</strong>(<span class="ph code_type">uint32_t</span> numNewFaces)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Sets the number of faces stored in this texture.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">numNewFaces:</strong>	New number of faces for this texture.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">void</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">setOrientation</strong>(<span class="ph code_type">TextureMetaData::AxisOrientation</span> axisOrientation)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Sets the data orientation for a given axis in this texture.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">axisOrientation:</strong>	Specifying axis and orientation.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">void</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">setCubeMapOrder</strong>(<span class="ph code_type">std::string</span> cubeMapOrder)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Sets a texture's bump map data.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">cubeMapOrder:</strong>	Up to 6 character std::string, with values x,X,y,Y,z,Z in some combination.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">void</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">setIsFileCompressed</strong>(<span class="ph code_type">bool</span> isFileCompressed)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Sets whether or not the texture is compressed using PVRTexLib's FILE compression - this is independent of any texture compression. Currently unsupported.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">isFileCompressed:</strong>	Sets file compression to true/false.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">void</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">setIsPreMultiplied</strong>(<span class="ph code_type">bool</span> isPreMultiplied)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Sets whether or not the texture's color has been pre-multiplied by the alpha values.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">isPreMultiplied:</strong>	Sets if texture is premultiplied.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__1">void</td>
+<td class="entry" headers="pvrTextureHeader__entry__2"><p class="p"><strong class="ph b">addMetaData</strong>(<span class="ph code_type">const TextureMetaData &amp;</span> metaData)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Adds an arbitrary piece of meta data.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">metaData:</strong>	Meta data block to be added.</li>
+
+</ul>
+</td>
+	</tr>
+			</tbody></table>
+<table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Public Properties</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvrTextureHeader__entry__85">Type</th><th class="entry" id="pvrTextureHeader__entry__86">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__85">uint32_t</td>
+<td class="entry" headers="pvrTextureHeader__entry__86">flags</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__85">PixelFormat</td>
+<td class="entry" headers="pvrTextureHeader__entry__86">pixelFormat</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__85">ColorSpace</td>
+<td class="entry" headers="pvrTextureHeader__entry__86">colorSpace</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__85">VariableType</td>
+<td class="entry" headers="pvrTextureHeader__entry__86">channelType</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__85">uint32_t</td>
+<td class="entry" headers="pvrTextureHeader__entry__86">height</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__85">uint32_t</td>
+<td class="entry" headers="pvrTextureHeader__entry__86">width</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__85">uint32_t</td>
+<td class="entry" headers="pvrTextureHeader__entry__86">depth</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__85">uint32_t</td>
+<td class="entry" headers="pvrTextureHeader__entry__86">numSurfaces</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__85">uint32_t</td>
+<td class="entry" headers="pvrTextureHeader__entry__86">numFaces</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__85">uint32_t</td>
+<td class="entry" headers="pvrTextureHeader__entry__86">numMipMaps</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__85">uint32_t</td>
+<td class="entry" headers="pvrTextureHeader__entry__86">metaDataSize</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__85">std::map&lt;uint32_t, std::map&lt;uint32_t, TextureMetaData&gt; &gt;</td>
+<td class="entry" headers="pvrTextureHeader__entry__86">_metaDataMap</td>
+	</tr>
+			</tbody></table>
+<table class="table"><caption><span class="table--title-label">Table 3. </span><span class="title">Public Enums</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvrTextureHeader__entry__111">Name</th><th class="entry" id="pvrTextureHeader__entry__112">Values</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvrTextureHeader__entry__111">Constants</td>
+<td class="entry" headers="pvrTextureHeader__entry__112"><p class="p"><strong class="ph b">Name: </strong>PVRv3   <strong class="ph b">Value: </strong>55727696</p><p class="p"><strong class="ph b">Name: </strong>PVRv3Reversed   <strong class="ph b">Value: </strong>1347834371</p><p class="p"><strong class="ph b">Name: </strong>CompressedFlag   <strong class="ph b">Value: </strong>( 1 &lt;&lt; 0 )</p><p class="p"><strong class="ph b">Name: </strong>PremultipliedFlag   <strong class="ph b">Value: </strong>( 1 &lt;&lt; 1 )</p><p class="p"><strong class="ph b">Name: </strong>SizeOfHeader   <strong class="ph b">Value: </strong>52</p></td>
+	</tr>
+			</tbody></table>
+</div>
+
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../classes/pvr.html">pvr</a></div></div></nav></article></main></div></div></div></div></div><div id="custom_nav" class="text-right hidden-sm hidden-xs hidden-print"><div class="well well-lg" style="margin-left:20px; margin-right:20px;"><footer role="contentinfo"><script src="../ditasearch.js"></script><footer xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="site-info  wh_footer" itemtype="https://schema.org/WPFooter" itemscope="" whc:version="21.0">
+
+  <div class="inside-site-info grid-container grid-parent footer-container  mx-auto">
+    <div class="copyright-bar">
+      <div class="elementor elementor-70634">
+        <div class="elementor-inner">
+          <div class="elementor-section-wrap">
+            <section class="elementor-element elementor-element-a126d69 elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a126d69" data-element_type="section">
+              <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-row">
+                  <div class="elementor-element elementor-element-c1f5a3a elementor-column elementor-col-50 elementor-top-column" data-id="c1f5a3a" data-element_type="column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-9f26949 elementor-widget elementor-widget-image" data-id="9f26949" data-element_type="widget" data-widget_type="image.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-image"> <a href="https://www.imgtec.com/"><img src="https://www.imgtec.com/wp-content/uploads/2019/10/Imagination_Logo_Secondary_Blk.svg" title="Imagination_Logo" alt="Imagination_Logo" class="lazyloading"></img></a></div>
+                          </div>
+                        </div>
+                        <div class="elementor-element elementor-element-4eb6939 elementor-widget elementor-widget-text-editor">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-text-editor elementor-clearfix">
+                              <div class="footer-copyright">© Imagination Technologies Limited. All rights reserved.<br></br><a href="https://www.imgtec.com/privacy-policy/">Privacy Policy</a> – <a href="https://www.imgtec.com/terms-and-conditions/">Terms &amp; Conditions</a> – <a href="https://www.imgtec.com/trademarks/">Trademarks</a> – <a href="https://www.imgtec.com/cookies/">Cookies</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="elementor-element elementor-element-01bb773 elementor-column elementor-col-50 elementor-top-column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-1c0e19c elementor-shape-square elementor-widget elementor-widget-social-icons" data-id="1c0e19c" data-element_type="widget" data-widget_type="social-icons.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-social-icons-wrapper"> <a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin" href="https://www.linkedin.com/company/imagination-technologies/" target="_blank"> <span class="elementor-screen-only">Linkedin</span> <i class="fab fa-linkedin"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-twitter" href="https://twitter.com/imaginationtech" target="_blank"> <span class="elementor-screen-only">Twitter</span> <i class="fab fa-twitter"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook" href="https://www.facebook.com/imgtec/" target="_blank"> <span class="elementor-screen-only">Facebook</span> <i class="fab fa-facebook"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-youtube" href="https://www.youtube.com/user/Imgtec/" target="_blank"> <span class="elementor-screen-only">Youtube</span> <i class="fab fa-youtube"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram" href="https://www.instagram.com/imaginationtech/" target="_blank"> <span class="elementor-screen-only">Instagram</span> <i class="fab fa-instagram"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-google-plus" href="https://plus.google.com/+ImaginationTechnologiesLtd" target="_blank"> <span class="elementor-screen-only">Google-plus</span> <i class="fab fa-google-plus"></i> </a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer></footer></div></div></div></body></html>

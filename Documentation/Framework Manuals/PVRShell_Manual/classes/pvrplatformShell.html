@@ -1,0 +1,1063 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2020"><meta name="DC.rights.owner" content="(C) Copyright 2020"><meta name="DC.type" content="concept"><meta name="description" content="The PowerVR Shell (pvr::Shell) is the main class that the user will inherit his application from."><meta name="DC.relation" scheme="URI" content="../classes/pvrplatform.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrplatformShellPointingDeviceState.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrplatformShellPrivatePointerState.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrplatformShellPointerNormalisedLocation.html"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="pvrplatformShell"><link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/devcss.css"><title>pvr::platform::Shell</title><head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="icon" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png" sizes="32x32" type="image/png">
+<link rel="shorcut icon" type="image/png" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png">
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head></head><body id="pvrplatformShell"><header role="banner"><div class="ditasearch" data-searchroot="../"></div><header xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="navbar navbar-default wh_header" whc:version="21.0">
+    <div class="container-fluid  header-area">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="html5_logo_and_publication_title">
+		<a href="https://docs.imgtec.com" class="wh_logo hidden-xs">
+				<img src="https://www.imgtec.com/wp-content/uploads/2018/11/Imagination-logo-white.png"></img></a>
+		<p>Developer Documentation</p>
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <whc:webhelp_logo class="hidden-xs"></whc:webhelp_logo>
+                </div>
+                
+
+            </div>
+
+
+	
+
+		<whc:webhelp_search_input></whc:webhelp_search_input>
+        </div>
+
+		<!--<whc:webhelp_publication_title/>-->
+    </div>
+	</header></header><div class="container-fluid" id="content"><div class="row"><div class="wh_content_area doc_title"><h1>
+PVRShell Manual
+
+</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../PVRShell_intro.html">PVRShell Intro</a><ul><li><a href="../PVRShell_files.html">PVRShell Files</a></li><li><a href="../PVRShell_classes.html">PVRShell Classes</a><ul><li><a href="../classes/pvr.html">pvr</a><ul><li><a href="../classes/pvrplatform.html">pvr::platform</a><ul><li><a href="../classes/pvrplatformShellEvent.html">pvr::platform::ShellEvent</a></li><li class="active"><a href="../classes/pvrplatformShell.html">pvr::platform::Shell</a><ul><li><a href="../classes/pvrplatformShellPointingDeviceState.html">pvr::platform::Shell::PointingDeviceState</a></li><li><a href="../classes/pvrplatformShellPrivatePointerState.html">pvr::platform::Shell::PrivatePointerState</a></li><li><a href="../classes/pvrplatformShellPointerNormalisedLocation.html">pvr::platform::Shell::PointerNormalisedLocation</a></li></ul></li><li><a href="../classes/pvrplatformShellOS.html">pvr::platform::ShellOS</a></li><li><a href="../classes/pvrplatformInternalOS.html">pvr::platform::InternalOS</a></li><li><a href="../classes/pvrplatformWindowsOSData.html">pvr::platform::WindowsOSData</a></li><li><a href="../classes/pvrplatformShellData.html">pvr::platform::ShellData</a></li><li><a href="../classes/pvrplatformStateMachine.html">pvr::platform::StateMachine</a></li><li><a href="../classes/pvrplatformSpecialKeyCode.html">pvr::platform::SpecialKeyCode</a></li></ul></li><li><a href="../classes/pvrPointerLocation.html">pvr::PointerLocation</a></li><li><a href="../classes/pvrPointerLocationStore.html">pvr::PointerLocationStore</a></li><li><a href="../classes/pvrConfigureEvent.html">pvr::ConfigureEvent</a></li></ul></li></ul></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1">pvr::platform::Shell</h1>
+
+<div class="body conbody"><p class="shortdesc">The PowerVR Shell (pvr::Shell) is the main class that the user will inherit his application from.</p>
+
+<p class="p">The PowerVR Shell (pvr::Shell) is the main class that the user will inherit his application from.</p>
+<p class="p">Found in file: <a class="xref" href="../files/Shell.html" title="Contains the all-important pvr::Shell class that the user will be inheriting from for his application. See">Shell.h</a></p>
+<table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Classes</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvrplatformShell__entry__1">Declaration Type</th><th class="entry" id="pvrplatformShell__entry__2">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__1">struct</td>
+<td class="entry" headers="pvrplatformShell__entry__2"><a class="xref" href="pvrplatformShellPointingDeviceState.html" title="Contains the state of a pointing device (mouse, touch screen).">pvr::platform::Shell::PointingDeviceState</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__1">struct</td>
+<td class="entry" headers="pvrplatformShell__entry__2"><a class="xref" href="pvrplatformShellPrivatePointerState.html">pvr::platform::Shell::PrivatePointerState</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__1">struct</td>
+<td class="entry" headers="pvrplatformShell__entry__2"><a class="xref" href="pvrplatformShellPointerNormalisedLocation.html" title="Contains a pointer location in unsigned normalised coordinates (0..1).">pvr::platform::Shell::PointerNormalisedLocation</a></td>
+	</tr>
+			</tbody></table>
+<table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Public Methods</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvrplatformShell__entry__9">Return Type</th><th class="entry" id="pvrplatformShell__entry__10">Name and Description</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">onKeyDown</strong>(<span class="ph code_type">Keys</span> key)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Used externally to signify events to the Shell. Do not use.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">key:</strong>	The key for this event.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">onKeyUp</strong>(<span class="ph code_type">Keys</span> key)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Used externally to signify events to the Shell. Do not use.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">key:</strong>	The key for this event.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">onPointingDeviceDown</strong>(<span class="ph code_type">uint8_t</span> buttonIdx)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Used externally to signify events to the Shell. Do not use.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">buttonIdx:</strong>	The button ID for this event.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">onPointingDeviceUp</strong>(<span class="ph code_type">uint8_t</span> buttonIdx)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Used externally to signify events to the Shell. Do not use.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">buttonIdx:</strong>	The button ID for this event.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">onSystemEvent</strong>(<span class="ph code_type">SystemEvent</span> systemEvent)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Used externally to signify events to the Shell. Do not use.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">systemEvent:</strong>	The type of the system event.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">onConfigureEvent</strong>(<span class="ph code_type">const ConfigureEvent &amp;</span> configureEvent)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Called by some OS (X11) to record the movement of the mouse.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">configureEvent:</strong>	Mouse data.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">Shell</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Destructor.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">DisplayAttributes &amp;</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getDisplayAttributes</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the display attributes (width, height, bpp, AA, etc) of this pvr::Shell</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">const DisplayAttributes &amp;</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getDisplayAttributes</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the display attributes (width, height, bpp, AA, etc) of this pvr::Shell</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">OSConnection</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getConnection</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the underlying connection object of this shell</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">OSDisplay</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getDisplay</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the underlying Display object of this shell</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">OSWindow</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getWindow</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the underlying Window object of this shell</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">bool</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">isKeyPressed</strong>(<span class="ph code_type">Keys</span> key)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Query if a key is pressed.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">key:</strong>	The key to check</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">bool</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">isButtonPressed</strong>(<span class="ph code_type">int8_t</span> buttonIndex)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Query if a key is pressed.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">buttonIndex:</strong>	The number of the button to check (LMB:0, RMB:1, MMB:2)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">PointerLocation</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getPointerAbsolutePosition</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Query the pointer location in pixels.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">PointerLocation</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getPointerRelativePosition</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Query the pointer relative position.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">PointerNormalisedLocation</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getPointerNormalisedPosition</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Query the pointer location in normalised coordinates (0..1).</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">const PointingDeviceState &amp;</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getPointingDeviceState</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Query the state of the pointing device (Mouse, Touchscreend).</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">uint64_t</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getTime</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the total time (from the same arbitrary starting point as getTimeAtInitApplication ), in milliseconds.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">uint64_t</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getFrameTime</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">The duration of the last frame to pass, in milliseconds. This is the time to use to advance app logic.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">uint64_t</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getTimeAtInitApplication</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the total time (from the same arbitrary starting point as getTime ), in milliseconds.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">const platform::CommandLineParser::ParsedCommandLine &amp;</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getCommandLine</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the command line options that were passed at application launch.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">setFullscreen</strong>(<span class="ph code_type">const bool</span> fullscreen)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">ONLY EFFECTIVE AT INIT APPLICATION. Set the application to run at full screen mode. Not all platforms support this option.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">fullscreen:</strong>	Set to true for fullscreen, false for windowed</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">bool</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">isFullScreen</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get if the application is running in full screen.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">uint32_t</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getWidth</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the width of the application area (window width for windowed, or screen width for full screen).</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">uint32_t</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getHeight</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the height of the application area (window height for windowed, or screen height for full screen).</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">uint32_t</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getCaptureFrameScale</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the screenshot capture scale to be applied to any saved screenshot.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">Api</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getMaxApi</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the maximum api type requested.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">Api</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getMinApi</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the minimum api type requested.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">Result</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">setDimensions</strong>(<span class="ph code_type">uint32_t</span> w, <span class="ph code_type">uint32_t</span> h)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">ONLY EFFECTIVE IF CALLED AT INIT APPLICATION. Set the window size, or resolution for fullscreen.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">h:</strong>	The height of the window / vertical resolution</li>
+
+<li class="li"><strong class="ph b">w:</strong>	The width of the window / horizontal resolution</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">uint32_t</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getPositionX</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the window position X coordinate.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">uint32_t</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getPositionY</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the window position Y coordinate.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">Result</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">setPosition</strong>(<span class="ph code_type">uint32_t</span> x, <span class="ph code_type">uint32_t</span> y)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">ONLY EFFECTIVE IF CALLED AT INIT APPLICATION. Set the window position. Not supported in all platforms.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">x:</strong>	x-coordinate (Distance of the left of the window to the left of the screen)</li>
+
+<li class="li"><strong class="ph b">y:</strong>	y-coordinate (Distance of the top of the window to the top of the screen)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">int32_t</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getQuitAfterFrame</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Return the frame after which the application is set to automatically quit. If QuitAfterFrame was not set, returns -1</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">setQuitAfterFrame</strong>(<span class="ph code_type">uint32_t</span> value)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">ONLY EFFECTIVE IF CALLED AT INIT APPLICATION. Set a frame after which the application will quit.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">value:</strong>	The frame after which the application is set to quit. Set to -1 to disable.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">float</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getQuitAfterTime</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the time after which the application is set to automatically quit.If QuitAfterTime was not set, returns -1</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">setQuitAfterTime</strong>(<span class="ph code_type">float</span> value)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">ONLY EFFECTIVE IF CALLED AT INIT APPLICATION. Set a time after which the application will quit.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">value:</strong>	The time (seconds) after which the application will quit. Set to -1 to disable.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">VsyncMode</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getVsyncMode</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the vertical synchronization mode.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">setVsyncMode</strong>(<span class="ph code_type">VsyncMode</span> mode)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">ONLY EFFECTIVE IF CALLED AT INIT APPLICATION. Set the Vertical Syncchronization mode(vertical sync). Default is On(Fifo).</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">setPreferredSwapChainLength</strong>(<span class="ph code_type">uint32_t</span> swapChainLength)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">ONLY EFFECTIVE IF CALLED AT INIT APPLICATION. Set a desired number of swap images (number of framebuffers). This number will be clamped between the minimum and the maximum number supported by the platform, so that if a small (0-1) or large (8+) number is requested, the minimum/maximum of the platform will always be providedd</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">swapChainLength:</strong>	The desired number of swap images. Default is 3 for Mailbox, 2 for On.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">forceReleaseInitView</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">EFFECTIVE IF CALLED DURING RenderFrame. Force the shell to ReleaseView and then InitView again after this frame.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">forceReleaseInitWindow</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">EFFECTIVE IF CALLED DURING RenderFrame. Force the shell to ReleaseView and then InitView again after this frame.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">uint32_t</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getAASamples</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the number of anti-aliasing samples.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">setAASamples</strong>(<span class="ph code_type">uint32_t</span> value)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">ONLY EFFECTIVE IF CALLED AT INIT APPLICATION. Set the Anti-Aliasing samples.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">value:</strong>	The anti-aliasing samples.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">uint32_t</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getColorBitsPerPixel</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment"></span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">uint32_t</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getDepthBitsPerPixel</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the number of framebuffer depth bits per pixel.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">uint32_t</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getStencilBitsPerPixel</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the number of framebuffer stencil bits per pixel.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">ColorSpace</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getBackBufferColorspace</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the Colorspace of the main window framebuffer (linear RGB or sRGB).</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">setBackBufferColorspace</strong>(<span class="ph code_type">ColorSpace</span> colorSpace)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">ONLY EFFECTIVE IF CALLED AT INIT APPLICATION. Specify the colorspace of the backbuffer. Default is a (linear) RGB BackBuffer. Use this to specifically request an sRGB backbuffer. Since the support of backbuffer colorspace is an extension in many implementations, if you use this function, you must call getBackBufferColorspace after initApplication (in initView) to determine the actual backBuffer colorspace that was obtained.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">colorSpace:</strong>	the desired framebuffer colorspace (either lRgb or sRgb)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">setColorBitsPerPixel</strong>(<span class="ph code_type">uint32_t</span> r, <span class="ph code_type">uint32_t</span> g, <span class="ph code_type">uint32_t</span> b, <span class="ph code_type">uint32_t</span> a)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">ONLY EFFECTIVE IF CALLED AT INIT APPLICATION. Set the number of framebuffer color bits per pixel.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">r:</strong>	The Red framebuffer channel color bits</li>
+
+<li class="li"><strong class="ph b">a:</strong>	The Alpha framebuffer channel color bits</li>
+
+<li class="li"><strong class="ph b">g:</strong>	The Green framebuffer channel color bits</li>
+
+<li class="li"><strong class="ph b">b:</strong>	The Blue framebuffer channel color bits</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">setDepthBitsPerPixel</strong>(<span class="ph code_type">uint32_t</span> value)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">ONLY EFFECTIVE IF CALLED AT INIT APPLICATION. Set the number of framebuffer Depth bits per pixel.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">value:</strong>	The desired framebuffer Depth channel bits.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">setStencilBitsPerPixel</strong>(<span class="ph code_type">uint32_t</span> value)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">ONLY EFFECTIVE IF CALLED AT INIT APPLICATION. Set the number of Stencil bits per pixel.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">value:</strong>	The Stencil channel bits.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">setForceFrameTime</strong>(<span class="ph code_type">const bool</span> value)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">ONLY EFFECTIVE IF CALLED AT INIT APPLICATION. Forces frame time to always be reported as 1/60th of a second.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">value:</strong>	True to force frame time, false to use real frame time.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">bool</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">isForcingFrameTime</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Check if frame time is forced (forceFrameTime(true) has been called)</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">bool</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">isScreenRotated</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Check if screen is rotated. By convention, we consider "landscape" to be the default, non-rotated and "portrait" to be rotated.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">bool</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">isScreenPortrait</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment"></span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">bool</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">isScreenLandscape</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment"></span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">showOutputInfo</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Print out general information about this Shell (application name, sdk version, cmd line etc.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">setCaptureFrames</strong>(<span class="ph code_type">uint32_t</span> start, <span class="ph code_type">uint32_t</span> stop)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">ONLY EFFECTIVE IF CALLED AT INIT APPLICATION. Captures the frames between start and stop and saves them as TGA screenshots.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">stop:</strong>	Last frame to be captured</li>
+
+<li class="li"><strong class="ph b">start:</strong>	First frame to be captured</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">setCaptureFrameScale</strong>(<span class="ph code_type">uint32_t</span> value)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">ONLY EFFECTIVE IF CALLED AT INIT APPLICATION. Sets the upscale factor of the screenshots. Upscaling only.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">value:</strong>	Upscaling of the screenshots</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">uint32_t</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getCaptureFrameStart</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">If capturing frames, get the first frame to be captured.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">uint32_t</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getCaptureFrameStop</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">If capturing frames, get the last frame to be captured.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">uint32_t</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getFrameNumber</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Returns the current frame number. Incremented each time renderFrame is called.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">uint32_t</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getContextPriority</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the requested context priority.0=Low,1=Medium, 2+ = High. Initial value: High.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">setContextPriority</strong>(<span class="ph code_type">uint32_t</span> value)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">ONLY EFFECTIVE IF CALLED AT INIT APPLICATION. If supported, sets a ContextPriority that the shell will attempt to use when creating the main Graphics Context used for the window. Initial value:High.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">value:</strong>	The context priority requested. 0=Low, 1=Medium, 2+=High.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">uint32_t</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getDesiredConfig</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">If setDesiredConfig was called, get the desired ConfigID.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">setDesiredConfig</strong>(<span class="ph code_type">uint32_t</span> value)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">ONLY EFFECTIVE IF CALLED AT INIT APPLICATION. If supported by the platform/API, sets a specific Context Configuration ID to be used.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">value:</strong>	The ConfigID that will be requested.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">uint32_t</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getFakeFrameTime</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the artificial frame time that has been set. 0 means unset.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">setFakeFrameTime</strong>(<span class="ph code_type">uint32_t</span> value)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Sets a time delta that will be used as frame time to increment the application clock instead of real time. This number will be returned as the frame time.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">value:</strong>	The number of milliseconds of the frame.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">bool</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">isShowingFPS</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Check if FPS are being printed out.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">setShowFPS</strong>(<span class="ph code_type">bool</span> showFPS)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Sets if the Frames Per Second are to be output periodically.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">showFPS:</strong>	Set to true to output fps, false otherwise.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">float</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getFPS</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get an FPS calculation of the last frame.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">static const char *</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getSDKVersion</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the current version of the PowerVR SDK.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">setExitMessage</strong>(<span class="ph code_type">const char * const</span> format, <span class="ph code_type">Args</span> args)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set a message to be displayed on application exit. Normally used to display critical error messages that might be missed if displayed as just logs.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">format:</strong>	A printf-style format std::string</li>
+
+<li class="li"><strong class="ph b">args:</strong>	Printf-style variable arguments</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">setApplicationName</strong>(<span class="ph code_type">const char * const</span> format, <span class="ph code_type">Args</span> args)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Sets the application name.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">format:</strong>	A printf-style format std::string</li>
+
+<li class="li"><strong class="ph b">args:</strong>	Printf-style variable parameters</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">setTitle</strong>(<span class="ph code_type">const char * const</span> format, <span class="ph code_type">Args</span> args)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Sets the window title. Will only be actually displayed If used on or before initApplication.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">format:</strong>	A printf-style format std::string</li>
+
+<li class="li"><strong class="ph b">args:</strong>	Printf-style variable parameters</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">const std::string &amp;</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getExitMessage</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the exit message set by the user.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">const std::string &amp;</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getApplicationName</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get application name.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">const std::string &amp;</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getDefaultReadPath</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the default read path.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">const std::vector&lt;std::string&gt; &amp;</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getReadPaths</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get a list of all paths that will be tried when looking for loading files.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">const std::string &amp;</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getWritePath</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the path where any files will be saved.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">exitShell</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Signifies the application to clean up and exit. Will go through the normal StateMachine cycle and exit cleanly, exactly like returning ExitRenderFrame from RenderFrame. Will skip the next RenderFrame execution.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">std::unique_ptr&lt;Stream&gt;</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getAssetStream</strong>(<span class="ph code_type">const std::string &amp;</span> filename, <span class="ph code_type">bool</span> errorIfFileNotFound)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Create and return a Stream object for a specific filename. Uses platform dependent lookup rules to create the stream from the filesystem or a platform-specific store (Windows resources, Android .apk assets) etc. Will first try the filesystem (if available) and then the built-in stores, in order to allow the user to easily override built-in assets.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">filename:</strong>	The name of the file to load. Is usually a raw filename, but may contain a path.</li>
+
+<li class="li"><strong class="ph b">errorIfFileNotFound:</strong>	Set this to false if file-not-found are expected and should not be logged as errors.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">ShellOS &amp;</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getOS</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Gets the ShellOS object owned by this shell.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">bool</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">shouldTakeScreenshot</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Returns whether a screenshot should be taken for the current frame making use of command line arguments.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">std::string</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">getScreenshotFileName</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Generates and returns a potential screenshot name based on the shell write path, frame number and appication name</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__9">void</td>
+<td class="entry" headers="pvrplatformShell__entry__10"><p class="p"><strong class="ph b">addReadPath</strong>(<span class="ph code_type">const std::string &amp;</span> readPath)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Adds a new path to the set of read paths</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">readPath:</strong>	A new read path to add to the set of read paths.</li>
+
+</ul>
+</td>
+	</tr>
+			</tbody></table>
+<table class="table"><caption><span class="table--title-label">Table 3. </span><span class="title">Protected Methods</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvrplatformShell__entry__185">Return Type</th><th class="entry" id="pvrplatformShell__entry__186">Name and Description</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__185">Result</td>
+<td class="entry" headers="pvrplatformShell__entry__186"><p class="p"><strong class="ph b">initApplication</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">IMPLEMENT THIS FUNCTION IN YOUR APPLICATION CLASS. This event represents application start.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__185">Result</td>
+<td class="entry" headers="pvrplatformShell__entry__186"><p class="p"><strong class="ph b">initView</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">IMPLEMENT THIS FUNCTION IN YOUR APPLICATION CLASS. This event is called after successful window/context aquisition.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__185">Result</td>
+<td class="entry" headers="pvrplatformShell__entry__186"><p class="p"><strong class="ph b">renderFrame</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">IMPLEMENT THIS FUNCTION IN YOUR APPLICATION CLASS. This event is called every frame.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__185">Result</td>
+<td class="entry" headers="pvrplatformShell__entry__186"><p class="p"><strong class="ph b">releaseView</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">IMPLEMENT THIS FUNCTION IN YOUR APPLICATION CLASS. This event represents graphics context released.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__185">Result</td>
+<td class="entry" headers="pvrplatformShell__entry__186"><p class="p"><strong class="ph b">quitApplication</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">IMPLEMENT THIS FUNCTION IN YOUR APPLICATION CLASS. This event represents application exit.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__185">void</td>
+<td class="entry" headers="pvrplatformShell__entry__186"><p class="p"><strong class="ph b">eventClick</strong>(<span class="ph code_type">int</span> buttonIdx, <span class="ph code_type">PointerLocation</span> location)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Override in your class to handle the "Click" or "Touch" event of the main input device (mouse or touchscreen).</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">location:</strong>	The location of the click.</li>
+
+<li class="li"><strong class="ph b">buttonIdx:</strong>	The index of the button (LMB:0, RMB:1, MMB:2, Touch:0)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__185">void</td>
+<td class="entry" headers="pvrplatformShell__entry__186"><p class="p"><strong class="ph b">eventDragFinished</strong>(<span class="ph code_type">PointerLocation</span> location)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Override in your class to handle the finish of a "Drag" event of the main input device (mouse, touchscreen).</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">location:</strong>	The location of the click.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__185">void</td>
+<td class="entry" headers="pvrplatformShell__entry__186"><p class="p"><strong class="ph b">eventDragStart</strong>(<span class="ph code_type">int</span> buttonIdx, <span class="ph code_type">PointerLocation</span> location)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Override in your class to handle the start of a "Drag" event of the main input device (mouse, touchscreen).</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">location:</strong>	The location of the click.</li>
+
+<li class="li"><strong class="ph b">buttonIdx:</strong>	The index of the button (LMB:0, RMB:1, MMB:2, Touch:0).</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__185">void</td>
+<td class="entry" headers="pvrplatformShell__entry__186"><p class="p"><strong class="ph b">eventButtonDown</strong>(<span class="ph code_type">int</span> buttonIdx)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Override in your class to handle the initial press (down) of the main input device (mouse, touchscreen).</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">buttonIdx:</strong>	The index of the button (LMB:0, RMB:1, MMB:2, Touch:0)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__185">void</td>
+<td class="entry" headers="pvrplatformShell__entry__186"><p class="p"><strong class="ph b">eventButtonUp</strong>(<span class="ph code_type">int</span> buttonIdx)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Override in your class to handle the release (up) of the main input device (mouse, touchscreen).</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">buttonIdx:</strong>	The index of the button (LMB:0, RMB:1, MMB:2, Touch:0)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__185">void</td>
+<td class="entry" headers="pvrplatformShell__entry__186"><p class="p"><strong class="ph b">eventKeyDown</strong>(<span class="ph code_type">Keys</span> key)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Override in your class to handle the press of a key of the keyboard.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">key:</strong>	The key pressed</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__185">void</td>
+<td class="entry" headers="pvrplatformShell__entry__186"><p class="p"><strong class="ph b">eventKeyStroke</strong>(<span class="ph code_type">Keys</span> key)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Override in your class to handle a keystroke of the keyboard.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">key:</strong>	The key pressed</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__185">void</td>
+<td class="entry" headers="pvrplatformShell__entry__186"><p class="p"><strong class="ph b">eventKeyUp</strong>(<span class="ph code_type">Keys</span> key)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Override in your class to handle the release (up) of a key of of the keyboard.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">key:</strong>	The key released</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__185">void</td>
+<td class="entry" headers="pvrplatformShell__entry__186"><p class="p"><strong class="ph b">eventMappedInput</strong>(<span class="ph code_type">SimplifiedInput</span> key)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Override in your class to handle a unified interface for input across different platforms and devices.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">key:</strong>	The Simplified Unified Event</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__185">void</td>
+<td class="entry" headers="pvrplatformShell__entry__186"><p class="p"><strong class="ph b">Shell</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Default constructor. Do not instantiate a Shell class directly - extend as your application and then provide the newDemo() function returning your application instance. See bottom of this file.</span></em></p>
+</td>
+	</tr>
+			</tbody></table>
+<table class="table"><caption><span class="table--title-label">Table 4. </span><span class="title">Private Methods</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvrplatformShell__entry__217">Return Type</th><th class="entry" id="pvrplatformShell__entry__218">Name and Description</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__217">void</td>
+<td class="entry" headers="pvrplatformShell__entry__218"><p class="p"><strong class="ph b">updatePointerPosition</strong>(<span class="ph code_type">PointerLocation</span> location)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Used externally to signify events to the Shell. Do not use.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__217">void</td>
+<td class="entry" headers="pvrplatformShell__entry__218"><p class="p"><strong class="ph b">implKeyDown</strong>(<span class="ph code_type">Keys</span> key)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__217">void</td>
+<td class="entry" headers="pvrplatformShell__entry__218"><p class="p"><strong class="ph b">implKeyUp</strong>(<span class="ph code_type">Keys</span> key)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__217">void</td>
+<td class="entry" headers="pvrplatformShell__entry__218"><p class="p"><strong class="ph b">implPointingDeviceDown</strong>(<span class="ph code_type">uint8_t</span> buttonIdx)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__217">void</td>
+<td class="entry" headers="pvrplatformShell__entry__218"><p class="p"><strong class="ph b">implPointingDeviceUp</strong>(<span class="ph code_type">uint8_t</span> buttonIdx)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__217">void</td>
+<td class="entry" headers="pvrplatformShell__entry__218"><p class="p"><strong class="ph b">implSystemEvent</strong>(<span class="ph code_type">SystemEvent</span> systemEvent)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__217">void</td>
+<td class="entry" headers="pvrplatformShell__entry__218"><p class="p"><strong class="ph b">processShellEvents</strong>()</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__217">bool</td>
+<td class="entry" headers="pvrplatformShell__entry__218"><p class="p"><strong class="ph b">init</strong>(<span class="ph code_type">ShellData *</span> data)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__217">Result</td>
+<td class="entry" headers="pvrplatformShell__entry__218"><p class="p"><strong class="ph b">shellInitApplication</strong>()</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__217">Result</td>
+<td class="entry" headers="pvrplatformShell__entry__218"><p class="p"><strong class="ph b">shellQuitApplication</strong>()</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__217">Result</td>
+<td class="entry" headers="pvrplatformShell__entry__218"><p class="p"><strong class="ph b">shellInitView</strong>()</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__217">Result</td>
+<td class="entry" headers="pvrplatformShell__entry__218"><p class="p"><strong class="ph b">shellReleaseView</strong>()</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__217">Result</td>
+<td class="entry" headers="pvrplatformShell__entry__218"><p class="p"><strong class="ph b">shellRenderFrame</strong>()</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__217">SimplifiedInput</td>
+<td class="entry" headers="pvrplatformShell__entry__218"><p class="p"><strong class="ph b">MapKeyToMainInput</strong>(<span class="ph code_type">Keys</span> key)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__217">bool</td>
+<td class="entry" headers="pvrplatformShell__entry__218"><p class="p"><strong class="ph b">setKeyPressedVal</strong>(<span class="ph code_type">Keys</span> key, <span class="ph code_type">char</span> val)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__217">bool</td>
+<td class="entry" headers="pvrplatformShell__entry__218"><p class="p"><strong class="ph b">isKeyPressedVal</strong>(<span class="ph code_type">Keys</span> key)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__217">SimplifiedInput</td>
+<td class="entry" headers="pvrplatformShell__entry__218"><p class="p"><strong class="ph b">MapPointingDeviceButtonToSimpleInput</strong>(<span class="ph code_type">int</span> buttonIdx)</p>
+</td>
+	</tr>
+			</tbody></table>
+<table class="table"><caption><span class="table--title-label">Table 5. </span><span class="title">Private Properties</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvrplatformShell__entry__253">Type</th><th class="entry" id="pvrplatformShell__entry__254">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__253">std::queue&lt;ShellEvent&gt;</td>
+<td class="entry" headers="pvrplatformShell__entry__254">eventQueue</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__253">bool</td>
+<td class="entry" headers="pvrplatformShell__entry__254">_dragging</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__253">std::bitset&lt;256&gt;</td>
+<td class="entry" headers="pvrplatformShell__entry__254">_keystate</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__253">PrivatePointerState</td>
+<td class="entry" headers="pvrplatformShell__entry__254">_pointerState</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__253">ShellData *</td>
+<td class="entry" headers="pvrplatformShell__entry__254">_data</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrplatformShell__entry__253">ConfigureEvent</td>
+<td class="entry" headers="pvrplatformShell__entry__254">_configureEvent</td>
+	</tr>
+			</tbody></table>
+</div>
+
+<nav role="navigation" class="related-links"><ul class="ullinks"><li class="link ulchildlink"><strong><a href="../classes/pvrplatformShellPointingDeviceState.html">pvr::platform::Shell::PointingDeviceState</a></strong><br>Contains the state of a pointing device (mouse, touch screen).</li><li class="link ulchildlink"><strong><a href="../classes/pvrplatformShellPrivatePointerState.html">pvr::platform::Shell::PrivatePointerState</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrplatformShellPointerNormalisedLocation.html">pvr::platform::Shell::PointerNormalisedLocation</a></strong><br>Contains a pointer location in unsigned normalised coordinates (0..1).</li></ul><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../classes/pvrplatform.html">pvr::platform</a></div></div></nav></article></main></div></div></div></div></div><div id="custom_nav" class="text-right hidden-sm hidden-xs hidden-print"><div class="well well-lg" style="margin-left:20px; margin-right:20px;"><footer role="contentinfo"><script src="../ditasearch.js"></script><footer xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="site-info  wh_footer" itemtype="https://schema.org/WPFooter" itemscope="" whc:version="21.0">
+
+  <div class="inside-site-info grid-container grid-parent footer-container  mx-auto">
+    <div class="copyright-bar">
+      <div class="elementor elementor-70634">
+        <div class="elementor-inner">
+          <div class="elementor-section-wrap">
+            <section class="elementor-element elementor-element-a126d69 elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a126d69" data-element_type="section">
+              <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-row">
+                  <div class="elementor-element elementor-element-c1f5a3a elementor-column elementor-col-50 elementor-top-column" data-id="c1f5a3a" data-element_type="column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-9f26949 elementor-widget elementor-widget-image" data-id="9f26949" data-element_type="widget" data-widget_type="image.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-image"> <a href="https://www.imgtec.com/"><img src="https://www.imgtec.com/wp-content/uploads/2019/10/Imagination_Logo_Secondary_Blk.svg" title="Imagination_Logo" alt="Imagination_Logo" class="lazyloading"></img></a></div>
+                          </div>
+                        </div>
+                        <div class="elementor-element elementor-element-4eb6939 elementor-widget elementor-widget-text-editor">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-text-editor elementor-clearfix">
+                              <div class="footer-copyright">© Imagination Technologies Limited. All rights reserved.<br></br><a href="https://www.imgtec.com/privacy-policy/">Privacy Policy</a> – <a href="https://www.imgtec.com/terms-and-conditions/">Terms &amp; Conditions</a> – <a href="https://www.imgtec.com/trademarks/">Trademarks</a> – <a href="https://www.imgtec.com/cookies/">Cookies</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="elementor-element elementor-element-01bb773 elementor-column elementor-col-50 elementor-top-column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-1c0e19c elementor-shape-square elementor-widget elementor-widget-social-icons" data-id="1c0e19c" data-element_type="widget" data-widget_type="social-icons.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-social-icons-wrapper"> <a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin" href="https://www.linkedin.com/company/imagination-technologies/" target="_blank"> <span class="elementor-screen-only">Linkedin</span> <i class="fab fa-linkedin"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-twitter" href="https://twitter.com/imaginationtech" target="_blank"> <span class="elementor-screen-only">Twitter</span> <i class="fab fa-twitter"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook" href="https://www.facebook.com/imgtec/" target="_blank"> <span class="elementor-screen-only">Facebook</span> <i class="fab fa-facebook"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-youtube" href="https://www.youtube.com/user/Imgtec/" target="_blank"> <span class="elementor-screen-only">Youtube</span> <i class="fab fa-youtube"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram" href="https://www.instagram.com/imaginationtech/" target="_blank"> <span class="elementor-screen-only">Instagram</span> <i class="fab fa-instagram"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-google-plus" href="https://plus.google.com/+ImaginationTechnologiesLtd" target="_blank"> <span class="elementor-screen-only">Google-plus</span> <i class="fab fa-google-plus"></i> </a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer></footer></div></div></div></body></html>

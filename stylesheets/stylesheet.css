@@ -103,7 +103,7 @@ footer p {
 
 a {
   text-decoration: none;
-  color: #cd239d;
+  color: #3d7e9a;
   text-shadow: none;
 
   transition: color 0.5s ease;
@@ -195,6 +195,9 @@ blockquote {
   border-left: 3px solid #bbb;
 }
 
+#side_toc ul{
+  list-style: none;
+}
 
 ul, ol, dl {
   margin-bottom: 15px
@@ -285,7 +288,7 @@ Full-Width Styles
 }
 
 #header_wrap {
-  background: #72166b;
+  background: #000000;
 }
 
 #header_wrap .inner {

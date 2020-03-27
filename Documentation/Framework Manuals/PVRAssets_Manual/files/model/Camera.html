@@ -1,0 +1,172 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2020"><meta name="DC.rights.owner" content="(C) Copyright 2020"><meta name="DC.type" content="concept"><meta name="description" content="Represents a Camera in the scene (Model.h)."><meta name="DC.relation" scheme="URI" content="../../files/model_dir.html"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="Camera.h_Reference"><link rel="stylesheet" type="text/css" href="../../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../../css/devcss.css"><title>Camera.h Reference</title><head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="icon" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png" sizes="32x32" type="image/png">
+<link rel="shorcut icon" type="image/png" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png">
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head></head><body id="Camera.h_Reference"><header role="banner"><div class="ditasearch" data-searchroot="../../"></div><header xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="navbar navbar-default wh_header" whc:version="21.0">
+    <div class="container-fluid  header-area">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="html5_logo_and_publication_title">
+		<a href="https://docs.imgtec.com" class="wh_logo hidden-xs">
+				<img src="https://www.imgtec.com/wp-content/uploads/2018/11/Imagination-logo-white.png"></img></a>
+		<p>Developer Documentation</p>
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <whc:webhelp_logo class="hidden-xs"></whc:webhelp_logo>
+                </div>
+                
+
+            </div>
+
+
+	
+
+		<whc:webhelp_search_input></whc:webhelp_search_input>
+        </div>
+
+		<!--<whc:webhelp_publication_title/>-->
+    </div>
+	</header></header><div class="container-fluid" id="content"><div class="row"><div class="wh_content_area doc_title"><h1>
+PVRAssets Manual
+
+</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../../PVRAssets_intro.html">Introduction to PVRAssets</a><ul><li><a href="../../PVRAssets_files.html">PVRAssets Files</a><ul><li><a href="../../files/Model.html">Model.h Reference</a></li><li><a href="../../files/Helper.html">Helper.h Reference</a></li><li><a href="../../files/ShadowVolume.html">ShadowVolume.h Reference</a></li><li><a href="../../files/PVRAssets.html">PVRAssets.h Reference</a></li><li><a href="../../files/BoundingBox.html">BoundingBox.h Reference</a></li><li><a href="../../files/Volume.html">Volume.h Reference</a></li><li><a href="../../files/Geometry.html">Geometry.h Reference</a></li><li><a href="../../files/IndexedArray.html">IndexedArray.h Reference</a></li><li><a href="../../files/model_dir.html">model</a><ul><li><a href="../../files/model/Animation.html">Animation.h Reference</a></li><li><a href="../../files/model/Light.html">Light.h Reference</a></li><li><a href="../../files/model/Mesh.html">Mesh.h Reference</a></li><li class="active"><a href="../../files/model/Camera.html">Camera.h Reference</a></li></ul></li><li><a href="../../files/fileio_dir.html">fileio</a></li></ul></li><li><a href="../../PVRAssets_classes.html">PVRAssets Classes</a></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1">Camera.h Reference</h1>
+
+<div class="body conbody"><p class="shortdesc">Represents a Camera in the scene (Model.h).</p>
+
+<section class="section" id="Camera.h_Reference__overview"><h2 class="title sectiontitle">Overview</h2>
+	
+<p class="p"><strong class="ph b">Description</strong>: Represents a Camera in the scene (Model.h).</p>
+</section>
+<section class="section">
+
+<table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Classes</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="Camera.h_Reference__entry__1">Declaration Type</th><th class="entry" id="Camera.h_Reference__entry__2">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="Camera.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Camera.h_Reference__entry__2"><a class="xref" href="../../classes/pvrassetsCameraInternalDataFovAnimationData.html" title="Contains perframe fov data.">pvr::assets::Camera::InternalData::FovAnimationData</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Camera.h_Reference__entry__1">class</td>
+<td class="entry" headers="Camera.h_Reference__entry__2"><a class="xref" href="../../classes/pvrassetsCamera.html" title="Contains all information necessary to recreate a Camera in the scene.">pvr::assets::Camera</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Camera.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Camera.h_Reference__entry__2"><a class="xref" href="../../classes/pvrassetsCameraInternalData.html" title="Raw internal structure of the Camera.">pvr::assets::Camera::InternalData</a></td>
+	</tr>
+			</tbody></table>
+</section>
+<section class="section">
+
+<table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="Camera.h_Reference__entry__9">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="Camera.h_Reference__entry__9"><a class="xref" href="../../classes/pvrassetsModelMaterial.html" title="Class which stores model material info.">pvr::assets::Model::Material</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Camera.h_Reference__entry__9"><span class="xref">pvr::assets::utils</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Camera.h_Reference__entry__9"><span class="xref">pvr::assets::helper</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Camera.h_Reference__entry__9"><a class="xref" href="../../classes/pvrassetsModel.html" title="The Model class represents an entire Scene, or Model. It is mainly a Node structure, allowing various different kinds of data to be stored in the Nodes. The class contains a tree-like structure of Nodes. Each Node can be a Mesh node (containing a Mesh), Camera node or Light node. The tree-structure assumes transformational hierarchy (as usual). Transformations are expressed through Animation objects (a static transform is an animation with a single frame) There is an implicit order in the nodes - First in the array the Mesh nodes will be laid out, then Camera and Light nodes.">pvr::assets::Model</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Camera.h_Reference__entry__9"><a class="xref" href="../../classes/pvrassets.html">pvr::assets</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Camera.h_Reference__entry__9"><a class="xref" href="../../classes/pvrIndexedArray.html" title="A combination of array (std::vector) with associative container (std::map). Supports association of names with values, and retrieval by index.">pvr::IndexedArray</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Camera.h_Reference__entry__9"><a class="xref" href="../../classes/pvrassetsAnimationData.html" title="Specifies animation data.">pvr::assets::AnimationData</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Camera.h_Reference__entry__9"><a class="xref" href="../../classes/pvrassetsLight.html" title="Represents a Light source in the scene.">pvr::assets::Light</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Camera.h_Reference__entry__9"><a class="xref" href="../../classes/pvrVolume.html" title="Represents data for handling volumes of a single Mesh.">pvr::Volume</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Camera.h_Reference__entry__9"><a class="xref" href="../../classes/pvrassetsCamera.html" title="Contains all information necessary to recreate a Camera in the scene.">pvr::assets::Camera</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Camera.h_Reference__entry__9"><a class="xref" href="../../classes/pvrassetsModelNode.html" title="The Node represents a Mesh, Camera or Light. A Node has its own parenting, material, animation and custom user data. The tree-structure assumes transformational hierarchy (as usual), so parent transformations should be applied to children. Transformations are expressed through Animation objects (a static transform is an animation with a single frame). Note: Node ID and MeshID can sometimes be confusing: They will always be the same (when a MeshID makes sense) because Meshes are always laid out first in the internal list of Nodes.">pvr::assets::Model::Node</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Camera.h_Reference__entry__9"><span class="xref">pvr::tool::impl</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Camera.h_Reference__entry__9"><a class="xref" href="../../classes/pvrShadowVolume.html" title="Represents data for handling Shadow volumes of a single Mesh.">pvr::ShadowVolume</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Camera.h_Reference__entry__9"><a class="xref" href="../../classes/pvrassetsMesh.html" title="Mesh class. Represent a Mesh, a collection of primitives (usually, but not necessarily, triangles) together with their per-vertex information. A mesh's is a grouping where all vertices/primitives will have the same basic transformation (but can then be skinned) and material applied.">pvr::assets::Mesh</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Camera.h_Reference__entry__9"><a class="xref" href="../../classes/pvrassetsCameraInternalData.html" title="Raw internal structure of the Camera.">pvr::assets::Camera::InternalData</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Camera.h_Reference__entry__9"><a class="xref" href="../../classes/pvrassetsAnimationInstance.html" title="A specific instance of an animation.">pvr::assets::AnimationInstance</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Camera.h_Reference__entry__9"><a class="xref" href="../../classes/pvrtool.html">pvr::tool</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Camera.h_Reference__entry__9"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
+	</tr>
+			</tbody></table>
+</section>
+</div>
+ <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../files/model_dir.html">model</a></div></div></nav></article></main></div></div></div></div></div><div id="custom_nav" class="text-right hidden-sm hidden-xs hidden-print"><div class="well well-lg" style="margin-left:20px; margin-right:20px;"><footer role="contentinfo"><script src="../../ditasearch.js"></script><footer xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="site-info  wh_footer" itemtype="https://schema.org/WPFooter" itemscope="" whc:version="21.0">
+
+  <div class="inside-site-info grid-container grid-parent footer-container  mx-auto">
+    <div class="copyright-bar">
+      <div class="elementor elementor-70634">
+        <div class="elementor-inner">
+          <div class="elementor-section-wrap">
+            <section class="elementor-element elementor-element-a126d69 elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a126d69" data-element_type="section">
+              <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-row">
+                  <div class="elementor-element elementor-element-c1f5a3a elementor-column elementor-col-50 elementor-top-column" data-id="c1f5a3a" data-element_type="column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-9f26949 elementor-widget elementor-widget-image" data-id="9f26949" data-element_type="widget" data-widget_type="image.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-image"> <a href="https://www.imgtec.com/"><img src="https://www.imgtec.com/wp-content/uploads/2019/10/Imagination_Logo_Secondary_Blk.svg" title="Imagination_Logo" alt="Imagination_Logo" class="lazyloading"></img></a></div>
+                          </div>
+                        </div>
+                        <div class="elementor-element elementor-element-4eb6939 elementor-widget elementor-widget-text-editor">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-text-editor elementor-clearfix">
+                              <div class="footer-copyright">© Imagination Technologies Limited. All rights reserved.<br></br><a href="https://www.imgtec.com/privacy-policy/">Privacy Policy</a> – <a href="https://www.imgtec.com/terms-and-conditions/">Terms &amp; Conditions</a> – <a href="https://www.imgtec.com/trademarks/">Trademarks</a> – <a href="https://www.imgtec.com/cookies/">Cookies</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="elementor-element elementor-element-01bb773 elementor-column elementor-col-50 elementor-top-column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-1c0e19c elementor-shape-square elementor-widget elementor-widget-social-icons" data-id="1c0e19c" data-element_type="widget" data-widget_type="social-icons.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-social-icons-wrapper"> <a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin" href="https://www.linkedin.com/company/imagination-technologies/" target="_blank"> <span class="elementor-screen-only">Linkedin</span> <i class="fab fa-linkedin"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-twitter" href="https://twitter.com/imaginationtech" target="_blank"> <span class="elementor-screen-only">Twitter</span> <i class="fab fa-twitter"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook" href="https://www.facebook.com/imgtec/" target="_blank"> <span class="elementor-screen-only">Facebook</span> <i class="fab fa-facebook"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-youtube" href="https://www.youtube.com/user/Imgtec/" target="_blank"> <span class="elementor-screen-only">Youtube</span> <i class="fab fa-youtube"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram" href="https://www.instagram.com/imaginationtech/" target="_blank"> <span class="elementor-screen-only">Instagram</span> <i class="fab fa-instagram"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-google-plus" href="https://plus.google.com/+ImaginationTechnologiesLtd" target="_blank"> <span class="elementor-screen-only">Google-plus</span> <i class="fab fa-google-plus"></i> </a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer></footer></div></div></div></body></html>

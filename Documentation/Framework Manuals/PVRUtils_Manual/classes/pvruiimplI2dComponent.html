@@ -1,0 +1,242 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2020"><meta name="DC.rights.owner" content="(C) Copyright 2020"><meta name="DC.type" content="concept"><meta name="description" content="A component that can be positioned in 2D using 2d position, scale, rotation and anchored using its center or corners."><meta name="DC.relation" scheme="URI" content="../classes/pvruiimpl.html"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="pvruiimplI2dComponent"><link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/devcss.css"><title>pvr::ui::impl::I2dComponent</title><head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="icon" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png" sizes="32x32" type="image/png">
+<link rel="shorcut icon" type="image/png" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png">
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head></head><body id="pvruiimplI2dComponent"><header role="banner"><div class="ditasearch" data-searchroot="../"></div><header xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="navbar navbar-default wh_header" whc:version="21.0">
+    <div class="container-fluid  header-area">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="html5_logo_and_publication_title">
+		<a href="https://docs.imgtec.com" class="wh_logo hidden-xs">
+				<img src="https://www.imgtec.com/wp-content/uploads/2018/11/Imagination-logo-white.png"></img></a>
+		<p>Developer Documentation</p>
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <whc:webhelp_logo class="hidden-xs"></whc:webhelp_logo>
+                </div>
+                
+
+            </div>
+
+
+	
+
+		<whc:webhelp_search_input></whc:webhelp_search_input>
+        </div>
+
+		<!--<whc:webhelp_publication_title/>-->
+    </div>
+	</header></header><div class="container-fluid" id="content"><div class="row"><div class="wh_content_area doc_title"><h1>
+PVRUtils Manual
+
+</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../PVRUtils_intro.html">Introduction to PVRUtils</a><ul><li><a href="../PVRUtils_files.html">PVRUtils Files</a></li><li><a href="../PVRUtils_classes.html">PVRUtils Classes</a><ul><li><a href="../classes/clutils.html">clutils</a></li><li><a href="../classes/pvr.html">pvr</a><ul><li><a href="../classes/pvrui.html">pvr::ui</a><ul><li><a href="../classes/pvruiimpl.html">pvr::ui::impl</a><ul><li><a href="../classes/pvruiimplPixelGroup_.html">pvr::ui::impl::PixelGroup_</a></li><li><a href="../classes/pvruiimplGroup_.html">pvr::ui::impl::Group_</a></li><li><a href="../classes/pvruiimplFont_.html">pvr::ui::impl::Font_</a></li><li><a href="../classes/pvruiimplText_.html">pvr::ui::impl::Text_</a></li><li><a href="../classes/pvruiimplMatrixGroup_.html">pvr::ui::impl::MatrixGroup_</a></li><li><a href="../classes/pvruiimplTextElement_.html">pvr::ui::impl::TextElement_</a></li><li><a href="../classes/pvruiimplImage_.html">pvr::ui::impl::Image_</a></li><li class="active"><a href="../classes/pvruiimplI2dComponent.html">pvr::ui::impl::I2dComponent</a></li><li><a href="../classes/pvruiimplVertex.html">pvr::ui::impl::Vertex</a></li><li><a href="../classes/pvruiimplSprite_.html">pvr::ui::impl::Sprite_</a></li></ul></li><li><a href="../classes/pvruiUIRenderer.html">pvr::ui::UIRenderer</a></li><li><a href="../classes/pvruiUIRendererInstanceMaxError.html">pvr::ui::UIRendererInstanceMaxError</a></li><li><a href="../classes/pvruiGLStateTracker.html">pvr::ui::GLStateTracker</a></li><li><a href="../classes/pvruiUIRendererError.html">pvr::ui::UIRendererError</a></li><li><a href="../classes/pvruiGLState.html">pvr::ui::GLState</a></li></ul></li><li><a href="../classes/pvrutils.html">pvr::utils</a></li><li><a href="../classes/pvrplatform.html">pvr::platform</a></li><li><a href="../classes/pvrMulti.html">pvr::Multi</a></li><li><a href="../classes/pvrGlError.html">pvr::GlError</a></li><li><a href="../classes/pvrGlExtensionNotSupportedError.html">pvr::GlExtensionNotSupportedError</a></li></ul></li></ul></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1">pvr::ui::impl::I2dComponent</h1>
+
+<div class="body conbody"><p class="shortdesc">A component that can be positioned in 2D using 2d position, scale, rotation and anchored using its center or corners.</p>
+
+<p class="p">A component that can be positioned in 2D using 2d position, scale, rotation and anchored using its center or corners.</p>
+<p class="p">Found in file: <a class="xref" href="../files/OpenGLES/SpriteGles.html" title="Contains the Sprite classes and framework objects used by the UIRenderer (Sprite, Text, Image, Font, Group).">SpriteGles.h</a></p>
+<table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Public Methods</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvruiimplI2dComponent__entry__1">Return Type</th><th class="entry" id="pvruiimplI2dComponent__entry__2">Name and Description</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvruiimplI2dComponent__entry__1">void</td>
+<td class="entry" headers="pvruiimplI2dComponent__entry__2"><p class="p"><strong class="ph b">I2dComponent</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Virtual Descructor for a I2dComponent.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiimplI2dComponent__entry__1">I2dComponent const *</td>
+<td class="entry" headers="pvruiimplI2dComponent__entry__2"><p class="p"><strong class="ph b">setAnchor</strong>(<span class="ph code_type">Anchor</span> anchor, <span class="ph code_type">const glm::vec2 &amp;</span> ndcPos)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set the anchor and position ("centerpoint") of this component. The anchor is the point around which all operations (e.g. scales, rotations) will happen.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">ndcPos:</strong>	The normalized device coordinates (-1..1) where the anchor should be in its group.</li>
+
+<li class="li"><strong class="ph b">anchor:</strong>	The anchor point</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiimplI2dComponent__entry__1">I2dComponent const *</td>
+<td class="entry" headers="pvruiimplI2dComponent__entry__2"><p class="p"><strong class="ph b">setAnchor</strong>(<span class="ph code_type">Anchor</span> anchor, <span class="ph code_type">float</span> ndcPosX, <span class="ph code_type">float</span> ndcPosY)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set the anchor and position ("centerpoint") of this component. The anchor is the point around which all operations (e.g. scales, rotations) will happen.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">anchor:</strong>	The anchor point</li>
+
+<li class="li"><strong class="ph b">ndcPosY:</strong>	The normalized (-1..1) vertical coordinate where the anchor should be in its group.</li>
+
+<li class="li"><strong class="ph b">ndcPosX:</strong>	The normalized (-1..1) horizontal coordinate where the anchor should be in its group.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiimplI2dComponent__entry__1">I2dComponent const *</td>
+<td class="entry" headers="pvruiimplI2dComponent__entry__2"><p class="p"><strong class="ph b">setPixelOffset</strong>(<span class="ph code_type">float</span> offsetX, <span class="ph code_type">float</span> offsetY)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set the pixel offset of this object. Pixel offset is applied after every other calculation, so it always moves the final (transformed) sprite by the specified number of pixels in each direction.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">offsetX:</strong>	Number of pixels to move the sprite right (negative for left)</li>
+
+<li class="li"><strong class="ph b">offsetY:</strong>	Number of pixels to move the sprite up (negative for down)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiimplI2dComponent__entry__1">I2dComponent const *</td>
+<td class="entry" headers="pvruiimplI2dComponent__entry__2"><p class="p"><strong class="ph b">setPixelOffset</strong>(<span class="ph code_type">glm::vec2</span> offset)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set the pixel offset of this object. Pixel offset is applied after every other calculation, so it always moves the final (transformed) sprite by the specified number of pixels in each direction.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">offset:</strong>	Number of pixels to move the sprite right/up (negative for down/left)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiimplI2dComponent__entry__1">I2dComponent const *</td>
+<td class="entry" headers="pvruiimplI2dComponent__entry__2"><p class="p"><strong class="ph b">setScale</strong>(<span class="ph code_type">glm::vec2 const &amp;</span> scale)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set the scale of this object.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">scale:</strong>	The scale of this object. (1,1) is natural scale.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiimplI2dComponent__entry__1">I2dComponent const *</td>
+<td class="entry" headers="pvruiimplI2dComponent__entry__2"><p class="p"><strong class="ph b">setScale</strong>(<span class="ph code_type">float</span> scaleX, <span class="ph code_type">float</span> scaleY)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set the scale of this object.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">scaleY:</strong>	The scale of this object in the Y direction. 1 is natural scale.</li>
+
+<li class="li"><strong class="ph b">scaleX:</strong>	The scale of this object in the X direction. 1 is natural scale.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiimplI2dComponent__entry__1">I2dComponent const *</td>
+<td class="entry" headers="pvruiimplI2dComponent__entry__2"><p class="p"><strong class="ph b">setRotation</strong>(<span class="ph code_type">float</span> radians)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set the rotation of this object on the screen (in fact, its parent group's) plane.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">radians:</strong>	The Counter Clockwise rotation of this object, in radians, around its Z axis.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiimplI2dComponent__entry__1">I2dComponent const *</td>
+<td class="entry" headers="pvruiimplI2dComponent__entry__2"><p class="p"><strong class="ph b">setUV</strong>(<span class="ph code_type">const pvr::Rectanglef &amp;</span> uv)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set the uv coordinates for this object.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">uv:</strong>	The UV coordinate to use for this object.</li>
+
+</ul>
+</td>
+	</tr>
+			</tbody></table>
+<table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Private Methods</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvruiimplI2dComponent__entry__21">Return Type</th><th class="entry" id="pvruiimplI2dComponent__entry__22">Name and Description</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvruiimplI2dComponent__entry__21">void</td>
+<td class="entry" headers="pvruiimplI2dComponent__entry__22"><p class="p"><strong class="ph b">I2dComponent</strong>()</p>
+</td>
+	</tr>
+			</tbody></table>
+<table class="table"><caption><span class="table--title-label">Table 3. </span><span class="title">Protected Properties</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvruiimplI2dComponent__entry__25">Type</th><th class="entry" id="pvruiimplI2dComponent__entry__26">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvruiimplI2dComponent__entry__25">mutable Anchor</td>
+<td class="entry" headers="pvruiimplI2dComponent__entry__26">_anchor</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiimplI2dComponent__entry__25">mutable glm::vec2</td>
+<td class="entry" headers="pvruiimplI2dComponent__entry__26">_position</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiimplI2dComponent__entry__25">mutable glm::vec2</td>
+<td class="entry" headers="pvruiimplI2dComponent__entry__26">_scale</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiimplI2dComponent__entry__25">mutable float</td>
+<td class="entry" headers="pvruiimplI2dComponent__entry__26">_rotation</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiimplI2dComponent__entry__25">mutable bool</td>
+<td class="entry" headers="pvruiimplI2dComponent__entry__26">_isPositioningDirty</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiimplI2dComponent__entry__25">mutable glm::vec2</td>
+<td class="entry" headers="pvruiimplI2dComponent__entry__26">_pixelOffset</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiimplI2dComponent__entry__25">mutable Rectanglef</td>
+<td class="entry" headers="pvruiimplI2dComponent__entry__26">_uv</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiimplI2dComponent__entry__25">mutable bool</td>
+<td class="entry" headers="pvruiimplI2dComponent__entry__26">_isUVDirty</td>
+	</tr>
+			</tbody></table>
+</div>
+
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../classes/pvruiimpl.html">pvr::ui::impl</a></div></div></nav></article></main></div></div></div></div></div><div id="custom_nav" class="text-right hidden-sm hidden-xs hidden-print"><div class="well well-lg" style="margin-left:20px; margin-right:20px;"><footer role="contentinfo"><script src="../ditasearch.js"></script><footer xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="site-info  wh_footer" itemtype="https://schema.org/WPFooter" itemscope="" whc:version="21.0">
+
+  <div class="inside-site-info grid-container grid-parent footer-container  mx-auto">
+    <div class="copyright-bar">
+      <div class="elementor elementor-70634">
+        <div class="elementor-inner">
+          <div class="elementor-section-wrap">
+            <section class="elementor-element elementor-element-a126d69 elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a126d69" data-element_type="section">
+              <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-row">
+                  <div class="elementor-element elementor-element-c1f5a3a elementor-column elementor-col-50 elementor-top-column" data-id="c1f5a3a" data-element_type="column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-9f26949 elementor-widget elementor-widget-image" data-id="9f26949" data-element_type="widget" data-widget_type="image.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-image"> <a href="https://www.imgtec.com/"><img src="https://www.imgtec.com/wp-content/uploads/2019/10/Imagination_Logo_Secondary_Blk.svg" title="Imagination_Logo" alt="Imagination_Logo" class="lazyloading"></img></a></div>
+                          </div>
+                        </div>
+                        <div class="elementor-element elementor-element-4eb6939 elementor-widget elementor-widget-text-editor">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-text-editor elementor-clearfix">
+                              <div class="footer-copyright">© Imagination Technologies Limited. All rights reserved.<br></br><a href="https://www.imgtec.com/privacy-policy/">Privacy Policy</a> – <a href="https://www.imgtec.com/terms-and-conditions/">Terms &amp; Conditions</a> – <a href="https://www.imgtec.com/trademarks/">Trademarks</a> – <a href="https://www.imgtec.com/cookies/">Cookies</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="elementor-element elementor-element-01bb773 elementor-column elementor-col-50 elementor-top-column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-1c0e19c elementor-shape-square elementor-widget elementor-widget-social-icons" data-id="1c0e19c" data-element_type="widget" data-widget_type="social-icons.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-social-icons-wrapper"> <a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin" href="https://www.linkedin.com/company/imagination-technologies/" target="_blank"> <span class="elementor-screen-only">Linkedin</span> <i class="fab fa-linkedin"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-twitter" href="https://twitter.com/imaginationtech" target="_blank"> <span class="elementor-screen-only">Twitter</span> <i class="fab fa-twitter"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook" href="https://www.facebook.com/imgtec/" target="_blank"> <span class="elementor-screen-only">Facebook</span> <i class="fab fa-facebook"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-youtube" href="https://www.youtube.com/user/Imgtec/" target="_blank"> <span class="elementor-screen-only">Youtube</span> <i class="fab fa-youtube"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram" href="https://www.instagram.com/imaginationtech/" target="_blank"> <span class="elementor-screen-only">Instagram</span> <i class="fab fa-instagram"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-google-plus" href="https://plus.google.com/+ImaginationTechnologiesLtd" target="_blank"> <span class="elementor-screen-only">Google-plus</span> <i class="fab fa-google-plus"></i> </a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer></footer></div></div></div></body></html>

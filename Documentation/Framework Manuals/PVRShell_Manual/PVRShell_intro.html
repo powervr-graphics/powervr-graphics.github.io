@@ -1,0 +1,331 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2020"><meta name="DC.rights.owner" content="(C) Copyright 2020"><meta name="DC.type" content="concept"><meta name="description" content="An overview of the PowerVR SDK Framework module PVRShell"><meta name="DC.relation" scheme="URI" content="PVRShell_files.html"><meta name="DC.relation" scheme="URI" content="PVRShell_classes.html"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="PVRShell_Files"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/devcss.css"><title>PVRShell Intro</title><head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="icon" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png" sizes="32x32" type="image/png">
+<link rel="shorcut icon" type="image/png" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png">
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head></head><body id="PVRShell_Files"><header role="banner"><div class="ditasearch" data-searchroot=""></div><header xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="navbar navbar-default wh_header" whc:version="21.0">
+    <div class="container-fluid  header-area">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="html5_logo_and_publication_title">
+		<a href="https://docs.imgtec.com" class="wh_logo hidden-xs">
+				<img src="https://www.imgtec.com/wp-content/uploads/2018/11/Imagination-logo-white.png"></img></a>
+		<p>Developer Documentation</p>
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <whc:webhelp_logo class="hidden-xs"></whc:webhelp_logo>
+                </div>
+                
+
+            </div>
+
+
+	
+
+		<whc:webhelp_search_input></whc:webhelp_search_input>
+        </div>
+
+		<!--<whc:webhelp_publication_title/>-->
+    </div>
+	</header></header><div class="container-fluid" id="content"><div class="row"><div class="wh_content_area doc_title"><h1>
+PVRShell Manual
+
+</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li class="active"><a href="PVRShell_intro.html">PVRShell Intro</a><ul><li><a href="PVRShell_files.html">PVRShell Files</a></li><li><a href="PVRShell_classes.html">PVRShell Classes</a></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
+	<h1 class="title topictitle1" id="ariaid-title1">PVRShell Intro</h1>
+	
+	<div class="body conbody"><p class="shortdesc">An overview of the PowerVR SDK Framework module PVRShell</p>
+		<section class="section" id="PVRShell_Files__section_uzf_1sd_mkb"><h2 class="title sectiontitle">Overview</h2>
+			
+			<p class="p">PVRShell will usually be the foundation upon which an application is written. This library
+				abstracts the system and contains, amongst other, the entry point of the application
+					(<code class="ph codeph">main()</code>, <code class="ph codeph">android_main()</code> or other depending on
+				the platform), command-line arguments, events, main loop, and so on. This module
+				effectively abstracts the native platform.</p>
+			<p class="p">Also, PVRShell will create and teardown the window, initialise and de-initialise the
+				graphics system, swap the buffers at the end of every frame, search
+				platform-specific methods, and file system storage (file system, assets, bundle, and
+				so on).</p>
+			<p class="p">PVRShell directly depends on PVRCore, Normally, PVRShell is used as the first step of
+				every PowerVR SDK application.</p>
+			<p class="p">PVRShell source can be found in the PVRShell folder in the SDK package.</p>
+		</section>
+		<section class="section" id="PVRShell_Files__section_wjk_nsd_mkb"><h2 class="title sectiontitle">Using PVRShell</h2>
+			
+			<p class="p">To use PVRShell:</p>
+			<ul class="ul" id="PVRShell_Files__ul_fmb_4sd_mkb">
+				<li class="li">
+					<p class="p">Depending on the platform, add the module in by adding either:</p>
+					<div class="p">
+						<ul class="ul" id="PVRShell_Files__ul_gmb_4sd_mkb">
+							<li class="li">A project dependency (windows/macOS/iOS/android/...) (project file in
+								Framework/PVRShell/Build/[Platform]/...)</li>
+							<li class="li">The library to link against directly (windows/android/linux
+								makefiles) (.so etc. in
+								Framework/Bin/[Platform]/[lib?]PVRShell[.lib/.so])</li>
+						</ul>
+					</div>
+				</li>
+				<li class="li">In your main code file, include <code class="ph codeph">PVRShell/PVRShell.h</code></li>
+				<li class="li">Write a function <code class="ph codeph">pvr::newDemo()</code> that returns a
+						<code class="ph codeph">std::unique_ptr</code> to a created instance of your class (refer
+					to the bottom of any example)</li>
+				<li class="li">Implement the pure virtual functions of <code class="ph codeph">pvr::Shell</code> in your own class
+						(<code class="ph codeph">initApplication</code>, <code class="ph codeph">initView</code>,
+						<code class="ph codeph">renderFrame</code>, <code class="ph codeph">releaseView</code>,
+						<code class="ph codeph">quitApplication</code>)</li>
+				<li class="li">Write an application class inheriting from <code class="ph codeph">pvr::Shell</code></li>
+				<li class="li">Implement a simple function <code class="ph codeph">pvr::newDemo()</code> returning an
+						<code class="ph codeph">unique_ptr</code> to an instance of your application class</li>
+			</ul>
+			<ul class="ul" id="PVRShell_Files__ul_hmb_4sd_mkb">
+				<li class="li">
+					<p class="p">Implement <code class="ph codeph">pvr::Shell::initApplication()</code></p>
+					<p class="p">This is the first initialization step. It is called once, after PVRShell is
+						initialized, but before the Device/Graphics Context have been initialized.
+						Initialization steps that do not require a graphical context can go here
+						(Model file loading, etc.). Any preferences that will influence context
+						creation should be here.</p>
+				</li>
+			</ul>
+			<ul class="ul" id="PVRShell_Files__ul_imb_4sd_mkb">
+				<li class="li">
+					<p class="p">Implement <code class="ph codeph">pvr::Shell::initView()</code></p>
+					<p class="p">This is called right after a Device/Graphics Context is created and bound.
+						Additionally, if the context is lost, this function is called when it is
+						recreated. Implement any initialization operations that would require a
+						graphics context initialized (texture loading, buffer creation etc.).</p>
+				</li>
+			</ul>
+			<ul class="ul" id="PVRShell_Files__ul_jmb_4sd_mkb">
+				<li class="li">
+					<p class="p">Implement <code class="ph codeph">pvr::Shell::releaseView()</code></p>
+					<p class="p"><code class="ph codeph">releaseView()</code> is called just before a Graphics Context is released at
+						teardown, or if it is lost (for example, minimizing the application on
+						Android). Release API objects (textures, buffers) should be here.</p>
+				</li>
+			</ul>
+			<ul class="ul" id="PVRShell_Files__ul_kmb_4sd_mkb">
+				<li class="li">
+					<p class="p">Implement <code class="ph codeph">pvr::Shell::quitApplication()</code></p>
+					<p class="p">This is called just before application teardown, after the context is lost.
+						Release any left-over non-API resources here.</p>
+				</li>
+			</ul>
+			<ul class="ul" id="PVRShell_Files__ul_lmb_4sd_mkb">
+				<li class="li">
+					<p class="p">Implement <code class="ph codeph">pvr::Shell::renderFrame()</code></p>
+					<p class="p"><code class="ph codeph">renderFrame()</code> is called every frame and is intended to contain the logic
+						and actual drawing code. Backbuffer swapping is done automatically.</p>
+				</li>
+			</ul>
+			<ul class="ul" id="PVRShell_Files__ul_mmb_4sd_mkb">
+				<li class="li">
+					<p class="p">(Recommended, optional step) Implement input event handling</p>
+					<p class="p">Override either <code class="ph codeph">pvr::Shell::eventMappedInput(...)</code> and/or any of the
+						device-specific input functions (<code class="ph codeph">pvr::Shell::onKeyDown</code>,
+							<code class="ph codeph">onKeyUp</code>, <code class="ph codeph">onPointingDeviceDown</code>, and so
+						on).</p>
+					<p class="p"><code class="ph codeph">eventMappedInput()</code> is a call-back provided by PVRShell to handle simplified
+						input events unified across different platforms (for example, both a swipe
+						left of a touchscreen, and the left arrow on a keyboard would map to
+							<code class="ph codeph">MappedInput::Left</code>).</p>
+				</li>
+			</ul>
+			<ul class="ul" id="PVRShell_Files__ul_nmb_4sd_mkb">
+				<li class="li">The application entry point is provided by PVRShell library. Hence, application
+					start, context creation, initialization, etc., will all be done for you.</li>
+			</ul>
+		</section>
+		<section class="section" id="PVRShell_Files__section_hgt_4sd_mkb"><h2 class="title sectiontitle">Code Examples</h2>
+			
+			<div class="p">
+				<pre class="pre codeblock language-cpp"><code>//The five callbacks house the application
+void MyApplication::initApplication { setApiTypeRequired(pvr::api::OpenGLES3);}
+pvr::Result MyApplication::renderFrame() { float dt =this-&gt;getFrameTime(); ... }</code></pre>
+				<pre class="pre codeblock language-cpp"><code>this-&gt;getAssetStream("Texture.pvr"); // Will look everywhere for assets: Files, then Windows //Resources(.rc)/iOS bundled resources/Android assets</code></pre>
+				<pre class="pre codeblock language-cpp"><code>void MyApplication::eventMappedInput(SimplifiedInput::Actions evt) //Abstracts/simplifies
+{ 
+	switch (evt)
+	{
+		case MappedInputEvent::Action1: 
+			pauseDemo();
+			break; 
+		case MappedInputEvent::Left: 
+			showPreviousPage(); 
+			break; 
+		case MappedInputEvent::Quit: 
+			if (showExitDialogue())
+				exitShell(); 
+			break;
+	}
+} </code></pre>
+				<pre class="pre codeblock language-cpp"><code>void MyApplication::eventKeyUp(Keys key){} // Or, detailed keyboard/mouse/touch input</code></pre>
+			</div>
+		</section>
+		<section class="section" id="PVRShell_Files__section_s3j_ysd_mkb"><h2 class="title sectiontitle">Command-Line Arguments</h2>
+			
+			<div class="p">PVRShell takes a set of command-line arguments which allow items like the position
+				and size of the example to be controlled. The table below identifies these
+					options.<table class="table" id="PVRShell_Files__table_ipm_1td_mkb"><caption></caption><colgroup><col><col></colgroup><thead class="thead">
+							<tr class="row">
+								<th class="entry" id="PVRShell_Files__table_ipm_1td_mkb__entry__1">Option</th>
+								<th class="entry" id="PVRShell_Files__table_ipm_1td_mkb__entry__2">Description</th>
+							</tr>
+						</thead><tbody class="tbody">
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-aasamples=N</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">Sets the number of samples to use for full screen
+									anti-aliasing, e.g., 0, 2, 4, 8.</td>
+							</tr>
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-c=N</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">Save a single screenshot or a range, for a given frame or
+									frame range, e.g., -c=14, -c=1-10.</td>
+							</tr>
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-colourbpp=N or -colorbpp=N or -cbpp=N</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">Frame buffer colour bits per pixel. When choosing an EGL
+									config, N will be used as the value for EGL_BUFFER_SIZE.</td>
+							</tr>
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-config=N</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">Force the shell to use the EGL config with ID N.</td>
+							</tr>
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-depthbpp=N or -dbpp=N</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">Depth buffer bits per pixel. When choosing an EGL config, N
+									will be used as the value for EGL_DEPTH_SIZE.</td>
+							</tr>
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-display</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">EGL only. Allows specifying the native display to use if the
+									device has more than one.</td>
+							</tr>
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-forceframetime=N or -fft=N</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">Force PVRShellGetTime to report fixed frame time.</td>
+							</tr>
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-fps</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">Output frames per second.</td>
+							</tr>
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-fullscreen=[1,0]</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">Runs in full-screen mode (1) or windowed (0).</td>
+							</tr>
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-height=N</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">Sets the viewport height to N.</td>
+							</tr>
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-info</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">Output setup information to the debug output.</td>
+							</tr>
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-posx=N</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">Sets the x coordinate of the viewport.</td>
+							</tr>
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-posy=N</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">Sets the y coordinate of the viewport.</td>
+							</tr>
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-powersaving=[1,0] or -ps=[1,0]</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">Where available enable/disable power saving.</td>
+							</tr>
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-priority=N</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">Sets the priority of the EGL context.</td>
+							</tr>
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-quitafterframe=N or -qaf=N</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">Specify the frame after which to quit.</td>
+							</tr>
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-quitaftertime=N or -qat=N</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">Specify the time after which to quit.</td>
+							</tr>
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-rotatekeys=N</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">Sets the orientation of the keyboard input. N can be 0-3,
+									where 0 is no rotation.</td>
+							</tr>
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-screenshotscale=N</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">Allows to scale up screenshots to a bigger size (pixel
+									replication).</td>
+							</tr>
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-sw</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">Software render.</td>
+							</tr>
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-version</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">Output the SDK version to the debug output.</td>
+							</tr>
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-vsync=N</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">Where available modify the app's vsync parameters. 0: No
+									vsync, 1: Vsync, -1: Adaptive Vsync</td>
+							</tr>
+							<tr class="row">
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__1">-width=N</td>
+								<td class="entry" headers="PVRShell_Files__table_ipm_1td_mkb__entry__2">Sets the viewport width to N.</td>
+							</tr>
+						</tbody></table></div>
+		</section>
+	</div>
+<nav role="navigation" class="related-links"><ul class="ullinks"><li class="link ulchildlink"><strong><a href="PVRShell_files.html">PVRShell Files</a></strong><br>All of the available classes inPVRShell</li><li class="link ulchildlink"><strong><a href="PVRShell_classes.html">PVRShell Classes</a></strong><br>All of the available classes in PVRShell</li></ul></nav></article></main></div></div></div></div></div><div id="custom_nav" class="text-right hidden-sm hidden-xs hidden-print"><div class="well well-lg" style="margin-left:20px; margin-right:20px;"><footer role="contentinfo"><script src="ditasearch.js"></script><footer xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="site-info  wh_footer" itemtype="https://schema.org/WPFooter" itemscope="" whc:version="21.0">
+
+  <div class="inside-site-info grid-container grid-parent footer-container  mx-auto">
+    <div class="copyright-bar">
+      <div class="elementor elementor-70634">
+        <div class="elementor-inner">
+          <div class="elementor-section-wrap">
+            <section class="elementor-element elementor-element-a126d69 elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a126d69" data-element_type="section">
+              <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-row">
+                  <div class="elementor-element elementor-element-c1f5a3a elementor-column elementor-col-50 elementor-top-column" data-id="c1f5a3a" data-element_type="column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-9f26949 elementor-widget elementor-widget-image" data-id="9f26949" data-element_type="widget" data-widget_type="image.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-image"> <a href="https://www.imgtec.com/"><img src="https://www.imgtec.com/wp-content/uploads/2019/10/Imagination_Logo_Secondary_Blk.svg" title="Imagination_Logo" alt="Imagination_Logo" class="lazyloading"></img></a></div>
+                          </div>
+                        </div>
+                        <div class="elementor-element elementor-element-4eb6939 elementor-widget elementor-widget-text-editor">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-text-editor elementor-clearfix">
+                              <div class="footer-copyright">© Imagination Technologies Limited. All rights reserved.<br></br><a href="https://www.imgtec.com/privacy-policy/">Privacy Policy</a> – <a href="https://www.imgtec.com/terms-and-conditions/">Terms &amp; Conditions</a> – <a href="https://www.imgtec.com/trademarks/">Trademarks</a> – <a href="https://www.imgtec.com/cookies/">Cookies</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="elementor-element elementor-element-01bb773 elementor-column elementor-col-50 elementor-top-column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-1c0e19c elementor-shape-square elementor-widget elementor-widget-social-icons" data-id="1c0e19c" data-element_type="widget" data-widget_type="social-icons.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-social-icons-wrapper"> <a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin" href="https://www.linkedin.com/company/imagination-technologies/" target="_blank"> <span class="elementor-screen-only">Linkedin</span> <i class="fab fa-linkedin"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-twitter" href="https://twitter.com/imaginationtech" target="_blank"> <span class="elementor-screen-only">Twitter</span> <i class="fab fa-twitter"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook" href="https://www.facebook.com/imgtec/" target="_blank"> <span class="elementor-screen-only">Facebook</span> <i class="fab fa-facebook"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-youtube" href="https://www.youtube.com/user/Imgtec/" target="_blank"> <span class="elementor-screen-only">Youtube</span> <i class="fab fa-youtube"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram" href="https://www.instagram.com/imaginationtech/" target="_blank"> <span class="elementor-screen-only">Instagram</span> <i class="fab fa-instagram"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-google-plus" href="https://plus.google.com/+ImaginationTechnologiesLtd" target="_blank"> <span class="elementor-screen-only">Google-plus</span> <i class="fab fa-google-plus"></i> </a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer></footer></div></div></div></body></html>
