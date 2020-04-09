@@ -1,0 +1,1601 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2020"><meta name="DC.rights.owner" content="(C) Copyright 2020"><meta name="DC.type" content="concept"><meta name="description" content="Contains helper functions for several common complicated Vulkan tasks, such as swapchain creation and texture uploading"><meta name="DC.relation" scheme="URI" content="../../files/Vulkan_dir.html"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="HelperVk.h_Reference"><link rel="stylesheet" type="text/css" href="../../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../../css/devcss.css"><title>HelperVk.h Reference</title><head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="icon" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png" sizes="32x32" type="image/png">
+<link rel="shorcut icon" type="image/png" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png">
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head></head><body id="HelperVk.h_Reference"><header role="banner"><div class="ditasearch" data-searchroot="../../"></div><header xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="navbar navbar-default wh_header" whc:version="21.0">
+    <div class="container-fluid  header-area">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="html5_logo_and_publication_title">
+		<a href="https://docs.imgtec.com" class="wh_logo hidden-xs">
+				<img src="https://www.imgtec.com/wp-content/uploads/2018/11/Imagination-logo-white.png"></img></a>
+		<p>Developer Documentation</p>
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <whc:webhelp_logo class="hidden-xs"></whc:webhelp_logo>
+                </div>
+                
+
+            </div>
+
+
+	
+
+		<whc:webhelp_search_input></whc:webhelp_search_input>
+        </div>
+
+		<!--<whc:webhelp_publication_title/>-->
+    </div>
+	</header></header><div class="container-fluid" id="content"><div class="row"><div class="wh_content_area doc_title"><h1>
+PVRUtils Manual
+
+</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../../PVRUtils_intro.html">Introduction to PVRUtils</a><ul><li><a href="../../PVRUtils_files.html">PVRUtils Files</a><ul><li><a href="../../files/PowerVRLogo.html">PowerVRLogo.h Reference</a></li><li><a href="../../files/ArialBoldFont.html">ArialBoldFont.h Reference</a></li><li><a href="../../files/PBRUtils.html">PBRUtils.h Reference</a></li><li><a href="../../files/PVRUtilsGles.html">PVRUtilsGles.h Reference</a></li><li><a href="../../files/MultiObject.html">MultiObject.h Reference</a></li><li><a href="../../files/StructuredMemory.html">StructuredMemory.h Reference</a></li><li><a href="../../files/PVRUtilsVk.html">PVRUtilsVk.h Reference</a></li><li><a href="../../files/PVRUtilsTypes.html">PVRUtilsTypes.h Reference</a></li><li><a href="../../files/Vulkan_dir.html">Vulkan</a><ul><li><a href="../../files/Vulkan/PBRUtilsPrefilteredFragShader.html">PBRUtilsPrefilteredFragShader.h Reference</a></li><li><a href="../../files/Vulkan/PBRUtilsPreFilterFragShader.html">PBRUtilsPreFilterFragShader.h Reference</a></li><li><a href="../../files/Vulkan/MemoryAllocator.html">MemoryAllocator.h Reference</a></li><li><a href="../../files/Vulkan/PBRUtilsVk.html">PBRUtilsVk.h Reference</a></li><li><a href="../../files/Vulkan/UIRendererFragShader.html">UIRendererFragShader.h Reference</a></li><li><a href="../../files/Vulkan/AsynchronousVk.html">AsynchronousVk.h Reference</a></li><li><a href="../../files/Vulkan/PBRUtilsVertShader.html">PBRUtilsVertShader.h Reference</a></li><li><a href="../../files/Vulkan/PBRUtilsIrradianceFragShader.html">PBRUtilsIrradianceFragShader.h Reference</a></li><li><a href="../../files/Vulkan/UIRendererVk.html">UIRendererVk.h Reference</a></li><li><a href="../../files/Vulkan/ShaderUtilsVk.html">ShaderUtilsVk.h Reference</a></li><li><a href="../../files/Vulkan/UIRendererVertShader.html">UIRendererVertShader.h Reference</a></li><li><a href="../../files/Vulkan/SpriteVk.html">SpriteVk.h Reference</a></li><li class="active"><a href="../../files/Vulkan/HelperVk.html">HelperVk.h Reference</a></li><li><a href="../../files/Vulkan/ConvertToPVRVkTypes.html">ConvertToPVRVkTypes.h Reference</a></li></ul></li><li><a href="../../files/OpenCL_dir.html">OpenCL</a></li><li><a href="../../files/EAGL_dir.html">EAGL</a></li><li><a href="../../files/OpenGLES_dir.html">OpenGLES</a></li><li><a href="../../files/EGL_dir.html">EGL</a></li></ul></li><li><a href="../../PVRUtils_classes.html">PVRUtils Classes</a></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1">HelperVk.h Reference</h1>
+
+<div class="body conbody"><p class="shortdesc">Contains helper functions for several common complicated Vulkan tasks, such as swapchain creation and texture uploading</p>
+
+<section class="section" id="HelperVk.h_Reference__overview"><h2 class="title sectiontitle">Overview</h2>
+	
+<p class="p"><strong class="ph b">Description</strong>: Contains helper functions for several common complicated Vulkan tasks, such as swapchain creation and texture uploading</p>
+</section>
+<section class="section">
+
+<table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Classes</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="HelperVk.h_Reference__entry__1">Declaration Type</th><th class="entry" id="HelperVk.h_Reference__entry__2">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__1">struct</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__2"><a class="xref" href="../../classes/pvrutilsCreateSwapchainParameters.html" title="Parameter object for the createSwapchainRenderpassFramebuffers call. Defaults are sensible and immediately usable, can be used, but it is recommended to pass the Vulkan Memory Allocator if one is used in the application.">pvr::utils::CreateSwapchainParameters</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__1">struct</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__2"><a class="xref" href="../../classes/pvrutilsImageUpdateInfo.html" title="The ImageUpdateInfo struct.">pvr::utils::ImageUpdateInfo</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__1">struct</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__2"><a class="xref" href="../../classes/pvrutilsDeviceExtensions.html" title="Container for a list of device extensions to be used for initiailising a device using the helper function 'createDeviceAndQueues'.">pvr::utils::DeviceExtensions</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__1">struct</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__2"><a class="xref" href="../../classes/pvrutilsQueueAccessInfo.html" title="A structure encapsulating the family id and queue id of a particular queue retrieved via the helper function 'createDeviceAndQueues'. The family id corresponds to the family id the queue was retrieved from. The queue id corresponds to the particular queue index for the retrieved queue.">pvr::utils::QueueAccessInfo</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__1">struct</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__2"><a class="xref" href="../../classes/pvrutilsQueuePopulateInfo.html" title="A structure encapsulating the set of queue flags required for a particular queue retrieved via the helper function 'createDeviceAndQueues'. Optionally additionally providing a surface will indicate that the queue must support presentation via the provided surface.">pvr::utils::QueuePopulateInfo</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__1">struct</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__2"><a class="xref" href="../../classes/pvrutilsOnScreenObjects.html" title="Packaging for Swapchain, on screen Framebuffers, Renderpass, Attachments. Returned by createSwapchainRenderpassFramebuffers">pvr::utils::OnScreenObjects</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__1">struct</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__2"><a class="xref" href="../../classes/pvrutilsInstanceExtensions.html" title="Container for a list of instance extensions to be used for initiailising an instance using the helper function 'createInstanceAndSurface'.">pvr::utils::InstanceExtensions</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__1">struct</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__2"><a class="xref" href="../../classes/pvrutilsDebugUtilsCallbacks.html" title="A simple wrapper structure which provides a more abstract representation of a set of debug utils messengers or debug callbacks when using either VK_EXT_debug_utils or VK_EXT_debug_report respectively.">pvr::utils::DebugUtilsCallbacks</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__1">struct</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__2"><a class="xref" href="../../classes/pvrutilsInstanceLayers.html" title="Container for a list of instance layers to be used for initiailising an instance using the helper function 'createInstanceAndSurface'.">pvr::utils::InstanceLayers</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__1">struct</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__2"><a class="xref" href="../../classes/pvrutilsVertexBindings_Name.html" title="Represents a shader Reflective binding, tying a Semantic name to an Attribute variable name.">pvr::utils::VertexBindings_Name</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__1">struct</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__2"><a class="xref" href="../../classes/pvrutilsVulkanVersion.html" title="The VulkanVersion structure provides an easy mechanism for constructing the Vulkan version for use when creating a Vulkan instance.">pvr::utils::VulkanVersion</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__1">struct</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__2"><a class="xref" href="../../classes/pvrutilsVertexBindings.html" title="Represents a shader Explicit binding, tying a Semantic name to an Attribute Index.">pvr::utils::VertexBindings</a></td>
+	</tr>
+			</tbody></table>
+</section>
+<section class="section">
+
+<table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="HelperVk.h_Reference__entry__27">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__27"><a class="xref" href="../../classes/pvruiimplImage_.html" title="Use this class through the reference counted Framework Object pvr::ui::Image. Represents a 2D Image (aka Texture). Can be used like all Sprites and additionally contains methods required for working with Images.">pvr::ui::impl::Image_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__27"><a class="xref" href="../../classes/pvrutilsvmaimplPool_.html" title="An embedded ref counted Pool class">pvr::utils::vma::impl::Pool_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__27"><a class="xref" href="../../classes/pvruiimplMatrixGroup_.html" title="This class is wrapped into the pvr::ui::Group reference counted Framework Object. Use to apply a transformation to several Sprites and render them together (for example, layout some sprites to form a UI and then apply translation or rotation effects to all of them to change the page).">pvr::ui::impl::MatrixGroup_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__27"><a class="xref" href="../../classes/pvrui.html">pvr::ui</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__27"><a class="xref" href="../../classes/pvruiimpl.html">pvr::ui::impl</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__27"><a class="xref" href="../../classes/pvruiimplText_.html" title="Use this class through the reference counted Framework Object pvr::ui::Text. Represents some text that can be rendered as a normal Sprite_ and additionally contains the necessary text manipulation functions.">pvr::ui::impl::Text_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__27"><a class="xref" href="../../classes/pvrutils.html">pvr::utils</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__27"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__27"><a class="xref" href="../../classes/pvruiimplFont_.html" title="Use this class through the reference counted Framework Object pvr::ui::Font. Is an Image_ containing font characters along with the metadata necessary for rendering text with them. Although it can be used like an Image_, this does not make some sense since it would just display the characters as a texture atlas. Text objects will contain a reference to a Font to render with.">pvr::ui::impl::Font_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__27"><a class="xref" href="../../classes/pvrutilsvmaimpl.html">pvr::utils::vma::impl</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__27"><span class="xref">pvr::utils::details</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__27"><a class="xref" href="../../classes/pvrutilsvmaimplAllocation_.html" title="The DeviceMemoryWrapper_. Class Just wraps the Vulkan device memory object allocated by the memory allocatpr. This class doesn't manages the creation and destruction of vulkan object. It only serves as the interface to device memory functions.">pvr::utils::vma::impl::Allocation_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__27"><a class="xref" href="../../classes/pvrutilsvmaimplDeviceMemoryWrapper_.html" title="A wrapper for device memory">pvr::utils::vma::impl::DeviceMemoryWrapper_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__27"><a class="xref" href="../../classes/pvrutilsvma.html">pvr::utils::vma</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__27"><a class="xref" href="../../classes/pvrutilsvmaimplAllocator_.html">pvr::utils::vma::impl::Allocator_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__27"><a class="xref" href="../../classes/pvruiUIRenderer.html" title="Manages and render the sprites.">pvr::ui::UIRenderer</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__27"><a class="xref" href="../../classes/pvruiimplGroup_.html" title="Abstract container for sprites. See MatrixGroup or PixelGroup. A group contains references to a number of sprites, allowing hierarchical transformations to be applied to them">pvr::ui::impl::Group_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__27"><a class="xref" href="../../classes/pvrutilsStructuredMemoryEntry.html" title="Defines a StructuredMemoryEntry element. A StructuredMemoryEntry defines an actual element entry in a structured buffer view. WARNING: Arrays of size 1 not supported - they are considered non-arrays. WARNING: Due to pointers to parents, no reallocations must *ever* happen. Once initialized, the lists must be final. WARNING: THE ENTIRE PUBLIC INTERFACE OF THIS CLASS EXCEPT FOR INIT, IS CONST. WARNING: IT IS NOT INTENDED FOR THIS CLASS TO BE EVER MODIFIABLE.">pvr::utils::StructuredMemoryEntry</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__27"><a class="xref" href="../../classes/pvruiimplTextElement_.html" title="The TextElement class should be used through the reference counted Framework Object pvr::ui::TextElement. The TextElement_ class handles the implementation specifics for creating, managing and rendering text elements to the screen including buffer creation, updates and deletion as well as the rendering of the text element.">pvr::ui::impl::TextElement_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__27"><a class="xref" href="../../classes/pvruiimplPixelGroup_.html" title="This class is wrapped into the pvr::ui::Group reference counted Framework Object. Use to apply a transformation to several Sprites and render them together (for example, layout some sprites to form a UI and then apply translation or rotation effects to all of them to change the page).">pvr::ui::impl::PixelGroup_</a></td>
+	</tr>
+			</tbody></table>
+</section>
+<section class="section"><h2 class="title sectiontitle">Functions</h2>
+<table class="table"><caption><span class="table--title-label">Table 3. </span><span class="title">Functions</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="HelperVk.h_Reference__entry__48">Return Type</th><th class="entry" id="HelperVk.h_Reference__entry__49">Name and Description</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline bool</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">isFormatDepthStencil</strong>(<span class="ph code_type">pvrvk::Format</span> format)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Return true if the format is a depth stencil format</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">format:</strong>	Format to querry</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">getMemoryTypeIndex</strong>(<span class="ph code_type">const pvrvk::PhysicalDevice &amp;</span> physicalDevice, <span class="ph code_type">const uint32_t</span> allowedMemoryTypeBits, <span class="ph code_type">const pvrvk::MemoryPropertyFlags</span> requiredMemoryProperties, <span class="ph code_type">const pvrvk::MemoryPropertyFlags</span> optimalMemoryProperties, <span class="ph code_type">uint32_t &amp;</span> outMemoryTypeIndex, <span class="ph code_type">pvrvk::MemoryPropertyFlags &amp;</span> outMemoryPropertyFlags)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Utility function for retrieving a memory type index for a suitable memory type which supports the memory type bits specified. If the optimal set of memory properties are supported then return the corresponding memory type index otherwise check for availablility of the required set of memory properties. This allows for implementations to optionally request the use of a more optimal set of memory properties whilst still preserving the ability to retrieve the required set of memory properties as a fallback.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">requiredMemoryProperties:</strong>	The set of memory properties which must be present.</li>
+
+<li class="li"><strong class="ph b">allowedMemoryTypeBits:</strong>	The memory type bits allowed. The required memory type chosen must be one of those allowed.</li>
+
+<li class="li"><strong class="ph b">optimalMemoryProperties:</strong>	A set of optimal memory properties which may be preferred by the application.</li>
+
+<li class="li"><strong class="ph b">physicalDevice:</strong>	The physical device whose set of pvrvk::PhysicalDeviceMemoryProperties will be used to determine support for the requested memory properties.</li>
+
+<li class="li"><strong class="ph b">outMemoryPropertyFlags:</strong>	The returned set of memory property flags.</li>
+
+<li class="li"><strong class="ph b">outMemoryTypeIndex:</strong>	The returned memory type index.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">populateClearValues</strong>(<span class="ph code_type">const pvrvk::RenderPass &amp;</span> renderpass, <span class="ph code_type">const pvrvk::ClearValue &amp;</span> clearColor, <span class="ph code_type">const pvrvk::ClearValue &amp;</span> clearDepthStencilValue, <span class="ph code_type">pvrvk::ClearValue *</span> outClearValues)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Populate color and depthstencil clear values</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">outClearValues:</strong>	A pointer to an array of pvrvk::ClearValue structures which should have size greater than or equal to the number of renderpass attachments.</li>
+
+<li class="li"><strong class="ph b">clearColor:</strong>	A pvrvk::ClearValue which will be used as the clear color value for the renderpass attachments with color formats</li>
+
+<li class="li"><strong class="ph b">renderpass:</strong>	The renderpass is used to determine the number of attachments and their formats from which a decision will be as to whether the provided clearColor or clearDepthStencilValue will be used for the corresponding pvrvk::ClearValue structure for each attachment.</li>
+
+<li class="li"><strong class="ph b">clearDepthStencilValue:</strong>	A pvrvk::ClearValue which will be used as the depth stencil value for the renderpass attachments with depth stencil formats</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline uint8_t</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">getNumSamplesFromSampleCountFlags</strong>(<span class="ph code_type">pvrvk::SampleCountFlags</span> sampleCountFlags)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Convert pvrvk sample count to the number of samples it is equivalent to</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">sampleCountFlags:</strong>	The pvrvk sample count to determine the number of samples for</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">pvrvk::ImageAspectFlags</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">inferAspectFromFormat</strong>(<span class="ph code_type">pvrvk::Format</span> format)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Infers the pvrvk::ImageAspectFlags from the pvrvk::Format.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">format:</strong>	A format to infer pvrvk::ImageAspectFlags from</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">getColorBits</strong>(<span class="ph code_type">pvrvk::Format</span> format, <span class="ph code_type">uint32_t &amp;</span> redBits, <span class="ph code_type">uint32_t &amp;</span> greenBits, <span class="ph code_type">uint32_t &amp;</span> blueBits, <span class="ph code_type">uint32_t &amp;</span> alphaBits)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Determines the number of color bits per pixel for the given pvrvk::Format.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">format:</strong>	A format to calculate the number of bits for</li>
+
+<li class="li"><strong class="ph b">greenBits:</strong>	The number of green bits per pixel</li>
+
+<li class="li"><strong class="ph b">alphaBits:</strong>	The number of alpha channel bits per pixel</li>
+
+<li class="li"><strong class="ph b">redBits:</strong>	The number of red bits per pixel</li>
+
+<li class="li"><strong class="ph b">blueBits:</strong>	The number of blue bits per pixel</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">getDepthStencilBits</strong>(<span class="ph code_type">pvrvk::Format</span> format, <span class="ph code_type">uint32_t &amp;</span> depthBits, <span class="ph code_type">uint32_t &amp;</span> stencilBits)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Determines the number of depth and stencil bits per pixel for the given pvrvk::Format.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">format:</strong>	A format to calculate the number of bits for</li>
+
+<li class="li"><strong class="ph b">depthBits:</strong>	The number of depth bits per pixel</li>
+
+<li class="li"><strong class="ph b">stencilBits:</strong>	The number of stencil bits per pixel</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">DebugUtilsCallbacks</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">createDebugUtilsCallbacks</strong>(<span class="ph code_type">pvrvk::Instance &amp;</span> instance)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Creates a default set of debug utils messengers or debug callbacks using either VK_EXT_debug_utils or VK_EXT_debug_report respectively. The first callback will trigger an exception to be thrown when an error message is returned. The second callback will Log a message for errors and warnings.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">instance:</strong>	The instance from which the debug utils messengers or debug callbacks will be created depending on support for VK_EXT_debug_utils or VK_EXT_debug_report respectively.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">beginQueueDebugLabel</strong>(<span class="ph code_type">pvrvk::Queue</span> queue, <span class="ph code_type">const pvrvk::DebugUtilsLabel &amp;</span> labelInfo)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Begins identifying a region of work submitted to this queue. The calls to beginDebugUtilsLabel and endDebugUtilsLabel must be matched and balanced.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">labelInfo:</strong>	Specifies the parameters of the label region to open</li>
+
+<li class="li"><strong class="ph b">queue:</strong>	The queue to which the debug label region should be opened</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">endQueueDebugLabel</strong>(<span class="ph code_type">pvrvk::Queue</span> queue)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Ends a label region of work submitted to this queue.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">queue:</strong>	The queue to which the debug label region should be ended</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">beginCommandBufferDebugLabel</strong>(<span class="ph code_type">pvrvk::CommandBufferBase</span> commandBufferBase, <span class="ph code_type">const pvrvk::DebugUtilsLabel &amp;</span> labelInfo)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Begins identifying a region of work submitted to this command buffer. The calls to beginDebugUtilsLabel and endDebugUtilsLabel must be matched and balanced.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">commandBufferBase:</strong>	The command buffer base to which the debug label region should be opened</li>
+
+<li class="li"><strong class="ph b">labelInfo:</strong>	Specifies the parameters of the label region to open</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">endCommandBufferDebugLabel</strong>(<span class="ph code_type">pvrvk::CommandBufferBase</span> commandBufferBase)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Ends a label region of work submitted to this base command buffer.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">commandBufferBase:</strong>	The command buffer base to which the debug label region should be ended</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">insertDebugUtilsLabel</strong>(<span class="ph code_type">pvrvk::CommandBufferBase</span> commandBufferBase, <span class="ph code_type">const pvrvk::DebugUtilsLabel &amp;</span> labelInfo)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Inserts a single debug label any time.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">commandBufferBase:</strong>	The base command buffer to which the debug label should be inserted</li>
+
+<li class="li"><strong class="ph b">labelInfo:</strong>	Specifies the parameters of the label region to insert</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">beginCommandBufferDebugLabel</strong>(<span class="ph code_type">pvrvk::CommandBuffer &amp;</span> commandBuffer, <span class="ph code_type">const pvrvk::DebugUtilsLabel &amp;</span> labelInfo)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Begins identifying a region of work submitted to this command buffer. The calls to beginDebugUtilsLabel and endDebugUtilsLabel must be matched and balanced.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">commandBuffer:</strong>	The command buffer to which the debug label region should be opened</li>
+
+<li class="li"><strong class="ph b">labelInfo:</strong>	Specifies the parameters of the label region to open</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">beginCommandBufferDebugLabel</strong>(<span class="ph code_type">pvrvk::SecondaryCommandBuffer &amp;</span> secondaryCommandBuffer, <span class="ph code_type">const pvrvk::DebugUtilsLabel &amp;</span> labelInfo)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Begins identifying a region of work submitted to this secondary command buffer. The calls to beginDebugUtilsLabel and endDebugUtilsLabel must be matched and balanced.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">secondaryCommandBuffer:</strong>	The secondary command buffer to which the debug label region should be opened</li>
+
+<li class="li"><strong class="ph b">labelInfo:</strong>	Specifies the parameters of the label region to open</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">endCommandBufferDebugLabel</strong>(<span class="ph code_type">pvrvk::CommandBuffer &amp;</span> commandBuffer)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Ends a label region of work submitted to this command buffer.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">commandBuffer:</strong>	The command buffer to which the debug label region should be ended</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">endCommandBufferDebugLabel</strong>(<span class="ph code_type">pvrvk::SecondaryCommandBuffer &amp;</span> secondaryCommandBuffer)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Ends a label region of work submitted to this secondary command buffer.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">secondaryCommandBuffer:</strong>	The secondary command buffer to which the debug label region should be ended</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">insertDebugUtilsLabel</strong>(<span class="ph code_type">pvrvk::CommandBuffer &amp;</span> commandBuffer, <span class="ph code_type">const pvrvk::DebugUtilsLabel &amp;</span> labelInfo)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Inserts a single debug label any time.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">commandBuffer:</strong>	The command buffer to which the debug label should be inserted</li>
+
+<li class="li"><strong class="ph b">labelInfo:</strong>	Specifies the parameters of the label region to insert</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">insertDebugUtilsLabel</strong>(<span class="ph code_type">pvrvk::SecondaryCommandBuffer &amp;</span> secondaryCommandBuffer, <span class="ph code_type">const pvrvk::DebugUtilsLabel &amp;</span> labelInfo)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Inserts a single debug label any time.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">secondaryCommandBuffer:</strong>	The secondary command buffer to which the debug label should be inserted</li>
+
+<li class="li"><strong class="ph b">labelInfo:</strong>	Specifies the parameters of the label region to insert</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">VKAPI_ATTR VkBool32 VKAPI_CALL</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">throwOnErrorDebugUtilsMessengerCallback</strong>(<span class="ph code_type">VkDebugUtilsMessageSeverityFlagBitsEXT</span> messageSeverity, <span class="ph code_type">VkDebugUtilsMessageTypeFlagsEXT</span> messageTypes, <span class="ph code_type">const VkDebugUtilsMessengerCallbackDataEXT *</span> pCallbackData, <span class="ph code_type">void *</span> pUserData)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">An application DebugUtilsMessengerCallback function providing logging for various events. The callback will also throw an exception when VkDebugUtilsMessageSeverityFlagBitsEXT includes the VK_DEBUG_UTILS_MESSAGE_SEVERITY_ERROR_BIT_EXT.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">messageSeverity:</strong>	Indicates the VkDebugUtilsMessageSeverityFlagBitsEXT which define the severity of any message.</li>
+
+<li class="li"><strong class="ph b">pUserData:</strong>	The user data provided when the VkDebugUtilsMessengerEXT was created</li>
+
+<li class="li"><strong class="ph b">messageTypes:</strong>	A set of VkDebugUtilsMessageTypeFlagsEXT which define the type of the message.</li>
+
+<li class="li"><strong class="ph b">pCallbackData:</strong>	Contains all the callback related data in the VkDebugUtilsMessengerCallbackDataEXT structure</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">VKAPI_ATTR VkBool32 VKAPI_CALL</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">logMessageDebugUtilsMessengerCallback</strong>(<span class="ph code_type">VkDebugUtilsMessageSeverityFlagBitsEXT</span> messageSeverity, <span class="ph code_type">VkDebugUtilsMessageTypeFlagsEXT</span> messageTypes, <span class="ph code_type">const VkDebugUtilsMessengerCallbackDataEXT *</span> pCallbackData, <span class="ph code_type">void *</span> pUserData)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">An application DebugUtilsMessengerCallback function providing logging for various events.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">messageSeverity:</strong>	Indicates the VkDebugUtilsMessageSeverityFlagBitsEXT which define the severity of any message.</li>
+
+<li class="li"><strong class="ph b">pUserData:</strong>	The user data provided when the VkDebugUtilsMessengerEXT was created</li>
+
+<li class="li"><strong class="ph b">messageTypes:</strong>	A set of VkDebugUtilsMessageTypeFlagsEXT which define the type of the message.</li>
+
+<li class="li"><strong class="ph b">pCallbackData:</strong>	Contains all the callback related data in the VkDebugUtilsMessengerCallbackDataEXT structure</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">VKAPI_ATTR VkBool32 VKAPI_CALL</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">throwOnErrorDebugReportCallback</strong>(<span class="ph code_type">VkDebugReportFlagsEXT</span> flags, <span class="ph code_type">VkDebugReportObjectTypeEXT</span> objectType, <span class="ph code_type">uint64_t</span> object, <span class="ph code_type">size_t</span> location, <span class="ph code_type">int32_t</span> messageCode, <span class="ph code_type">const char *</span> pLayerPrefix, <span class="ph code_type">const char *</span> pMessage, <span class="ph code_type">void *</span> pUserData)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">An application DebugReportCallback function providing logging for various events. The callback will also throw an exception when VkDebugReportFlagsEXT includes the VK_DEBUG_REPORT_ERROR_BIT_EXT.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">messageCode:</strong>	A layer defined value indicating the test which triggered the callback</li>
+
+<li class="li"><strong class="ph b">objectType:</strong>	The type of the object being used/created when the event was triggered.</li>
+
+<li class="li"><strong class="ph b">pMessage:</strong>	String detailing the trigger conditions</li>
+
+<li class="li"><strong class="ph b">flags:</strong>	Indicates the VkDebugReportFlagsEXT triggering the callback.</li>
+
+<li class="li"><strong class="ph b">pUserData:</strong>	User data given when the callback was created</li>
+
+<li class="li"><strong class="ph b">location:</strong>	A component defined value indicating the location of the trigger</li>
+
+<li class="li"><strong class="ph b">pLayerPrefix:</strong>	Abbreviation of the component making the callback</li>
+
+<li class="li"><strong class="ph b">object:</strong>	The object where the issue was detected</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">VKAPI_ATTR VkBool32 VKAPI_CALL</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">logMessageDebugReportCallback</strong>(<span class="ph code_type">VkDebugReportFlagsEXT</span> flags, <span class="ph code_type">VkDebugReportObjectTypeEXT</span> objectType, <span class="ph code_type">uint64_t</span> object, <span class="ph code_type">size_t</span> location, <span class="ph code_type">int32_t</span> messageCode, <span class="ph code_type">const char *</span> pLayerPrefix, <span class="ph code_type">const char *</span> pMessage, <span class="ph code_type">void *</span> pUserData)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">An application DebugReportCallback function providing logging for various events.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">messageCode:</strong>	A layer defined value indicating the test which triggered the callback</li>
+
+<li class="li"><strong class="ph b">objectType:</strong>	The type of the object being used/created when the event was triggered.</li>
+
+<li class="li"><strong class="ph b">pMessage:</strong>	String detailing the trigger conditions</li>
+
+<li class="li"><strong class="ph b">flags:</strong>	Indicates the VkDebugReportFlagsEXT triggering the callback.</li>
+
+<li class="li"><strong class="ph b">pUserData:</strong>	User data given when the callback was created</li>
+
+<li class="li"><strong class="ph b">location:</strong>	A component defined value indicating the location of the trigger</li>
+
+<li class="li"><strong class="ph b">pLayerPrefix:</strong>	Abbreviation of the component making the callback</li>
+
+<li class="li"><strong class="ph b">object:</strong>	The object where the issue was detected</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline LogLevel</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">mapDebugUtilsMessageSeverityFlagsToLogLevel</strong>(<span class="ph code_type">pvrvk::DebugUtilsMessageSeverityFlagsEXT</span> flags)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Maps a set of DebugUtilsMessageSeverityFlagsEXT to a particular type of log message.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">flags:</strong>	The DebugUtilsMessageSeverityFlagsEXT to map to a LogLevel.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline LogLevel</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">mapDebugReportFlagsToLogLevel</strong>(<span class="ph code_type">pvrvk::DebugReportFlagsEXT</span> flags)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Maps a set of DebugReportFlagsEXT to a particular type of log message.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">flags:</strong>	The DebugReportFlagsEXT to map to a LogLevel.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">pvrvk::Buffer</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">createBuffer</strong>(<span class="ph code_type">const pvrvk::Device &amp;</span> device, <span class="ph code_type">const pvrvk::BufferCreateInfo &amp;</span> createInfo, <span class="ph code_type">pvrvk::MemoryPropertyFlags</span> requiredMemoryFlags, <span class="ph code_type">pvrvk::MemoryPropertyFlags</span> optimalMemoryFlags, <span class="ph code_type">const vma::Allocator &amp;</span> bufferAllocator, <span class="ph code_type">vma::AllocationCreateFlags</span> vmaAllocationCreateFlags)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Create a new buffer object and (optionally) allocate and bind memory for it</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">vmaAllocationCreateFlags:</strong>	VMA Allocation creation flags. These flags can be used to control how and where the memory is allocated from. Valid flags include e_DEDICATED_MEMORY_BIT and e_MAPPED_BIT. e_DEDICATED_MEMORY_BIT indicates that the allocation should have its own memory block. e_MAPPED_BIT indicates memory will be persistently mapped respectively. The default vma::AllocationCreateFlags::e_MAPPED_BIT is valid even if HOST_VISIBLE is not used - these flags will be ignored in this case.</li>
+
+<li class="li"><strong class="ph b">optimalMemoryFlags:</strong>	The most optimal set of memory property flags which could be used by the memory backing the returned PVRVk buffer. If pvrvk::MemoryPropertyFlags::e_NONE is passed optimalMemoryFlags will be set to match requiredMemoryFlags.</li>
+
+<li class="li"><strong class="ph b">device:</strong>	The device on which to create the buffer</li>
+
+<li class="li"><strong class="ph b">requiredMemoryFlags:</strong>	The minimal set of memory property flags which are required for the PVRVk buffer to be created. If pvrvk::MemoryPropertyFlags::e_NONE is passed, no memory will be allocated for this buffer.</li>
+
+<li class="li"><strong class="ph b">createInfo:</strong>	A pvrvk::BufferCreateInfo structure controlling how the buffer will be created.</li>
+
+<li class="li"><strong class="ph b">bufferAllocator:</strong>	A VMA allocator used to allocate memory for the created buffer.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">pvrvk::Image</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">createImage</strong>(<span class="ph code_type">const pvrvk::Device &amp;</span> device, <span class="ph code_type">const pvrvk::ImageCreateInfo &amp;</span> createInfo, <span class="ph code_type">pvrvk::MemoryPropertyFlags</span> requiredMemoryFlags, <span class="ph code_type">pvrvk::MemoryPropertyFlags</span> optimalMemoryFlags, <span class="ph code_type">const vma::Allocator &amp;</span> imageAllocator, <span class="ph code_type">vma::AllocationCreateFlags</span> vmaAllocationCreateFlags)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment"></span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">vmaAllocationCreateFlags:</strong>	VMA Allocation creation flags. These flags can be used to control how and where the memory is allocated from. Valid flags include e_DEDICATED_MEMORY_BIT and e_MAPPED_BIT. e_DEDICATED_MEMORY_BIT indicates that the allocation should have its own memory block. e_MAPPED_BIT indicates memory will be persistently mapped respectively. The default vma::AllocationCreateFlags::e_MAPPED_BIT is valid even if HOST_VISIBLE is not used - these flags will be ignored in this case.</li>
+
+<li class="li"><strong class="ph b">optimalMemoryFlags:</strong>	The most optimal set of memory property flags which could be used by the memory backing the returned PVRVk Image. If pvrvk::MemoryPropertyFlags::e_NONE is passed optimalMemoryFlags will be set to match requiredMemoryFlags.</li>
+
+<li class="li"><strong class="ph b">device:</strong>	The device on which to create the image</li>
+
+<li class="li"><strong class="ph b">requiredMemoryFlags:</strong>	The minimal set of memory property flags which are required for the PVRVk Image to be created. If pvrvk::MemoryPropertyFlags::e_NONE is passed, no memory will be allocated for this Image.</li>
+
+<li class="li"><strong class="ph b">createInfo:</strong>	A pvrvk::ImageCreateInfo structure controlling how the image will be created.</li>
+
+<li class="li"><strong class="ph b">imageAllocator:</strong>	A VMA allocator used to allocate memory for the created image.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">setImageLayoutAndQueueFamilyOwnership</strong>(<span class="ph code_type">pvrvk::CommandBufferBase</span> srccmd, <span class="ph code_type">pvrvk::CommandBufferBase</span> dstcmd, <span class="ph code_type">uint32_t</span> srcQueueFamily, <span class="ph code_type">uint32_t</span> dstQueueFamily, <span class="ph code_type">pvrvk::ImageLayout</span> oldLayout, <span class="ph code_type">pvrvk::ImageLayout</span> newLayout, <span class="ph code_type">pvrvk::Image &amp;</span> image, <span class="ph code_type">uint32_t</span> baseMipLevel, <span class="ph code_type">uint32_t</span> numMipLevels, <span class="ph code_type">uint32_t</span> baseArrayLayer, <span class="ph code_type">uint32_t</span> numArrayLayers, <span class="ph code_type">pvrvk::ImageAspectFlags</span> aspect)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set image layout and queue family ownership</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">numArrayLayers:</strong>	The number of array layers of the image to transition</li>
+
+<li class="li"><strong class="ph b">aspect:</strong>	The pvrvk::ImageAspectFlags of the image to transition</li>
+
+<li class="li"><strong class="ph b">baseMipLevel:</strong>	The base mip level of the image to transition</li>
+
+<li class="li"><strong class="ph b">image:</strong>	The image to transition</li>
+
+<li class="li"><strong class="ph b">srccmd:</strong>	The source command buffer from which to transition the image from.</li>
+
+<li class="li"><strong class="ph b">numMipLevels:</strong>	The number of mip levels of the image to transition</li>
+
+<li class="li"><strong class="ph b">srcQueueFamily:</strong>	srcQueueFamily is the source queue family for a queue family ownership transfer.</li>
+
+<li class="li"><strong class="ph b">baseArrayLayer:</strong>	The base array layer level of the image to transition</li>
+
+<li class="li"><strong class="ph b">dstcmd:</strong>	The destination command buffer from which to transition the image to.</li>
+
+<li class="li"><strong class="ph b">dstQueueFamily:</strong>	dstQueueFamily is the destination queue family for a queue family ownership transfer.</li>
+
+<li class="li"><strong class="ph b">oldLayout:</strong>	An old image layout to transition from</li>
+
+<li class="li"><strong class="ph b">newLayout:</strong>	A new image layout to transition to</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">setImageLayout</strong>(<span class="ph code_type">pvrvk::Image &amp;</span> image, <span class="ph code_type">pvrvk::ImageLayout</span> oldLayout, <span class="ph code_type">pvrvk::ImageLayout</span> newLayout, <span class="ph code_type">pvrvk::CommandBufferBase</span> transitionCmdBuffer)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set image layout</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">image:</strong>	The image to transition</li>
+
+<li class="li"><strong class="ph b">oldLayout:</strong>	An old image layout to transition from</li>
+
+<li class="li"><strong class="ph b">transitionCmdBuffer:</strong>	A command buffer to add the pipelineBarrier for the image transition.</li>
+
+<li class="li"><strong class="ph b">newLayout:</strong>	A new image layout to transition to</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">pvrvk::ImageView</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">uploadImageAndViewSubmit</strong>(<span class="ph code_type">pvrvk::Device &amp;</span> device, <span class="ph code_type">const Texture &amp;</span> texture, <span class="ph code_type">bool</span> allowDecompress, <span class="ph code_type">pvrvk::CommandPool &amp;</span> commandPool, <span class="ph code_type">pvrvk::Queue &amp;</span> queue, <span class="ph code_type">pvrvk::ImageUsageFlags</span> usageFlags, <span class="ph code_type">pvrvk::ImageLayout</span> finalLayout, <span class="ph code_type">vma::Allocator</span> stagingBufferAllocator, <span class="ph code_type">vma::Allocator</span> imageAllocator, <span class="ph code_type">vma::AllocationCreateFlags</span> imageAllocationCreateFlags)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Uploads an image to GPU memory and returns the created image view and associated image.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">finalLayout:</strong>	The final image layout the image will be transitioned to.</li>
+
+<li class="li"><strong class="ph b">usageFlags:</strong>	A set of image usage flags for which the created image can be used for.</li>
+
+<li class="li"><strong class="ph b">texture:</strong>	The source pvr::Texture object from which to take the texture data.</li>
+
+<li class="li"><strong class="ph b">queue:</strong>	A queue to which the upload operations should be submitted to.</li>
+
+<li class="li"><strong class="ph b">imageAllocationCreateFlags:</strong>	VMA Allocation creation flags. These flags can be used to control how and where the memory is allocated from. Valid flags include e_DEDICATED_MEMORY_BIT and e_MAPPED_BIT. e_DEDICATED_MEMORY_BIT indicates that the allocation should have its own memory block. e_MAPPED_BIT indicates memory will be persistently mapped respectively.</li>
+
+<li class="li"><strong class="ph b">device:</strong>	The device to use to create the image and image view.</li>
+
+<li class="li"><strong class="ph b">imageAllocator:</strong>	A VMA allocator used to allocate memory for the created image.</li>
+
+<li class="li"><strong class="ph b">allowDecompress:</strong>	Specifies whether the texture can be decompressed as part of the image upload.</li>
+
+<li class="li"><strong class="ph b">stagingBufferAllocator:</strong>	A VMA allocator used to allocate memory for the created staging buffer.</li>
+
+<li class="li"><strong class="ph b">commandPool:</strong>	A command pool from which to allocate a temporary command buffer to carry out the upload operations.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">pvrvk::ImageView</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">uploadImageAndView</strong>(<span class="ph code_type">pvrvk::Device &amp;</span> device, <span class="ph code_type">const Texture &amp;</span> texture, <span class="ph code_type">bool</span> allowDecompress, <span class="ph code_type">pvrvk::SecondaryCommandBuffer &amp;</span> commandBuffer, <span class="ph code_type">pvrvk::ImageUsageFlags</span> usageFlags, <span class="ph code_type">pvrvk::ImageLayout</span> finalLayout, <span class="ph code_type">vma::Allocator</span> stagingBufferAllocator, <span class="ph code_type">vma::Allocator</span> imageAllocator, <span class="ph code_type">vma::AllocationCreateFlags</span> imageAllocationCreateFlags)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Uploads an image to gpu. The upload command and staging buffers are recorded in the commandbuffer.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">finalLayout:</strong>	The final image layout the image will be transitioned to.</li>
+
+<li class="li"><strong class="ph b">usageFlags:</strong>	A command buffer to add the pipelineBarrier for the image transition.</li>
+
+<li class="li"><strong class="ph b">texture:</strong>	The source pvr::Texture object from which to take the texture data.</li>
+
+<li class="li"><strong class="ph b">stagingBufferAllocator:</strong>	A VMA allocator used to allocate memory for the created staging buffer.</li>
+
+<li class="li"><strong class="ph b">device:</strong>	The device to use to create the image and image view.</li>
+
+<li class="li"><strong class="ph b">imageAllocationCreateFlags:</strong>	VMA Allocation creation flags. These flags can be used to control how and where the memory is allocated from. Valid flags include e_DEDICATED_MEMORY_BIT and e_MAPPED_BIT. e_DEDICATED_MEMORY_BIT indicates that the allocation should have its own memory block. e_MAPPED_BIT indicates memory will be persistently mapped respectively.</li>
+
+<li class="li"><strong class="ph b">commandBuffer:</strong>	A secondary command buffer to which the upload operations are be added. Note that the upload will not be guranteed to be complete until the command buffer is submitted to a queue with appropriate synchronisation.</li>
+
+<li class="li"><strong class="ph b">allowDecompress:</strong>	Specifies whether the texture can be decompressed as part of the image upload.</li>
+
+<li class="li"><strong class="ph b">imageAllocator:</strong>	A VMA allocator used to allocate memory for the created image.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">pvrvk::ImageView</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">uploadImageAndView</strong>(<span class="ph code_type">pvrvk::Device &amp;</span> device, <span class="ph code_type">const Texture &amp;</span> texture, <span class="ph code_type">bool</span> allowDecompress, <span class="ph code_type">pvrvk::CommandBuffer &amp;</span> commandBuffer, <span class="ph code_type">pvrvk::ImageUsageFlags</span> usageFlags, <span class="ph code_type">pvrvk::ImageLayout</span> finalLayout, <span class="ph code_type">vma::Allocator</span> stagingBufferAllocator, <span class="ph code_type">vma::Allocator</span> imageAllocator, <span class="ph code_type">vma::AllocationCreateFlags</span> imageAllocationCreateFlags)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Upload image to gpu. The upload command and staging buffers are recorded in the commandbuffer.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">finalLayout:</strong>	The final image layout the image will be transitioned to.</li>
+
+<li class="li"><strong class="ph b">usageFlags:</strong>	A command buffer to add the pipelineBarrier for the image transition.</li>
+
+<li class="li"><strong class="ph b">texture:</strong>	The source pvr::Texture object from which to take the texture data.</li>
+
+<li class="li"><strong class="ph b">stagingBufferAllocator:</strong>	A VMA allocator used to allocate memory for the created staging buffer.</li>
+
+<li class="li"><strong class="ph b">device:</strong>	The device to use to create the image and image view.</li>
+
+<li class="li"><strong class="ph b">imageAllocationCreateFlags:</strong>	VMA Allocation creation flags. These flags can be used to control how and where the memory is allocated from. Valid flags include e_DEDICATED_MEMORY_BIT and e_MAPPED_BIT. e_DEDICATED_MEMORY_BIT indicates that the allocation should have its own memory block. e_MAPPED_BIT indicates memory will be persistently mapped respectively.</li>
+
+<li class="li"><strong class="ph b">commandBuffer:</strong>	A command buffer to which the upload operations should be added. Note that the upload will not be guranteed to be complete until the command buffer is submitted to a queue with appropriate synchronisation.</li>
+
+<li class="li"><strong class="ph b">allowDecompress:</strong>	Specifies whether the texture can be decompressed as part of the image upload.</li>
+
+<li class="li"><strong class="ph b">imageAllocator:</strong>	A VMA allocator used to allocate memory for the created image.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">pvrvk::Image</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">uploadImage</strong>(<span class="ph code_type">pvrvk::Device &amp;</span> device, <span class="ph code_type">const Texture &amp;</span> texture, <span class="ph code_type">bool</span> allowDecompress, <span class="ph code_type">pvrvk::CommandBuffer &amp;</span> commandBuffer, <span class="ph code_type">pvrvk::ImageUsageFlags</span> usageFlags, <span class="ph code_type">pvrvk::ImageLayout</span> finalLayout, <span class="ph code_type">vma::Allocator</span> stagingBufferAllocator, <span class="ph code_type">vma::Allocator</span> imageAllocator, <span class="ph code_type">vma::AllocationCreateFlags</span> imageAllocationCreateFlags)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Upload image to gpu. The upload command and staging buffers are recorded in the commandbuffer.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">finalLayout:</strong>	The final image layout the image will be transitioned to.</li>
+
+<li class="li"><strong class="ph b">usageFlags:</strong>	A command buffer to add the pipelineBarrier for the image transition.</li>
+
+<li class="li"><strong class="ph b">texture:</strong>	The source pvr::Texture object from which to take the texture data.</li>
+
+<li class="li"><strong class="ph b">stagingBufferAllocator:</strong>	A VMA allocator used to allocate memory for the created staging buffer.</li>
+
+<li class="li"><strong class="ph b">device:</strong>	The device to use to create the image.</li>
+
+<li class="li"><strong class="ph b">imageAllocationCreateFlags:</strong>	VMA Allocation creation flags. These flags can be used to control how and where the memory is allocated from. Valid flags include e_DEDICATED_MEMORY_BIT and e_MAPPED_BIT. e_DEDICATED_MEMORY_BIT indicates that the allocation should have its own memory block. e_MAPPED_BIT indicates memory will be persistently mapped respectively.</li>
+
+<li class="li"><strong class="ph b">commandBuffer:</strong>	A command buffer to which the upload operations should be added. Note that the upload will not be guranteed to be complete until the command buffer is submitted to a queue with appropriate synchronisation.</li>
+
+<li class="li"><strong class="ph b">allowDecompress:</strong>	Specifies whether the texture can be decompressed as part of the image upload.</li>
+
+<li class="li"><strong class="ph b">imageAllocator:</strong>	A VMA allocator used to allocate memory for the created image.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">pvrvk::ImageView</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">loadAndUploadImageAndView</strong>(<span class="ph code_type">pvrvk::Device &amp;</span> device, <span class="ph code_type">const char *</span> fileName, <span class="ph code_type">bool</span> allowDecompress, <span class="ph code_type">pvrvk::CommandBuffer &amp;</span> commandBuffer, <span class="ph code_type">IAssetProvider &amp;</span> assetProvider, <span class="ph code_type">pvrvk::ImageUsageFlags</span> usageFlags, <span class="ph code_type">pvrvk::ImageLayout</span> finalLayout, <span class="ph code_type">Texture *</span> outAssetTexture, <span class="ph code_type">vma::Allocator</span> stagingBufferAllocator, <span class="ph code_type">vma::Allocator</span> imageAllocator, <span class="ph code_type">vma::AllocationCreateFlags</span> imageAllocationCreateFlags)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Load and upload image to gpu. The upload command and staging buffers are recorded in the commandbuffer.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">fileName:</strong>	The filename of a source texture from which to take the texture data.</li>
+
+<li class="li"><strong class="ph b">finalLayout:</strong>	The final image layout the image will be transitioned to.</li>
+
+<li class="li"><strong class="ph b">assetProvider:</strong>	Specifies an asset provider to use for loading the texture from system memory.</li>
+
+<li class="li"><strong class="ph b">commandBuffer:</strong>	A command buffer to which the upload operations should be added. Note that the upload will not be guranteed to be complete until the command buffer is submitted to a queue with appropriate synchronisation.</li>
+
+<li class="li"><strong class="ph b">outAssetTexture:</strong>	A pointer to a created pvr::texture.</li>
+
+<li class="li"><strong class="ph b">stagingBufferAllocator:</strong>	A VMA allocator used to allocate memory for the created staging buffer.</li>
+
+<li class="li"><strong class="ph b">device:</strong>	The device to use to create the image and image view.</li>
+
+<li class="li"><strong class="ph b">imageAllocationCreateFlags:</strong>	VMA Allocation creation flags. These flags can be used to control how and where the memory is allocated from. Valid flags include e_DEDICATED_MEMORY_BIT and e_MAPPED_BIT. e_DEDICATED_MEMORY_BIT indicates that the allocation should have its own memory block. e_MAPPED_BIT indicates memory will be persistently mapped respectively.</li>
+
+<li class="li"><strong class="ph b">allowDecompress:</strong>	Specifies whether the texture can be decompressed as part of the image upload.</li>
+
+<li class="li"><strong class="ph b">usageFlags:</strong>	Specifies the usage flags for the image being created.</li>
+
+<li class="li"><strong class="ph b">imageAllocator:</strong>	A VMA allocator used to allocate memory for the created image.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">pvrvk::Image</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">loadAndUploadImage</strong>(<span class="ph code_type">pvrvk::Device &amp;</span> device, <span class="ph code_type">const char *</span> fileName, <span class="ph code_type">bool</span> allowDecompress, <span class="ph code_type">pvrvk::CommandBuffer &amp;</span> commandBuffer, <span class="ph code_type">IAssetProvider &amp;</span> assetProvider, <span class="ph code_type">pvrvk::ImageUsageFlags</span> usageFlags, <span class="ph code_type">pvrvk::ImageLayout</span> finalLayout, <span class="ph code_type">Texture *</span> outAssetTexture, <span class="ph code_type">vma::Allocator</span> stagingBufferAllocator, <span class="ph code_type">vma::Allocator</span> imageAllocator, <span class="ph code_type">vma::AllocationCreateFlags</span> imageAllocationCreateFlags)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Load and upload image to gpu. The upload command and staging buffers are recorded in the commandbuffer.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">fileName:</strong>	The filename of a source texture from which to take the texture data.</li>
+
+<li class="li"><strong class="ph b">finalLayout:</strong>	The final image layout the image will be transitioned to.</li>
+
+<li class="li"><strong class="ph b">assetProvider:</strong>	Specifies an asset provider to use for loading the texture from system memory.</li>
+
+<li class="li"><strong class="ph b">commandBuffer:</strong>	A command buffer to which the upload operations should be added. Note that the upload will not be guranteed to be complete until the command buffer is submitted to a queue with appropriate synchronisation.</li>
+
+<li class="li"><strong class="ph b">outAssetTexture:</strong>	A pointer to a created pvr::texture.</li>
+
+<li class="li"><strong class="ph b">stagingBufferAllocator:</strong>	A VMA allocator used to allocate memory for the created staging buffer.</li>
+
+<li class="li"><strong class="ph b">device:</strong>	The device to use to create the image and image view.</li>
+
+<li class="li"><strong class="ph b">imageAllocationCreateFlags:</strong>	VMA Allocation creation flags. These flags can be used to control how and where the memory is allocated from. Valid flags include e_DEDICATED_MEMORY_BIT and e_MAPPED_BIT. e_DEDICATED_MEMORY_BIT indicates that the allocation should have its own memory block. e_MAPPED_BIT indicates memory will be persistently mapped respectively.</li>
+
+<li class="li"><strong class="ph b">allowDecompress:</strong>	Specifies whether the texture can be decompressed as part of the image upload.</li>
+
+<li class="li"><strong class="ph b">usageFlags:</strong>	Specifies the usage flags for the image being created.</li>
+
+<li class="li"><strong class="ph b">imageAllocator:</strong>	A VMA allocator used to allocate memory for the created image.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">pvrvk::Image</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">loadAndUploadImage</strong>(<span class="ph code_type">pvrvk::Device &amp;</span> device, <span class="ph code_type">const std::string &amp;</span> fileName, <span class="ph code_type">bool</span> allowDecompress, <span class="ph code_type">pvrvk::CommandBuffer &amp;</span> commandBuffer, <span class="ph code_type">IAssetProvider &amp;</span> assetProvider, <span class="ph code_type">pvrvk::ImageUsageFlags</span> usageFlags, <span class="ph code_type">pvrvk::ImageLayout</span> finalLayout, <span class="ph code_type">Texture *</span> outAssetTexture, <span class="ph code_type">vma::Allocator</span> stagingBufferAllocator, <span class="ph code_type">vma::Allocator</span> imageAllocator, <span class="ph code_type">vma::AllocationCreateFlags</span> imageAllocationCreateFlags)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Load and upload image to gpu. The upload command and staging buffers are recorded in the commandbuffer.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">fileName:</strong>	The filename of a source texture from which to take the texture data.</li>
+
+<li class="li"><strong class="ph b">finalLayout:</strong>	The final image layout the image will be transitioned to.</li>
+
+<li class="li"><strong class="ph b">assetProvider:</strong>	Specifies an asset provider to use for loading the texture from system memory.</li>
+
+<li class="li"><strong class="ph b">commandBuffer:</strong>	A command buffer to which the upload operations should be added. Note that the upload will not be guranteed to be complete until the command buffer is submitted to a queue with appropriate synchronisation.</li>
+
+<li class="li"><strong class="ph b">outAssetTexture:</strong>	A pointer to a created pvr::texture.</li>
+
+<li class="li"><strong class="ph b">stagingBufferAllocator:</strong>	A VMA allocator used to allocate memory for the created staging buffer.</li>
+
+<li class="li"><strong class="ph b">device:</strong>	The device to use to create the image and image view.</li>
+
+<li class="li"><strong class="ph b">imageAllocationCreateFlags:</strong>	VMA Allocation creation flags. These flags can be used to control how and where the memory is allocated from. Valid flags include e_DEDICATED_MEMORY_BIT and e_MAPPED_BIT. e_DEDICATED_MEMORY_BIT indicates that the allocation should have its own memory block. e_MAPPED_BIT indicates memory will be persistently mapped respectively.</li>
+
+<li class="li"><strong class="ph b">allowDecompress:</strong>	Specifies whether the texture can be decompressed as part of the image upload.</li>
+
+<li class="li"><strong class="ph b">usageFlags:</strong>	Specifies the usage flags for the image being created.</li>
+
+<li class="li"><strong class="ph b">imageAllocator:</strong>	A VMA allocator used to allocate memory for the created image.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">pvrvk::ImageView</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">loadAndUploadImageAndView</strong>(<span class="ph code_type">pvrvk::Device &amp;</span> device, <span class="ph code_type">const char *</span> fileName, <span class="ph code_type">bool</span> allowDecompress, <span class="ph code_type">pvrvk::SecondaryCommandBuffer &amp;</span> commandBuffer, <span class="ph code_type">IAssetProvider &amp;</span> assetProvider, <span class="ph code_type">pvrvk::ImageUsageFlags</span> usageFlags, <span class="ph code_type">pvrvk::ImageLayout</span> finalLayout, <span class="ph code_type">Texture *</span> outAssetTexture, <span class="ph code_type">vma::Allocator</span> stagingBufferAllocator, <span class="ph code_type">vma::Allocator</span> imageAllocator, <span class="ph code_type">vma::AllocationCreateFlags</span> imageAllocationCreateFlags)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Load and upload image to gpu. The upload command and staging buffers are recorded in the commandbuffer.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">fileName:</strong>	The filename of a source texture from which to take the texture data.</li>
+
+<li class="li"><strong class="ph b">finalLayout:</strong>	The final image layout the image will be transitioned to.</li>
+
+<li class="li"><strong class="ph b">assetProvider:</strong>	Specifies an asset provider to use for loading the texture from system memory.</li>
+
+<li class="li"><strong class="ph b">commandBuffer:</strong>	A secondary command buffer to which the upload operations should be added. Note that the upload will not be guranteed to be complete until the command buffer is submitted to a queue with appropriate synchronisation.</li>
+
+<li class="li"><strong class="ph b">outAssetTexture:</strong>	A pointer to a created pvr::texture.</li>
+
+<li class="li"><strong class="ph b">stagingBufferAllocator:</strong>	A VMA allocator used to allocate memory for the created staging buffer.</li>
+
+<li class="li"><strong class="ph b">device:</strong>	The device to use to create the image and image view.</li>
+
+<li class="li"><strong class="ph b">imageAllocationCreateFlags:</strong>	VMA Allocation creation flags. These flags can be used to control how and where the memory is allocated from. Valid flags include e_DEDICATED_MEMORY_BIT and e_MAPPED_BIT. e_DEDICATED_MEMORY_BIT indicates that the allocation should have its own memory block. e_MAPPED_BIT indicates memory will be persistently mapped respectively.</li>
+
+<li class="li"><strong class="ph b">allowDecompress:</strong>	Specifies whether the texture can be decompressed as part of the image upload.</li>
+
+<li class="li"><strong class="ph b">usageFlags:</strong>	Specifies the usage flags for the image being created.</li>
+
+<li class="li"><strong class="ph b">imageAllocator:</strong>	A VMA allocator used to allocate memory for the created image.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">pvrvk::Image</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">loadAndUploadImage</strong>(<span class="ph code_type">pvrvk::Device &amp;</span> device, <span class="ph code_type">const char *</span> fileName, <span class="ph code_type">bool</span> allowDecompress, <span class="ph code_type">pvrvk::SecondaryCommandBuffer &amp;</span> commandBuffer, <span class="ph code_type">IAssetProvider &amp;</span> assetProvider, <span class="ph code_type">pvrvk::ImageUsageFlags</span> usageFlags, <span class="ph code_type">pvrvk::ImageLayout</span> finalLayout, <span class="ph code_type">Texture *</span> outAssetTexture, <span class="ph code_type">vma::Allocator</span> stagingBufferAllocator, <span class="ph code_type">vma::Allocator</span> imageAllocator, <span class="ph code_type">vma::AllocationCreateFlags</span> imageAllocationCreateFlags)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Load and upload image to gpu. The upload command and staging buffers are recorded in the commandbuffer.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">fileName:</strong>	The filename of a source texture from which to take the texture data.</li>
+
+<li class="li"><strong class="ph b">finalLayout:</strong>	The final image layout the image will be transitioned to.</li>
+
+<li class="li"><strong class="ph b">assetProvider:</strong>	Specifies an asset provider to use for loading the texture from system memory.</li>
+
+<li class="li"><strong class="ph b">commandBuffer:</strong>	A secondary command buffer to which the upload operations should be added. Note that the upload will not be guranteed to be complete until the command buffer is submitted to a queue with appropriate synchronisation.</li>
+
+<li class="li"><strong class="ph b">outAssetTexture:</strong>	A pointer to a created pvr::texture.</li>
+
+<li class="li"><strong class="ph b">stagingBufferAllocator:</strong>	A VMA allocator used to allocate memory for the created staging buffer.</li>
+
+<li class="li"><strong class="ph b">device:</strong>	The device to use to create the image and image view.</li>
+
+<li class="li"><strong class="ph b">imageAllocationCreateFlags:</strong>	VMA Allocation creation flags. These flags can be used to control how and where the memory is allocated from. Valid flags include e_DEDICATED_MEMORY_BIT and e_MAPPED_BIT. e_DEDICATED_MEMORY_BIT indicates that the allocation should have its own memory block. e_MAPPED_BIT indicates memory will be persistently mapped respectively.</li>
+
+<li class="li"><strong class="ph b">allowDecompress:</strong>	Specifies whether the texture can be decompressed as part of the image upload.</li>
+
+<li class="li"><strong class="ph b">usageFlags:</strong>	Specifies the usage flags for the image being created.</li>
+
+<li class="li"><strong class="ph b">imageAllocator:</strong>	A VMA allocator used to allocate memory for the created image.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">updateImage</strong>(<span class="ph code_type">pvrvk::Device &amp;</span> device, <span class="ph code_type">pvrvk::CommandBufferBase</span> transferCommandBuffer, <span class="ph code_type">ImageUpdateInfo *</span> updateInfos, <span class="ph code_type">uint32_t</span> numUpdateInfos, <span class="ph code_type">pvrvk::Format</span> format, <span class="ph code_type">pvrvk::ImageLayout</span> layout, <span class="ph code_type">bool</span> isCubeMap, <span class="ph code_type">pvrvk::Image &amp;</span> image, <span class="ph code_type">vma::Allocator</span> bufferAllocator)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Utility function to update an image's data. This function will record the update of the image in the supplied command buffer but NOT submit the command buffer, hence allowing the user to submit it at his own time. IMPORTANT. Assumes image layout is pvrvk::ImageLayout::e_DST_OPTIMAL IMPORTANT. The cleanup object that is the return value of the function must be kept alive as long until the moment that the relevant command buffer submission is finished. Then it can be destroyed (or the cleanup function be called) to free any relevant resources.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">format:</strong>	The format of the image.</li>
+
+<li class="li"><strong class="ph b">updateInfos:</strong>	This object is a c-style array of areas and the data to upload.</li>
+
+<li class="li"><strong class="ph b">isCubeMap:</strong>	Is the image a cubemap</li>
+
+<li class="li"><strong class="ph b">layout:</strong>	The final image layout for the image being updated.</li>
+
+<li class="li"><strong class="ph b">numUpdateInfos:</strong>	The number of ImageUpdateInfo objects in</li>
+
+<li class="li"><strong class="ph b">transferCommandBuffer:</strong>	The command buffer into which the image update operations will be added.</li>
+
+<li class="li"><strong class="ph b">image:</strong>	The image to update</li>
+
+<li class="li"><strong class="ph b">device:</strong>	The device used to create the image</li>
+
+<li class="li"><strong class="ph b">bufferAllocator:</strong>	A VMA allocator used to allocate memory for the created buffer.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">updateHostVisibleBuffer</strong>(<span class="ph code_type">pvrvk::Buffer &amp;</span> buffer, <span class="ph code_type">const void *</span> data, <span class="ph code_type">VkDeviceSize</span> offset, <span class="ph code_type">VkDeviceSize</span> size, <span class="ph code_type">bool</span> flushMemory)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Utility function to update a buffer's data. This function maps and unmap the buffer only if the buffer is not already mapped.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">flushMemory:</strong>	Boolean flag determining whether to flush the memory prior to the unmap</li>
+
+<li class="li"><strong class="ph b">data:</strong>	The data to use in the update</li>
+
+<li class="li"><strong class="ph b">size:</strong>	The size of the data to be updated</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">updateBufferUsingStagingBuffer</strong>(<span class="ph code_type">pvrvk::Device &amp;</span> device, <span class="ph code_type">pvrvk::Buffer &amp;</span> buffer, <span class="ph code_type">pvrvk::CommandBufferBase</span> uploadCmdBuffer, <span class="ph code_type">const void *</span> data, <span class="ph code_type">VkDeviceSize</span> offset, <span class="ph code_type">VkDeviceSize</span> size, <span class="ph code_type">vma::Allocator</span> stagingBufferAllocator)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Utility function to update a buffer's data via an indirect copy from a temporary staging buffer. Updating memory via the use of a staging buffer is necessary when using memory without e_HOST_VISIBLE_BIT memory property flags meaning the buffer itself cannot be mapped to host memory.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">stagingBufferAllocator:</strong>	A VMA allocator used to allocate memory for the created staging buffer.</li>
+
+<li class="li"><strong class="ph b">buffer:</strong>	The destination buffer.</li>
+
+<li class="li"><strong class="ph b">data:</strong>	The data to use in the update</li>
+
+<li class="li"><strong class="ph b">device:</strong>	The device used to create the staging buffer</li>
+
+<li class="li"><strong class="ph b">uploadCmdBuffer:</strong>	A command buffer into which commands will be recorded for carrying out the buffer copy</li>
+
+<li class="li"><strong class="ph b">size:</strong>	The size of the data to be updated</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">generateTextureAtlas</strong>(<span class="ph code_type">pvrvk::Device &amp;</span> device, <span class="ph code_type">const pvrvk::Image *</span> inputImages, <span class="ph code_type">pvrvk::Rect2Df *</span> outUVs, <span class="ph code_type">uint32_t</span> numImages, <span class="ph code_type">pvrvk::ImageLayout</span> inputImageLayout, <span class="ph code_type">pvrvk::ImageView *</span> outImageView, <span class="ph code_type">TextureHeader *</span> outDescriptor, <span class="ph code_type">pvrvk::CommandBufferBase</span> cmdBuffer, <span class="ph code_type">pvrvk::ImageLayout</span> finalLayout, <span class="ph code_type">vma::Allocator</span> imageAllocator, <span class="ph code_type">vma::AllocationCreateFlags</span> imageAllocationCreateFlags)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Utility function for generating a texture atlas based on a set of images.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">finalLayout:</strong>	The final image layout the image will be transitioned to.</li>
+
+<li class="li"><strong class="ph b">outUVs:</strong>	A pointer to a set of UVs corresponding to the position of the images within the generated texture atlas.</li>
+
+<li class="li"><strong class="ph b">outDescriptor:</strong>	The texture header for the generated texture atlas</li>
+
+<li class="li"><strong class="ph b">numImages:</strong>	The number of textures used for generating the texture atlas.</li>
+
+<li class="li"><strong class="ph b">imageAllocationCreateFlags:</strong>	VMA Allocation creation flags. These flags can be used to control how and where the memory is allocated from. Valid flags include e_DEDICATED_MEMORY_BIT and e_MAPPED_BIT. e_DEDICATED_MEMORY_BIT indicates that the allocation should have its own memory block. e_MAPPED_BIT indicates memory will be persistently mapped respectively.</li>
+
+<li class="li"><strong class="ph b">device:</strong>	The device used to create the texture atlas.</li>
+
+<li class="li"><strong class="ph b">cmdBuffer:</strong>	A previously constructured command buffer which will be used by the utility function for various operations such as creating images.</li>
+
+<li class="li"><strong class="ph b">inputImages:</strong>	A list of input images used to generate the texture atlas from.</li>
+
+<li class="li"><strong class="ph b">inputImageLayout:</strong>	The current layout of the input images. All input images must be in the layout specified.</li>
+
+<li class="li"><strong class="ph b">outImageView:</strong>	The generated texture atlas returned by the function</li>
+
+<li class="li"><strong class="ph b">imageAllocator:</strong>	A VMA allocator used to allocate memory for the created image.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">pvrvk::Instance</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">createInstance</strong>(<span class="ph code_type">const std::string &amp;</span> applicationName, <span class="ph code_type">VulkanVersion</span> apiVersion, <span class="ph code_type">const InstanceExtensions &amp;</span> instanceExtensions, <span class="ph code_type">const InstanceLayers &amp;</span> instanceLayers)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Utility function for creating a Vulkan instance and supported physical devices using the appropriately set parameters.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">applicationName:</strong>	Used for setting the pApplicationName of the pvrvk::ApplicationInfo structure used when calling vkCreateInstance.</li>
+
+<li class="li"><strong class="ph b">instanceExtensions:</strong>	An InstanceExtensions structure which holds a list of instance extensions which will be checked for compatibility with the current Vulkan implementation before setting as the ppEnabledExtensionNames member of the pvrvk::InstanceCreateInfo used when creating the Vulkan instance.</li>
+
+<li class="li"><strong class="ph b">apiVersion:</strong>	A VulkanVersion structure used for setting the apiVersion of the pvrvk::ApplicationInfo structure used when creating the Vulkan instance.</li>
+
+<li class="li"><strong class="ph b">instanceLayers:</strong>	An InstanceLayers structure which holds a list of instance layers which will be checked for compatibility with the current Vulkan implementation before setting as the ppEnabledLayerNames member of the pvrvk::InstanceCreateInfo used when creating the Vulkan instance.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">pvrvk::Device</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">createDeviceAndQueues</strong>(<span class="ph code_type">pvrvk::PhysicalDevice</span> physicalDevice, <span class="ph code_type">const QueuePopulateInfo *</span> queueCreateInfos, <span class="ph code_type">uint32_t</span> numQueueCreateInfos, <span class="ph code_type">QueueAccessInfo *</span> outAccessInfo, <span class="ph code_type">const DeviceExtensions &amp;</span> deviceExtensions)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Create the pvrvk::Device and the queues</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">numQueueCreateInfos:</strong>	The number of QueuePopulateInfo structures provided.</li>
+
+<li class="li"><strong class="ph b">physicalDevice:</strong>	A physical device to use for creating the logical device.</li>
+
+<li class="li"><strong class="ph b">deviceExtensions:</strong>	A DeviceExtensions structure which specifyies a list device extensions to try to enable.</li>
+
+<li class="li"><strong class="ph b">outAccessInfo:</strong>	A pointer to a list of QueueAccessInfo structures specifying the properties for each of the queues retrieved.</li>
+
+<li class="li"><strong class="ph b">queueCreateInfos:</strong>	A pointer to a list of QueuePopulateInfo structures specifying the required properties for each of the queues retrieved.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">pvrvk::Surface</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">createSurface</strong>(<span class="ph code_type">const pvrvk::Instance &amp;</span> instance, <span class="ph code_type">const pvrvk::PhysicalDevice &amp;</span> physicalDevice, <span class="ph code_type">void *</span> window, <span class="ph code_type">void *</span> display, <span class="ph code_type">void *</span> connection)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Creates an abstract vulkan native platform surface.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">instance:</strong>	The instance from which to create the native platform surface.</li>
+
+<li class="li"><strong class="ph b">window:</strong>	A pointer to a NativeWindow used to create the windowing surface.</li>
+
+<li class="li"><strong class="ph b">physicalDevice:</strong>	A physical device from which to create the native platform surface.</li>
+
+<li class="li"><strong class="ph b">connection:</strong>	A pointer to a NativeConnection used to create the windowing surface.</li>
+
+<li class="li"><strong class="ph b">display:</strong>	A pointer to a NativeDisplay used to create the windowing surface.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline bool</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">isImageUsageSupportedBySurface</strong>(<span class="ph code_type">const pvrvk::SurfaceCapabilitiesKHR &amp;</span> surfaceCapabilities, <span class="ph code_type">pvrvk::ImageUsageFlags</span> imageUsage)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Utility function used to determine whether the SurfaceCapabilitiesKHR supportedUsageFlags member contains the specified image usage and therefore can be used in the intended way.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">imageUsage:</strong>	A set of image usage flags which should be checked for support.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">pvrvk::Swapchain</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">createSwapchain</strong>(<span class="ph code_type">const pvrvk::Device &amp;</span> device, <span class="ph code_type">const pvrvk::Surface &amp;</span> surface, <span class="ph code_type">pvr::DisplayAttributes &amp;</span> displayAttributes, <span class="ph code_type">pvrvk::ImageUsageFlags</span> swapchainImageUsageFlags, <span class="ph code_type">const std::vector&amp;lt;pvrvk::Format&gt; &amp;</span> preferredColorFormats)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Create a pvrvk::Swapchain using a pre-initialised pvrvk::Device and pvrvk::Surface.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">device:</strong>	A logical device to use for creating the pvrvk::Swapchain.</li>
+
+<li class="li"><strong class="ph b">swapchainImageUsageFlags:</strong>	Specifies for what the swapchain images can be used for.</li>
+
+<li class="li"><strong class="ph b">surface:</strong>	A pvrvk::Surface from which surface capabilities, supported formats and presentation modes will be derived.</li>
+
+<li class="li"><strong class="ph b">displayAttributes:</strong>	A set of display attributes from which certain properties will be taken such as width, height, vsync mode and preferences for the number of pixels per channel.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">bool</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">isSupportedDepthStencilFormat</strong>(<span class="ph code_type">const pvrvk::Device &amp;</span> device, <span class="ph code_type">pvrvk::Format</span> format)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline static void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">createAttachmentImages</strong>(<span class="ph code_type">ImageContainer &amp;</span> outImages, <span class="ph code_type">const pvrvk::Device &amp;</span> device, <span class="ph code_type">int32_t</span> imageCount, <span class="ph code_type">pvrvk::Format</span> format, <span class="ph code_type">const pvrvk::Extent2D &amp;</span> imageExtent, <span class="ph code_type">const pvrvk::ImageUsageFlags &amp;</span> imageUsageFlags, <span class="ph code_type">pvrvk::SampleCountFlags</span> sampleCount, <span class="ph code_type">const vma::Allocator &amp;</span> imageAllocator, <span class="ph code_type">vma::AllocationCreateFlags</span> imageAllocationCreateFlags, <span class="ph code_type">const std::string &amp;</span> objectName)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Helper function to create a collection of images intended to be used as attachments, e.g. Depth/Stencil images, resolve attachments etc.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">format:</strong>	The format of the attachments. If creating multisample color attachments, ensure format matches the swapchain image formats.</li>
+
+<li class="li"><strong class="ph b">objectName:</strong>	The name to use for each created image. An index will be appended to each according to its swapchain index.</li>
+
+<li class="li"><strong class="ph b">imageAllocator:</strong>	An optional Vulkan Memory Allocator object that will be used to allocate memory for the images.</li>
+
+<li class="li"><strong class="ph b">imageUsageFlags:</strong>	The usage flags for the images.</li>
+
+<li class="li"><strong class="ph b">imageAllocationCreateFlags:</strong>	The vma allocation flags to pass to VMA when constructing the objects.</li>
+
+<li class="li"><strong class="ph b">device:</strong>	The device for which the attachment images will be created</li>
+
+<li class="li"><strong class="ph b">imageCount:</strong>	The swapchain backbuffer image count (double, triple buffering etc).</li>
+
+<li class="li"><strong class="ph b">outImages:</strong>	The container to use for the images. Must support resize() and indexing[]</li>
+
+<li class="li"><strong class="ph b">imageExtent:</strong>	The size of the images. For each framebuffer, ensure imageExtent matches for all attachments.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">OnScreenObjects</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">createSwapchainRenderpassFramebuffers</strong>(<span class="ph code_type">const pvrvk::Device &amp;</span> device, <span class="ph code_type">const pvrvk::Surface &amp;</span> surface, <span class="ph code_type">pvr::DisplayAttributes &amp;</span> displayAttributes, <span class="ph code_type">const CreateSwapchainParameters &amp;</span> params)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment"></span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">params:</strong>	 A parameter object containing various different configurations to request for the created framebuffers etc. See the CreateSwapchainParameters struct documentation</li>
+
+<li class="li"><strong class="ph b">device:</strong>	 The device</li>
+
+<li class="li"><strong class="ph b">surface:</strong>	 The surface for which the swapchain will be created.</li>
+
+<li class="li"><strong class="ph b">displayAttributes:</strong>	 A configuration object for the requested objects. Can be retrieved from pvr::Shell, or just as easily populated manually.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">[ [</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">deprecated</strong>(<span class="ph code_type">"createDepthStencilImageAndViews is deprecated in v5.5 and will be removed. Superseded by createSwapchainRenderpassFramebuffers which supports multisampling " "correctly and " "provides an improved interface.") ] ] void</span> createSwapchainAndDepthStencilImageAndViews(constpvrvk::Device&amp;device,constpvrvk::Surface&amp;surface,pvr::DisplayAttributes&amp;displayAttributes,pvrvk::Swapchain&amp;outSwapchain,Multi&amp;lt;pvrvk::ImageView&gt;&amp;outDepthStencilImages,constpvrvk::ImageUsageFlags&amp;swapchainImageUsageFlags=pvrvk::ImageUsageFlags::e_COLOR_ATTACHMENT_BIT,constpvrvk::ImageUsageFlags&amp;dsImageUsageFlags=pvrvk::ImageUsageFlags::e_DEPTH_STENCIL_ATTACHMENT_BIT|pvrvk::ImageUsageFlags::e_TRANSIENT_ATTACHMENT_BIT,constvma::Allocator&amp;imageAllocator=nullptr,vma::AllocationCreateFlagsdsImageAllocationCreateFlags=vma::AllocationCreateFlags::e_DEDICATED_MEMORY_BIT)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">DEPRECATED. Either use createSwapchainRenderpassFramebuffers, or createSwapchain and createAttachments</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">swapchainImageUsageFlags:</strong>	DEPRECATED</li>
+
+<li class="li"><strong class="ph b">displayAttributes:</strong>	DEPRECATED</li>
+
+<li class="li"><strong class="ph b">dsImageUsageFlags:</strong>	DEPRECATED</li>
+
+<li class="li"><strong class="ph b">device:</strong>	DEPRECATED</li>
+
+<li class="li"><strong class="ph b">dsImageAllocationCreateFlags:</strong>	DEPRECATED</li>
+
+<li class="li"><strong class="ph b">surface:</strong>	DEPRECATED</li>
+
+<li class="li"><strong class="ph b">dsImageAllocator:</strong>	DEPRECATED</li>
+
+<li class="li"><strong class="ph b">outSwapchain:</strong>	DEPRECATED</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">[ [</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">deprecated</strong>(<span class="ph code_type">"createDepthStencilImageAndViews is deprecated. Superseded by createAttachmentImages, which has an improved interface and allows any kind of attachment and " "container.") ] ] inline std::vector&amp;lt;pvrvk::ImageView&gt;</span> createDepthStencilImageAndViews(constpvrvk::Device&amp;device,int32_timageCount,pvrvk::FormatdepthFormat,constpvrvk::Extent2D&amp;imageExtent,constpvrvk::ImageUsageFlags&amp;imageUsageFlags=pvrvk::ImageUsageFlags::e_DEPTH_STENCIL_ATTACHMENT_BIT|pvrvk::ImageUsageFlags::e_TRANSIENT_ATTACHMENT_BIT,pvrvk::SampleCountFlagssampleCount=pvrvk::SampleCountFlags::e_1_BIT,vma::AllocatordsImageAllocator=nullptr,vma::AllocationCreateFlagsdsImageAllocationCreateFlags=vma::AllocationCreateFlags::e_DEDICATED_MEMORY_BIT)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">DEPRECATED. Use createAttachmentImages instead</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">depthFormat:</strong>	DEPRECATED.</li>
+
+<li class="li"><strong class="ph b">dsImageAllocator:</strong>	DEPRECATED.</li>
+
+<li class="li"><strong class="ph b">imageUsageFlags:</strong>	DEPRECATED.</li>
+
+<li class="li"><strong class="ph b">device:</strong>	DEPRECATED.</li>
+
+<li class="li"><strong class="ph b">imageCount:</strong>	DEPRECATED.</li>
+
+<li class="li"><strong class="ph b">dsImageAllocationCreateFlags:</strong>	DEPRECATED.</li>
+
+<li class="li"><strong class="ph b">sampleCount:</strong>	DEPRECATED.</li>
+
+<li class="li"><strong class="ph b">imageExtent:</strong>	DEPRECATED.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">pvrvk::RenderPass</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">createOnScreenRenderPass</strong>(<span class="ph code_type">const pvrvk::Swapchain &amp;</span> swapchain, <span class="ph code_type">bool</span> hasDepthStencil, <span class="ph code_type">const pvrvk::Format</span> depthStencilFormat, <span class="ph code_type">pvrvk::ImageLayout</span> initialSwapchainLayout, <span class="ph code_type">pvrvk::ImageLayout</span> initialDepthStencilLayout, <span class="ph code_type">pvrvk::AttachmentLoadOp</span> colorLoadOp, <span class="ph code_type">pvrvk::AttachmentStoreOp</span> colorStoreOp, <span class="ph code_type">pvrvk::AttachmentLoadOp</span> depthStencilLoadOp, <span class="ph code_type">pvrvk::AttachmentStoreOp</span> depthStencilStoreOp, <span class="ph code_type">pvrvk::SampleCountFlags</span> samples)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment"> Create a renderpass for On-Screen (or other swapchain-based) rendering, based on the information contained in the swapchain. No other objects, (such as framebuffers and attachments) are created.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">colorLoadOp:</strong>	This is the LOAD op for the swapchain images, the operation performed on them when beginning the renderpass. Strongly prefer e_CLEAR if possible as it improves performance considerably compared to e_LOAD. For a multisampled renderpass, this is actually the load op for the Color Attachment, as the Color Resolve attachment is automatically e_DONT_CARE since it is always completely overwritten.</li>
+
+<li class="li"><strong class="ph b">initialDepthStencilLayout:</strong>	This is the layout with which the depth/stencil images, if present, will be in, in the beginning the renderpass.</li>
+
+<li class="li"><strong class="ph b">hasDepthStencil:</strong>	CHANGED API v5.5. Pass "true" if the renderpass will be used for a framebuffer with depth or stencil. To port from the 5.3 code, please pass "true" if the old depthStencilImages parameter would not have been null.</li>
+
+<li class="li"><strong class="ph b">initialSwapchainLayout:</strong>	This is the layout with which the swapchain images will be in, in the beginning the renderpass.</li>
+
+<li class="li"><strong class="ph b">depthStencilLoadOp:</strong>	This is the LOAD op for the depth/stencil images, the operation performed on the depth/stencil images images when beginning the renderpass. Normally has to be (and should be preferred for performance) e_CLEAR For a multisampled renderpass, this is actually the load op for the Depth Attachment, as the Depth Resolve attachment is automatically e_DONT_CARE since it is always completely overwritten.</li>
+
+<li class="li"><strong class="ph b">swapchain:</strong>	A swapchain object. The data of the swapchain object will be used to ensure the renderpass created is compatible with this swapchain object</li>
+
+<li class="li"><strong class="ph b">depthStencilFormat:</strong>	CHANGED API v5.5. If "hasDepthStencil" is true, pass the depth stencil format here. To port from the 5.4 code, retrieve the format from the first member of the old depthStencilImages array</li>
+
+<li class="li"><strong class="ph b">samples:</strong>	The number of samples (if greater then e_1_BIT, the renderpass will be multisampled, so correct color and depth resolve items will be assumed.</li>
+
+<li class="li"><strong class="ph b">colorStoreOp:</strong>	This is the STORE op for the depth/stencil images, the operation performed on the depth/stencil images at the end of the renderpass. Strongly prefer e_DONT_CARE as the depth buffer almost never needs to be preserved between frames, and this can have a strong performance impact as it could even elide memory allocation for it. For a multisampled renderpass, this is actually the store op for the Depth Resolve Attachment, as the Depth attachment is automatically e_DONT_CARE since it cannot be used elsewhere since it is multisampled.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">assignAttachmentIndexes</strong>(<span class="ph code_type">bool</span> hasDepth, <span class="ph code_type">bool</span> isMultisampled, <span class="ph code_type">int &amp;</span> outColorIdx, <span class="ph code_type">int &amp;</span> outDepthIdx, <span class="ph code_type">int &amp;</span> outColorResolveIdx, <span class="ph code_type">int &amp;</span> outDepthResolveIdx)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline ContainerType</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">createOnscreenFramebuffers</strong>(<span class="ph code_type">const pvrvk::Swapchain &amp;</span> swapchain, <span class="ph code_type">const pvrvk::RenderPass &amp;</span> renderPass, <span class="ph code_type">const pvrvk::ImageView *</span> depthStencilImages, <span class="ph code_type">pvrvk::ImageView *</span> colorMultisampledImages, <span class="ph code_type">pvrvk::ImageView *</span> depthStencilMultisampledImages)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment"></span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">colorMultisampledImages:</strong>	If the renderPass is multisampled, MUST contain an array of Multisampling Images to be used as Color attachments. Otherwise, MUST be null</li>
+
+<li class="li"><strong class="ph b">renderPass:</strong>	The renderpass for which the framebuffers will be created. Must of course be compatible with the swapchain images.</li>
+
+<li class="li"><strong class="ph b">depthMultisampledImages:</strong>	If the renderPass is multisampled AND depthStencilImages is not null, MUST contain an array of Multisampling Images to be used as Depth attachments. Otherwise, MUST be null.</li>
+
+<li class="li"><strong class="ph b">swapchain:</strong>	The swapchain for which framebuffers will be created. The swapchain images will used as Color attachments. If multisampled, they will be used as Color Resolve attachments instead.</li>
+
+<li class="li"><strong class="ph b">depthStencilImages:</strong>	If the renderPass requires a depth buffer, MUST contain an array of Images compatible with the RenderPass definition. Will be used as Depth attachments. If multisampled, will be used as Depth Resolve attachments instead.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">[ [</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">deprecated</strong>(<span class="ph code_type">"This function is deprecated in v5.5 and will be removed. It is superseded by " "createSwapchainFramebufferRenderpass, which supports multisampling correctly and has an improved interface.") ] ] inline pvrvk::RenderPass</span> createOnscreenFramebufferAndRenderPass(constpvrvk::Swapchain&amp;swapchain,pvrvk::ImageView*depthStencilImages,Multi&amp;lt;pvrvk::Framebuffer&gt;&amp;outFramebuffers,pvrvk::ImageLayoutinitialSwapchainLayout=pvrvk::ImageLayout::e_UNDEFINED,pvrvk::ImageLayoutinitialDepthStencilLayout=pvrvk::ImageLayout::e_UNDEFINED,pvrvk::AttachmentLoadOpcolorLoadOp=pvrvk::AttachmentLoadOp::e_CLEAR,pvrvk::AttachmentStoreOpcolorStoreOp=pvrvk::AttachmentStoreOp::e_STORE,pvrvk::AttachmentLoadOpdepthStencilLoadOp=pvrvk::AttachmentLoadOp::e_CLEAR,pvrvk::AttachmentStoreOpdepthStencilStoreOp=pvrvk::AttachmentStoreOp::e_DONT_CARE)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">DEPRECATED</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">colorLoadOp:</strong>	DEPRECATED</li>
+
+<li class="li"><strong class="ph b">initialDepthStencilLayout:</strong>	DEPRECATED</li>
+
+<li class="li"><strong class="ph b">swapchain:</strong>	DEPRECATED</li>
+
+<li class="li"><strong class="ph b">initialSwapchainLayout:</strong>	DEPRECATED</li>
+
+<li class="li"><strong class="ph b">outRenderPass:</strong>	DEPRECATED</li>
+
+<li class="li"><strong class="ph b">outFramebuffers:</strong>	DEPRECATED</li>
+
+<li class="li"><strong class="ph b">depthStencilStoreOp:</strong>	DEPRECATED</li>
+
+<li class="li"><strong class="ph b">depthStencilLoadOp:</strong>	DEPRECATED</li>
+
+<li class="li"><strong class="ph b">depthStencilImages:</strong>	DEPRECATED</li>
+
+<li class="li"><strong class="ph b">colorStoreOp:</strong>	DEPRECATED</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">populateViewportStateCreateInfo</strong>(<span class="ph code_type">const pvrvk::Framebuffer &amp;</span> framebuffer, <span class="ph code_type">pvrvk::PipelineViewportStateCreateInfo &amp;</span> outCreateInfo)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Fills out a pvrvk::ViewportStateCreateInfo structure setting parameters for a 'default' viewport and scissor based on the specified frame buffer dimensions.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">framebuffer:</strong>	An input Framebuffer object from which to take dimensions used to initialise a pvrvk::ViewportStateCreateInfo structure.</li>
+
+<li class="li"><strong class="ph b">outCreateInfo:</strong>	A pvrvk::ViewportStateCreateInfo structure which will have its viewport and scissor members set based on the framebuffers dimensions.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">populateInputAssemblyFromMesh</strong>(<span class="ph code_type">const assets::Mesh &amp;</span> mesh, <span class="ph code_type">const VertexBindings *</span> bindingMap, <span class="ph code_type">uint16_t</span> numBindings, <span class="ph code_type">pvrvk::PipelineVertexInputStateCreateInfo &amp;</span> vertexCreateInfo, <span class="ph code_type">pvrvk::PipelineInputAssemblerStateCreateInfo &amp;</span> inputAssemblerCreateInfo, <span class="ph code_type">uint16_t *</span> numOutBuffers)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Fills out input assembly and vertex input state structures using a mesh and a list of corresponding VertexBindings.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">bindingMap:</strong>	A pointer to an array of VertexBindings structures which specify the semantic names and binding indices of any vertex attributes to retrieve.</li>
+
+<li class="li"><strong class="ph b">numBindings:</strong>	Specifies the number of VertexBindings structures in the array pointed to by bindingMap.</li>
+
+<li class="li"><strong class="ph b">numOutBuffers:</strong>	A pointer to an unsigned integer which will set to specify the number of buffers required to create buffers for to use the mesh vertex attributes.</li>
+
+<li class="li"><strong class="ph b">mesh:</strong>	A mesh from which to retrieve vertex attributes, vertex buffer strides and primitive topology information from.</li>
+
+<li class="li"><strong class="ph b">inputAssemblerCreateInfo:</strong>	A pvrvk::InputAssemblerStateCreateInfo structure which will be filled by this utility function.</li>
+
+<li class="li"><strong class="ph b">vertexCreateInfo:</strong>	A pvrvk::PipelineVertexInputStateCreateInfo structure which will be filled by this utility function.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">populateInputAssemblyFromMesh</strong>(<span class="ph code_type">const assets::Mesh &amp;</span> mesh, <span class="ph code_type">const VertexBindings_Name *</span> bindingMap, <span class="ph code_type">uint32_t</span> numBindings, <span class="ph code_type">pvrvk::PipelineVertexInputStateCreateInfo &amp;</span> vertexCreateInfo, <span class="ph code_type">pvrvk::PipelineInputAssemblerStateCreateInfo &amp;</span> inputAssemblerCreateInfo, <span class="ph code_type">uint32_t *</span> numOutBuffers)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Fills out input assembly and vertex input state structures using a mesh and a list of corresponding VertexBindings_Name.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">bindingMap:</strong>	A pointer to an array of VertexBindings_Name structures which specify the semantic and binding names of any vertex attributes to retrieve.</li>
+
+<li class="li"><strong class="ph b">numBindings:</strong>	Specifies the number of VertexBindings structures in the array pointed to by bindingMap.</li>
+
+<li class="li"><strong class="ph b">numOutBuffers:</strong>	A pointer to an unsigned integer which will set to specify the number of buffers required to create buffers for to use the mesh vertex attributes.</li>
+
+<li class="li"><strong class="ph b">mesh:</strong>	A mesh from which to retrieve vertex attributes, vertex buffer strides and primitive topology information from.</li>
+
+<li class="li"><strong class="ph b">inputAssemblerCreateInfo:</strong>	A pvrvk::InputAssemblerStateCreateInfo structure which will be filled by this utility function.</li>
+
+<li class="li"><strong class="ph b">vertexCreateInfo:</strong>	A pvrvk::PipelineVertexInputStateCreateInfo structure which will be filled by this utility function.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">createSingleBuffersFromMesh</strong>(<span class="ph code_type">pvrvk::Device &amp;</span> device, <span class="ph code_type">const assets::Mesh &amp;</span> mesh, <span class="ph code_type">pvrvk::Buffer &amp;</span> outVbo, <span class="ph code_type">pvrvk::Buffer &amp;</span> outIbo, <span class="ph code_type">pvrvk::CommandBuffer &amp;</span> uploadCmdBuffer, <span class="ph code_type">bool &amp;</span> requiresCommandBufferSubmission, <span class="ph code_type">vma::Allocator</span> bufferAllocator, <span class="ph code_type">vma::AllocationCreateFlags</span> vmaAllocationCreateFlags)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Auto generates a single VBO and a single IBO from all the vertex data of a mesh.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">requiresCommandBufferSubmission:</strong>	Indicates whether commands have been recorded into the given command buffer.</li>
+
+<li class="li"><strong class="ph b">vmaAllocationCreateFlags:</strong>	VMA Allocation creation flags. These flags can be used to control how and where the memory is allocated from. Valid flags include e_DEDICATED_MEMORY_BIT and e_MAPPED_BIT. e_DEDICATED_MEMORY_BIT indicates that the allocation should have its own memory block. e_MAPPED_BIT indicates memory will be persistently mapped respectively. The default vma::AllocationCreateFlags::e_MAPPED_BIT is valid even if HOST_VISIBLE is not used - these flags will be ignored in this case.</li>
+
+<li class="li"><strong class="ph b">outVbo:</strong>	The VBO handle where the data will be put.</li>
+
+<li class="li"><strong class="ph b">outIbo:</strong>	The IBO handle where the data will be put. If no face data is present on the mesh, the handle will be null.</li>
+
+<li class="li"><strong class="ph b">device:</strong>	The device where the buffers will be generated on</li>
+
+<li class="li"><strong class="ph b">mesh:</strong>	The mesh whose data will populate the buffers</li>
+
+<li class="li"><strong class="ph b">uploadCmdBuffer:</strong>	A command buffer into which commands may be recorded for uploading mesh data to the created buffers. This command buffer will only be used when memory without e_HOST_VISIBLE_BIT memory property flags was allocated for the vbos or ibos.</li>
+
+<li class="li"><strong class="ph b">bufferAllocator:</strong>	A VMA allocator used to allocate memory for the created buffer.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">createMultipleBuffersFromMesh</strong>(<span class="ph code_type">pvrvk::Device &amp;</span> device, <span class="ph code_type">const assets::Mesh &amp;</span> mesh, <span class="ph code_type">std::vector&amp;lt;pvrvk::Buffer&gt; &amp;</span> outVbos, <span class="ph code_type">pvrvk::Buffer &amp;</span> outIbo, <span class="ph code_type">pvrvk::CommandBuffer &amp;</span> uploadCmdBuffer, <span class="ph code_type">bool &amp;</span> requiresCommandBufferSubmission, <span class="ph code_type">vma::Allocator</span> bufferAllocator, <span class="ph code_type">vma::AllocationCreateFlags</span> vmaAllocationCreateFlags)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Auto generates a set of VBOs and a single IBO from all the vertex data of a mesh.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">requiresCommandBufferSubmission:</strong>	Indicates whether commands have been recorded into the given command buffer.</li>
+
+<li class="li"><strong class="ph b">vmaAllocationCreateFlags:</strong>	VMA Allocation creation flags. These flags can be used to control how and where the memory is allocated from. Valid flags include e_DEDICATED_MEMORY_BIT and e_MAPPED_BIT. e_DEDICATED_MEMORY_BIT indicates that the allocation should have its own memory block. e_MAPPED_BIT indicates memory will be persistently mapped respectively. The default vma::AllocationCreateFlags::e_MAPPED_BIT is valid even if HOST_VISIBLE is not used - these flags will be ignored in this case.</li>
+
+<li class="li"><strong class="ph b">outIbo:</strong>	The IBO handle where the data will be put. No buffer needs to have been created on the handle. If no face data is present on the mesh, the handle will be null.</li>
+
+<li class="li"><strong class="ph b">device:</strong>	The device where the buffers will be generated on</li>
+
+<li class="li"><strong class="ph b">mesh:</strong>	The mesh whose data will populate the buffers</li>
+
+<li class="li"><strong class="ph b">uploadCmdBuffer:</strong>	A command buffer into which commands may be recorded for uploading mesh data to the created buffers. This command buffer will only be used when memory without e_HOST_VISIBLE_BIT memory property flags was allocated for the vbos or ibos.</li>
+
+<li class="li"><strong class="ph b">outVbos:</strong>	Reference to a std::vector of VBO handles where the data will be put. Buffers will be appended at the end.</li>
+
+<li class="li"><strong class="ph b">bufferAllocator:</strong>	A VMA allocator used to allocate memory for the created buffer.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">createSingleBuffersFromMeshes</strong>(<span class="ph code_type">pvrvk::Device &amp;</span> device, <span class="ph code_type">MeshIterator_</span> meshIter, <span class="ph code_type">MeshIterator_</span> meshIterEnd, <span class="ph code_type">VboInsertIterator_</span> outVbos, <span class="ph code_type">IboInsertIterator_</span> outIbos, <span class="ph code_type">pvrvk::CommandBuffer &amp;</span> uploadCmdBuffer, <span class="ph code_type">bool &amp;</span> requiresCommandBufferSubmission, <span class="ph code_type">vma::Allocator</span> bufferAllocator, <span class="ph code_type">vma::AllocationCreateFlags</span> vmaAllocationCreateFlags)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Auto generates a set of VBOs and a set of IBOs from the vertex data of multiple meshes and uses std::inserter provided by the user to insert them to any container.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">meshIter:</strong>	Iterator for a collection of meshes.</li>
+
+<li class="li"><strong class="ph b">requiresCommandBufferSubmission:</strong>	Indicates whether commands have been recorded into the given command buffer.</li>
+
+<li class="li"><strong class="ph b">vmaAllocationCreateFlags:</strong>	VMA Allocation creation flags. These flags can be used to control how and where the memory is allocated from. Valid flags include e_DEDICATED_MEMORY_BIT and e_MAPPED_BIT. e_DEDICATED_MEMORY_BIT indicates that the allocation should have its own memory block. e_MAPPED_BIT indicates memory will be persistently mapped respectively. The default vma::AllocationCreateFlags::e_MAPPED_BIT is valid even if HOST_VISIBLE is not used - these flags will be ignored in this case.</li>
+
+<li class="li"><strong class="ph b">meshIterEnd:</strong>	End Iterator for meshIter.</li>
+
+<li class="li"><strong class="ph b">device:</strong>	The device where the buffers will be generated on</li>
+
+<li class="li"><strong class="ph b">outIbos:</strong>	std::inserter for a collection of pvrvk::Buffer handles. It will be used to insert one IBO per mesh. If face data is not present on the mesh, a null handle will be inserted.</li>
+
+<li class="li"><strong class="ph b">uploadCmdBuffer:</strong>	A command buffer into which commands may be recorded for uploading mesh data to the created buffers. This command buffer will only be used when memory without e_HOST_VISIBLE_BIT memory property flags was allocated for the vbos or ibos.</li>
+
+<li class="li"><strong class="ph b">outVbos:</strong>	std::inserter for a collection of pvrvk::Buffer handles. It will be used to insert one VBO per mesh.</li>
+
+<li class="li"><strong class="ph b">bufferAllocator:</strong>	A VMA allocator used to allocate memory for the created buffer.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">createSingleBuffersFromMeshes</strong>(<span class="ph code_type">pvrvk::Device &amp;</span> device, <span class="ph code_type">MeshIterator_</span> meshIter, <span class="ph code_type">MeshIterator_</span> meshIterEnd, <span class="ph code_type">VboContainer_ &amp;</span> outVbos, <span class="ph code_type">typename VboContainer_::iterator</span> vbos_where, <span class="ph code_type">IboContainer_ &amp;</span> outIbos, <span class="ph code_type">typename IboContainer_::iterator</span> ibos_where, <span class="ph code_type">pvrvk::CommandBuffer &amp;</span> uploadCmdBuffer, <span class="ph code_type">bool &amp;</span> requiresCommandBufferSubmission, <span class="ph code_type">vma::Allocator</span> bufferAllocator, <span class="ph code_type">vma::AllocationCreateFlags</span> vmaAllocationCreateFlags)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Auto generates a set of VBOs and a set of IBOs from the vertex data of multiple meshes and insert them at the specified spot in a user-provided container.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">meshIter:</strong>	Iterator for a collection of meshes.</li>
+
+<li class="li"><strong class="ph b">requiresCommandBufferSubmission:</strong>	Indicates whether commands have been recorded into the given command buffer.</li>
+
+<li class="li"><strong class="ph b">vbos_where:</strong>	Iterator on outVbos - the position where the insertion will happen.</li>
+
+<li class="li"><strong class="ph b">vmaAllocationCreateFlags:</strong>	VMA Allocation creation flags. These flags can be used to control how and where the memory is allocated from. Valid flags include e_DEDICATED_MEMORY_BIT and e_MAPPED_BIT. e_DEDICATED_MEMORY_BIT indicates that the allocation should have its own memory block. e_MAPPED_BIT indicates memory will be persistently mapped respectively. The default vma::AllocationCreateFlags::e_MAPPED_BIT is valid even if HOST_VISIBLE is not used - these flags will be ignored in this case.</li>
+
+<li class="li"><strong class="ph b">uploadCmdBuffer:</strong>	A command buffer into which commands may be recorded for uploading mesh data to the created buffers. This command buffer will only be used when memory without e_HOST_VISIBLE_BIT memory property flags was allocated for the vbos or ibos.</li>
+
+<li class="li"><strong class="ph b">meshIterEnd:</strong>	End Iterator for meshIter.</li>
+
+<li class="li"><strong class="ph b">device:</strong>	The device where the buffers will be generated on</li>
+
+<li class="li"><strong class="ph b">outIbos:</strong>	Collection of pvrvk::Buffer handles. It will be used to insert one IBO per mesh. If face data is not present on the mesh, a null handle will be inserted.</li>
+
+<li class="li"><strong class="ph b">ibos_where:</strong>	Iterator on outIbos - the position where the insertion will happen.</li>
+
+<li class="li"><strong class="ph b">outVbos:</strong>	Collection of pvrvk::Buffer handles. It will be used to insert one VBO per mesh.</li>
+
+<li class="li"><strong class="ph b">bufferAllocator:</strong>	A VMA allocator used to allocate memory for the created buffer.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">createSingleBuffersFromModel</strong>(<span class="ph code_type">pvrvk::Device &amp;</span> device, <span class="ph code_type">const assets::Model &amp;</span> model, <span class="ph code_type">VboInsertIterator_</span> vbos, <span class="ph code_type">IboInsertIterator_</span> ibos, <span class="ph code_type">pvrvk::CommandBuffer &amp;</span> uploadCmdBuffer, <span class="ph code_type">bool &amp;</span> requiresCommandBufferSubmission, <span class="ph code_type">vma::Allocator</span> bufferAllocator, <span class="ph code_type">vma::AllocationCreateFlags</span> vmaAllocationCreateFlags)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Auto generates a set of VBOs and a set of IBOs from the vertex data of the meshes of a model and inserts them into containers provided by the user using std::inserters.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">requiresCommandBufferSubmission:</strong>	Indicates whether commands have been recorded into the given command buffer.</li>
+
+<li class="li"><strong class="ph b">vmaAllocationCreateFlags:</strong>	VMA Allocation creation flags. These flags can be used to control how and where the memory is allocated from. Valid flags include e_DEDICATED_MEMORY_BIT and e_MAPPED_BIT. e_DEDICATED_MEMORY_BIT indicates that the allocation should have its own memory block. e_MAPPED_BIT indicates memory will be persistently mapped respectively. The default vma::AllocationCreateFlags::e_MAPPED_BIT is valid even if HOST_VISIBLE is not used - these flags will be ignored in this case.</li>
+
+<li class="li"><strong class="ph b">ibos:</strong>	An insert iterator to an std::pvrvk::Buffer container for the IBOs. Ibos will be inserted using this iterator.</li>
+
+<li class="li"><strong class="ph b">model:</strong>	The model whose meshes will be used to generate the Buffers</li>
+
+<li class="li"><strong class="ph b">device:</strong>	The device device where the buffers will be generated on</li>
+
+<li class="li"><strong class="ph b">vbos:</strong>	An insert iterator to a std::pvrvk::Buffer container for the VBOs. Vbos will be inserted using this iterator.</li>
+
+<li class="li"><strong class="ph b">uploadCmdBuffer:</strong>	A command buffer into which commands may be recorded for uploading mesh data to the created buffers. This command buffer will only be used when memory without e_HOST_VISIBLE_BIT memory property flags was allocated for the vbos or ibos.</li>
+
+<li class="li"><strong class="ph b">bufferAllocator:</strong>	A VMA allocator used to allocate memory for the created buffer.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">inline void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">appendSingleBuffersFromModel</strong>(<span class="ph code_type">pvrvk::Device &amp;</span> device, <span class="ph code_type">const assets::Model &amp;</span> model, <span class="ph code_type">VboContainer_ &amp;</span> vbos, <span class="ph code_type">IboContainer_ &amp;</span> ibos, <span class="ph code_type">pvrvk::CommandBuffer &amp;</span> uploadCmdBuffer, <span class="ph code_type">bool &amp;</span> requiresCommandBufferSubmission, <span class="ph code_type">vma::Allocator</span> bufferAllocator, <span class="ph code_type">vma::AllocationCreateFlags</span> vmaAllocationCreateFlags)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Auto generates a set of VBOs and a set of IBOs from the vertex data of the meshes of a model and appends them at the end of containers provided by the user.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">requiresCommandBufferSubmission:</strong>	Indicates whether commands have been recorded into the given command buffer.</li>
+
+<li class="li"><strong class="ph b">vmaAllocationCreateFlags:</strong>	VMA Allocation creation flags. These flags can be used to control how and where the memory is allocated from. Valid flags include e_DEDICATED_MEMORY_BIT and e_MAPPED_BIT. e_DEDICATED_MEMORY_BIT indicates that the allocation should have its own memory block. e_MAPPED_BIT indicates memory will be persistently mapped respectively. The default vma::AllocationCreateFlags::e_MAPPED_BIT is valid even if HOST_VISIBLE is not used - these flags will be ignored in this case.</li>
+
+<li class="li"><strong class="ph b">ibos:</strong>	A container of pvrvk::Buffer handles. The IBOs will be inserted at the end of this container.</li>
+
+<li class="li"><strong class="ph b">model:</strong>	The model whose meshes will be used to generate the Buffers</li>
+
+<li class="li"><strong class="ph b">device:</strong>	The device device where the buffers will be generated on</li>
+
+<li class="li"><strong class="ph b">vbos:</strong>	A container of pvrvk::Buffer handles. The VBOs will be inserted at the end of this container.</li>
+
+<li class="li"><strong class="ph b">uploadCmdBuffer:</strong>	A command buffer into which commands may be recorded for uploading mesh data to the created buffers. This command buffer will only be used when memory without e_HOST_VISIBLE_BIT memory property flags was allocated for the vbos or ibos.</li>
+
+<li class="li"><strong class="ph b">bufferAllocator:</strong>	A VMA allocator used to allocate memory for the created buffer.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">create3dPlaneMesh</strong>(<span class="ph code_type">uint32_t</span> width, <span class="ph code_type">uint32_t</span> depth, <span class="ph code_type">bool</span> generateTexCoords, <span class="ph code_type">bool</span> generateNormalCoords, <span class="ph code_type">assets::Mesh &amp;</span> outMesh)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Creates a 3d plane mesh based on the width and depth specified. Texture coordinates and normal coordinates can also optionally be generated based on the generateTexCoords and generateNormalCoords flags respectively. The generated mesh will be returned as a pvr::assets::Mesh.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">depth:</strong>	The depth of the plane to generate.</li>
+
+<li class="li"><strong class="ph b">generateNormalCoords:</strong>	Specifies whether to generate normal coordinates for the plane.</li>
+
+<li class="li"><strong class="ph b">outMesh:</strong>	The generated pvr::assets::Mesh.</li>
+
+<li class="li"><strong class="ph b">width:</strong>	The width of the plane to generate.</li>
+
+<li class="li"><strong class="ph b">generateTexCoords:</strong>	Specifies whether to generate texture coordinates for the plane.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">std::vector&amp;lt;unsigned char&gt;</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">captureImageRegion</strong>(<span class="ph code_type">pvrvk::Queue &amp;</span> queue, <span class="ph code_type">pvrvk::CommandPool &amp;</span> commandPool, <span class="ph code_type">pvrvk::Image &amp;</span> image, <span class="ph code_type">pvrvk::Offset3D</span> srcOffset, <span class="ph code_type">pvrvk::Extent3D</span> srcExtent)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Retrieves and returns the contents of a particular image region. Note that the image must have been created with the pvrvk::ImageUsageFlags::e_TRANSFER_SRC_BIT set.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">srcExtent:</strong>	The extent of the region to capture.</li>
+
+<li class="li"><strong class="ph b">imageAllocator:</strong>	A VMA allocator used to allocate memory for the created image.</li>
+
+<li class="li"><strong class="ph b">commandPool:</strong>	A command pool from which to allocate a temporary command buffer to carry out the transfer operations.</li>
+
+<li class="li"><strong class="ph b">queue:</strong>	A queue to submit the generated command buffer to. This queue must be compatible with the command pool provided.</li>
+
+<li class="li"><strong class="ph b">destinationImageFormat:</strong>	The format to use for the saved image. Valid format conversions will be applied using vkCmdBlitImage.</li>
+
+<li class="li"><strong class="ph b">image:</strong>	The image from which the specified region will be retrieved.</li>
+
+<li class="li"><strong class="ph b">imageFinalLayout:</strong>	The final layout of the image to which a transition will be made.</li>
+
+<li class="li"><strong class="ph b">bufferAllocator:</strong>	A VMA allocator used to allocate memory for the created the buffer used as the target of an imageToBufferCopy.</li>
+
+<li class="li"><strong class="ph b">imageInitialLayout:</strong>	The initial layout of the image from which a transition will be made to pvrvk::ImageLayout::e_TRANSFER_SRC_OPTIMAL.</li>
+
+<li class="li"><strong class="ph b">srcOffset:</strong>	The offset into the specified image from which to begin the region to capture.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">void</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">saveImage</strong>(<span class="ph code_type">pvrvk::Queue &amp;</span> queue, <span class="ph code_type">pvrvk::CommandPool &amp;</span> commandPool, <span class="ph code_type">pvrvk::Image &amp;</span> image, <span class="ph code_type">const pvrvk::ImageLayout</span> imageInitialLayout, <span class="ph code_type">const pvrvk::ImageLayout</span> imageFinalLayout, <span class="ph code_type">const std::string &amp;</span> filename, <span class="ph code_type">vma::Allocator</span> bufferAllocator, <span class="ph code_type">vma::Allocator</span> imageAllocator, <span class="ph code_type">const uint32_t</span> screenshotScale)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Saves the input image as a TGA file with the filename specified. Note that the image must have been created with the pvrvk::ImageUsageFlags::e_TRANSFER_SRC_BIT set.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">filename:</strong>	The filename to use for the saved TGA image.</li>
+
+<li class="li"><strong class="ph b">screenshotScale:</strong>	A scaling factor to use for increasing the size of the saved screenshot.</li>
+
+<li class="li"><strong class="ph b">commandPool:</strong>	A command pool from which to allocate a temporary command buffer to carry out the transfer operations.</li>
+
+<li class="li"><strong class="ph b">queue:</strong>	A queue to submit the generated command buffer to. This queue must be compatible with the command pool provided.</li>
+
+<li class="li"><strong class="ph b">image:</strong>	The image to save as a TGA file.</li>
+
+<li class="li"><strong class="ph b">imageFinalLayout:</strong>	The final layout of the image to which a transition will be made.</li>
+
+<li class="li"><strong class="ph b">imageAllocator:</strong>	A VMA allocator used to allocate memory for the created image.</li>
+
+<li class="li"><strong class="ph b">imageInitialLayout:</strong>	The initial layout of the image from which a transition will be made to pvrvk::ImageLayout::e_TRANSFER_SRC_OPTIMAL.</li>
+
+<li class="li"><strong class="ph b">bufferAllocator:</strong>	A VMA allocator used to allocate memory for the created the buffer used as the target of an imageToBufferCopy.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperVk.h_Reference__entry__48">bool</td>
+<td class="entry" headers="HelperVk.h_Reference__entry__49"><p class="p"><strong class="ph b">takeScreenshot</strong>(<span class="ph code_type">pvrvk::Queue &amp;</span> queue, <span class="ph code_type">pvrvk::CommandPool &amp;</span> commandPool, <span class="ph code_type">pvrvk::Swapchain &amp;</span> swapchain, <span class="ph code_type">const uint32_t</span> swapIndex, <span class="ph code_type">const std::string &amp;</span> screenshotFileName, <span class="ph code_type">vma::Allocator</span> bufferAllocator, <span class="ph code_type">vma::Allocator</span> imageAllocator, <span class="ph code_type">const uint32_t</span> screenshotScale)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Saves a particular swapchain image corresponding to the swapchain image at index swapIndex for the swapchain.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">swapchain:</strong>	The swapchain from which a particular image will be saved.</li>
+
+<li class="li"><strong class="ph b">swapIndex:</strong>	The swapchain image at index swapIndex will be saved as a TGA file.</li>
+
+<li class="li"><strong class="ph b">commandPool:</strong>	A command pool from which to allocate a temporary command buffer to carry out the transfer operations.</li>
+
+<li class="li"><strong class="ph b">queue:</strong>	A queue to submit the generated command buffer to. This queue must be compatible with the command pool provided.</li>
+
+<li class="li"><strong class="ph b">screenshotFileName:</strong>	The filename to use for the saved TGA image.</li>
+
+<li class="li"><strong class="ph b">imageAllocator:</strong>	A VMA allocator used to allocate memory for the created image.</li>
+
+<li class="li"><strong class="ph b">screenshotScale:</strong>	A scaling factor to use for increasing the size of the saved screenshot.</li>
+
+<li class="li"><strong class="ph b">bufferAllocator:</strong>	A VMA allocator used to allocate memory for the created the buffer used as the target of an imageToBufferCopy.</li>
+
+</ul>
+</td>
+	</tr>
+			</tbody></table>
+</section>
+</div>
+ <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../files/Vulkan_dir.html">Vulkan</a></div></div></nav></article></main></div></div></div></div></div><div id="custom_nav" class="text-right hidden-sm hidden-xs hidden-print"><div class="well well-lg" style="margin-left:20px; margin-right:20px;"><footer role="contentinfo"><script src="../../ditasearch.js"></script><footer xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="site-info  wh_footer" itemtype="https://schema.org/WPFooter" itemscope="" whc:version="21.0">
+
+  <div class="inside-site-info grid-container grid-parent footer-container  mx-auto">
+    <div class="copyright-bar">
+      <div class="elementor elementor-70634">
+        <div class="elementor-inner">
+          <div class="elementor-section-wrap">
+            <section class="elementor-element elementor-element-a126d69 elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a126d69" data-element_type="section">
+              <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-row">
+                  <div class="elementor-element elementor-element-c1f5a3a elementor-column elementor-col-50 elementor-top-column" data-id="c1f5a3a" data-element_type="column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-9f26949 elementor-widget elementor-widget-image" data-id="9f26949" data-element_type="widget" data-widget_type="image.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-image"> <a href="https://www.imgtec.com/"><img src="https://www.imgtec.com/wp-content/uploads/2019/10/Imagination_Logo_Secondary_Blk.svg" title="Imagination_Logo" alt="Imagination_Logo" class="lazyloading"></img></a></div>
+                          </div>
+                        </div>
+                        <div class="elementor-element elementor-element-4eb6939 elementor-widget elementor-widget-text-editor">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-text-editor elementor-clearfix">
+                              <div class="footer-copyright">© Imagination Technologies Limited. All rights reserved.<br></br><a href="https://www.imgtec.com/privacy-policy/">Privacy Policy</a> – <a href="https://www.imgtec.com/terms-and-conditions/">Terms &amp; Conditions</a> – <a href="https://www.imgtec.com/trademarks/">Trademarks</a> – <a href="https://www.imgtec.com/cookies/">Cookies</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="elementor-element elementor-element-01bb773 elementor-column elementor-col-50 elementor-top-column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-1c0e19c elementor-shape-square elementor-widget elementor-widget-social-icons" data-id="1c0e19c" data-element_type="widget" data-widget_type="social-icons.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-social-icons-wrapper"> <a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin" href="https://www.linkedin.com/company/imagination-technologies/" target="_blank"> <span class="elementor-screen-only">Linkedin</span> <i class="fab fa-linkedin"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-twitter" href="https://twitter.com/imaginationtech" target="_blank"> <span class="elementor-screen-only">Twitter</span> <i class="fab fa-twitter"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook" href="https://www.facebook.com/imgtec/" target="_blank"> <span class="elementor-screen-only">Facebook</span> <i class="fab fa-facebook"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-youtube" href="https://www.youtube.com/user/Imgtec/" target="_blank"> <span class="elementor-screen-only">Youtube</span> <i class="fab fa-youtube"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram" href="https://www.instagram.com/imaginationtech/" target="_blank"> <span class="elementor-screen-only">Instagram</span> <i class="fab fa-instagram"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-google-plus" href="https://plus.google.com/+ImaginationTechnologiesLtd" target="_blank"> <span class="elementor-screen-only">Google-plus</span> <i class="fab fa-google-plus"></i> </a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer></footer></div></div></div></body></html>

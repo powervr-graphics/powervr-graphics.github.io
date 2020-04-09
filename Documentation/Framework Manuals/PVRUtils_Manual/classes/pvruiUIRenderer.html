@@ -1,0 +1,749 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2020"><meta name="DC.rights.owner" content="(C) Copyright 2020"><meta name="DC.type" content="concept"><meta name="description" content="Manages and render the sprites."><meta name="DC.relation" scheme="URI" content="../classes/pvrui.html"><meta name="DC.relation" scheme="URI" content="../classes/pvruiUIRendererUboMaterial.html"><meta name="DC.relation" scheme="URI" content="../classes/pvruiUIRendererProgramData.html"><meta name="DC.relation" scheme="URI" content="../classes/pvruiUIRendererUboMvp.html"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="pvruiUIRenderer"><link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/devcss.css"><title>pvr::ui::UIRenderer</title><head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="icon" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png" sizes="32x32" type="image/png">
+<link rel="shorcut icon" type="image/png" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png">
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head></head><body id="pvruiUIRenderer"><header role="banner"><div class="ditasearch" data-searchroot="../"></div><header xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="navbar navbar-default wh_header" whc:version="21.0">
+    <div class="container-fluid  header-area">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="html5_logo_and_publication_title">
+		<a href="https://docs.imgtec.com" class="wh_logo hidden-xs">
+				<img src="https://www.imgtec.com/wp-content/uploads/2018/11/Imagination-logo-white.png"></img></a>
+		<p>Developer Documentation</p>
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <whc:webhelp_logo class="hidden-xs"></whc:webhelp_logo>
+                </div>
+                
+
+            </div>
+
+
+	
+
+		<whc:webhelp_search_input></whc:webhelp_search_input>
+        </div>
+
+		<!--<whc:webhelp_publication_title/>-->
+    </div>
+	</header></header><div class="container-fluid" id="content"><div class="row"><div class="wh_content_area doc_title"><h1>
+PVRUtils Manual
+
+</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../PVRUtils_intro.html">Introduction to PVRUtils</a><ul><li><a href="../PVRUtils_files.html">PVRUtils Files</a></li><li><a href="../PVRUtils_classes.html">PVRUtils Classes</a><ul><li><a href="../classes/clutils.html">clutils</a></li><li><a href="../classes/pvr.html">pvr</a><ul><li><a href="../classes/pvrui.html">pvr::ui</a><ul><li><a href="../classes/pvruiimpl.html">pvr::ui::impl</a></li><li class="active"><a href="../classes/pvruiUIRenderer.html">pvr::ui::UIRenderer</a><ul><li><a href="../classes/pvruiUIRendererUboMaterial.html">pvr::ui::UIRenderer::UboMaterial</a></li><li><a href="../classes/pvruiUIRendererProgramData.html">pvr::ui::UIRenderer::ProgramData</a></li><li><a href="../classes/pvruiUIRendererUboMvp.html">pvr::ui::UIRenderer::UboMvp</a></li></ul></li><li><a href="../classes/pvruiUIRendererInstanceMaxError.html">pvr::ui::UIRendererInstanceMaxError</a></li><li><a href="../classes/pvruiGLStateTracker.html">pvr::ui::GLStateTracker</a></li><li><a href="../classes/pvruiUIRendererError.html">pvr::ui::UIRendererError</a></li><li><a href="../classes/pvruiGLState.html">pvr::ui::GLState</a></li></ul></li><li><a href="../classes/pvrutils.html">pvr::utils</a></li><li><a href="../classes/pvrplatform.html">pvr::platform</a></li><li><a href="../classes/pvrMulti.html">pvr::Multi</a></li><li><a href="../classes/pvrGlError.html">pvr::GlError</a></li><li><a href="../classes/pvrGlExtensionNotSupportedError.html">pvr::GlExtensionNotSupportedError</a></li></ul></li></ul></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1">pvr::ui::UIRenderer</h1>
+
+<div class="body conbody"><p class="shortdesc">Manages and render the sprites.</p>
+
+<p class="p">Manages and render the sprites.</p>
+<p class="p">Found in file: <a class="xref" href="../files/OpenGLES/UIRendererGles.html" title="Contains implementations of functions for the classes in UIRendererGles.h">UIRendererGles.h</a></p>
+<table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Classes</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvruiUIRenderer__entry__1">Declaration Type</th><th class="entry" id="pvruiUIRenderer__entry__2">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__1">struct</td>
+<td class="entry" headers="pvruiUIRenderer__entry__2"><a class="xref" href="pvruiUIRendererProgramData.html" title="Information used for uploading required info to the shaders (matrices, attributes etc).">pvr::ui::UIRenderer::ProgramData</a></td>
+	</tr>
+			</tbody></table>
+<table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Public Methods</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvruiUIRenderer__entry__5">Return Type</th><th class="entry" id="pvruiUIRenderer__entry__6">Name and Description</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">const GLuint &amp;</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">getFontIbo</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Retrieves the Font index buffer.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">const GLuint &amp;</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">getImageVbo</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Retrieves the Image vertex buffer.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">UIRenderer</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Constructor. Does not produce a ready-to-use object, use the init function before use.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">UIRenderer</strong>(<span class="ph code_type">UIRenderer &amp; &amp;</span> rhs)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Move Constructor. Does not produce a ready-to-use object, use the init function before use.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">rhs:</strong>	Another UIRenderer to initiialise from.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">UIRenderer &amp;</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">operator=</strong>(<span class="ph code_type">UIRenderer &amp; &amp;</span> rhs)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Assignment Operator overload. Does not produce a ready-to-use object, use the init function before use.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">rhs:</strong>	Another UIRenderer to initiialise from.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">UIRenderer &amp;</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">operator=</strong>(<span class="ph code_type">const UIRenderer &amp;</span> rhs)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">UIRenderer</strong>(<span class="ph code_type">UIRenderer &amp;</span> rhs)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">UIRenderer</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Destructor for the UIRenderer which will release all resources currently in use.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">const ProgramData &amp;</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">getProgramData</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Returns the ProgramData used by this UIRenderer.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">init</strong>(<span class="ph code_type">uint32_t</span> width, <span class="ph code_type">uint32_t</span> height, <span class="ph code_type">bool</span> fullscreen, <span class="ph code_type">bool</span> isFrameBufferSRGB)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Initialize the UIRenderer with window dimensions. MUST BE called exactly once before use, after a valid graphics context is available (usually, during initView).</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">fullscreen:</strong>	Indicates whether the rendering is occuring in full screen mode.</li>
+
+<li class="li"><strong class="ph b">width:</strong>	The width of the screen used for rendering.</li>
+
+<li class="li"><strong class="ph b">height:</strong>	The height of the screen used for rendering</li>
+
+<li class="li"><strong class="ph b">isFrameBufferSRGB:</strong>	Indicates whether the rendering in to SRGB</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">release</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Release the UIRenderer and its resources. Must be called once after we are done with the UIRenderer. (usually, during releaseView).</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">TextElement</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">createTextElement</strong>(<span class="ph code_type">const std::string &amp;</span> text)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Create a Text sprite. Initialize with std::string. Uses default font.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">text:</strong>	std::string object that this Text object will be initialized with</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">TextElement</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">createTextElement</strong>(<span class="ph code_type">const std::string &amp;</span> text, <span class="ph code_type">const Font &amp;</span> font)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Create Text sprite from std::string and pvr::ui::Font.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">text:</strong>	String object that this Text object will be initialized with</li>
+
+<li class="li"><strong class="ph b">font:</strong>	The font that the text will be using. The font must belong to the same UIrenderer object.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">TextElement</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">createTextElement</strong>(<span class="ph code_type">const Font &amp;</span> font)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Create a Text Element sprite from a pvr::ui::Font. A default string will be used</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">font:</strong>	The font that the text element will be using. The font must belong to the same UIrenderer object.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">TextElement</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">createTextElement</strong>(<span class="ph code_type">const std::wstring &amp;</span> text)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Create Text sprite from wide std::string. Uses the Default Font.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">text:</strong>	Wide std::string that this Text object will be initialized with. Will use the Default Font.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">TextElement</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">createTextElement</strong>(<span class="ph code_type">const std::wstring &amp;</span> text, <span class="ph code_type">const Font &amp;</span> font)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Create Text sprite from wide std::wstring and a pvr::ui::Font.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">text:</strong>	text to be rendered.</li>
+
+<li class="li"><strong class="ph b">font:</strong>	The font that the text will be using. The font must belong to the same UIrenderer object.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">Text</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">createText</strong>(<span class="ph code_type">const TextElement &amp;</span> textElement)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Create a Text sprite from a TextElement.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">textElement:</strong>	text element to initialise a Text framework object from.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">Text</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">createText</strong>(<span class="ph code_type">const std::string &amp;</span> text)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Create a Text sprite. Initialize with std::string. Uses default font.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">text:</strong>	std::string object that this Text object will be initialized with</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">Text</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">createText</strong>(<span class="ph code_type">const std::string &amp;</span> text, <span class="ph code_type">const Font &amp;</span> font)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Create Text sprite from std::string.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">text:</strong>	String object that this Text object will be initialized with</li>
+
+<li class="li"><strong class="ph b">font:</strong>	The font that the text will be using. The font must belong to the same UIrenderer object.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">Text</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">createText</strong>(<span class="ph code_type">const Font &amp;</span> font)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Create a Text sprite from a pvr::ui::Font. Uses a default text string</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">font:</strong>	The font that the text will be using. The font must belong to the same UIrenderer object.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">Text</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">createText</strong>(<span class="ph code_type">const std::wstring &amp;</span> text)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Create Text sprite from wide std::wstring. Uses the Default Font.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">text:</strong>	Wide std::string that this Text object will be initialized with. Will use the Default Font.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">Text</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">createText</strong>(<span class="ph code_type">const std::wstring &amp;</span> text, <span class="ph code_type">const Font &amp;</span> font)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Create Text sprite from wide std::string.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">text:</strong>	text to be rendered.</li>
+
+<li class="li"><strong class="ph b">font:</strong>	The font that the text will be using. The font must belong to the same UIrenderer object.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">float</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">getRenderingDimX</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the X dimension of the rectangle the UIRenderer is rendering to in order to scale UI elements. Initial value is the Screen Width.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">float</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">getRenderingDimY</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the Y dimension of the rectangle the UIRenderer is rendering to in order to scale UI elements. Initial value is the Screen Height.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">glm::vec2</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">getRenderingDim</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the rendering dimensions of the rectangle the UIRenderer is rendering to in order to scale UI elements. Initial value is the Screen Width and Screen Height.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">Rectanglei</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">getViewport</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the viewport of the rectangle the UIRenderer is rendering to. Initial value is the Screen Width and Screen Height.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">setRenderingDimX</strong>(<span class="ph code_type">float</span> value)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set the X dimension of the rectangle the UIRenderer is rendering to in order to scale UI elements. Initial value is the Screen Width.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">value:</strong>	The new rendering width.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">setRenderingDimY</strong>(<span class="ph code_type">float</span> value)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set the Y dimension of the rectangle the UIRenderer is rendering to in order to scale UI elements. Initial value is the Screen Height.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">value:</strong>	The new rendering height.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">Font</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">createFont</strong>(<span class="ph code_type">GLuint</span> texture, <span class="ph code_type">const TextureHeader &amp;</span> textureHeader, <span class="ph code_type">GLuint</span> sampler)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Create a font from a given texture (use PVRTexTool to create the font texture from a font file).</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">textureHeader:</strong>	A pvr::TextureHeader of the same object. Necessary for the texture metadata.</li>
+
+<li class="li"><strong class="ph b">texture:</strong>	An OpenGL ES texture handle. Must be 2D. It will be used directly.</li>
+
+<li class="li"><strong class="ph b">sampler:</strong>	(Optional) A specific sampler object to use for this font.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">Font</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">createFont</strong>(<span class="ph code_type">const Texture &amp;</span> texture, <span class="ph code_type">GLuint</span> sampler)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Create a font from a given texture (use PVRTexTool to create the font texture from a font file).</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">texture:</strong>	An OpenGL ES texture handle. Must be 2D. It will be used directly.</li>
+
+<li class="li"><strong class="ph b">sampler:</strong>	(Optional) A specific sampler object to use for this font.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">Image</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">createImage</strong>(<span class="ph code_type">GLuint</span> texture, <span class="ph code_type">int32_t</span> width, <span class="ph code_type">int32_t</span> height, <span class="ph code_type">bool</span> useMipmaps, <span class="ph code_type">GLuint</span> sampler)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Create a pvr::ui::Image from an API texture. NOTE: Creating new image requires re-recording the commandbuffer</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">useMipmaps:</strong>	Specifies whether the image should use mip maps</li>
+
+<li class="li"><strong class="ph b">width:</strong>	The width of the texture.</li>
+
+<li class="li"><strong class="ph b">texture:</strong>	An OpenGL ES texture handle. Must be 2D. It will be used directly.</li>
+
+<li class="li"><strong class="ph b">sampler:</strong>	(Optional) A specific sampler object to use for this font.</li>
+
+<li class="li"><strong class="ph b">height:</strong>	The height of the texture.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">Image</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">createImage</strong>(<span class="ph code_type">const Texture &amp;</span> texture, <span class="ph code_type">GLuint</span> sampler)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Create a pvr::ui::Image from a Texture asset. NOTE: Creating new image requires re-recording the commandbuffer</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">texture:</strong>	A pvr::Texture object. Will be internally used to create an api::Texture2D to use.</li>
+
+<li class="li"><strong class="ph b">sampler:</strong>	(Optional) A specific sampler object to use for this font.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">Image</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">createImageFromAtlas</strong>(<span class="ph code_type">GLuint</span> texture, <span class="ph code_type">const Rectanglef &amp;</span> uv, <span class="ph code_type">uint32_t</span> width, <span class="ph code_type">uint32_t</span> height, <span class="ph code_type">bool</span> useMipmaps, <span class="ph code_type">GLuint</span> sampler)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Create a pvr::ui::Image from a Texture Atlas asset. NOTE: Creating new image requires re-recording the commandbuffer</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">uv:</strong>	Texture UV coordinate</li>
+
+<li class="li"><strong class="ph b">width:</strong>	 Texture Atlas width.</li>
+
+<li class="li"><strong class="ph b">texture:</strong>	An OpenGL ES texture handle. Must be 2D. It will be used directly.</li>
+
+<li class="li"><strong class="ph b">useMipmaps:</strong>	Specifies whether the image should use mip maps</li>
+
+<li class="li"><strong class="ph b">sampler:</strong>	A sampler used for this Image (Optional)</li>
+
+<li class="li"><strong class="ph b">height:</strong>	 Texture Atlas height</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">MatrixGroup</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">createMatrixGroup</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Create a pvr::ui::MatrixGroup.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">PixelGroup</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">createPixelGroup</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Create a pvr::ui::PixelGroup.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">beginRendering</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Begins direct rendering for the UIRenderer.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">beginRendering</strong>(<span class="ph code_type">const GLStateTracker &amp;</span> stateTracker)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Begins direct rendering for the UIRenderer. A GLStateTracker structure is used for more efficient state tracking management. Note that for correct state tracking and management this structure must have been fully managed and updated by the caller. If certain states and their tracker are not updated appropriately then certain states may not be tracked or set correctly resulting in incorrect rendering.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">stateTracker:</strong>	A GLStateTracker structure storing the current OpenGL ES state as well as indicating which states have been changed since the last time UIRenderer was used.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">endRendering</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Ends rendering and resets the state</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">endRendering</strong>(<span class="ph code_type">GLStateTracker &amp;</span> stateTracker)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Ends rendering and fills out the GLStateTracker structure which can be used by the caller for more efficient state tracking management.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">stateTracker:</strong>	A GLStateTracker structure which stores the current OpenGL ES state as well as indicating which states have been changed since the last time the caller called beginRendering. The Caller has the responsibility of restoring and managing the OpenGL ES state.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">const Font &amp;</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">getDefaultFont</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">The UIRenderer has a built-in default pvr::ui::Font that can always be used when the UIRenderer is initialized. Used throughout the PowerVR SDK Examples.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">Font &amp;</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">getDefaultFont</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">The UIRenderer has a built-in default pvr::ui::Font that can always be used when the UIRenderer is initialized. Used throughout the PowerVR SDK Examples.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">const Image &amp;</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">getSdkLogo</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">The UIRenderer has a built-in pvr::ui::Image of the PowerVR SDK logo that can always be used when the UIRenderer is initialized. Used throughout the PowerVR SDK Examples.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">Image &amp;</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">getSdkLogo</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">The UIRenderer has a built-in pvr::ui::Image of the PowerVR SDK logo that can always be used when the UIRenderer is initialized. Used throughout the PowerVR SDK Examples.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">const Text &amp;</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">getDefaultTitle</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">The UIRenderer has a built-in pvr::ui::Text positioned and sized for used as a title (top-left, large) for convenience. Set the text of this sprite and use it as normal. Can be resized and repositioned at will. Used throughout the PowerVR SDK Examples.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">Text &amp;</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">getDefaultTitle</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">The UIRenderer has a built-in pvr::ui::Text positioned and sized for used as a title (top-left, large) for convenience. Set the text of this sprite and use it as normal. Can be resized and repositioned at will. Used throughout the PowerVR SDK Examples.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">const Text &amp;</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">getDefaultDescription</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">The UIRenderer has a built-in pvr::ui::Text positioned and sized for use as a description (subtitle) (top-left, below DefaultTitle, small)) for convenience. Set the text of this sprite and use it as normal. Can be resized and repositioned at will. Used throughout the PowerVR SDK Examples.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">Text &amp;</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">getDefaultDescription</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">The UIRenderer has a built-in pvr::ui::Text positioned and sized for used as a description (subtitle (top-left, below DefaultTitle, small)) for convenience. Set the text of this sprite and use it as normal. Can be resized and repositioned at will. Used throughout the PowerVR SDK Examples.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">const Text &amp;</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">getDefaultControls</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">The UIRenderer has a built-in pvr::ui::Text positioned and sized for use as a controls display (bottom-left, small text) for convenience. You can set the text of this sprite and use it as normal. Can be resized and repositioned at will. Used throughout the PowerVR SDK Examples.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">Text &amp;</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">getDefaultControls</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">The UIRenderer has a built-in pvr::ui::Text positioned and sized for use as a controls display (bottom-left, small text) for convenience. You can set the text of this sprite and use it as normal. Can be resized and repositioned at will. Used throughout the PowerVR SDK Examples.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">glm::mat4</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">getProjection</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Returns the projection matrix</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">rotateScreen90degreeCCW</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">return the default DescriptorSetLayout. ONLY to be used by the Sprites</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">rotateScreen90degreeCW</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">return the default DescriptorSetLayout. ONLY to be used by the Sprites</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">glm::mat4</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">getScreenRotation</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Return the default DescriptorSetLayout. ONLY to be used by the Sprites</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">GLStateTracker</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">getStateTracker</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Return the state tracker used by the ui renderer for tracking changed states</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__5">Api</td>
+<td class="entry" headers="pvruiUIRenderer__entry__6"><p class="p"><strong class="ph b">getApiVersion</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Return the OpenGL ES version assumed by the UIRenderer (the bound context version from when it was created)</span></em></p>
+</td>
+	</tr>
+			</tbody></table>
+<table class="table"><caption><span class="table--title-label">Table 3. </span><span class="title">Private Methods</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvruiUIRenderer__entry__117">Return Type</th><th class="entry" id="pvruiUIRenderer__entry__118">Name and Description</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__117">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__118"><p class="p"><strong class="ph b">storeCurrentGlState</strong>()</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__117">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__118"><p class="p"><strong class="ph b">setUiState</strong>()</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__117">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__118"><p class="p"><strong class="ph b">checkStateChanged</strong>()</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__117">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__118"><p class="p"><strong class="ph b">checkStateChanged</strong>(<span class="ph code_type">const GLStateTracker &amp;</span> stateTracker)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__117">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__118"><p class="p"><strong class="ph b">restoreState</strong>()</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__117">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__118"><p class="p"><strong class="ph b">updateResourceOwnership</strong>()</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__117">uint64_t</td>
+<td class="entry" headers="pvruiUIRenderer__entry__118"><p class="p"><strong class="ph b">generateGroupId</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">return the default DescriptorSetLayout. ONLY to be used by the Sprites</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__117">GLuint</td>
+<td class="entry" headers="pvruiUIRenderer__entry__118"><p class="p"><strong class="ph b">getSamplerBilinear</strong>()</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__117">GLuint</td>
+<td class="entry" headers="pvruiUIRenderer__entry__118"><p class="p"><strong class="ph b">getSamplerTrilinear</strong>()</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__117">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__118"><p class="p"><strong class="ph b">init_CreateDefaultFont</strong>()</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__117">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__118"><p class="p"><strong class="ph b">init_CreateDefaultSampler</strong>()</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__117">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__118"><p class="p"><strong class="ph b">init_CreateDefaultSdkLogo</strong>()</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__117">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__118"><p class="p"><strong class="ph b">init_CreateDefaultTitle</strong>()</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__117">void</td>
+<td class="entry" headers="pvruiUIRenderer__entry__118"><p class="p"><strong class="ph b">init_CreateShaders</strong>(<span class="ph code_type">bool</span> framebufferSRGB)</p>
+</td>
+	</tr>
+			</tbody></table>
+<table class="table"><caption><span class="table--title-label">Table 4. </span><span class="title">Private Properties</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvruiUIRenderer__entry__147">Type</th><th class="entry" id="pvruiUIRenderer__entry__148">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__147">std::vector&amp;lt;SpriteWeakRef&gt;</td>
+<td class="entry" headers="pvruiUIRenderer__entry__148">_sprites</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__147">std::vector&amp;lt;TextElementWeakRef&gt;</td>
+<td class="entry" headers="pvruiUIRenderer__entry__148">_textElements</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__147">std::vector&amp;lt;FontWeakRef&gt;</td>
+<td class="entry" headers="pvruiUIRenderer__entry__148">_fonts</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__147">ProgramData</td>
+<td class="entry" headers="pvruiUIRenderer__entry__148">_programData</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__147">Font</td>
+<td class="entry" headers="pvruiUIRenderer__entry__148">_defaultFont</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__147">Image</td>
+<td class="entry" headers="pvruiUIRenderer__entry__148">_sdkLogo</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__147">Text</td>
+<td class="entry" headers="pvruiUIRenderer__entry__148">_defaultTitle</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__147">Text</td>
+<td class="entry" headers="pvruiUIRenderer__entry__148">_defaultDescription</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__147">Text</td>
+<td class="entry" headers="pvruiUIRenderer__entry__148">_defaultControls</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__147">GLuint</td>
+<td class="entry" headers="pvruiUIRenderer__entry__148">_program</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__147">GLuint</td>
+<td class="entry" headers="pvruiUIRenderer__entry__148">_samplerBilinear</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__147">GLuint</td>
+<td class="entry" headers="pvruiUIRenderer__entry__148">_samplerTrilinear</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__147">GLuint</td>
+<td class="entry" headers="pvruiUIRenderer__entry__148">_fontIbo</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__147">bool</td>
+<td class="entry" headers="pvruiUIRenderer__entry__148">_fontIboCreated</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__147">GLuint</td>
+<td class="entry" headers="pvruiUIRenderer__entry__148">_imageVbo</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__147">bool</td>
+<td class="entry" headers="pvruiUIRenderer__entry__148">_imageVboCreated</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__147">glm::vec2</td>
+<td class="entry" headers="pvruiUIRenderer__entry__148">_screenDimensions</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__147">float</td>
+<td class="entry" headers="pvruiUIRenderer__entry__148">_screenRotation</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__147">uint64_t</td>
+<td class="entry" headers="pvruiUIRenderer__entry__148">_groupId</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__147">GLStateTracker</td>
+<td class="entry" headers="pvruiUIRenderer__entry__148">_uiStateTracker</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__147">GLState</td>
+<td class="entry" headers="pvruiUIRenderer__entry__148">_currentState</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvruiUIRenderer__entry__147">Api</td>
+<td class="entry" headers="pvruiUIRenderer__entry__148">_api</td>
+	</tr>
+			</tbody></table>
+</div>
+
+<nav role="navigation" class="related-links"><ul class="ullinks"><li class="link ulchildlink"><strong><a href="../classes/pvruiUIRendererUboMaterial.html">pvr::ui::UIRenderer::UboMaterial</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvruiUIRendererProgramData.html">pvr::ui::UIRenderer::ProgramData</a></strong><br>Information used for uploading required info to the shaders (matrices, attributes etc).</li><li class="link ulchildlink"><strong><a href="../classes/pvruiUIRendererUboMvp.html">pvr::ui::UIRenderer::UboMvp</a></strong><br></li></ul><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../classes/pvrui.html">pvr::ui</a></div></div></nav></article></main></div></div></div></div></div><div id="custom_nav" class="text-right hidden-sm hidden-xs hidden-print"><div class="well well-lg" style="margin-left:20px; margin-right:20px;"><footer role="contentinfo"><script src="../ditasearch.js"></script><footer xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="site-info  wh_footer" itemtype="https://schema.org/WPFooter" itemscope="" whc:version="21.0">
+
+  <div class="inside-site-info grid-container grid-parent footer-container  mx-auto">
+    <div class="copyright-bar">
+      <div class="elementor elementor-70634">
+        <div class="elementor-inner">
+          <div class="elementor-section-wrap">
+            <section class="elementor-element elementor-element-a126d69 elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a126d69" data-element_type="section">
+              <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-row">
+                  <div class="elementor-element elementor-element-c1f5a3a elementor-column elementor-col-50 elementor-top-column" data-id="c1f5a3a" data-element_type="column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-9f26949 elementor-widget elementor-widget-image" data-id="9f26949" data-element_type="widget" data-widget_type="image.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-image"> <a href="https://www.imgtec.com/"><img src="https://www.imgtec.com/wp-content/uploads/2019/10/Imagination_Logo_Secondary_Blk.svg" title="Imagination_Logo" alt="Imagination_Logo" class="lazyloading"></img></a></div>
+                          </div>
+                        </div>
+                        <div class="elementor-element elementor-element-4eb6939 elementor-widget elementor-widget-text-editor">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-text-editor elementor-clearfix">
+                              <div class="footer-copyright">© Imagination Technologies Limited. All rights reserved.<br></br><a href="https://www.imgtec.com/privacy-policy/">Privacy Policy</a> – <a href="https://www.imgtec.com/terms-and-conditions/">Terms &amp; Conditions</a> – <a href="https://www.imgtec.com/trademarks/">Trademarks</a> – <a href="https://www.imgtec.com/cookies/">Cookies</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="elementor-element elementor-element-01bb773 elementor-column elementor-col-50 elementor-top-column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-1c0e19c elementor-shape-square elementor-widget elementor-widget-social-icons" data-id="1c0e19c" data-element_type="widget" data-widget_type="social-icons.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-social-icons-wrapper"> <a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin" href="https://www.linkedin.com/company/imagination-technologies/" target="_blank"> <span class="elementor-screen-only">Linkedin</span> <i class="fab fa-linkedin"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-twitter" href="https://twitter.com/imaginationtech" target="_blank"> <span class="elementor-screen-only">Twitter</span> <i class="fab fa-twitter"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook" href="https://www.facebook.com/imgtec/" target="_blank"> <span class="elementor-screen-only">Facebook</span> <i class="fab fa-facebook"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-youtube" href="https://www.youtube.com/user/Imgtec/" target="_blank"> <span class="elementor-screen-only">Youtube</span> <i class="fab fa-youtube"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram" href="https://www.instagram.com/imaginationtech/" target="_blank"> <span class="elementor-screen-only">Instagram</span> <i class="fab fa-instagram"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-google-plus" href="https://plus.google.com/+ImaginationTechnologiesLtd" target="_blank"> <span class="elementor-screen-only">Google-plus</span> <i class="fab fa-google-plus"></i> </a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer></footer></div></div></div></body></html>

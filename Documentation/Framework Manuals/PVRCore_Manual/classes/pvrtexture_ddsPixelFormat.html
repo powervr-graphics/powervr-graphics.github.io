@@ -1,0 +1,129 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2020"><meta name="DC.rights.owner" content="(C) Copyright 2020"><meta name="DC.type" content="concept"><meta name="description" content="Pixel format used in DDS files."><meta name="DC.relation" scheme="URI" content="../classes/pvrtexture_dds.html"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="pvrtexture_ddsPixelFormat"><link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/devcss.css"><title>pvr::texture_dds::PixelFormat</title><head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="icon" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png" sizes="32x32" type="image/png">
+<link rel="shorcut icon" type="image/png" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png">
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head></head><body id="pvrtexture_ddsPixelFormat"><header role="banner"><div class="ditasearch" data-searchroot="../"></div><header xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="navbar navbar-default wh_header" whc:version="21.0">
+    <div class="container-fluid  header-area">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="html5_logo_and_publication_title">
+		<a href="https://docs.imgtec.com" class="wh_logo hidden-xs">
+				<img src="https://www.imgtec.com/wp-content/uploads/2018/11/Imagination-logo-white.png"></img></a>
+		<p>Developer Documentation</p>
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <whc:webhelp_logo class="hidden-xs"></whc:webhelp_logo>
+                </div>
+                
+
+            </div>
+
+
+	
+
+		<whc:webhelp_search_input></whc:webhelp_search_input>
+        </div>
+
+		<!--<whc:webhelp_publication_title/>-->
+    </div>
+	</header></header><div class="container-fluid" id="content"><div class="row"><div class="wh_content_area doc_title"><h1>
+PVRCore Manual
+
+</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../PVRCore_intro.html">Introduction to PVRCore</a><ul><li><a href="../PVRCore_files.html">PVRCore Files</a></li><li><a href="../PVRCore_classes.html">PVRCore Classes</a><ul><li><a href="../classes/pvr.html">pvr</a><ul><li><a href="../classes/pvrtexture_xnb.html">pvr::texture_xnb</a></li><li><a href="../classes/pvrRefCountEntryIntrusive.html">pvr::RefCountEntryIntrusive</a></li><li><a href="../classes/pvreffect.html">pvr::effect</a></li><li><a href="../classes/pvrIsRefCountedType.html">pvr::IsRefCountedType</a></li><li><a href="../classes/pvrasync.html">pvr::async</a></li><li><a href="../classes/pvrplatform.html">pvr::platform</a></li><li><a href="../classes/pvrtexture_bmp.html">pvr::texture_bmp</a></li><li><a href="../classes/pvrPixelFormat.html">pvr::PixelFormat</a></li><li><a href="../classes/pvrtexture_dds.html">pvr::texture_dds</a><ul><li><a href="../classes/pvrtexture_ddsFileHeaderDX10.html">pvr::texture_dds::FileHeaderDX10</a></li><li class="active"><a href="../classes/pvrtexture_ddsPixelFormat.html">pvr::texture_dds::PixelFormat</a></li><li><a href="../classes/pvrtexture_ddsMakeFourCC.html">pvr::texture_dds::MakeFourCC</a></li><li><a href="../classes/pvrtexture_ddsFileHeader.html">pvr::texture_dds::FileHeader</a></li></ul></li><li><a href="../classes/pvrutils.html">pvr::utils</a></li><li><a href="../classes/pvrtexture_tga.html">pvr::texture_tga</a></li><li><a href="../classes/pvrtexture_ktx.html">pvr::texture_ktx</a></li><li><a href="../classes/pvrFreeValue.html">pvr::FreeValue</a></li><li><a href="../classes/pvrGpuDatatypesHelper.html">pvr::GpuDatatypesHelper</a></li><li><a href="../classes/pvrmath.html">pvr::math</a></li><li><a href="../classes/pvrtexture_legacy.html">pvr::texture_legacy</a></li><li><a href="../classes/pvrIAssetProvider.html">pvr::IAssetProvider</a></li><li><a href="../classes/pvrPvrError.html">pvr::PvrError</a></li><li><a href="../classes/pvrCameraAnimationController.html">pvr::CameraAnimationController</a></li><li><a href="../classes/pvrhashstdbasic_stringT.html">pvr::hash&lt;std::basic_string&lt;T&gt;&gt;</a></li><li><a href="../classes/pvrRefcountEntryHolder.html">pvr::RefcountEntryHolder</a></li><li><a href="../classes/pvrStencilState.html">pvr::StencilState</a></li><li><a href="../classes/pvrTypedMem.html">pvr::TypedMem</a></li><li><a href="../classes/pvrGenericExtent3D.html">pvr::GenericExtent3D</a></li><li><a href="../classes/pvrTPSOrbitCamera.html">pvr::TPSOrbitCamera</a></li><li><a href="../classes/pvrGeneratePixelType1.html">pvr::GeneratePixelType1</a></li><li><a href="../classes/pvrBlendingConfig.html">pvr::BlendingConfig</a></li><li><a href="../classes/pvrGenericOffset3D.html">pvr::GenericOffset3D</a></li><li><a href="../classes/pvrImageSubresourceLayers.html">pvr::ImageSubresourceLayers</a></li><li><a href="../classes/pvrImageLayersSize.html">pvr::ImageLayersSize</a></li><li><a href="../classes/pvrDisplayAttributes.html">pvr::DisplayAttributes</a></li><li><a href="../classes/pvrGeneratePixelType2.html">pvr::GeneratePixelType2</a></li><li><a href="../classes/pvrImageResolveRange.html">pvr::ImageResolveRange</a></li><li><a href="../classes/pvrIndexOutOfRange.html">pvr::IndexOutOfRange</a></li><li><a href="../classes/pvrLockedQueue.html">pvr::LockedQueue</a></li><li><a href="../classes/pvrImageSubresourceRange.html">pvr::ImageSubresourceRange</a></li><li><a href="../classes/pvrFPSCamera.html">pvr::FPSCamera</a></li><li><a href="../classes/pvrDereferenceable.html">pvr::Dereferenceable</a></li><li><a href="../classes/pvrFileNotFoundError.html">pvr::FileNotFoundError</a></li><li><a href="../classes/pvrUnsupportedOperationError.html">pvr::UnsupportedOperationError</a></li><li><a href="../classes/pvrEmbeddedRefCount.html">pvr::EmbeddedRefCount</a></li><li><a href="../classes/pvrRefCountedWeakReference.html">pvr::RefCountedWeakReference</a></li><li><a href="../classes/pvrIRefCountEntry.html">pvr::IRefCountEntry</a></li><li><a href="../classes/pvrGenericOffset2D.html">pvr::GenericOffset2D</a></li><li><a href="../classes/pvrFileStream.html">pvr::FileStream</a></li><li><a href="../classes/pvrInvalidOperationError.html">pvr::InvalidOperationError</a></li><li><a href="../classes/pvrGeneratePixelType4.html">pvr::GeneratePixelType4</a></li><li><a href="../classes/pvrEmbeddedRefCountedResource.html">pvr::EmbeddedRefCountedResource</a></li><li><a href="../classes/pvrVertexAttributeLayout.html">pvr::VertexAttributeLayout</a></li><li><a href="../classes/pvrRefCountEntry.html">pvr::RefCountEntry</a></li><li><a href="../classes/pvrTexture.html">pvr::Texture</a></li><li><a href="../classes/pvrRectangle.html">pvr::Rectangle</a></li><li><a href="../classes/pvrGenericExtent2D.html">pvr::GenericExtent2D</a></li><li><a href="../classes/pvrImageRange.html">pvr::ImageRange</a></li><li><a href="../classes/pvrImageSubresource.html">pvr::ImageSubresource</a></li><li><a href="../classes/pvrhasher_helperhashvalue,first.html">pvr::hasher_helper&lt;hashvalue,first&gt;</a></li><li><a href="../classes/pvrCameraKeyFrame.html">pvr::CameraKeyFrame</a></li><li><a href="../classes/pvrhashuint64_t.html">pvr::hash&lt;uint64_t&gt;</a></li><li><a href="../classes/pvrImageStorageFormat.html">pvr::ImageStorageFormat</a></li><li><a href="../classes/pvrCompressedImageDataFormat.html">pvr::CompressedImageDataFormat</a></li><li><a href="../classes/pvrRectangle3D.html">pvr::Rectangle3D</a></li><li><a href="../classes/pvrFilePath.html">pvr::FilePath</a></li><li><a href="../classes/pvrTime.html">pvr::Time</a></li><li><a href="../classes/pvrBufferStream.html">pvr::BufferStream</a></li><li><a href="../classes/pvrhashuint32_t.html">pvr::hash&lt;uint32_t&gt;</a></li><li><a href="../classes/pvrStream.html">pvr::Stream</a></li><li><a href="../classes/pvrTextureHeader.html">pvr::TextureHeader</a></li><li><a href="../classes/pvrTextureDecompressionError.html">pvr::TextureDecompressionError</a></li><li><a href="../classes/pvrWindowsResourceStream.html">pvr::WindowsResourceStream</a></li><li><a href="../classes/pvrFileEOFError.html">pvr::FileEOFError</a></li><li><a href="../classes/pvrTPSCamera.html">pvr::TPSCamera</a></li><li><a href="../classes/pvrPaletteExpander.html">pvr::PaletteExpander</a></li><li><a href="../classes/pvrhasher_helperhashvalue,first,dummy.html">pvr::hasher_helper&lt;hashvalue,first,dummy&gt;</a></li><li><a href="../classes/pvrInvalidDataError.html">pvr::InvalidDataError</a></li><li><a href="../classes/pvrInvalidArgumentError.html">pvr::InvalidArgumentError</a></li><li><a href="../classes/pvrhashint32_t.html">pvr::hash&lt;int32_t&gt;</a></li><li><a href="../classes/pvrHashCompileTime.html">pvr::HashCompileTime</a></li><li><a href="../classes/pvrhash.html">pvr::hash</a></li><li><a href="../classes/pvrRefCountedResource.html">pvr::RefCountedResource</a></li><li><a href="../classes/pvrFreeValueView.html">pvr::FreeValueView</a></li><li><a href="../classes/pvrhashint64_t.html">pvr::hash&lt;int64_t&gt;</a></li><li><a href="../classes/pvrTextureMetaData.html">pvr::TextureMetaData</a></li><li><a href="../classes/pvrRefcountEntryHoldervoid.html">pvr::RefcountEntryHolder&lt;void&gt;</a></li><li><a href="../classes/pvrGeneratePixelType3.html">pvr::GeneratePixelType3</a></li><li><a href="../classes/pvrPlane3d.html">pvr::Plane3d</a></li><li><a href="../classes/pvrStridedBuffer.html">pvr::StridedBuffer</a></li><li><a href="../classes/pvrSwizzleChannels.html">pvr::SwizzleChannels</a></li><li><a href="../classes/pvrFileIOError.html">pvr::FileIOError</a></li><li><a href="../classes/pvrOperationFailedError.html">pvr::OperationFailedError</a></li><li><a href="../classes/pvrStringHash.html">pvr::StringHash</a></li><li><a href="../classes/pvrImageStorageFormatCompressed.html">pvr::ImageStorageFormatCompressed</a></li><li><a href="../classes/pvrImageDataFormat.html">pvr::ImageDataFormat</a></li></ul></li><li><a href="../classes/Logger.html">Logger</a></li><li><a href="../classes/ILogger.html">ILogger</a></li></ul></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1">pvr::texture_dds::PixelFormat</h1>
+
+<div class="body conbody"><p class="shortdesc">Pixel format used in DDS files.</p>
+
+<p class="p">Pixel format used in DDS files.</p>
+<p class="p">Found in file: <a class="xref" href="../files/textureio/FileDefinesDDS.html" title="Defines used internally by the DDS reader.">FileDefinesDDS.h</a></p>
+<table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Public Properties</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvrtexture_ddsPixelFormat__entry__1">Type</th><th class="entry" id="pvrtexture_ddsPixelFormat__entry__2">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvrtexture_ddsPixelFormat__entry__1">uint32_t</td>
+<td class="entry" headers="pvrtexture_ddsPixelFormat__entry__2">size</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrtexture_ddsPixelFormat__entry__1">uint32_t</td>
+<td class="entry" headers="pvrtexture_ddsPixelFormat__entry__2">flags</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrtexture_ddsPixelFormat__entry__1">uint32_t</td>
+<td class="entry" headers="pvrtexture_ddsPixelFormat__entry__2">fourCC</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrtexture_ddsPixelFormat__entry__1">uint32_t</td>
+<td class="entry" headers="pvrtexture_ddsPixelFormat__entry__2">bitCount</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrtexture_ddsPixelFormat__entry__1">uint32_t</td>
+<td class="entry" headers="pvrtexture_ddsPixelFormat__entry__2">redMask</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrtexture_ddsPixelFormat__entry__1">uint32_t</td>
+<td class="entry" headers="pvrtexture_ddsPixelFormat__entry__2">greenMask</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrtexture_ddsPixelFormat__entry__1">uint32_t</td>
+<td class="entry" headers="pvrtexture_ddsPixelFormat__entry__2">blueMask</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrtexture_ddsPixelFormat__entry__1">uint32_t</td>
+<td class="entry" headers="pvrtexture_ddsPixelFormat__entry__2">alphaMask</td>
+	</tr>
+			</tbody></table>
+</div>
+
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../classes/pvrtexture_dds.html">pvr::texture_dds</a></div></div></nav></article></main></div></div></div></div></div><div id="custom_nav" class="text-right hidden-sm hidden-xs hidden-print"><div class="well well-lg" style="margin-left:20px; margin-right:20px;"><footer role="contentinfo"><script src="../ditasearch.js"></script><footer xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="site-info  wh_footer" itemtype="https://schema.org/WPFooter" itemscope="" whc:version="21.0">
+
+  <div class="inside-site-info grid-container grid-parent footer-container  mx-auto">
+    <div class="copyright-bar">
+      <div class="elementor elementor-70634">
+        <div class="elementor-inner">
+          <div class="elementor-section-wrap">
+            <section class="elementor-element elementor-element-a126d69 elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a126d69" data-element_type="section">
+              <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-row">
+                  <div class="elementor-element elementor-element-c1f5a3a elementor-column elementor-col-50 elementor-top-column" data-id="c1f5a3a" data-element_type="column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-9f26949 elementor-widget elementor-widget-image" data-id="9f26949" data-element_type="widget" data-widget_type="image.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-image"> <a href="https://www.imgtec.com/"><img src="https://www.imgtec.com/wp-content/uploads/2019/10/Imagination_Logo_Secondary_Blk.svg" title="Imagination_Logo" alt="Imagination_Logo" class="lazyloading"></img></a></div>
+                          </div>
+                        </div>
+                        <div class="elementor-element elementor-element-4eb6939 elementor-widget elementor-widget-text-editor">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-text-editor elementor-clearfix">
+                              <div class="footer-copyright">© Imagination Technologies Limited. All rights reserved.<br></br><a href="https://www.imgtec.com/privacy-policy/">Privacy Policy</a> – <a href="https://www.imgtec.com/terms-and-conditions/">Terms &amp; Conditions</a> – <a href="https://www.imgtec.com/trademarks/">Trademarks</a> – <a href="https://www.imgtec.com/cookies/">Cookies</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="elementor-element elementor-element-01bb773 elementor-column elementor-col-50 elementor-top-column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-1c0e19c elementor-shape-square elementor-widget elementor-widget-social-icons" data-id="1c0e19c" data-element_type="widget" data-widget_type="social-icons.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-social-icons-wrapper"> <a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin" href="https://www.linkedin.com/company/imagination-technologies/" target="_blank"> <span class="elementor-screen-only">Linkedin</span> <i class="fab fa-linkedin"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-twitter" href="https://twitter.com/imaginationtech" target="_blank"> <span class="elementor-screen-only">Twitter</span> <i class="fab fa-twitter"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook" href="https://www.facebook.com/imgtec/" target="_blank"> <span class="elementor-screen-only">Facebook</span> <i class="fab fa-facebook"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-youtube" href="https://www.youtube.com/user/Imgtec/" target="_blank"> <span class="elementor-screen-only">Youtube</span> <i class="fab fa-youtube"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram" href="https://www.instagram.com/imaginationtech/" target="_blank"> <span class="elementor-screen-only">Instagram</span> <i class="fab fa-instagram"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-google-plus" href="https://plus.google.com/+ImaginationTechnologiesLtd" target="_blank"> <span class="elementor-screen-only">Google-plus</span> <i class="fab fa-google-plus"></i> </a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer></footer></div></div></div></body></html>

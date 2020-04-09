@@ -1,0 +1,470 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2020"><meta name="DC.rights.owner" content="(C) Copyright 2020"><meta name="DC.type" content="concept"><meta name="DC.relation" scheme="URI" content="../PVRCore_classes.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrtexture_xnb.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrRefCountEntryIntrusive.html"><meta name="DC.relation" scheme="URI" content="../classes/pvreffect.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrIsRefCountedType.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrasync.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrplatform.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrtexture_bmp.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrPixelFormat.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrtexture_dds.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutils.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrtexture_tga.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrtexture_ktx.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrFreeValue.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrGpuDatatypesHelper.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrmath.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrtexture_legacy.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrIAssetProvider.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrPvrError.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrCameraAnimationController.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrhashstdbasic_stringT.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrRefcountEntryHolder.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrStencilState.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrTypedMem.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrGenericExtent3D.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrTPSOrbitCamera.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrGeneratePixelType1.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrBlendingConfig.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrGenericOffset3D.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrImageSubresourceLayers.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrImageLayersSize.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrDisplayAttributes.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrGeneratePixelType2.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrImageResolveRange.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrIndexOutOfRange.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrLockedQueue.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrImageSubresourceRange.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrFPSCamera.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrDereferenceable.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrFileNotFoundError.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrUnsupportedOperationError.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrEmbeddedRefCount.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrRefCountedWeakReference.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrIRefCountEntry.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrGenericOffset2D.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrFileStream.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrInvalidOperationError.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrGeneratePixelType4.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrEmbeddedRefCountedResource.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrVertexAttributeLayout.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrRefCountEntry.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrTexture.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrRectangle.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrGenericExtent2D.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrImageRange.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrImageSubresource.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrhasher_helperhashvalue,first.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrCameraKeyFrame.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrhashuint64_t.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrImageStorageFormat.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrCompressedImageDataFormat.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrRectangle3D.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrFilePath.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrTime.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrBufferStream.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrhashuint32_t.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrStream.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrTextureHeader.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrTextureDecompressionError.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrWindowsResourceStream.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrFileEOFError.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrTPSCamera.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrPaletteExpander.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrhasher_helperhashvalue,first,dummy.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrInvalidDataError.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrInvalidArgumentError.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrhashint32_t.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrHashCompileTime.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrhash.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrRefCountedResource.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrFreeValueView.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrhashint64_t.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrTextureMetaData.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrRefcountEntryHoldervoid.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrGeneratePixelType3.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrPlane3d.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrStridedBuffer.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrSwizzleChannels.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrFileIOError.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrOperationFailedError.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrStringHash.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrImageStorageFormatCompressed.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrImageDataFormat.html"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="pvr"><link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/devcss.css"><title>pvr</title><head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="icon" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png" sizes="32x32" type="image/png">
+<link rel="shorcut icon" type="image/png" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png">
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head></head><body id="pvr"><header role="banner"><div class="ditasearch" data-searchroot="../"></div><header xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="navbar navbar-default wh_header" whc:version="21.0">
+    <div class="container-fluid  header-area">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="html5_logo_and_publication_title">
+		<a href="https://docs.imgtec.com" class="wh_logo hidden-xs">
+				<img src="https://www.imgtec.com/wp-content/uploads/2018/11/Imagination-logo-white.png"></img></a>
+		<p>Developer Documentation</p>
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <whc:webhelp_logo class="hidden-xs"></whc:webhelp_logo>
+                </div>
+                
+
+            </div>
+
+
+	
+
+		<whc:webhelp_search_input></whc:webhelp_search_input>
+        </div>
+
+		<!--<whc:webhelp_publication_title/>-->
+    </div>
+	</header></header><div class="container-fluid" id="content"><div class="row"><div class="wh_content_area doc_title"><h1>
+PVRCore Manual
+
+</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../PVRCore_intro.html">Introduction to PVRCore</a><ul><li><a href="../PVRCore_files.html">PVRCore Files</a></li><li><a href="../PVRCore_classes.html">PVRCore Classes</a><ul><li class="active"><a href="../classes/pvr.html">pvr</a><ul><li><a href="../classes/pvrtexture_xnb.html">pvr::texture_xnb</a></li><li><a href="../classes/pvrRefCountEntryIntrusive.html">pvr::RefCountEntryIntrusive</a></li><li><a href="../classes/pvreffect.html">pvr::effect</a></li><li><a href="../classes/pvrIsRefCountedType.html">pvr::IsRefCountedType</a></li><li><a href="../classes/pvrasync.html">pvr::async</a></li><li><a href="../classes/pvrplatform.html">pvr::platform</a></li><li><a href="../classes/pvrtexture_bmp.html">pvr::texture_bmp</a></li><li><a href="../classes/pvrPixelFormat.html">pvr::PixelFormat</a></li><li><a href="../classes/pvrtexture_dds.html">pvr::texture_dds</a></li><li><a href="../classes/pvrutils.html">pvr::utils</a></li><li><a href="../classes/pvrtexture_tga.html">pvr::texture_tga</a></li><li><a href="../classes/pvrtexture_ktx.html">pvr::texture_ktx</a></li><li><a href="../classes/pvrFreeValue.html">pvr::FreeValue</a></li><li><a href="../classes/pvrGpuDatatypesHelper.html">pvr::GpuDatatypesHelper</a></li><li><a href="../classes/pvrmath.html">pvr::math</a></li><li><a href="../classes/pvrtexture_legacy.html">pvr::texture_legacy</a></li><li><a href="../classes/pvrIAssetProvider.html">pvr::IAssetProvider</a></li><li><a href="../classes/pvrPvrError.html">pvr::PvrError</a></li><li><a href="../classes/pvrCameraAnimationController.html">pvr::CameraAnimationController</a></li><li><a href="../classes/pvrhashstdbasic_stringT.html">pvr::hash&lt;std::basic_string&lt;T&gt;&gt;</a></li><li><a href="../classes/pvrRefcountEntryHolder.html">pvr::RefcountEntryHolder</a></li><li><a href="../classes/pvrStencilState.html">pvr::StencilState</a></li><li><a href="../classes/pvrTypedMem.html">pvr::TypedMem</a></li><li><a href="../classes/pvrGenericExtent3D.html">pvr::GenericExtent3D</a></li><li><a href="../classes/pvrTPSOrbitCamera.html">pvr::TPSOrbitCamera</a></li><li><a href="../classes/pvrGeneratePixelType1.html">pvr::GeneratePixelType1</a></li><li><a href="../classes/pvrBlendingConfig.html">pvr::BlendingConfig</a></li><li><a href="../classes/pvrGenericOffset3D.html">pvr::GenericOffset3D</a></li><li><a href="../classes/pvrImageSubresourceLayers.html">pvr::ImageSubresourceLayers</a></li><li><a href="../classes/pvrImageLayersSize.html">pvr::ImageLayersSize</a></li><li><a href="../classes/pvrDisplayAttributes.html">pvr::DisplayAttributes</a></li><li><a href="../classes/pvrGeneratePixelType2.html">pvr::GeneratePixelType2</a></li><li><a href="../classes/pvrImageResolveRange.html">pvr::ImageResolveRange</a></li><li><a href="../classes/pvrIndexOutOfRange.html">pvr::IndexOutOfRange</a></li><li><a href="../classes/pvrLockedQueue.html">pvr::LockedQueue</a></li><li><a href="../classes/pvrImageSubresourceRange.html">pvr::ImageSubresourceRange</a></li><li><a href="../classes/pvrFPSCamera.html">pvr::FPSCamera</a></li><li><a href="../classes/pvrDereferenceable.html">pvr::Dereferenceable</a></li><li><a href="../classes/pvrFileNotFoundError.html">pvr::FileNotFoundError</a></li><li><a href="../classes/pvrUnsupportedOperationError.html">pvr::UnsupportedOperationError</a></li><li><a href="../classes/pvrEmbeddedRefCount.html">pvr::EmbeddedRefCount</a></li><li><a href="../classes/pvrRefCountedWeakReference.html">pvr::RefCountedWeakReference</a></li><li><a href="../classes/pvrIRefCountEntry.html">pvr::IRefCountEntry</a></li><li><a href="../classes/pvrGenericOffset2D.html">pvr::GenericOffset2D</a></li><li><a href="../classes/pvrFileStream.html">pvr::FileStream</a></li><li><a href="../classes/pvrInvalidOperationError.html">pvr::InvalidOperationError</a></li><li><a href="../classes/pvrGeneratePixelType4.html">pvr::GeneratePixelType4</a></li><li><a href="../classes/pvrEmbeddedRefCountedResource.html">pvr::EmbeddedRefCountedResource</a></li><li><a href="../classes/pvrVertexAttributeLayout.html">pvr::VertexAttributeLayout</a></li><li><a href="../classes/pvrRefCountEntry.html">pvr::RefCountEntry</a></li><li><a href="../classes/pvrTexture.html">pvr::Texture</a></li><li><a href="../classes/pvrRectangle.html">pvr::Rectangle</a></li><li><a href="../classes/pvrGenericExtent2D.html">pvr::GenericExtent2D</a></li><li><a href="../classes/pvrImageRange.html">pvr::ImageRange</a></li><li><a href="../classes/pvrImageSubresource.html">pvr::ImageSubresource</a></li><li><a href="../classes/pvrhasher_helperhashvalue,first.html">pvr::hasher_helper&lt;hashvalue,first&gt;</a></li><li><a href="../classes/pvrCameraKeyFrame.html">pvr::CameraKeyFrame</a></li><li><a href="../classes/pvrhashuint64_t.html">pvr::hash&lt;uint64_t&gt;</a></li><li><a href="../classes/pvrImageStorageFormat.html">pvr::ImageStorageFormat</a></li><li><a href="../classes/pvrCompressedImageDataFormat.html">pvr::CompressedImageDataFormat</a></li><li><a href="../classes/pvrRectangle3D.html">pvr::Rectangle3D</a></li><li><a href="../classes/pvrFilePath.html">pvr::FilePath</a></li><li><a href="../classes/pvrTime.html">pvr::Time</a></li><li><a href="../classes/pvrBufferStream.html">pvr::BufferStream</a></li><li><a href="../classes/pvrhashuint32_t.html">pvr::hash&lt;uint32_t&gt;</a></li><li><a href="../classes/pvrStream.html">pvr::Stream</a></li><li><a href="../classes/pvrTextureHeader.html">pvr::TextureHeader</a></li><li><a href="../classes/pvrTextureDecompressionError.html">pvr::TextureDecompressionError</a></li><li><a href="../classes/pvrWindowsResourceStream.html">pvr::WindowsResourceStream</a></li><li><a href="../classes/pvrFileEOFError.html">pvr::FileEOFError</a></li><li><a href="../classes/pvrTPSCamera.html">pvr::TPSCamera</a></li><li><a href="../classes/pvrPaletteExpander.html">pvr::PaletteExpander</a></li><li><a href="../classes/pvrhasher_helperhashvalue,first,dummy.html">pvr::hasher_helper&lt;hashvalue,first,dummy&gt;</a></li><li><a href="../classes/pvrInvalidDataError.html">pvr::InvalidDataError</a></li><li><a href="../classes/pvrInvalidArgumentError.html">pvr::InvalidArgumentError</a></li><li><a href="../classes/pvrhashint32_t.html">pvr::hash&lt;int32_t&gt;</a></li><li><a href="../classes/pvrHashCompileTime.html">pvr::HashCompileTime</a></li><li><a href="../classes/pvrhash.html">pvr::hash</a></li><li><a href="../classes/pvrRefCountedResource.html">pvr::RefCountedResource</a></li><li><a href="../classes/pvrFreeValueView.html">pvr::FreeValueView</a></li><li><a href="../classes/pvrhashint64_t.html">pvr::hash&lt;int64_t&gt;</a></li><li><a href="../classes/pvrTextureMetaData.html">pvr::TextureMetaData</a></li><li><a href="../classes/pvrRefcountEntryHoldervoid.html">pvr::RefcountEntryHolder&lt;void&gt;</a></li><li><a href="../classes/pvrGeneratePixelType3.html">pvr::GeneratePixelType3</a></li><li><a href="../classes/pvrPlane3d.html">pvr::Plane3d</a></li><li><a href="../classes/pvrStridedBuffer.html">pvr::StridedBuffer</a></li><li><a href="../classes/pvrSwizzleChannels.html">pvr::SwizzleChannels</a></li><li><a href="../classes/pvrFileIOError.html">pvr::FileIOError</a></li><li><a href="../classes/pvrOperationFailedError.html">pvr::OperationFailedError</a></li><li><a href="../classes/pvrStringHash.html">pvr::StringHash</a></li><li><a href="../classes/pvrImageStorageFormatCompressed.html">pvr::ImageStorageFormatCompressed</a></li><li><a href="../classes/pvrImageDataFormat.html">pvr::ImageDataFormat</a></li></ul></li><li><a href="../classes/Logger.html">Logger</a></li><li><a href="../classes/ILogger.html">ILogger</a></li></ul></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1">pvr</h1>
+<div class="body conbody">
+
+<table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvr__entry__1">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvr__entry__1"><a class="xref" href="pvrtexture_xnb.html">pvr::texture_xnb</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__1"><a class="xref" href="pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__1"><a class="xref" href="pvreffect.html">pvr::effect</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__1"><a class="xref" href="pvrIsRefCountedType.html">pvr::IsRefCountedType</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__1"><span class="xref">pvr::strings</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__1"><a class="xref" href="pvrasync.html">pvr::async</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__1"><span class="xref">pvr::assetWriters</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__1"><span class="xref">pvr::assetReaders</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__1"><a class="xref" href="pvrplatform.html">pvr::platform</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__1"><a class="xref" href="pvrtexture_bmp.html">pvr::texture_bmp</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__1"><a class="xref" href="pvrPixelFormat.html" title="The PixelFormat class fully defines a Pixel Format (channels, format, compression, bit width etc.).">pvr::PixelFormat</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__1"><a class="xref" href="pvrtexture_dds.html">pvr::texture_dds</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__1"><a class="xref" href="pvrutils.html">pvr::utils</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__1"><span class="xref">pvr::pfx</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__1"><a class="xref" href="pvrtexture_tga.html">pvr::texture_tga</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__1"><a class="xref" href="pvrtexture_ktx.html">pvr::texture_ktx</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__1"><a class="xref" href="pvrFreeValue.html" title="A Free Value View that is backed by a 64-byte statically allocated array: Enough to hold one item of any GPU-datatype, up to a mat4x4">pvr::FreeValue</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__1"><a class="xref" href="pvrGpuDatatypesHelper.html">pvr::GpuDatatypesHelper</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__1"><a class="xref" href="pvrmath.html">pvr::math</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__1"><a class="xref" href="pvrtexture_legacy.html">pvr::texture_legacy</a></td>
+	</tr>
+			</tbody></table>
+<table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Classes</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvr__entry__22">Declaration Type</th><th class="entry" id="pvr__entry__23">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrRefcountEntryHolder.html">pvr::RefcountEntryHolder</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrGenericExtent3D.html" title="Contains a 3D Integer size (width, height, depth)">pvr::GenericExtent3D</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrCompressedImageDataFormat.html" title="Describes a Compressed format. Compressed formats provide less information than the uncompressed format, as they can only be accessed &#34;black box&#34;.">pvr::CompressedImageDataFormat</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrImageLayersSize.html" title="Structure describes the number of array levels and mip levels an image contains">pvr::ImageLayersSize</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrRefCountEntry.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. A &#34;simple&#34; Refcount entry keeps a user-provided pointer to the object together with the reference counts.">pvr::RefCountEntry</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrFPSCamera.html" title="A simple first person camera implementation">pvr::FPSCamera</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrIRefCountEntry.html" title="An interface that represents a block of memory that will be doing the bookkeeping for an object that will be Reference Counted. This bit of memory holds the reference counts.">pvr::IRefCountEntry</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrGenericOffset2D.html" title="The GenericOffset2D contains a 16-bit 2D offset (offsetX, offsetY)">pvr::GenericOffset2D</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrCameraKeyFrame.html" title="A simple structure for handling key camera frames">pvr::CameraKeyFrame</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrRectangle3D.html" title="A class representing an Axis-Aligned cuboidal region of 3D space. Internal representation offset defined as the absolute coordinates of one corner of the bounding region and extent which defines the second corner of the bounding region relative to the offset.">pvr::Rectangle3D</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrFilePath.html" title="Filepath represents a Path + Filename + Extension.">pvr::FilePath</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrBufferStream.html" title="This class is used to access a block of memory as a Stream.">pvr::BufferStream</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrhashuint32_t.html" title="Template specialization of hash specifically for uint32_t">pvr::hash&lt;uint32_t&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrTextureHeader.html" title="A class mirroring the PVR Texture container format header, and which can in general represent any Texture asset. Contains accessors functions to facilitate using the Texture data in application code.">pvr::TextureHeader</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrTPSCamera.html" title="A simple third person camera implementation">pvr::TPSCamera</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrInvalidDataError.html" title="A simple std::runtime_error wrapper for throwing exceptions when invalid data is provided">pvr::InvalidDataError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrStencilState.html" title="Pipeline Stencil state">pvr::StencilState</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrFreeValueView.html" title="Represents a runtime-known number of elements of a runtime-known type, with functions to handle and convert them. Very commonly used to dynamically represent data that will eventually need to be used by the GPU, such as uniforms, vectors and matrices. Does not contain methods to actually be populated, as this should be done through subclasses.">pvr::FreeValueView</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrTextureMetaData.html" title="The TextureMetaData class contains metadata of a texture. Metadata is any information that a texture could be correctly loaded from file without. In most cases, metadata may still be necessary to actually USE the texture, such as winding orders, paddings, atlas information and others.">pvr::TextureMetaData</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrGeneratePixelType4.html" title="Use this template class to generate a 4 channel PixelID.">pvr::GeneratePixelType4</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrPvrError.html" title="A simple std::runtime_error wrapper for throwing generic PVR exceptions">pvr::PvrError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrCameraAnimationController.html" title="A simple structure for controlling camera animations">pvr::CameraAnimationController</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrhashstdbasic_stringT.html" title="Template specialization of hash specifically for an std::basic_string">pvr::hash&lt;std::basic_string&lt;T&gt;&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrRefCountedResource.html" title="Reference counted smart pointer. It can be used very similarly to the C++11 shared_ptr, but with some differences.">pvr::RefCountedResource</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrGenericOffset3D.html" title="The GenericOffset3D contains the offsets in 3 dimension (offsetX, offsetY, offsetZ)">pvr::GenericOffset3D</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrImageSubresourceLayers.html" title="Represents a specific subresource layer: A specified Array Layer and Mipmap level of specific aspect of an image">pvr::ImageSubresourceLayers</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrImageResolveRange.html" title="Represents an image resolve operation">pvr::ImageResolveRange</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrhashuint64_t.html" title="Template specialization of hash specifically for uint64_t">pvr::hash&lt;uint64_t&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrFileNotFoundError.html" title="A simple std::runtime_error wrapper for throwing exceptions when file not found errors occur">pvr::FileNotFoundError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrGenericExtent2D.html" title="Contains a 2d Integer size (width, height)">pvr::GenericExtent2D</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrFileStream.html" title="A FileStream is a Stream that is used to access a File in the filesystem of the platform.">pvr::FileStream</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrStream.html" title="This class is used to abstract streams of data (files, blocks of memory, resources etc.). In general a stream is considered something that can be read or written from. Specializations for many different types of streams are provided by the PowerVR Framework, the most commonly used ones being Files and Memory. The common interface and pointer types allow the Stream to abstract data in a very useful manner.">pvr::Stream</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrTime.html" title="This class provides functions for measuring time: current time, elapsed time etc. High performance timers are used if available by the platform.">pvr::Time</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrhashint32_t.html" title="Template specialization of hash specifically for int32_t">pvr::hash&lt;int32_t&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrhash.html" title="Class template denoting a hash. Specializations only - no default implementation. (int32_t/int64_t/uint32_t/uint64_t/string)">pvr::hash</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrRefcountEntryHoldervoid.html">pvr::RefcountEntryHolder&lt;void&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrStridedBuffer.html" title="Representation of raw data. Used to store raw data that is logically grouped in blocks with a stride.">pvr::StridedBuffer</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrPixelFormat.html" title="The PixelFormat class fully defines a Pixel Format (channels, format, compression, bit width etc.).">pvr::PixelFormat</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrImageStorageFormatCompressed.html" title="Describes a Compressed format. Compressed formats provide less information than the uncompressed format, as they can only be accessed &#34;black box&#34;.">pvr::ImageStorageFormatCompressed</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrTPSOrbitCamera.html" title="A simple third person orbit camera implementation">pvr::TPSOrbitCamera</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrBlendingConfig.html" title="Add blending configuration for a color attachment. Some API's only support one blending state for all attachments, in which case the 1st such configuration will be used for all.">pvr::BlendingConfig</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrImageSubresourceRange.html" title="Represents a subresource range: A specified range of Array Layers and Mipmap levels of specific aspect of an image">pvr::ImageSubresourceRange</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrImageDataFormat.html" title="Represents an image format, including pixel format(channels/bits per channel), datatype and colorspace.">pvr::ImageDataFormat</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrGeneratePixelType2.html" title="Use this template class to generate a 2 channel PixelID.">pvr::GeneratePixelType2</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrIndexOutOfRange.html" title="A simple std::runtime_error wrapper for throwing exceptions when attempting to use index out of range">pvr::IndexOutOfRange</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrEmbeddedRefCount.html" title="EmbeddedRefCount is the class that must be inherited from in order to have a class that automatically has refcounted members, with awareness and access to their ref counting by keeping their ref-counting bookkeeping entries embedded in the main class">pvr::EmbeddedRefCount</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrRefCountedWeakReference.html" title="A RefCountedWeakReference is a &#34;Weak Reference&#34; to a Reference counted object.">pvr::RefCountedWeakReference</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrInvalidOperationError.html" title="A simple std::runtime_error wrapper for throwing exceptions when invalid operations are attempted">pvr::InvalidOperationError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrEmbeddedRefCountedResource.html" title="&#34;Embedded&#34; subset of the Reference counted smart pointer. See RefCountedResource. It can be used very similarly to the C++11 shared_ptr, but with some differences, especially as far as conversions go. The EmbeddedRefCountedResource is used when the user must not have access to the .construct(...) functions of the RefCountedResource (especially, when a class is designed around reference counting and cannot stand widthout it). A RefCountedResource is-a EmbeddedRefCountedResource and is safe to &#34;slice&#34; to it as well (see details).">pvr::EmbeddedRefCountedResource</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrhasher_helperhashvalue,first,dummy.html" title="Template specialization for uint32_t values.">pvr::hasher_helper&lt;hashvalue,first,dummy&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrImageRange.html" title="Represents a specific 3-D range in an image (an orthogonal cuboid anywhere in the image)">pvr::ImageRange</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrRectangle.html" title="A class representing an axis-aligned rectangle. Internal representation TopLeft and size.">pvr::Rectangle</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrTextureDecompressionError.html" title="A simple std::runtime_error wrapper for throwing exceptions when invalid operations are attempted">pvr::TextureDecompressionError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrWindowsResourceStream.html" title="A Stream implementation that is used to access resources built in a MS Windows executable.">pvr::WindowsResourceStream</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrFileEOFError.html" title="A simple std::runtime_error wrapper for throwing exceptions when attempting to read past the End Of File">pvr::FileEOFError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrGeneratePixelType3.html" title="Use this template class to generate a 3 channel PixelID.">pvr::GeneratePixelType3</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrSwizzleChannels.html" title="The SwizzleChannels struct">pvr::SwizzleChannels</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrIAssetProvider.html" title="The IAssetProvider interface marks a class that provides the getAssetStream function to load assets in a platform independent way.">pvr::IAssetProvider</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrTypedMem.html" title="Represents Free Value View that is backed by a (usually small) dynamically allocated block.">pvr::TypedMem</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrGeneratePixelType1.html" title="Use this template class to generate a 1 channel PixelID.">pvr::GeneratePixelType1</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrFileIOError.html" title="A simple std::runtime_error wrapper for throwing exceptions when undertaking File IO operations">pvr::FileIOError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrDisplayAttributes.html" title="Contains display configuration information (width, height, position, title, bpp etc.).">pvr::DisplayAttributes</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrhasher_helperhashvalue,first.html" title="Template specialization for uint32_t values.">pvr::hasher_helper&lt;hashvalue,first&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrTexture.html" title="A 2D Texture asset, together with Information, Metadata and actual Pixel data. Only represents the actual data, not the API objects that may be created from it.">pvr::Texture</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrDereferenceable.html" title="DO NOT USE DIRECTLY. The RefCountedResource follows this class.">pvr::Dereferenceable</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrUnsupportedOperationError.html" title="A simple std::runtime_error wrapper for throwing exceptions when unsupported operations are attempted">pvr::UnsupportedOperationError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrPlane3d.html" title="Uses the plane equation Ax + By + Cz + D = 0, where A B C are plane normal, xyz are position on the plane and D is distance to the plane.">pvr::Plane3d</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrVertexAttributeLayout.html" title="This class contains all the information of a Vertex Attribute's layout inside a block of memory, typically a Vertex Buffer Object. This informations is normally the DataType of the attribute, the Offset (from the beginning of the array) and the width (how many values of type DataType form an attribute).">pvr::VertexAttributeLayout</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrImageSubresource.html" title="Describes a single &#34;layer&#34; of an image: a single array layer of a single mip level, or the offset of a layer range.">pvr::ImageSubresource</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrImageStorageFormat.html" title="Extends the ImageDataFormat with mipmaps and number of Samples.">pvr::ImageStorageFormat</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrFreeValue.html" title="A Free Value View that is backed by a 64-byte statically allocated array: Enough to hold one item of any GPU-datatype, up to a mat4x4">pvr::FreeValue</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrInvalidArgumentError.html" title="A simple std::runtime_error wrapper for throwing exceptions when invalid arguments are provided">pvr::InvalidArgumentError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrHashCompileTime.html" title="Template specialization for unsigned char values.">pvr::HashCompileTime</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">struct</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrhashint64_t.html" title="Template specialization of hash specifically for int64_t">pvr::hash&lt;int64_t&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrLockedQueue.html" title="A simple adapter for the BlockingConcurrentQueue that simplifies common use cases">pvr::LockedQueue</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrPaletteExpander.html" title="Internally used by some texture readers.">pvr::PaletteExpander</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrOperationFailedError.html" title="A simple std::runtime_error wrapper for throwing exceptions when operations fail">pvr::OperationFailedError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvr__entry__22">class</td>
+<td class="entry" headers="pvr__entry__23"><a class="xref" href="pvrStringHash.html" title="Implementation of a hashed std::string with functionality for fast compares.">pvr::StringHash</a></td>
+	</tr>
+			</tbody></table>
+</div><nav role="navigation" class="related-links"><ul class="ullinks"><li class="link ulchildlink"><strong><a href="../classes/pvrtexture_xnb.html">pvr::texture_xnb</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrRefCountEntryIntrusive.html">pvr::RefCountEntryIntrusive</a></strong><br>DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.</li><li class="link ulchildlink"><strong><a href="../classes/pvreffect.html">pvr::effect</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrIsRefCountedType.html">pvr::IsRefCountedType</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrasync.html">pvr::async</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrplatform.html">pvr::platform</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrtexture_bmp.html">pvr::texture_bmp</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrPixelFormat.html">pvr::PixelFormat</a></strong><br>The PixelFormat class fully defines a Pixel Format (channels, format, compression, bit width etc.).</li><li class="link ulchildlink"><strong><a href="../classes/pvrtexture_dds.html">pvr::texture_dds</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrutils.html">pvr::utils</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrtexture_tga.html">pvr::texture_tga</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrtexture_ktx.html">pvr::texture_ktx</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrFreeValue.html">pvr::FreeValue</a></strong><br>A Free Value View that is backed by a 64-byte statically allocated array: Enough to hold one item of any GPU-datatype, up to a mat4x4</li><li class="link ulchildlink"><strong><a href="../classes/pvrGpuDatatypesHelper.html">pvr::GpuDatatypesHelper</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrmath.html">pvr::math</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrtexture_legacy.html">pvr::texture_legacy</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrIAssetProvider.html">pvr::IAssetProvider</a></strong><br>The IAssetProvider interface marks a class that provides the getAssetStream function to load assets in a platform independent way.</li><li class="link ulchildlink"><strong><a href="../classes/pvrPvrError.html">pvr::PvrError</a></strong><br>A simple std::runtime_error wrapper for throwing generic PVR exceptions</li><li class="link ulchildlink"><strong><a href="../classes/pvrCameraAnimationController.html">pvr::CameraAnimationController</a></strong><br>A simple structure for controlling camera animations</li><li class="link ulchildlink"><strong><a href="../classes/pvrhashstdbasic_stringT.html">pvr::hash&lt;std::basic_string&lt;T&gt;&gt;</a></strong><br>Template specialization of hash specifically for an std::basic_string</li><li class="link ulchildlink"><strong><a href="../classes/pvrRefcountEntryHolder.html">pvr::RefcountEntryHolder</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrStencilState.html">pvr::StencilState</a></strong><br>Pipeline Stencil state</li><li class="link ulchildlink"><strong><a href="../classes/pvrTypedMem.html">pvr::TypedMem</a></strong><br>Represents Free Value View that is backed by a (usually small) dynamically allocated block.</li><li class="link ulchildlink"><strong><a href="../classes/pvrGenericExtent3D.html">pvr::GenericExtent3D</a></strong><br>Contains a 3D Integer size (width, height, depth)</li><li class="link ulchildlink"><strong><a href="../classes/pvrTPSOrbitCamera.html">pvr::TPSOrbitCamera</a></strong><br>A simple third person orbit camera implementation</li><li class="link ulchildlink"><strong><a href="../classes/pvrGeneratePixelType1.html">pvr::GeneratePixelType1</a></strong><br>Use this template class to generate a 1 channel PixelID.</li><li class="link ulchildlink"><strong><a href="../classes/pvrBlendingConfig.html">pvr::BlendingConfig</a></strong><br>Add blending configuration for a color attachment. Some API's only support one blending state for all attachments, in which case the 1st such configuration will be used for all.</li><li class="link ulchildlink"><strong><a href="../classes/pvrGenericOffset3D.html">pvr::GenericOffset3D</a></strong><br>The GenericOffset3D contains the offsets in 3 dimension (offsetX, offsetY, offsetZ)</li><li class="link ulchildlink"><strong><a href="../classes/pvrImageSubresourceLayers.html">pvr::ImageSubresourceLayers</a></strong><br>Represents a specific subresource layer: A specified Array Layer and Mipmap level of specific aspect of an image</li><li class="link ulchildlink"><strong><a href="../classes/pvrImageLayersSize.html">pvr::ImageLayersSize</a></strong><br>Structure describes the number of array levels and mip levels an image contains</li><li class="link ulchildlink"><strong><a href="../classes/pvrDisplayAttributes.html">pvr::DisplayAttributes</a></strong><br>Contains display configuration information (width, height, position, title, bpp etc.).</li><li class="link ulchildlink"><strong><a href="../classes/pvrGeneratePixelType2.html">pvr::GeneratePixelType2</a></strong><br>Use this template class to generate a 2 channel PixelID.</li><li class="link ulchildlink"><strong><a href="../classes/pvrImageResolveRange.html">pvr::ImageResolveRange</a></strong><br>Represents an image resolve operation</li><li class="link ulchildlink"><strong><a href="../classes/pvrIndexOutOfRange.html">pvr::IndexOutOfRange</a></strong><br>A simple std::runtime_error wrapper for throwing exceptions when attempting to use index out of range</li><li class="link ulchildlink"><strong><a href="../classes/pvrLockedQueue.html">pvr::LockedQueue</a></strong><br>A simple adapter for the BlockingConcurrentQueue that simplifies common use cases</li><li class="link ulchildlink"><strong><a href="../classes/pvrImageSubresourceRange.html">pvr::ImageSubresourceRange</a></strong><br>Represents a subresource range: A specified range of Array Layers and Mipmap levels of specific aspect of an image</li><li class="link ulchildlink"><strong><a href="../classes/pvrFPSCamera.html">pvr::FPSCamera</a></strong><br>A simple first person camera implementation</li><li class="link ulchildlink"><strong><a href="../classes/pvrDereferenceable.html">pvr::Dereferenceable</a></strong><br>DO NOT USE DIRECTLY. The RefCountedResource follows this class.</li><li class="link ulchildlink"><strong><a href="../classes/pvrFileNotFoundError.html">pvr::FileNotFoundError</a></strong><br>A simple std::runtime_error wrapper for throwing exceptions when file not found errors occur</li><li class="link ulchildlink"><strong><a href="../classes/pvrUnsupportedOperationError.html">pvr::UnsupportedOperationError</a></strong><br>A simple std::runtime_error wrapper for throwing exceptions when unsupported operations are attempted</li><li class="link ulchildlink"><strong><a href="../classes/pvrEmbeddedRefCount.html">pvr::EmbeddedRefCount</a></strong><br>EmbeddedRefCount is the class that must be inherited from in order to have a class that automatically has refcounted members, with awareness and access to their ref counting by keeping their ref-counting bookkeeping entries embedded in the main class</li><li class="link ulchildlink"><strong><a href="../classes/pvrRefCountedWeakReference.html">pvr::RefCountedWeakReference</a></strong><br>A RefCountedWeakReference is a "Weak Reference" to a Reference counted object.</li><li class="link ulchildlink"><strong><a href="../classes/pvrIRefCountEntry.html">pvr::IRefCountEntry</a></strong><br>An interface that represents a block of memory that will be doing the bookkeeping for an object that will be Reference Counted. This bit of memory holds the reference counts.</li><li class="link ulchildlink"><strong><a href="../classes/pvrGenericOffset2D.html">pvr::GenericOffset2D</a></strong><br>The GenericOffset2D contains a 16-bit 2D offset (offsetX, offsetY)</li><li class="link ulchildlink"><strong><a href="../classes/pvrFileStream.html">pvr::FileStream</a></strong><br>A FileStream is a Stream that is used to access a File in the filesystem of the platform.</li><li class="link ulchildlink"><strong><a href="../classes/pvrInvalidOperationError.html">pvr::InvalidOperationError</a></strong><br>A simple std::runtime_error wrapper for throwing exceptions when invalid operations are attempted</li><li class="link ulchildlink"><strong><a href="../classes/pvrGeneratePixelType4.html">pvr::GeneratePixelType4</a></strong><br>Use this template class to generate a 4 channel PixelID.</li><li class="link ulchildlink"><strong><a href="../classes/pvrEmbeddedRefCountedResource.html">pvr::EmbeddedRefCountedResource</a></strong><br>"Embedded" subset of the Reference counted smart pointer. See RefCountedResource. It can be used very similarly to the C++11 shared_ptr, but with some differences, especially as far as conversions go. The EmbeddedRefCountedResource is used when the user must not have access to the .construct(...) functions of the RefCountedResource (especially, when a class is designed around reference counting and cannot stand widthout it). A RefCountedResource is-a EmbeddedRefCountedResource and is safe to "slice" to it as well (see details).</li><li class="link ulchildlink"><strong><a href="../classes/pvrVertexAttributeLayout.html">pvr::VertexAttributeLayout</a></strong><br>This class contains all the information of a Vertex Attribute's layout inside a block of memory, typically a Vertex Buffer Object. This informations is normally the DataType of the attribute, the Offset (from the beginning of the array) and the width (how many values of type DataType form an attribute).</li><li class="link ulchildlink"><strong><a href="../classes/pvrRefCountEntry.html">pvr::RefCountEntry</a></strong><br>DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. A "simple" Refcount entry keeps a user-provided pointer to the object together with the reference counts.</li><li class="link ulchildlink"><strong><a href="../classes/pvrTexture.html">pvr::Texture</a></strong><br>A 2D Texture asset, together with Information, Metadata and actual Pixel data. Only represents the actual data, not the API objects that may be created from it.</li><li class="link ulchildlink"><strong><a href="../classes/pvrRectangle.html">pvr::Rectangle</a></strong><br>A class representing an axis-aligned rectangle. Internal representation TopLeft and size.</li><li class="link ulchildlink"><strong><a href="../classes/pvrGenericExtent2D.html">pvr::GenericExtent2D</a></strong><br>Contains a 2d Integer size (width, height)</li><li class="link ulchildlink"><strong><a href="../classes/pvrImageRange.html">pvr::ImageRange</a></strong><br>Represents a specific 3-D range in an image (an orthogonal cuboid anywhere in the image)</li><li class="link ulchildlink"><strong><a href="../classes/pvrImageSubresource.html">pvr::ImageSubresource</a></strong><br>Describes a single "layer" of an image: a single array layer of a single mip level, or the offset of a layer range.</li><li class="link ulchildlink"><strong><a href="../classes/pvrhasher_helperhashvalue,first.html">pvr::hasher_helper&lt;hashvalue,first&gt;</a></strong><br>Template specialization for uint32_t values.</li><li class="link ulchildlink"><strong><a href="../classes/pvrCameraKeyFrame.html">pvr::CameraKeyFrame</a></strong><br>A simple structure for handling key camera frames</li><li class="link ulchildlink"><strong><a href="../classes/pvrhashuint64_t.html">pvr::hash&lt;uint64_t&gt;</a></strong><br>Template specialization of hash specifically for uint64_t</li><li class="link ulchildlink"><strong><a href="../classes/pvrImageStorageFormat.html">pvr::ImageStorageFormat</a></strong><br>Extends the ImageDataFormat with mipmaps and number of Samples.</li><li class="link ulchildlink"><strong><a href="../classes/pvrCompressedImageDataFormat.html">pvr::CompressedImageDataFormat</a></strong><br>Describes a Compressed format. Compressed formats provide less information than the uncompressed format, as they can only be accessed "black box".</li><li class="link ulchildlink"><strong><a href="../classes/pvrRectangle3D.html">pvr::Rectangle3D</a></strong><br>A class representing an Axis-Aligned cuboidal region of 3D space. Internal representation offset defined as the absolute coordinates of one corner of the bounding region and extent which defines the second corner of the bounding region relative to the offset.</li><li class="link ulchildlink"><strong><a href="../classes/pvrFilePath.html">pvr::FilePath</a></strong><br>Filepath represents a Path + Filename + Extension.</li><li class="link ulchildlink"><strong><a href="../classes/pvrTime.html">pvr::Time</a></strong><br>This class provides functions for measuring time: current time, elapsed time etc. High performance timers are used if available by the platform.</li><li class="link ulchildlink"><strong><a href="../classes/pvrBufferStream.html">pvr::BufferStream</a></strong><br>This class is used to access a block of memory as a Stream.</li><li class="link ulchildlink"><strong><a href="../classes/pvrhashuint32_t.html">pvr::hash&lt;uint32_t&gt;</a></strong><br>Template specialization of hash specifically for uint32_t</li><li class="link ulchildlink"><strong><a href="../classes/pvrStream.html">pvr::Stream</a></strong><br>This class is used to abstract streams of data (files, blocks of memory, resources etc.). In general a stream is considered something that can be read or written from. Specializations for many different types of streams are provided by the PowerVR Framework, the most commonly used ones being Files and Memory. The common interface and pointer types allow the Stream to abstract data in a very useful manner.</li><li class="link ulchildlink"><strong><a href="../classes/pvrTextureHeader.html">pvr::TextureHeader</a></strong><br>A class mirroring the PVR Texture container format header, and which can in general represent any Texture asset. Contains accessors functions to facilitate using the Texture data in application code.</li><li class="link ulchildlink"><strong><a href="../classes/pvrTextureDecompressionError.html">pvr::TextureDecompressionError</a></strong><br>A simple std::runtime_error wrapper for throwing exceptions when invalid operations are attempted</li><li class="link ulchildlink"><strong><a href="../classes/pvrWindowsResourceStream.html">pvr::WindowsResourceStream</a></strong><br>A Stream implementation that is used to access resources built in a MS Windows executable.</li><li class="link ulchildlink"><strong><a href="../classes/pvrFileEOFError.html">pvr::FileEOFError</a></strong><br>A simple std::runtime_error wrapper for throwing exceptions when attempting to read past the End Of File</li><li class="link ulchildlink"><strong><a href="../classes/pvrTPSCamera.html">pvr::TPSCamera</a></strong><br>A simple third person camera implementation</li><li class="link ulchildlink"><strong><a href="../classes/pvrPaletteExpander.html">pvr::PaletteExpander</a></strong><br>Internally used by some texture readers.</li><li class="link ulchildlink"><strong><a href="../classes/pvrhasher_helperhashvalue,first,dummy.html">pvr::hasher_helper&lt;hashvalue,first,dummy&gt;</a></strong><br>Template specialization for uint32_t values.</li><li class="link ulchildlink"><strong><a href="../classes/pvrInvalidDataError.html">pvr::InvalidDataError</a></strong><br>A simple std::runtime_error wrapper for throwing exceptions when invalid data is provided</li><li class="link ulchildlink"><strong><a href="../classes/pvrInvalidArgumentError.html">pvr::InvalidArgumentError</a></strong><br>A simple std::runtime_error wrapper for throwing exceptions when invalid arguments are provided</li><li class="link ulchildlink"><strong><a href="../classes/pvrhashint32_t.html">pvr::hash&lt;int32_t&gt;</a></strong><br>Template specialization of hash specifically for int32_t</li><li class="link ulchildlink"><strong><a href="../classes/pvrHashCompileTime.html">pvr::HashCompileTime</a></strong><br>Template specialization for unsigned char values.</li><li class="link ulchildlink"><strong><a href="../classes/pvrhash.html">pvr::hash</a></strong><br>Class template denoting a hash. Specializations only - no default implementation. (int32_t/int64_t/uint32_t/uint64_t/string)</li><li class="link ulchildlink"><strong><a href="../classes/pvrRefCountedResource.html">pvr::RefCountedResource</a></strong><br>Reference counted smart pointer. It can be used very similarly to the C++11 shared_ptr, but with some differences.</li><li class="link ulchildlink"><strong><a href="../classes/pvrFreeValueView.html">pvr::FreeValueView</a></strong><br>Represents a runtime-known number of elements of a runtime-known type, with functions to handle and convert them. Very commonly used to dynamically represent data that will eventually need to be used by the GPU, such as uniforms, vectors and matrices. Does not contain methods to actually be populated, as this should be done through subclasses.</li><li class="link ulchildlink"><strong><a href="../classes/pvrhashint64_t.html">pvr::hash&lt;int64_t&gt;</a></strong><br>Template specialization of hash specifically for int64_t</li><li class="link ulchildlink"><strong><a href="../classes/pvrTextureMetaData.html">pvr::TextureMetaData</a></strong><br>The TextureMetaData class contains metadata of a texture. Metadata is any information that a texture could be correctly loaded from file without. In most cases, metadata may still be necessary to actually USE the texture, such as winding orders, paddings, atlas information and others.</li><li class="link ulchildlink"><strong><a href="../classes/pvrRefcountEntryHoldervoid.html">pvr::RefcountEntryHolder&lt;void&gt;</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrGeneratePixelType3.html">pvr::GeneratePixelType3</a></strong><br>Use this template class to generate a 3 channel PixelID.</li><li class="link ulchildlink"><strong><a href="../classes/pvrPlane3d.html">pvr::Plane3d</a></strong><br>Uses the plane equation Ax + By + Cz + D = 0, where A B C are plane normal, xyz are position on the plane and D is distance to the plane.</li><li class="link ulchildlink"><strong><a href="../classes/pvrStridedBuffer.html">pvr::StridedBuffer</a></strong><br>Representation of raw data. Used to store raw data that is logically grouped in blocks with a stride.</li><li class="link ulchildlink"><strong><a href="../classes/pvrSwizzleChannels.html">pvr::SwizzleChannels</a></strong><br>The SwizzleChannels struct</li><li class="link ulchildlink"><strong><a href="../classes/pvrFileIOError.html">pvr::FileIOError</a></strong><br>A simple std::runtime_error wrapper for throwing exceptions when undertaking File IO operations</li><li class="link ulchildlink"><strong><a href="../classes/pvrOperationFailedError.html">pvr::OperationFailedError</a></strong><br>A simple std::runtime_error wrapper for throwing exceptions when operations fail</li><li class="link ulchildlink"><strong><a href="../classes/pvrStringHash.html">pvr::StringHash</a></strong><br>Implementation of a hashed std::string with functionality for fast compares.</li><li class="link ulchildlink"><strong><a href="../classes/pvrImageStorageFormatCompressed.html">pvr::ImageStorageFormatCompressed</a></strong><br>Describes a Compressed format. Compressed formats provide less information than the uncompressed format, as they can only be accessed "black box".</li><li class="link ulchildlink"><strong><a href="../classes/pvrImageDataFormat.html">pvr::ImageDataFormat</a></strong><br>Represents an image format, including pixel format(channels/bits per channel), datatype and colorspace.</li></ul><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../PVRCore_classes.html" title="All of the available classes in PVRCore">PVRCore Classes</a></div></div></nav></article></main></div></div></div></div></div><div id="custom_nav" class="text-right hidden-sm hidden-xs hidden-print"><div class="well well-lg" style="margin-left:20px; margin-right:20px;"><footer role="contentinfo"><script src="../ditasearch.js"></script><footer xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="site-info  wh_footer" itemtype="https://schema.org/WPFooter" itemscope="" whc:version="21.0">
+
+  <div class="inside-site-info grid-container grid-parent footer-container  mx-auto">
+    <div class="copyright-bar">
+      <div class="elementor elementor-70634">
+        <div class="elementor-inner">
+          <div class="elementor-section-wrap">
+            <section class="elementor-element elementor-element-a126d69 elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a126d69" data-element_type="section">
+              <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-row">
+                  <div class="elementor-element elementor-element-c1f5a3a elementor-column elementor-col-50 elementor-top-column" data-id="c1f5a3a" data-element_type="column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-9f26949 elementor-widget elementor-widget-image" data-id="9f26949" data-element_type="widget" data-widget_type="image.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-image"> <a href="https://www.imgtec.com/"><img src="https://www.imgtec.com/wp-content/uploads/2019/10/Imagination_Logo_Secondary_Blk.svg" title="Imagination_Logo" alt="Imagination_Logo" class="lazyloading"></img></a></div>
+                          </div>
+                        </div>
+                        <div class="elementor-element elementor-element-4eb6939 elementor-widget elementor-widget-text-editor">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-text-editor elementor-clearfix">
+                              <div class="footer-copyright">© Imagination Technologies Limited. All rights reserved.<br></br><a href="https://www.imgtec.com/privacy-policy/">Privacy Policy</a> – <a href="https://www.imgtec.com/terms-and-conditions/">Terms &amp; Conditions</a> – <a href="https://www.imgtec.com/trademarks/">Trademarks</a> – <a href="https://www.imgtec.com/cookies/">Cookies</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="elementor-element elementor-element-01bb773 elementor-column elementor-col-50 elementor-top-column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-1c0e19c elementor-shape-square elementor-widget elementor-widget-social-icons" data-id="1c0e19c" data-element_type="widget" data-widget_type="social-icons.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-social-icons-wrapper"> <a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin" href="https://www.linkedin.com/company/imagination-technologies/" target="_blank"> <span class="elementor-screen-only">Linkedin</span> <i class="fab fa-linkedin"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-twitter" href="https://twitter.com/imaginationtech" target="_blank"> <span class="elementor-screen-only">Twitter</span> <i class="fab fa-twitter"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook" href="https://www.facebook.com/imgtec/" target="_blank"> <span class="elementor-screen-only">Facebook</span> <i class="fab fa-facebook"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-youtube" href="https://www.youtube.com/user/Imgtec/" target="_blank"> <span class="elementor-screen-only">Youtube</span> <i class="fab fa-youtube"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram" href="https://www.instagram.com/imaginationtech/" target="_blank"> <span class="elementor-screen-only">Instagram</span> <i class="fab fa-instagram"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-google-plus" href="https://plus.google.com/+ImaginationTechnologiesLtd" target="_blank"> <span class="elementor-screen-only">Google-plus</span> <i class="fab fa-google-plus"></i> </a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer></footer></div></div></div></body></html>

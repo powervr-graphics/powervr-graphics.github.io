@@ -1,0 +1,790 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2020"><meta name="DC.rights.owner" content="(C) Copyright 2020"><meta name="DC.type" content="concept"><meta name="description" content="All of the available classes in PVRCore"><meta name="DC.relation" scheme="URI" content="PVRCore_intro.html"><meta name="DC.relation" scheme="URI" content="classes/pvr.html"><meta name="DC.relation" scheme="URI" content="classes/Logger.html"><meta name="DC.relation" scheme="URI" content="classes/ILogger.html"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="PVRCore_Classes"><link rel="stylesheet" type="text/css" href="css/commonltr.css"><link rel="stylesheet" type="text/css" href="css/devcss.css"><title>PVRCore Classes</title><head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="icon" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png" sizes="32x32" type="image/png">
+<link rel="shorcut icon" type="image/png" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png">
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head></head><body id="PVRCore_Classes"><header role="banner"><div class="ditasearch" data-searchroot=""></div><header xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="navbar navbar-default wh_header" whc:version="21.0">
+    <div class="container-fluid  header-area">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="html5_logo_and_publication_title">
+		<a href="https://docs.imgtec.com" class="wh_logo hidden-xs">
+				<img src="https://www.imgtec.com/wp-content/uploads/2018/11/Imagination-logo-white.png"></img></a>
+		<p>Developer Documentation</p>
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <whc:webhelp_logo class="hidden-xs"></whc:webhelp_logo>
+                </div>
+                
+
+            </div>
+
+
+	
+
+		<whc:webhelp_search_input></whc:webhelp_search_input>
+        </div>
+
+		<!--<whc:webhelp_publication_title/>-->
+    </div>
+	</header></header><div class="container-fluid" id="content"><div class="row"><div class="wh_content_area doc_title"><h1>
+PVRCore Manual
+
+</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="PVRCore_intro.html">Introduction to PVRCore</a><ul><li><a href="PVRCore_files.html">PVRCore Files</a></li><li class="active"><a href="PVRCore_classes.html">PVRCore Classes</a><ul><li><a href="classes/pvr.html">pvr</a></li><li><a href="classes/Logger.html">Logger</a></li><li><a href="classes/ILogger.html">ILogger</a></li></ul></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1">PVRCore Classes</h1>
+
+<div class="body conbody"><p class="shortdesc">All of the available classes in PVRCore</p>
+
+<table class="table"><caption></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="PVRCore_Classes__entry__1">Declaration Type</th><th class="entry" id="PVRCore_Classes__entry__2">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvreffectEffect.html" title="An entire effect with all its metadata. An effect is intended to describe an entire, possibly multipass, rendering configuration, for several different objects - potentially an entire scene - by defining all the targets, textures, buffers, different pipelines for different objects, as long as they fulfil some similar conceptual roles (see subpass groups). By using &#34;SEMANTICS&#34;, i.e. descriptions of different items of information that may be provided from outside (e.g. the model, the animation system, or other), it provides a clear interface for the application to provide this information and render automatically. For an implementation of a rendering system using that, see the RenderManager in Vulkan Utilities.">pvr::effect::Effect</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrRefcountEntryHolder.html">pvr::RefcountEntryHolder</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGenericExtent3D.html" title="Contains a 3D Integer size (width, height, depth)">pvr::GenericExtent3D</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrCompressedImageDataFormat.html" title="Describes a Compressed format. Compressed formats provide less information than the uncompressed format, as they can only be accessed &#34;black box&#34;.">pvr::CompressedImageDataFormat</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvreffectSubpass.html" title="A collection of subpass groups that will be sequentially executed. The different groups can be used to set the drawing order within the same subpass.">pvr::effect::Subpass</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvreffectPipelineCondition.html" title="A Condition that can be used to select a specific pipeline to render a specific object">pvr::effect::PipelineCondition</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrImageLayersSize.html" title="Structure describes the number of array levels and mip levels an image contains">pvr::ImageLayersSize</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataglmvec3.html">pvr::GpuDatatypesHelper::Metadata&lt;glm::vec3&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataglmbvec3.html">pvr::GpuDatatypesHelper::Metadata&lt;glm::bvec3&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataglmmat3x2.html">pvr::GpuDatatypesHelper::Metadata&lt;glm::mat3x2&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrRefCountEntry.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. A &#34;simple&#34; Refcount entry keeps a user-provided pointer to the object together with the reference counts.">pvr::RefCountEntry</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrtexture_bmpInfoHeader2.html" title="Structure of a info header2 for a BMP file">pvr::texture_bmp::InfoHeader2</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrFPSCamera.html" title="A simple first person camera implementation">pvr::FPSCamera</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrasyncAsyncScheduler.html" title="The AsyncScheduler is an abstract Scheduling system of a homogeneous task queue running on a background thread, i.e. a queue of work of a particular type. It provides its child classes wioth access to the actual queue and the synchronization semaphores in order to facilitate easier implementation. Specifically, it is expected that the user will provide functions to enqueue and dequeue work, while this class provides the running loop (actually executing the tasks, calling the callbacks etc">pvr::async::AsyncScheduler</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrtexture_bmpInfoHeader5.html" title="Structure of a info header5 for a BMP file">pvr::texture_bmp::InfoHeader5</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrIRefCountEntry.html" title="An interface that represents a block of memory that will be doing the bookkeeping for an object that will be Reference Counted. This bit of memory holds the reference counts.">pvr::IRefCountEntry</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGenericOffset2D.html" title="The GenericOffset2D contains a 16-bit 2D offset (offsetX, offsetY)">pvr::GenericOffset2D</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrtexture_bmpInfoHeader3.html" title="Structure of a info header3 for a BMP file">pvr::texture_bmp::InfoHeader3</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvreffectTextureRef.html" title="Stores effect texture information.">pvr::effect::TextureRef</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrCameraKeyFrame.html" title="A simple structure for handling key camera frames">pvr::CameraKeyFrame</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadatafloat.html">pvr::GpuDatatypesHelper::Metadata&lt;float&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataint8_t.html">pvr::GpuDatatypesHelper::Metadata&lt;int8_t&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrRectangle3D.html" title="A class representing an Axis-Aligned cuboidal region of 3D space. Internal representation offset defined as the absolute coordinates of one corner of the bounding region and extent which defines the second corner of the bounding region relative to the offset.">pvr::Rectangle3D</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrplatformCommandLineParserParsedCommandLineOption.html" title="A c-style std::string name-value pair that represents command line argument (arg: name, val: value)">pvr::platform::CommandLineParser::ParsedCommandLine::Option</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrFilePath.html" title="Filepath represents a Path + Filename + Extension.">pvr::FilePath</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrBufferStream.html" title="This class is used to access a block of memory as a Stream.">pvr::BufferStream</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrhashuint32_t.html" title="Template specialization of hash specifically for uint32_t">pvr::hash&lt;uint32_t&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrTextureHeader.html" title="A class mirroring the PVR Texture container format header, and which can in general represent any Texture asset. Contains accessors functions to facilitate using the Texture data in application code.">pvr::TextureHeader</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrtexture_xnbTexture3DHeader.html" title="Texture 3D header for XNB files.">pvr::texture_xnb::Texture3DHeader</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvreffectTextureReference.html" title="Stores effect texture information.">pvr::effect::TextureReference</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrTPSCamera.html" title="A simple third person camera implementation">pvr::TPSCamera</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataglmmat4x4.html">pvr::GpuDatatypesHelper::Metadata&lt;glm::mat4x4&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrInvalidDataError.html" title="A simple std::runtime_error wrapper for throwing exceptions when invalid data is provided">pvr::InvalidDataError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrplatformCommandLineParserParsedCommandLine.html" title="This class provides access to the command line arguments of a CommandLineParser. Its lifecycle is tied to the commandLineParser.">pvr::platform::CommandLineParser::ParsedCommandLine</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrasyncMutex.html" title="A simple wrapper for a moodcamel Semaphore object used for synchronising multi threaded access">pvr::async::Mutex</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrStencilState.html" title="Pipeline Stencil state">pvr::StencilState</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrFreeValueView.html" title="Represents a runtime-known number of elements of a runtime-known type, with functions to handle and convert them. Very commonly used to dynamically represent data that will eventually need to be used by the GPU, such as uniforms, vectors and matrices. Does not contain methods to actually be populated, as this should be done through subclasses.">pvr::FreeValueView</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrTextureMetaData.html" title="The TextureMetaData class contains metadata of a texture. Metadata is any information that a texture could be correctly loaded from file without. In most cases, metadata may still be necessary to actually USE the texture, such as winding orders, paddings, atlas information and others.">pvr::TextureMetaData</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrmathAxisAlignedBox.html" title="This class provides functionality to handle 3 dimensional Axis Aligned Boxes. Center-halfextent representation.">pvr::math::AxisAlignedBox</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGeneratePixelType4.html" title="Use this template class to generate a 4 channel PixelID.">pvr::GeneratePixelType4</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataconstunsignedchar.html">pvr::GpuDatatypesHelper::Metadata&lt;constunsignedchar*&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrutilsUnicodeConverter.html" title="Use as a namespace (static functions only). Contains functionality to work with Unicode strings: Conversions between ASCII/UTF8/UTF16/UTF32, parse/count characters in Multibyte systems, validity queries.">pvr::utils::UnicodeConverter</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrasyncIFrameworkAsyncResult.html" title="An object that is intended to be used as an asynchronous return value. When you wish to perform a task in another thread, when &#34;kicking&#34; that task you should &#34;immediately&#34; (before the task is complete) return such an object, and use it to check when the task is complete, and retrieve its return value. Will provide both cleanup semantics (which should at least ensure the objects are safe to destroy and operations are pending on them), and functions to both query completion and (blockingly) get the return value. To implement this class, you must implement the abstract functions get_ (that actually waits for and returns the result, and _isComplete, which actually queries if the result is ready.">pvr::async::IFrameworkAsyncResult</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrtexture_ddsFileHeaderDX10.html" title="File header for DX10.">pvr::texture_dds::FileHeaderDX10</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataint32_t.html">pvr::GpuDatatypesHelper::Metadata&lt;int32_t&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrPvrError.html" title="A simple std::runtime_error wrapper for throwing generic PVR exceptions">pvr::PvrError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrCameraAnimationController.html" title="A simple structure for controlling camera animations">pvr::CameraAnimationController</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrhashstdbasic_stringT.html" title="Template specialization of hash specifically for an std::basic_string">pvr::hash&lt;std::basic_string&lt;T&gt;&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrRefCountedResource.html" title="Reference counted smart pointer. It can be used very similarly to the C++11 shared_ptr, but with some differences.">pvr::RefCountedResource</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvreffectShader.html" title="Store effect data from the shader block.">pvr::effect::Shader</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGenericOffset3D.html" title="The GenericOffset3D contains the offsets in 3 dimension (offsetX, offsetY, offsetZ)">pvr::GenericOffset3D</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrImageSubresourceLayers.html" title="Represents a specific subresource layer: A specified Array Layer and Mipmap level of specific aspect of an image">pvr::ImageSubresourceLayers</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvreffectDescriptorRef.html" title="Base class for classes that represent semantic references to an image or buffer">pvr::effect::DescriptorRef</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrtexture_legacyHeaderV1.html" title="Version 1 of the PVR file format">pvr::texture_legacy::HeaderV1</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrImageResolveRange.html" title="Represents an image resolve operation">pvr::ImageResolveRange</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrhashuint64_t.html" title="Template specialization of hash specifically for uint64_t">pvr::hash&lt;uint64_t&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrtexture_ddsFileHeader.html" title="File header format for DDS files.">pvr::texture_dds::FileHeader</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrFileNotFoundError.html" title="A simple std::runtime_error wrapper for throwing exceptions when file not found errors occur">pvr::FileNotFoundError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataconstchar.html">pvr::GpuDatatypesHelper::Metadata&lt;constchar*&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataglmmat2x4.html">pvr::GpuDatatypesHelper::Metadata&lt;glm::mat2x4&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataglmmat2x3.html">pvr::GpuDatatypesHelper::Metadata&lt;glm::mat2x3&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvreffectBufferDefinitionEntry.html" title="A variable entry into the buffer definition">pvr::effect::BufferDefinition::Entry</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGenericExtent2D.html" title="Contains a 2d Integer size (width, height)">pvr::GenericExtent2D</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataunsignedchar.html">pvr::GpuDatatypesHelper::Metadata&lt;unsignedchar*&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrFileStream.html" title="A FileStream is a Stream that is used to access a File in the filesystem of the platform.">pvr::FileStream</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrplatformCommandLineParser.html" title="This class parses, abstracts, stores and handles command line options passed on application launch.">pvr::platform::CommandLineParser</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvreffectPipelineReference.html" title="A Reference to a pipeline definition (used in the composition of the effects)">pvr::effect::PipelineReference</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvreffectTextureDefinition.html" title="Stores effect texture information.">pvr::effect::TextureDefinition</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrmathViewingFrustum.html" title="This class provides specialized functionality for when a frustum is a &#34;normal&#34;viewing frustum, that is, the following conditions hold (The conditions ARE NOT checked) Note: A &#34;frustum side&#34; of a plane means &#34;the quadrilateral of the plane that is enclosed by the 4 other planes not opposite to it&#34; &#34;Opposite&#34; means the &#34;other&#34; side of the frustum (minusX is opposit plusX). 1) Opposite Frustum sides do not intersect (their planes may do so outside the frustum) 2) The frustum is &#34;opening&#34;, or at least not &#34;closing&#34; accross the z axis accross all directions, meaning that the any point of the projection of the negative Z side of the frustum on the positive Z plane, is inside or on the positive Z side of the frustum. 3) Any point of a positive(negative) part of the frustum has a larger(smaller) corresponding coordinate than its opposite part 4) All plane normals point INTO of the frustum These optimizations allow us to greatly reduce the calculations for a viewing frustum.">pvr::math::ViewingFrustum</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataglmmat4x2.html">pvr::GpuDatatypesHelper::Metadata&lt;glm::mat4x2&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrStream.html" title="This class is used to abstract streams of data (files, blocks of memory, resources etc.). In general a stream is considered something that can be read or written from. Specializations for many different types of streams are provided by the PowerVR Framework, the most commonly used ones being Files and Memory. The common interface and pointer types allow the Stream to abstract data in a very useful manner.">pvr::Stream</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrTime.html" title="This class provides functions for measuring time: current time, elapsed time etc. High performance timers are used if available by the platform.">pvr::Time</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadatauint64_t.html">pvr::GpuDatatypesHelper::Metadata&lt;uint64_t&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrtexture_xnbTexture2DHeader.html" title="Texture 2D header for XNB files.">pvr::texture_xnb::Texture2DHeader</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvreffectInputAttachmentRef.html" title="A Reference to an Input Attachment.">pvr::effect::InputAttachmentRef</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataint16_t.html">pvr::GpuDatatypesHelper::Metadata&lt;int16_t&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrhashint32_t.html" title="Template specialization of hash specifically for int32_t">pvr::hash&lt;int32_t&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrhash.html" title="Class template denoting a hash. Specializations only - no default implementation. (int32_t/int64_t/uint32_t/uint64_t/string)">pvr::hash</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/Logger.html" title="Represents an object capable of providing Logging functionality. This class is normally instantiated and configured, not inherited from. The components providing the Logging capability are contained in this class through interfaces, and as such can be replaced with custom components.">::Logger</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrRefcountEntryHoldervoid.html">pvr::RefcountEntryHolder&lt;void&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrmathAxisAlignedBoxMinMax.html">pvr::math::AxisAlignedBoxMinMax</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrStridedBuffer.html" title="Representation of raw data. Used to store raw data that is logically grouped in blocks with a stride.">pvr::StridedBuffer</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataglmvec2.html">pvr::GpuDatatypesHelper::Metadata&lt;glm::vec2&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrPixelFormat.html" title="The PixelFormat class fully defines a Pixel Format (channels, format, compression, bit width etc.).">pvr::PixelFormat</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrImageStorageFormatCompressed.html" title="Describes a Compressed format. Compressed formats provide less information than the uncompressed format, as they can only be accessed &#34;black box&#34;.">pvr::ImageStorageFormatCompressed</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrtexture_xnbTextureCubeHeader.html" title="Texture Cube header for XNB files.">pvr::texture_xnb::TextureCubeHeader</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/ILogger.html" title="Represents an object capable of providing Logging functionality. This class is normally instantiated and configured, not inherited from. The components providing the Logging capability are contained in this class through interfaces, and as such can be replaced with custom components.">::ILogger</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrtexture_bmpInfoHeader4.html" title="Structure of a info header4 for a BMP file">pvr::texture_bmp::InfoHeader4</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrTPSOrbitCamera.html" title="A simple third person orbit camera implementation">pvr::TPSOrbitCamera</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvreffectAttributeSemantic.html" title="A Reference to an Attribute semantic.">pvr::effect::AttributeSemantic</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrBlendingConfig.html" title="Add blending configuration for a color attachment. Some API's only support one blending state for all attachments, in which case the 1st such configuration will be used for all.">pvr::BlendingConfig</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrImageSubresourceRange.html" title="Represents a subresource range: A specified range of Array Layers and Mipmap levels of specific aspect of an image">pvr::ImageSubresourceRange</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadatauint16_t.html">pvr::GpuDatatypesHelper::Metadata&lt;uint16_t&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrtexture_ddsPixelFormat.html" title="Pixel format used in DDS files.">pvr::texture_dds::PixelFormat</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrImageDataFormat.html" title="Represents an image format, including pixel format(channels/bits per channel), datatype and colorspace.">pvr::ImageDataFormat</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvreffectUniformSemantic.html" title="A Reference to a Uniform semantic (a free-standing shader variable).">pvr::effect::UniformSemantic</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGeneratePixelType2.html" title="Use this template class to generate a 2 channel PixelID.">pvr::GeneratePixelType2</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrIndexOutOfRange.html" title="A simple std::runtime_error wrapper for throwing exceptions when attempting to use index out of range">pvr::IndexOutOfRange</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataglmmat2x2.html">pvr::GpuDatatypesHelper::Metadata&lt;glm::mat2x2&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrasyncTextureLoadFuture_.html" title="A class wrapping the operations necessary to retrieve an asynchronously loaded texture, (e.g. querying if the load is complete, or blocking-wait get the result. It is a shared reference counted resource">pvr::async::TextureLoadFuture_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataglmvec4.html">pvr::GpuDatatypesHelper::Metadata&lt;glm::vec4&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrEmbeddedRefCount.html" title="EmbeddedRefCount is the class that must be inherited from in order to have a class that automatically has refcounted members, with awareness and access to their ref counting by keeping their ref-counting bookkeeping entries embedded in the main class">pvr::EmbeddedRefCount</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrRefCountedWeakReference.html" title="A RefCountedWeakReference is a &#34;Weak Reference&#34; to a Reference counted object.">pvr::RefCountedWeakReference</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadatauint32_t.html">pvr::GpuDatatypesHelper::Metadata&lt;uint32_t&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrInvalidOperationError.html" title="A simple std::runtime_error wrapper for throwing exceptions when invalid operations are attempted">pvr::InvalidOperationError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrEmbeddedRefCountedResource.html" title="&#34;Embedded&#34; subset of the Reference counted smart pointer. See RefCountedResource. It can be used very similarly to the C++11 shared_ptr, but with some differences, especially as far as conversions go. The EmbeddedRefCountedResource is used when the user must not have access to the .construct(...) functions of the RefCountedResource (especially, when a class is designed around reference counting and cannot stand widthout it). A RefCountedResource is-a EmbeddedRefCountedResource and is safe to &#34;slice&#34; to it as well (see details).">pvr::EmbeddedRefCountedResource</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataglmmat3x4.html">pvr::GpuDatatypesHelper::Metadata&lt;glm::mat3x4&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrhasher_helperhashvalue,first,dummy.html" title="Template specialization for uint32_t values.">pvr::hasher_helper&lt;hashvalue,first,dummy&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataglmuvec2.html">pvr::GpuDatatypesHelper::Metadata&lt;glm::uvec2&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataglmivec2.html">pvr::GpuDatatypesHelper::Metadata&lt;glm::ivec2&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrImageRange.html" title="Represents a specific 3-D range in an image (an orthogonal cuboid anywhere in the image)">pvr::ImageRange</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrtexture_xnbFileHeader.html" title="File header format for XNB files.">pvr::texture_xnb::FileHeader</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvreffectBufferDefinition.html" title="Information about a Buffer">pvr::effect::BufferDefinition</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataglmmat3x3.html">pvr::GpuDatatypesHelper::Metadata&lt;glm::mat3x3&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrRectangle.html" title="A class representing an axis-aligned rectangle. Internal representation TopLeft and size.">pvr::Rectangle</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrTextureDecompressionError.html" title="A simple std::runtime_error wrapper for throwing exceptions when invalid operations are attempted">pvr::TextureDecompressionError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvreffectBufferRef.html" title="A Reference to a buffer object inside the effect. Can be accessed either in its entirety through a Semantic, or through the semantics of each of its elements.">pvr::effect::BufferRef</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrtexture_bmpCoreHeader.html" title="Structure of a core header for a BMP file">pvr::texture_bmp::CoreHeader</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrWindowsResourceStream.html" title="A Stream implementation that is used to access resources built in a MS Windows executable.">pvr::WindowsResourceStream</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrFileEOFError.html" title="A simple std::runtime_error wrapper for throwing exceptions when attempting to read past the End Of File">pvr::FileEOFError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrutilsUnicodeConversionError.html" title="A simple std::runtime_error wrapper for throwing exceptions when undertaking unicode conversions">pvr::utils::UnicodeConversionError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrtexture_bmpivec3.html" title="Simple ivec3 representation">pvr::texture_bmp::ivec3</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataglmuvec4.html">pvr::GpuDatatypesHelper::Metadata&lt;glm::uvec4&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">union</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrRefCountEntryIntrusiveunion.html">pvr::RefCountEntryIntrusive::union</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">union</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrPixelFormatPixelFormatImpl.html">pvr::PixelFormat::PixelFormatImpl</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGeneratePixelType3.html" title="Use this template class to generate a 3 channel PixelID.">pvr::GeneratePixelType3</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrSwizzleChannels.html" title="The SwizzleChannels struct">pvr::SwizzleChannels</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvreffectPipelineVertexBinding.html" title="A description of binding a vertex to a pipeline.">pvr::effect::PipelineVertexBinding</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrIAssetProvider.html" title="The IAssetProvider interface marks a class that provides the getAssetStream function to load assets in a platform independent way.">pvr::IAssetProvider</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrtexture_bmpInfoHeader1.html" title="Structure of a info header1 for a BMP file">pvr::texture_bmp::InfoHeader1</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrTypedMem.html" title="Represents Free Value View that is backed by a (usually small) dynamically allocated block.">pvr::TypedMem</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGeneratePixelType1.html" title="Use this template class to generate a 1 channel PixelID.">pvr::GeneratePixelType1</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvreffectSubpassGroup.html" title="A collection of one or more pipelines, one of which should be conditionally picked per object to render this subpass.">pvr::effect::SubpassGroup</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrFileIOError.html" title="A simple std::runtime_error wrapper for throwing exceptions when undertaking File IO operations">pvr::FileIOError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrDisplayAttributes.html" title="Contains display configuration information (width, height, position, title, bpp etc.).">pvr::DisplayAttributes</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrPixelFormatLowHigh.html" title="64 bit Integer representation as 32 lower bits and 32 higher bits">pvr::PixelFormat::LowHigh</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrhasher_helperhashvalue,first.html" title="Template specialization for uint32_t values.">pvr::hasher_helper&lt;hashvalue,first&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataglmbvec2.html">pvr::GpuDatatypesHelper::Metadata&lt;glm::bvec2&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrTexture.html" title="A 2D Texture asset, together with Information, Metadata and actual Pixel data. Only represents the actual data, not the API objects that may be created from it.">pvr::Texture</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrasyncIFrameworkCleanupObject.html" title="A wrapper object with explicit clean up semantics that is intended to be used as the return value in functions that may need to wrap multiple items. For example, it might be the return value for a texture upload function that returns both a texture object and the fence to know the operatio is complete, and the cleanup function might wait on the fence and then delete it. to void destroying useful resources, does NOT call cleanup in the destructor by default, but that can (should usually) be added to the destructor of the derived class. Implement the abstract cleanup_ function to clean up the resource, then use this object as the return value_comp from a function needing to return (for example) multiple transient values.">pvr::async::IFrameworkCleanupObject</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrtexture_ktxFileHeader.html" title="Khronos texture file header">pvr::texture_ktx::FileHeader</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrDereferenceable.html" title="DO NOT USE DIRECTLY. The RefCountedResource follows this class.">pvr::Dereferenceable</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrtexture_ddsMakeFourCC.html" title="Make FourCC template.">pvr::texture_dds::MakeFourCC</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrUnsupportedOperationError.html" title="A simple std::runtime_error wrapper for throwing exceptions when unsupported operations are attempted">pvr::UnsupportedOperationError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrmathFrustum.html" title="This class provides functionality to handle the volume enclosed by 6 planes, normally the viewing frustum. The planes are represented in Hessian Normal Form (normal, distance) as vec4( (xyz):[normal], w:[distance from 0,0,0] )">pvr::math::Frustum</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrPlane3d.html" title="Uses the plane equation Ax + By + Cz + D = 0, where A B C are plane normal, xyz are position on the plane and D is distance to the plane.">pvr::Plane3d</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">union</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrFreeValueunion.html">pvr::FreeValue::union</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataglmivec4.html">pvr::GpuDatatypesHelper::Metadata&lt;glm::ivec4&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrVertexAttributeLayout.html" title="This class contains all the information of a Vertex Attribute's layout inside a block of memory, typically a Vertex Buffer Object. This informations is normally the DataType of the attribute, the Offset (from the beginning of the array) and the width (how many values of type DataType form an attribute).">pvr::VertexAttributeLayout</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrIsRefCountedTypeSFINAE.html">pvr::IsRefCountedType::SFINAE</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrtexture_legacyHeaderV2.html" title="Version 2 of the PVR file format">pvr::texture_legacy::HeaderV2</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadatauint8_t.html">pvr::GpuDatatypesHelper::Metadata&lt;uint8_t&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrImageSubresource.html" title="Describes a single &#34;layer&#34; of an image: a single array layer of a single mip level, or the offset of a layer range.">pvr::ImageSubresource</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrImageStorageFormat.html" title="Extends the ImageDataFormat with mipmaps and number of Samples.">pvr::ImageStorageFormat</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataglmivec3.html">pvr::GpuDatatypesHelper::Metadata&lt;glm::ivec3&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvreffectPipelineDefinition.html" title="A definition of a pipeline object/configuration.">pvr::effect::PipelineDefinition</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataglmuvec3.html">pvr::GpuDatatypesHelper::Metadata&lt;glm::uvec3&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrasyncTextureAsyncLoader.html" title="A class that loads Textures in a (single) different thread and provides futures to them. Create an instance of it, and then just call loadTextureAsync foreach texture to load. When each texture has completed loading, a callback may be called, otherwise you can use all the typical functionality of futures, such as querying if loading is comlete, or using a blocking wait to get the result">pvr::async::TextureAsyncLoader</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataglmbvec4.html">pvr::GpuDatatypesHelper::Metadata&lt;glm::bvec4&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrFreeValue.html" title="A Free Value View that is backed by a 64-byte statically allocated array: Enough to hold one item of any GPU-datatype, up to a mat4x4">pvr::FreeValue</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrInvalidArgumentError.html" title="A simple std::runtime_error wrapper for throwing exceptions when invalid arguments are provided">pvr::InvalidArgumentError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrHashCompileTime.html" title="Template specialization for unsigned char values.">pvr::HashCompileTime</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrhashint64_t.html" title="Template specialization of hash specifically for int64_t">pvr::hash&lt;int64_t&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvreffectPass.html" title="One full collection of drawing into a specific render target, from start to finish. Comprised of one or more subpasses.">pvr::effect::Pass</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrLockedQueue.html" title="A simple adapter for the BlockingConcurrentQueue that simplifies common use cases">pvr::LockedQueue</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadatadouble.html">pvr::GpuDatatypesHelper::Metadata&lt;double&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataglmmat4x3.html">pvr::GpuDatatypesHelper::Metadata&lt;glm::mat4x3&gt;</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrtexture_bmpFileHeader.html" title="Structure of a file header for a BMP file">pvr::texture_bmp::FileHeader</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrPaletteExpander.html" title="Internally used by some texture readers.">pvr::PaletteExpander</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrOperationFailedError.html" title="A simple std::runtime_error wrapper for throwing exceptions when operations fail">pvr::OperationFailedError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrtexture_tgaFileHeader.html" title="Structure of a file header for a TGA file">pvr::texture_tga::FileHeader</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">class</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrStringHash.html" title="Implementation of a hashed std::string with functionality for fast compares.">pvr::StringHash</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRCore_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRCore_Classes__entry__2"><a class="xref" href="classes/pvrGpuDatatypesHelperMetadataint64_t.html">pvr::GpuDatatypesHelper::Metadata&lt;int64_t&gt;</a></td>
+	</tr>
+			</tbody></table>
+</div>
+<nav role="navigation" class="related-links"><ul class="ullinks"><li class="link ulchildlink"><strong><a href="classes/pvr.html">pvr</a></strong><br></li><li class="link ulchildlink"><strong><a href="classes/Logger.html">Logger</a></strong><br>Represents an object capable of providing Logging functionality. This class is normally instantiated and configured, not inherited from. The components providing the Logging capability are contained in this class through interfaces, and as such can be replaced with custom components.</li><li class="link ulchildlink"><strong><a href="classes/ILogger.html">ILogger</a></strong><br>Represents an object capable of providing Logging functionality. This class is normally instantiated and configured, not inherited from. The components providing the Logging capability are contained in this class through interfaces, and as such can be replaced with custom components.</li></ul><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="PVRCore_intro.html" title="An introduction to PVRCore, one of the most vital modules of the PowerVR SDK Framework">Introduction to PVRCore</a></div></div></nav></article></main></div></div></div></div></div><div id="custom_nav" class="text-right hidden-sm hidden-xs hidden-print"><div class="well well-lg" style="margin-left:20px; margin-right:20px;"><footer role="contentinfo"><script src="ditasearch.js"></script><footer xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="site-info  wh_footer" itemtype="https://schema.org/WPFooter" itemscope="" whc:version="21.0">
+
+  <div class="inside-site-info grid-container grid-parent footer-container  mx-auto">
+    <div class="copyright-bar">
+      <div class="elementor elementor-70634">
+        <div class="elementor-inner">
+          <div class="elementor-section-wrap">
+            <section class="elementor-element elementor-element-a126d69 elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a126d69" data-element_type="section">
+              <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-row">
+                  <div class="elementor-element elementor-element-c1f5a3a elementor-column elementor-col-50 elementor-top-column" data-id="c1f5a3a" data-element_type="column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-9f26949 elementor-widget elementor-widget-image" data-id="9f26949" data-element_type="widget" data-widget_type="image.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-image"> <a href="https://www.imgtec.com/"><img src="https://www.imgtec.com/wp-content/uploads/2019/10/Imagination_Logo_Secondary_Blk.svg" title="Imagination_Logo" alt="Imagination_Logo" class="lazyloading"></img></a></div>
+                          </div>
+                        </div>
+                        <div class="elementor-element elementor-element-4eb6939 elementor-widget elementor-widget-text-editor">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-text-editor elementor-clearfix">
+                              <div class="footer-copyright">© Imagination Technologies Limited. All rights reserved.<br></br><a href="https://www.imgtec.com/privacy-policy/">Privacy Policy</a> – <a href="https://www.imgtec.com/terms-and-conditions/">Terms &amp; Conditions</a> – <a href="https://www.imgtec.com/trademarks/">Trademarks</a> – <a href="https://www.imgtec.com/cookies/">Cookies</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="elementor-element elementor-element-01bb773 elementor-column elementor-col-50 elementor-top-column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-1c0e19c elementor-shape-square elementor-widget elementor-widget-social-icons" data-id="1c0e19c" data-element_type="widget" data-widget_type="social-icons.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-social-icons-wrapper"> <a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin" href="https://www.linkedin.com/company/imagination-technologies/" target="_blank"> <span class="elementor-screen-only">Linkedin</span> <i class="fab fa-linkedin"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-twitter" href="https://twitter.com/imaginationtech" target="_blank"> <span class="elementor-screen-only">Twitter</span> <i class="fab fa-twitter"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook" href="https://www.facebook.com/imgtec/" target="_blank"> <span class="elementor-screen-only">Facebook</span> <i class="fab fa-facebook"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-youtube" href="https://www.youtube.com/user/Imgtec/" target="_blank"> <span class="elementor-screen-only">Youtube</span> <i class="fab fa-youtube"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram" href="https://www.instagram.com/imaginationtech/" target="_blank"> <span class="elementor-screen-only">Instagram</span> <i class="fab fa-instagram"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-google-plus" href="https://plus.google.com/+ImaginationTechnologiesLtd" target="_blank"> <span class="elementor-screen-only">Google-plus</span> <i class="fab fa-google-plus"></i> </a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer></footer></div></div></div></body></html>

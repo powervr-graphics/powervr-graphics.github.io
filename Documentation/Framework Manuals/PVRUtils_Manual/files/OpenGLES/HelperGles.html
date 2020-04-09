@@ -1,0 +1,555 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2020"><meta name="DC.rights.owner" content="(C) Copyright 2020"><meta name="DC.type" content="concept"><meta name="description" content="Contains utility functions to facilitate tasks to create API objects form assets"><meta name="DC.relation" scheme="URI" content="../../files/OpenGLES_dir.html"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="HelperGles.h_Reference"><link rel="stylesheet" type="text/css" href="../../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../../css/devcss.css"><title>HelperGles.h Reference</title><head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="icon" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png" sizes="32x32" type="image/png">
+<link rel="shorcut icon" type="image/png" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png">
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head></head><body id="HelperGles.h_Reference"><header role="banner"><div class="ditasearch" data-searchroot="../../"></div><header xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="navbar navbar-default wh_header" whc:version="21.0">
+    <div class="container-fluid  header-area">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="html5_logo_and_publication_title">
+		<a href="https://docs.imgtec.com" class="wh_logo hidden-xs">
+				<img src="https://www.imgtec.com/wp-content/uploads/2018/11/Imagination-logo-white.png"></img></a>
+		<p>Developer Documentation</p>
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <whc:webhelp_logo class="hidden-xs"></whc:webhelp_logo>
+                </div>
+                
+
+            </div>
+
+
+	
+
+		<whc:webhelp_search_input></whc:webhelp_search_input>
+        </div>
+
+		<!--<whc:webhelp_publication_title/>-->
+    </div>
+	</header></header><div class="container-fluid" id="content"><div class="row"><div class="wh_content_area doc_title"><h1>
+PVRUtils Manual
+
+</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../../PVRUtils_intro.html">Introduction to PVRUtils</a><ul><li><a href="../../PVRUtils_files.html">PVRUtils Files</a><ul><li><a href="../../files/PowerVRLogo.html">PowerVRLogo.h Reference</a></li><li><a href="../../files/ArialBoldFont.html">ArialBoldFont.h Reference</a></li><li><a href="../../files/PBRUtils.html">PBRUtils.h Reference</a></li><li><a href="../../files/PVRUtilsGles.html">PVRUtilsGles.h Reference</a></li><li><a href="../../files/MultiObject.html">MultiObject.h Reference</a></li><li><a href="../../files/StructuredMemory.html">StructuredMemory.h Reference</a></li><li><a href="../../files/PVRUtilsVk.html">PVRUtilsVk.h Reference</a></li><li><a href="../../files/PVRUtilsTypes.html">PVRUtilsTypes.h Reference</a></li><li><a href="../../files/Vulkan_dir.html">Vulkan</a></li><li><a href="../../files/OpenCL_dir.html">OpenCL</a></li><li><a href="../../files/EAGL_dir.html">EAGL</a></li><li><a href="../../files/OpenGLES_dir.html">OpenGLES</a><ul><li><a href="../../files/OpenGLES/ErrorsGles.html">ErrorsGles.h Reference</a></li><li><a href="../../files/OpenGLES/BindingsGles.html">BindingsGles.h Reference</a></li><li><a href="../../files/OpenGLES/ModelGles.html">ModelGles.h Reference</a></li><li><a href="../../files/OpenGLES/PBRUtilsGles.html">PBRUtilsGles.h Reference</a></li><li><a href="../../files/OpenGLES/ConvertToGlesTypes.html">ConvertToGlesTypes.h Reference</a></li><li><a href="../../files/OpenGLES/UIRendererShaders_ES.html">UIRendererShaders_ES.h Reference</a></li><li><a href="../../files/OpenGLES/UIRendererGles.html">UIRendererGles.h Reference</a></li><li><a href="../../files/OpenGLES/SpriteGles.html">SpriteGles.h Reference</a></li><li class="active"><a href="../../files/OpenGLES/HelperGles.html">HelperGles.h Reference</a></li><li><a href="../../files/OpenGLES/TextureUtilsGles.html">TextureUtilsGles.h Reference</a></li><li><a href="../../files/OpenGLES/ShaderUtilsGles.html">ShaderUtilsGles.h Reference</a></li></ul></li><li><a href="../../files/EGL_dir.html">EGL</a></li></ul></li><li><a href="../../PVRUtils_classes.html">PVRUtils Classes</a></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1">HelperGles.h Reference</h1>
+
+<div class="body conbody"><p class="shortdesc">Contains utility functions to facilitate tasks to create API objects form assets</p>
+
+<section class="section" id="HelperGles.h_Reference__overview"><h2 class="title sectiontitle">Overview</h2>
+	
+<p class="p"><strong class="ph b">Description</strong>: Contains utility functions to facilitate tasks to create API objects form assets</p>
+</section>
+<section class="section">
+
+<table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Classes</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="HelperGles.h_Reference__entry__1">Declaration Type</th><th class="entry" id="HelperGles.h_Reference__entry__2">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__1">struct</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__2"><a class="xref" href="../../classes/pvrutilsVertexAttributeInfoGles.html">pvr::utils::VertexAttributeInfoGles</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__1">struct</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__2"><a class="xref" href="../../classes/pvrutilsVertexConfiguration.html">pvr::utils::VertexConfiguration</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__1">struct</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__2"><a class="xref" href="../../classes/pvrutilsVertexBindings_Name.html" title="Represents a shader Reflective binding, tying a Semantic name to an Attribute variable name.">pvr::utils::VertexBindings_Name</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__1">struct</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__2"><a class="xref" href="../../classes/pvrutilsVertexBindings.html" title="Represents a shader Explicit binding, tying a Semantic name to an Attribute Index.">pvr::utils::VertexBindings</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__1">struct</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__2"><a class="xref" href="../../classes/pvrutilsVertexBindingInfoGles.html">pvr::utils::VertexBindingInfoGles</a></td>
+	</tr>
+			</tbody></table>
+</section>
+<section class="section">
+
+<table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="HelperGles.h_Reference__entry__13">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><a class="xref" href="../../classes/pvrplatform.html">pvr::platform</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><a class="xref" href="../../classes/pvruiimplFont_.html" title="Use this class through the reference counted Framework Object pvr::ui::Font. Is an Image_ containing font characters along with the metadata necessary for rendering text with them. Although it can be used like an Image_, this does not make some sense since it would just display the characters as a texture atlas. Text objects will contain a reference to a Font to render with.">pvr::ui::impl::Font_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><span class="xref">pvr::utils::details</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><a class="xref" href="../../classes/pvruiimplGroup_.html" title="Abstract container for sprites. See MatrixGroup or PixelGroup. A group contains references to a number of sprites, allowing hierarchical transformations to be applied to them">pvr::ui::impl::Group_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><a class="xref" href="../../classes/clutils.html">clutils</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><a class="xref" href="../../classes/pvruiimplMatrixGroup_.html" title="This class is wrapped into the pvr::ui::Group reference counted Framework Object. Use to apply a transformation to several Sprites and render them together (for example, layout some sprites to form a UI and then apply translation or rotation effects to all of them to change the page).">pvr::ui::impl::MatrixGroup_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><a class="xref" href="../../classes/pvrutils.html">pvr::utils</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><a class="xref" href="../../classes/pvrutilsvmaimplAllocation_.html" title="The DeviceMemoryWrapper_. Class Just wraps the Vulkan device memory object allocated by the memory allocatpr. This class doesn't manages the creation and destruction of vulkan object. It only serves as the interface to device memory functions.">pvr::utils::vma::impl::Allocation_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><a class="xref" href="../../classes/pvrutilsvmaimplAllocator_.html">pvr::utils::vma::impl::Allocator_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><a class="xref" href="../../classes/pvruiimplPixelGroup_.html" title="This class is wrapped into the pvr::ui::Group reference counted Framework Object. Use to apply a transformation to several Sprites and render them together (for example, layout some sprites to form a UI and then apply translation or rotation effects to all of them to change the page).">pvr::ui::impl::PixelGroup_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><a class="xref" href="../../classes/pvrutilsvmaimplPool_.html" title="An embedded ref counted Pool class">pvr::utils::vma::impl::Pool_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><a class="xref" href="../../classes/pvruiimplText_.html" title="Use this class through the reference counted Framework Object pvr::ui::Text. Represents some text that can be rendered as a normal Sprite_ and additionally contains the necessary text manipulation functions.">pvr::ui::impl::Text_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><a class="xref" href="../../classes/pvruiimpl.html">pvr::ui::impl</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><a class="xref" href="../../classes/pvrutilsvmaimpl.html">pvr::utils::vma::impl</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><a class="xref" href="../../classes/pvruiimplTextElement_.html" title="The TextElement class should be used through the reference counted Framework Object pvr::ui::TextElement. The TextElement_ class handles the implementation specifics for creating, managing and rendering text elements to the screen including buffer creation, updates and deletion as well as the rendering of the text element.">pvr::ui::impl::TextElement_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><a class="xref" href="../../classes/pvruiimplImage_.html" title="Use this class through the reference counted Framework Object pvr::ui::Image. Represents a 2D Image (aka Texture). Can be used like all Sprites and additionally contains methods required for working with Images.">pvr::ui::impl::Image_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><a class="xref" href="../../classes/pvrui.html">pvr::ui</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><a class="xref" href="../../classes/pvrutilsModelGles.html" title="The ModelGles class provides the functionality for creating all of the buffers (vbos and ibos) and textures required for basic rendering of a pvr::assets::Model using OpenGL ES.">pvr::utils::ModelGles</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><a class="xref" href="../../classes/pvrutilsvmaimplDeviceMemoryWrapper_.html" title="A wrapper for device memory">pvr::utils::vma::impl::DeviceMemoryWrapper_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><a class="xref" href="../../classes/pvrutilsvma.html">pvr::utils::vma</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><a class="xref" href="../../classes/pvruiUIRenderer.html" title="Manages and render the sprites.">pvr::ui::UIRenderer</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__13"><a class="xref" href="../../classes/pvrutilsStructuredMemoryEntry.html" title="Defines a StructuredMemoryEntry element. A StructuredMemoryEntry defines an actual element entry in a structured buffer view. WARNING: Arrays of size 1 not supported - they are considered non-arrays. WARNING: Due to pointers to parents, no reallocations must *ever* happen. Once initialized, the lists must be final. WARNING: THE ENTIRE PUBLIC INTERFACE OF THIS CLASS EXCEPT FOR INIT, IS CONST. WARNING: IT IS NOT INTENDED FOR THIS CLASS TO BE EVER MODIFIABLE.">pvr::utils::StructuredMemoryEntry</a></td>
+	</tr>
+			</tbody></table>
+</section>
+<section class="section"><h2 class="title sectiontitle">Functions</h2>
+<table class="table"><caption><span class="table--title-label">Table 3. </span><span class="title">Functions</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="HelperGles.h_Reference__entry__37">Return Type</th><th class="entry" id="HelperGles.h_Reference__entry__38">Name and Description</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">size_t</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">insertSorted</strong>(<span class="ph code_type">container &amp;</span> cont, <span class="ph code_type">typename container::iterator</span> begin, <span class="ph code_type">typename container::iterator</span> end, <span class="ph code_type">const val &amp;</span> item, <span class="ph code_type">const cmp &amp;</span> compare)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Insert sorted element in to the container</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">begin:</strong>	Container range begin</li>
+
+<li class="li"><strong class="ph b">cont:</strong>	Container to insert the element into.</li>
+
+<li class="li"><strong class="ph b">item:</strong>	Item to insert in to the container</li>
+
+<li class="li"><strong class="ph b">end:</strong>	Container range end</li>
+
+<li class="li"><strong class="ph b">compare:</strong>	Comparison operator used for sorting</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">size_t</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">insertSorted</strong>(<span class="ph code_type">container &amp;</span> cont, <span class="ph code_type">typename container::iterator</span> begin, <span class="ph code_type">typename container::iterator</span> end, <span class="ph code_type">const val &amp;</span> item)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Insert sorted element in to the container</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">begin:</strong>	Container range begin</li>
+
+<li class="li"><strong class="ph b">cont:</strong>	Container to insert the element into.</li>
+
+<li class="li"><strong class="ph b">item:</strong>	Item to insert in to the container</li>
+
+<li class="li"><strong class="ph b">end:</strong>	Container range end</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">size_t</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">insertSorted</strong>(<span class="ph code_type">container &amp;</span> cont, <span class="ph code_type">const val &amp;</span> item)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Insert sorted element in to the container</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">cont:</strong>	Container to insert the element into.</li>
+
+<li class="li"><strong class="ph b">item:</strong>	Item to insert in to the container</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">size_t</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">insertSorted</strong>(<span class="ph code_type">container &amp;</span> cont, <span class="ph code_type">const val &amp;</span> item, <span class="ph code_type">const cmp &amp;</span> compare)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Insert sorted element in to the container</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">compare:</strong>	Comparison operator used for sorting</li>
+
+<li class="li"><strong class="ph b">item:</strong>	Item to insert in to the container</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">size_t</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">insertSorted_overwrite</strong>(<span class="ph code_type">container &amp;</span> cont, <span class="ph code_type">typename container::iterator</span> begin, <span class="ph code_type">typename container::iterator</span> end, <span class="ph code_type">const val &amp;</span> item, <span class="ph code_type">const cmp &amp;</span> compare)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Insert sorted element, Overwrite if element exist in the container</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">begin:</strong>	Container range begin</li>
+
+<li class="li"><strong class="ph b">cont:</strong>	Container to insert the element into.</li>
+
+<li class="li"><strong class="ph b">item:</strong>	Item to insert in to the container</li>
+
+<li class="li"><strong class="ph b">end:</strong>	Container range end</li>
+
+<li class="li"><strong class="ph b">compare:</strong>	Comparison operator used for sorting</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">size_t</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">insertSorted_overwrite</strong>(<span class="ph code_type">container &amp;</span> cont, <span class="ph code_type">typename container::iterator</span> begin, <span class="ph code_type">typename container::iterator</span> end, <span class="ph code_type">const val &amp;</span> item)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Insert sorted element, Overwrite if element exist in the container</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">begin:</strong>	Container range begin</li>
+
+<li class="li"><strong class="ph b">cont:</strong>	Container to insert the element into.</li>
+
+<li class="li"><strong class="ph b">item:</strong>	Item to insert in to the container</li>
+
+<li class="li"><strong class="ph b">end:</strong>	Container range end</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">size_t</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">insertSorted_overwrite</strong>(<span class="ph code_type">container &amp;</span> cont, <span class="ph code_type">const val &amp;</span> item)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Insert sorted element, Overwrite if element exist in the container</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">cont:</strong>	Container to insert the element into.</li>
+
+<li class="li"><strong class="ph b">item:</strong>	Item to insert in to the container</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">size_t</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">insertSorted_overwrite</strong>(<span class="ph code_type">container &amp;</span> cont, <span class="ph code_type">const val &amp;</span> item, <span class="ph code_type">const cmp &amp;</span> compare)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Insert sorted element, Overwrite if element exist in the container</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">compare:</strong>	Comparison operator used for sorting</li>
+
+<li class="li"><strong class="ph b">cont:</strong>	Container to insert the element into.</li>
+
+<li class="li"><strong class="ph b">item:</strong>	Item to insert in to the container</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">inline Api</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">getCurrentGlesVersion</strong>()</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">inline bool</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">checkFboStatus</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Check the currently bound GL_DRAW_FRAMEBUFFER status. On success, return true. On error, log the actual error log and return false</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">inline void</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">takeScreenshot</strong>(<span class="ph code_type">const std::string &amp;</span> screenshotFileName, <span class="ph code_type">const uint32_t</span> width, <span class="ph code_type">const uint32_t</span> height, <span class="ph code_type">const uint32_t</span> screenshotScale)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Reads a block of pixel data from the frame buffer using the dimensions width and height as the dimensions of the pixel rectangle saved. The function will save the pixel data as a TGA file with the name specified by screenshotFileName. The function can be used to take screenshots of the current frame buffer or frame when called prior to presenting the backbuffer i.e. swapping buffers.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">screenshotFileName:</strong>	The name used as the filename for the saved TGA screenshot.</li>
+
+<li class="li"><strong class="ph b">screenshotScale:</strong>	A scaling factor to use for increasing the size of the saved screenshot.</li>
+
+<li class="li"><strong class="ph b">width:</strong>	The width of the pixel rectangle retrieved.</li>
+
+<li class="li"><strong class="ph b">height:</strong>	The width of the pixel rectangle retrieved.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">inline GLuint</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">textureUpload</strong>(<span class="ph code_type">const IAssetProvider &amp;</span> app, <span class="ph code_type">const char *</span> file, <span class="ph code_type">pvr::Texture &amp;</span> outTexture, <span class="ph code_type">bool</span> isEs2)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Reads a block of pixel data from the frame buffer using the dimensions width and height as the dimensions of the pixel rectangle saved. The function will save the pixel data as a TGA file with the name specified by screenshotFileName. The function can be used to take screenshots of the current frame buffer or frame when called prior to presenting the backbuffer i.e. swapping buffers.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">screenshotFileName:</strong>	The name used as the filename for the saved TGA screenshot.</li>
+
+<li class="li"><strong class="ph b">screenshotScale:</strong>	A scaling factor to use for increasing the size of the saved screenshot.</li>
+
+<li class="li"><strong class="ph b">width:</strong>	The width of the pixel rectangle retrieved.</li>
+
+<li class="li"><strong class="ph b">height:</strong>	The width of the pixel rectangle retrieved.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">inline GLuint</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">textureUpload</strong>(<span class="ph code_type">const IAssetProvider &amp;</span> app, <span class="ph code_type">const std::string &amp;</span> file, <span class="ph code_type">pvr::Texture &amp;</span> outTexture, <span class="ph code_type">bool</span> isEs2)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">inline GLuint</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">textureUpload</strong>(<span class="ph code_type">const IAssetProvider &amp;</span> app, <span class="ph code_type">const char *</span> file, <span class="ph code_type">bool</span> isEs2)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">inline GLuint</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">textureUpload</strong>(<span class="ph code_type">const IAssetProvider &amp;</span> app, <span class="ph code_type">const std::string &amp;</span> file, <span class="ph code_type">bool</span> isEs2)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">inline TextureUploadResults</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">textureUploadWithResults</strong>(<span class="ph code_type">const IAssetProvider &amp;</span> app, <span class="ph code_type">const char *</span> file, <span class="ph code_type">pvr::Texture &amp;</span> outTexture, <span class="ph code_type">bool</span> isEs2)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">inline TextureUploadResults</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">textureUploadWithResults</strong>(<span class="ph code_type">const IAssetProvider &amp;</span> app, <span class="ph code_type">const char *</span> file, <span class="ph code_type">bool</span> isEs2)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">inline pvr::Texture</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">getTextureData</strong>(<span class="ph code_type">const IAssetProvider &amp;</span> app, <span class="ph code_type">const char *</span> file)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">inline void</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">generateTextureAtlas</strong>(<span class="ph code_type">const IAssetProvider &amp;</span> app, <span class="ph code_type">const StringHash *</span> fileNames, <span class="ph code_type">Rectanglef *</span> outUVs, <span class="ph code_type">uint32_t</span> numTextures, <span class="ph code_type">GLuint *</span> outTexture, <span class="ph code_type">TextureHeader *</span> outDescriptor, <span class="ph code_type">bool</span> isEs2)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">inline void</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">deleteTexturesAndZero</strong>(<span class="ph code_type">GLuint &amp;</span> texture)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">inline void</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">deleteTexturesAndZero</strong>(<span class="ph code_type">GLuint &amp;</span> first, <span class="ph code_type">Args &amp;</span> rest)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">bool</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">operator()</strong>(<span class="ph code_type">const VertexAttributeInfoWithBinding &amp;</span> lhs, <span class="ph code_type">const VertexAttributeInfoWithBinding &amp;</span> rhs)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">bool</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">operator()</strong>(<span class="ph code_type">const VertexInputBindingInfo &amp;</span> lhs, <span class="ph code_type">const VertexInputBindingInfo &amp;</span> rhs)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">bool</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">operator()</strong>(<span class="ph code_type">uint16_t</span> lhs, <span class="ph code_type">const VertexInputBindingInfo &amp;</span> rhs)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">inline VertexConfiguration</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">createInputAssemblyFromMesh</strong>(<span class="ph code_type">const assets::Mesh &amp;</span> mesh, <span class="ph code_type">const VertexBindings *</span> bindingMap, <span class="ph code_type">uint16_t</span> numBindings, <span class="ph code_type">uint16_t *</span> outNumBuffers)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">inline VertexConfiguration</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">createInputAssemblyFromMesh</strong>(<span class="ph code_type">const assets::Mesh &amp;</span> mesh, <span class="ph code_type">const VertexBindings_Name *</span> bindingMap, <span class="ph code_type">uint16_t</span> numBindings, <span class="ph code_type">uint16_t *</span> outNumBuffers)</p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">inline void</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">createSingleBuffersFromMesh</strong>(<span class="ph code_type">const assets::Mesh &amp;</span> mesh, <span class="ph code_type">GLuint &amp;</span> outVbo, <span class="ph code_type">GLuint &amp;</span> outIbo)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Auto generates a single VBO and a single IBO from all the vertex data of a mesh. RESETS GL STATE: GL_ARRAY_BUFFER, GL_ELEMENT_ARRAY_BUFFER</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">outIbo:</strong>	The IBO handle where the data will be put. No buffer needs to have been created on the handle. If no face data is present on the mesh, the handle will be set to zero. IS ASSUMED TO NOT BE A VALID OPENGL OBJECT.</li>
+
+<li class="li"><strong class="ph b">outVbo:</strong>	The VBO handle where the data will be put. No buffer needs to have been created on the handle. IS ASSUMED TO NOT BE A VALID OPENGL OBJECT.</li>
+
+<li class="li"><strong class="ph b">mesh:</strong>	The mesh whose data will populate the buffers</li>
+
+<li class="li"><strong class="ph b">context:</strong>	The device context where the buffers will be generated on</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">inline void</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">createMultipleBuffersFromMesh</strong>(<span class="ph code_type">const assets::Mesh &amp;</span> mesh, <span class="ph code_type">std::vector&amp;lt;GLuint&gt; &amp;</span> outVbos, <span class="ph code_type">GLuint &amp;</span> outIbo)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Auto generates a set of VBOs and a single IBO from all the vertex data of a mesh, respecting the Mesh's vertex layout configuration: Each Data Element of the mesh will produce another VBO.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">outIbo:</strong>	The IBO handle where the data will be put. No buffer needs to have been created on the handle. If no face data is present on the mesh, the handle will be null.</li>
+
+<li class="li"><strong class="ph b">mesh:</strong>	The mesh whose data will populate the buffers</li>
+
+<li class="li"><strong class="ph b">outVbos:</strong>	Reference to a std::vector of VBO handles where the data will be put. Buffers will be appended at the end.</li>
+
+<li class="li"><strong class="ph b">context:</strong>	The device context where the buffers will be generated on</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">inline void</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">createSingleBuffersFromMeshes</strong>(<span class="ph code_type">MeshIterator_</span> meshIter, <span class="ph code_type">MeshIterator_</span> meshIterEnd, <span class="ph code_type">VboInsertIterator_</span> outVbos, <span class="ph code_type">IboInsertIterator_</span> outIbos)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Auto generates a set of VBOs and a set of IBOs from the vertex data of multiple meshes and uses std::inserter provided by the user to insert them to any container.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">meshIter:</strong>	Iterator for a collection of meshes.</li>
+
+<li class="li"><strong class="ph b">meshIterEnd:</strong>	End Iterator for meshIter.</li>
+
+<li class="li"><strong class="ph b">outIbos:</strong>	std::inserter for a collection of api::Buffer handles. It will be used to insert one IBO per mesh. If face data is not present on the mesh, a null handle will be inserted.</li>
+
+<li class="li"><strong class="ph b">outVbos:</strong>	std::inserter for a collection of api::Buffer handles. It will be used to insert one VBO per mesh.</li>
+
+<li class="li"><strong class="ph b">context:</strong>	The device context where the buffers will be generated on</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">inline void</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">createSingleBuffersFromMeshes</strong>(<span class="ph code_type">MeshIterator_</span> meshIter, <span class="ph code_type">MeshIterator_</span> meshIterEnd, <span class="ph code_type">VboContainer_ &amp;</span> outVbos, <span class="ph code_type">typename VboContainer_::iterator</span> vbos_where, <span class="ph code_type">IboContainer_ &amp;</span> outIbos, <span class="ph code_type">typename IboContainer_::iterator</span> ibos_where)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Auto generates a set of VBOs and a set of IBOs from the vertex data of multiple meshes and insert them at the specified spot in a user-provided container.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">meshIter:</strong>	Iterator for a collection of meshes.</li>
+
+<li class="li"><strong class="ph b">vbos_where:</strong>	Iterator on outVbos - the position where the insertion will happen.</li>
+
+<li class="li"><strong class="ph b">context:</strong>	The device context where the buffers will be generated on</li>
+
+<li class="li"><strong class="ph b">meshIterEnd:</strong>	End Iterator for meshIter.</li>
+
+<li class="li"><strong class="ph b">outIbos:</strong>	Collection of api::Buffer handles. It will be used to insert one IBO per mesh. If face data is not present on the mesh, a null handle will be inserted.</li>
+
+<li class="li"><strong class="ph b">ibos_where:</strong>	Iterator on outIbos - the position where the insertion will happen.</li>
+
+<li class="li"><strong class="ph b">outVbos:</strong>	Collection of api::Buffer handles. It will be used to insert one VBO per mesh.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">inline void</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">createSingleBuffersFromModel</strong>(<span class="ph code_type">const assets::Model &amp;</span> model, <span class="ph code_type">VboInsertIterator_</span> vbos, <span class="ph code_type">IboInsertIterator_</span> ibos)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Auto generates a set of VBOs and a set of IBOs from the vertex data of the meshes of a model and inserts them into containers provided by the user using std::inserters.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">model:</strong>	The model whose meshes will be used to generate the Buffers</li>
+
+<li class="li"><strong class="ph b">vbos:</strong>	An insert iterator to a std::Buffer container for the VBOs. Vbos will be inserted using this iterator.</li>
+
+<li class="li"><strong class="ph b">context:</strong>	The device context where the buffers will be generated on</li>
+
+<li class="li"><strong class="ph b">ibos:</strong>	An insert iterator to an std::Buffer container for the IBOs. Ibos will be inserted using this iterator.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">inline void</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">appendSingleBuffersFromModel</strong>(<span class="ph code_type">const assets::Model &amp;</span> model, <span class="ph code_type">VboContainer_ &amp;</span> vbos, <span class="ph code_type">IboContainer_ &amp;</span> ibos)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Auto generates a set of VBOs and a set of IBOs from the vertex data of the meshes of a model and appends them at the end of containers provided by the user.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">model:</strong>	The model whose meshes will be used to generate the Buffers</li>
+
+<li class="li"><strong class="ph b">vbos:</strong>	A container of api::Buffer handles. The VBOs will be inserted at the end of this container.</li>
+
+<li class="li"><strong class="ph b">context:</strong>	The device context where the buffers will be generated on</li>
+
+<li class="li"><strong class="ph b">ibos:</strong>	A container of api::Buffer handles. The IBOs will be inserted at the end of this container.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="HelperGles.h_Reference__entry__37">inline void</td>
+<td class="entry" headers="HelperGles.h_Reference__entry__38"><p class="p"><strong class="ph b">create3dPlaneMesh</strong>(<span class="ph code_type">uint32_t</span> width, <span class="ph code_type">uint32_t</span> length, <span class="ph code_type">bool</span> vertexAttribTex, <span class="ph code_type">bool</span> vertexAttribNormal, <span class="ph code_type">assets::Mesh &amp;</span> outMesh)</p>
+</td>
+	</tr>
+			</tbody></table>
+</section>
+</div>
+ <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../files/OpenGLES_dir.html">OpenGLES</a></div></div></nav></article></main></div></div></div></div></div><div id="custom_nav" class="text-right hidden-sm hidden-xs hidden-print"><div class="well well-lg" style="margin-left:20px; margin-right:20px;"><footer role="contentinfo"><script src="../../ditasearch.js"></script><footer xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="site-info  wh_footer" itemtype="https://schema.org/WPFooter" itemscope="" whc:version="21.0">
+
+  <div class="inside-site-info grid-container grid-parent footer-container  mx-auto">
+    <div class="copyright-bar">
+      <div class="elementor elementor-70634">
+        <div class="elementor-inner">
+          <div class="elementor-section-wrap">
+            <section class="elementor-element elementor-element-a126d69 elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a126d69" data-element_type="section">
+              <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-row">
+                  <div class="elementor-element elementor-element-c1f5a3a elementor-column elementor-col-50 elementor-top-column" data-id="c1f5a3a" data-element_type="column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-9f26949 elementor-widget elementor-widget-image" data-id="9f26949" data-element_type="widget" data-widget_type="image.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-image"> <a href="https://www.imgtec.com/"><img src="https://www.imgtec.com/wp-content/uploads/2019/10/Imagination_Logo_Secondary_Blk.svg" title="Imagination_Logo" alt="Imagination_Logo" class="lazyloading"></img></a></div>
+                          </div>
+                        </div>
+                        <div class="elementor-element elementor-element-4eb6939 elementor-widget elementor-widget-text-editor">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-text-editor elementor-clearfix">
+                              <div class="footer-copyright">© Imagination Technologies Limited. All rights reserved.<br></br><a href="https://www.imgtec.com/privacy-policy/">Privacy Policy</a> – <a href="https://www.imgtec.com/terms-and-conditions/">Terms &amp; Conditions</a> – <a href="https://www.imgtec.com/trademarks/">Trademarks</a> – <a href="https://www.imgtec.com/cookies/">Cookies</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="elementor-element elementor-element-01bb773 elementor-column elementor-col-50 elementor-top-column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-1c0e19c elementor-shape-square elementor-widget elementor-widget-social-icons" data-id="1c0e19c" data-element_type="widget" data-widget_type="social-icons.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-social-icons-wrapper"> <a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin" href="https://www.linkedin.com/company/imagination-technologies/" target="_blank"> <span class="elementor-screen-only">Linkedin</span> <i class="fab fa-linkedin"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-twitter" href="https://twitter.com/imaginationtech" target="_blank"> <span class="elementor-screen-only">Twitter</span> <i class="fab fa-twitter"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook" href="https://www.facebook.com/imgtec/" target="_blank"> <span class="elementor-screen-only">Facebook</span> <i class="fab fa-facebook"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-youtube" href="https://www.youtube.com/user/Imgtec/" target="_blank"> <span class="elementor-screen-only">Youtube</span> <i class="fab fa-youtube"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram" href="https://www.instagram.com/imaginationtech/" target="_blank"> <span class="elementor-screen-only">Instagram</span> <i class="fab fa-instagram"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-google-plus" href="https://plus.google.com/+ImaginationTechnologiesLtd" target="_blank"> <span class="elementor-screen-only">Google-plus</span> <i class="fab fa-google-plus"></i> </a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer></footer></div></div></div></body></html>

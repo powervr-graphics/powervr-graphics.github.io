@@ -1,0 +1,931 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2020"><meta name="DC.rights.owner" content="(C) Copyright 2020"><meta name="DC.type" content="concept"><meta name="description" content="The Model class represents an entire Scene, or Model. It is mainly a Node structure, allowing various different kinds of data to be stored in the Nodes. The class contains a tree-like structure of Nodes. Each Node can be a Mesh node (containing a Mesh), Camera node or Light node. The tree-structure assumes transformational hierarchy (as usual). Transformations are expressed through Animation objects (a static transform is an animation with a single frame) There is an implicit order in the nodes - First in the array the Mesh nodes will be laid out, then Camera and Light nodes."><meta name="DC.relation" scheme="URI" content="../classes/pvrassets.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrassetsModelNode.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrassetsModelMaterial.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrassetsModelTexture.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrassetsModelInternalData.html"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="pvrassetsModel"><link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/devcss.css"><title>pvr::assets::Model</title><head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="icon" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png" sizes="32x32" type="image/png">
+<link rel="shorcut icon" type="image/png" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png">
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head></head><body id="pvrassetsModel"><header role="banner"><div class="ditasearch" data-searchroot="../"></div><header xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="navbar navbar-default wh_header" whc:version="21.0">
+    <div class="container-fluid  header-area">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="html5_logo_and_publication_title">
+		<a href="https://docs.imgtec.com" class="wh_logo hidden-xs">
+				<img src="https://www.imgtec.com/wp-content/uploads/2018/11/Imagination-logo-white.png"></img></a>
+		<p>Developer Documentation</p>
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <whc:webhelp_logo class="hidden-xs"></whc:webhelp_logo>
+                </div>
+                
+
+            </div>
+
+
+	
+
+		<whc:webhelp_search_input></whc:webhelp_search_input>
+        </div>
+
+		<!--<whc:webhelp_publication_title/>-->
+    </div>
+	</header></header><div class="container-fluid" id="content"><div class="row"><div class="wh_content_area doc_title"><h1>
+PVRAssets Manual
+
+</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../PVRAssets_intro.html">Introduction to PVRAssets</a><ul><li><a href="../PVRAssets_files.html">PVRAssets Files</a></li><li><a href="../PVRAssets_classes.html">PVRAssets Classes</a><ul><li><a href="../classes/pvr.html">pvr</a><ul><li><a href="../classes/pvrassets.html">pvr::assets</a><ul><li><a href="../classes/pvrassetsAnimationInstance.html">pvr::assets::AnimationInstance</a></li><li class="active"><a href="../classes/pvrassetsModel.html">pvr::assets::Model</a><ul><li><a href="../classes/pvrassetsModelNode.html">pvr::assets::Model::Node</a></li><li><a href="../classes/pvrassetsModelMaterial.html">pvr::assets::Model::Material</a></li><li><a href="../classes/pvrassetsModelTexture.html">pvr::assets::Model::Texture</a></li><li><a href="../classes/pvrassetsModelInternalData.html">pvr::assets::Model::InternalData</a></li></ul></li><li><a href="../classes/pvrassetsAnimationData.html">pvr::assets::AnimationData</a></li><li><a href="../classes/pvrassetsMesh.html">pvr::assets::Mesh</a></li><li><a href="../classes/pvrassetsLight.html">pvr::assets::Light</a></li><li><a href="../classes/pvrassetsCamera.html">pvr::assets::Camera</a></li><li><a href="../classes/pvrassetsKeyFrameData.html">pvr::assets::KeyFrameData</a></li><li><a href="../classes/pvrassetsSkeleton.html">pvr::assets::Skeleton</a></li></ul></li><li><a href="../classes/pvrtool.html">pvr::tool</a></li><li><a href="../classes/pvrVolume.html">pvr::Volume</a></li><li><a href="../classes/pvrShadowVolume.html">pvr::ShadowVolume</a></li><li><a href="../classes/pvrIndexedArray.html">pvr::IndexedArray</a></li></ul></li></ul></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1">pvr::assets::Model</h1>
+
+<div class="body conbody"><p class="shortdesc">The Model class represents an entire Scene, or Model. It is mainly a Node structure, allowing various different kinds of data to be stored in the Nodes. The class contains a tree-like structure of Nodes. Each Node can be a Mesh node (containing a Mesh), Camera node or Light node. The tree-structure assumes transformational hierarchy (as usual). Transformations are expressed through Animation objects (a static transform is an animation with a single frame) There is an implicit order in the nodes - First in the array the Mesh nodes will be laid out, then Camera and Light nodes.</p>
+
+<p class="p">The Model class represents an entire Scene, or Model. It is mainly a Node structure, allowing various different kinds of data to be stored in the Nodes. The class contains a tree-like structure of Nodes. Each Node can be a Mesh node (containing a Mesh), Camera node or Light node. The tree-structure assumes transformational hierarchy (as usual). Transformations are expressed through Animation objects (a static transform is an animation with a single frame) There is an implicit order in the nodes - First in the array the Mesh nodes will be laid out, then Camera and Light nodes.</p>
+<p class="p">Found in file: <a class="xref" href="../files/Model.html" title="Contains the class representing an entire Scene, or Model.">Model.h</a></p>
+<table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Classes</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvrassetsModel__entry__1">Declaration Type</th><th class="entry" id="pvrassetsModel__entry__2">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__1">class</td>
+<td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelMaterial.html" title="Class which stores model material info.">pvr::assets::Model::Material</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__1">class</td>
+<td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelMaterialPODMetallicRoughnessSemantics.html" title="POD Metallic roughness semantics">pvr::assets::Model::Material::PODMetallicRoughnessSemantics</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__1">class</td>
+<td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelMaterialPBRSemantics.html" title="Base class for Physically-based-rendering(PBR) semantics">pvr::assets::Model::Material::PBRSemantics</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__1">class</td>
+<td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelMaterialDefaultMaterialSemantics.html" title="This class is provided for convenient compile-time access of the semantic values.">pvr::assets::Model::Material::DefaultMaterialSemantics</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__1">struct</td>
+<td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelMaterialInternalData.html" title="Raw internal structure of the Material.">pvr::assets::Model::Material::InternalData</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__1">class</td>
+<td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelTexture.html" title="Internal class which stores Texture information of the model (name).">pvr::assets::Model::Texture</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__1">class</td>
+<td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelNode.html" title="The Node represents a Mesh, Camera or Light. A Node has its own parenting, material, animation and custom user data. The tree-structure assumes transformational hierarchy (as usual), so parent transformations should be applied to children. Transformations are expressed through Animation objects (a static transform is an animation with a single frame). Note: Node ID and MeshID can sometimes be confusing: They will always be the same (when a MeshID makes sense) because Meshes are always laid out first in the internal list of Nodes.">pvr::assets::Model::Node</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__1">class</td>
+<td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelMaterialGLTFMetallicRoughnessSemantics.html" title="This class provides accessor for gltf metallic roughness semantics">pvr::assets::Model::Material::GLTFMetallicRoughnessSemantics</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__1">struct</td>
+<td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelInternalData.html" title="Struct containing the internal data of the Model.">pvr::assets::Model::InternalData</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__1">struct</td>
+<td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelNodeInternalData.html" title="Raw internal structure of the Node.">pvr::assets::Model::Node::InternalData</a></td>
+	</tr>
+			</tbody></table>
+<table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Public Methods</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvrassetsModel__entry__23">Return Type</th><th class="entry" id="pvrassetsModel__entry__24">Name and Description</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">const FreeValue *</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getModelSemantic</strong>(<span class="ph code_type">const StringHash &amp;</span> semantic)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Return the value of a Model-wide semantic as a FreeValue, null if it does not exist.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">semantic:</strong>	The semantic name to retrieve</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">const std::shared_ptr&lt;void&gt; &amp;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getUserDataPtr</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get a pointer to the UserData of this model, if such data exist.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">std::shared_ptr&lt;void&gt;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getUserDataPtr</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get a pointer to the UserData of this model.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">void</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">setUserDataPtr</strong>(<span class="ph code_type">const std::shared_ptr&lt;void&gt; &amp;</span> ptr)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set the UserData of this model (wrap the data into a std::shared_ptr and cast to Ref Counted void pointer.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">ptr:</strong>	The UserData. Must be wrapped in an appropriate std::shared_ptr, and then cast into a std::shared_ptr to void</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">void</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">releaseVertexData</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Free the vertex data (Vertex attribute values, Vertex Index values) of all meshes to free memory. Usually called after VBOs/IBOs have been created. Any other data of the Mesh are unaffected.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">void</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">releaseVertexData</strong>(<span class="ph code_type">uint32_t</span> meshId)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Free the vertex data (Vertex attribute values, Vertex Index values) of a single mesh to free memory. Usually called after VBOs/IBOs have been created. Any other data of the Mesh are unaffected.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">meshId:</strong>	The meshId of the mesh whose vertex data to free</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">glm::vec3</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getLightPosition</strong>(<span class="ph code_type">uint32_t</span> lightId)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Return the world-space position of a light. Corresponds to the Model's current frame of animation.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">lightId:</strong>	The node for which to return the world matrix.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">size_t</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getNumAnimationData</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get number of animation data</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">const AnimationData &amp;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getAnimationData</strong>(<span class="ph code_type">uint32_t</span> index)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment"> Get animation data</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">index:</strong>	 animation data index</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">const AnimationData *</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getAnimationData</strong>(<span class="ph code_type">const char *</span> name)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get Animation Data</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">name:</strong>	Animation data name</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">const AnimationInstance &amp;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getAnimationInstance</strong>(<span class="ph code_type">uint32_t</span> index)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get animation instance</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">index:</strong>	Animation instance index</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">AnimationInstance &amp;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getAnimationInstance</strong>(<span class="ph code_type">uint32_t</span> index)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get animation instance</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">index:</strong>	Animation instance index</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">size_t</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getNumAnimationInstances</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get number of animation instances</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">size_t</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">addAnimationInstance</strong>(<span class="ph code_type">const AnimationInstance &amp;</span> animationInstance)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Add new animation instance</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">animationInstance:</strong>	Animation instance to add</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">glm::mat4x4</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getWorldMatrix</strong>(<span class="ph code_type">uint32_t</span> nodeId)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Return the model-to-world matrix of a node. Corresponds to the Model's current frame of animation. This version will store a copy of the matrix in an internal cache so that repeated calls for it will use the cached copy of it. Will also store the cached versions of all parents of this node, or use cached versions of them if they exist. Use this if you have long hierarchies and/or repeated calls per frame.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">nodeId:</strong>	The node for which to return the world matrix.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">glm::mat4x4</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getWorldMatrixNoCache</strong>(<span class="ph code_type">uint32_t</span> nodeId)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Return the model-to-world matrix of a node. Corresponds to the Model's current frame of animation. This version will not use caching and will recalculate the matrix. Faster if the matrix is only used a few times.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">nodeId:</strong>	The node for which to return the world matrix</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">glm::mat4x4</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getBoneWorldMatrix</strong>(<span class="ph code_type">uint32_t</span> skinNodeID, <span class="ph code_type">uint32_t</span> boneId)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Return the model-to-world matrix of a specified bone. Corresponds to the Model's current frame of animation. This version will use caching.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">skinNodeID:</strong>	The node for which to return the world matrix</li>
+
+<li class="li"><strong class="ph b">boneId:</strong>	The bone for which to return the world matrix</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">glm::mat4x4</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">toWorldMatrix</strong>(<span class="ph code_type">uint32_t</span> nodeId, <span class="ph code_type">const glm::mat4 &amp;</span> localMatrix)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Transform a custom matrix with a node's parent's transformation. Allows a custom matrix to be applied to a node, while honoring the hierarchical transformations applied by its parent hierarchy.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">localMatrix:</strong>	The matrix to transform</li>
+
+<li class="li"><strong class="ph b">nodeId:</strong>	The node whose parents will be applied to the transformation.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">const Skeleton &amp;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getSkeleton</strong>(<span class="ph code_type">uint32_t</span> skeletonIndex)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get skeleton</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">skeletonIndex:</strong>	Skeleton index</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">size_t</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getNumSkeletons</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get number of skeletons</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">const float *</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getBackgroundColor</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the clear color (background) (float array R,G,B,A).</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">uint32_t</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getNumCameras</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the number of distinct camera objects. May be different than the actual number of Camera Instances (Nodes).</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">uint32_t</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getNumCameraNodes</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the number of Camera nodes in this model</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">const Camera &amp;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getCamera</strong>(<span class="ph code_type">uint32_t</span> cameraIndex)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get a Camera from this model</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">cameraIndex:</strong>	The index of the camera. Valid values (0 to getNumCameras()-1)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">Camera &amp;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getCamera</strong>(<span class="ph code_type">uint32_t</span> cameraIndex)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get a Camera from this model</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">cameraIndex:</strong>	The index of the camera. Valid values (0 to getNumCameras()-1)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">const Node &amp;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getCameraNode</strong>(<span class="ph code_type">uint32_t</span> cameraNodeIndex)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get a specific CameraNode.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">cameraNodeIndex:</strong>	The Index of a Camera Node. It is not the same as the NodeID. Valid values: (0 .. getNumCameraNodes()-1)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">Node &amp;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getCameraNode</strong>(<span class="ph code_type">uint32_t</span> cameraNodeIndex)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get a specific CameraNode.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">cameraNodeIndex:</strong>	The Index of a Camera Node. It is not the same as the NodeID. Valid values: (0 .. getNumCameraNodes()-1)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">size_t</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getNumAnimations</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get number of animation instances</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">uint32_t</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getNodeIdFromCameraId</strong>(<span class="ph code_type">uint32_t</span> cameraNodeIndex)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the (global) Node Index of a specific CameraNode.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">cameraNodeIndex:</strong>	The Index of a Camera Node that will be used to calculate the NodeID. Valid values: (0 to getNumCameraNodes()-1)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">uint32_t</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getNumLights</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the number of distinct Light objects. May be different than the actual number of Light Instances (Nodes).</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">uint32_t</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getNumLightNodes</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the number of Light nodes.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">const Light &amp;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getLight</strong>(<span class="ph code_type">uint32_t</span> lightIndex)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the light object with the specific Light Index.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">lightIndex:</strong>	The index of the light. Valid values (0..getNumLights()-1)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">Light &amp;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getLight</strong>(<span class="ph code_type">uint32_t</span> lightIndex)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the light object with the specific Light Index.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">lightIndex:</strong>	The index of the light. Valid values (0..getNumLights()-1)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">const Node &amp;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getLightNode</strong>(<span class="ph code_type">uint32_t</span> lightNodeIndex)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get a specific Light Node.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">lightNodeIndex:</strong>	The Index of the Light Node. It is not the same as the NodeID. Valid values: (0 to getNumLightNodes()-1)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">uint32_t</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getNodeIdFromLightNodeId</strong>(<span class="ph code_type">uint32_t</span> lightNodeIndex)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the GLOBAL index of a specific Light Node.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">lightNodeIndex:</strong>	The Index of the Light Node. It is not the same as the NodeID. Valid values: (0 to getNumLightNodes()-1)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">uint32_t</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getNumMeshes</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the number of distinct Mesh objects. Unless each Mesh appears at exactly one Node, may be different than the actual number of Mesh instances.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">uint32_t</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getNumMeshNodes</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the number of Mesh nodes.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">const Mesh &amp;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getMesh</strong>(<span class="ph code_type">uint32_t</span> meshIndex)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the Mesh object with the specific Mesh Index. Constant overload.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">meshIndex:</strong>	The index of the Mesh. Valid values (0..getNumMeshes()-1)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">void</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">allocateAnimationsData</strong>(<span class="ph code_type">uint32_t</span> numAnimation)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Allocate memory for animation data</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">numAnimation:</strong>	Number of animation data to allocate</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">void</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">allocateAnimationInstances</strong>(<span class="ph code_type">uint32_t</span> numAnimation)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Allocate memory for animation instances</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">numAnimation:</strong>	Number of animation instances to allocate</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">Mesh &amp;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getMesh</strong>(<span class="ph code_type">uint32_t</span> index)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the Mesh object with the specific Mesh Index.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">index:</strong>	The index of the Mesh. Valid values (0..getNumMeshes()-1)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">const Node &amp;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getMeshNode</strong>(<span class="ph code_type">uint32_t</span> meshIndex)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get a specific Mesh Node.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">meshIndex:</strong>	The Index of the Mesh Node. For meshes, it is the same as the NodeID. Valid values: (0 to getNumMeshNodes()-1)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">Node &amp;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getMeshNode</strong>(<span class="ph code_type">uint32_t</span> meshIndex)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get a specific Mesh Node.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">meshIndex:</strong>	The Index of the Mesh Node. For meshes, it is the same as the NodeID. Valid values: (0 to getNumMeshNodes()-1)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">void</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">connectMeshWithMeshNode</strong>(<span class="ph code_type">uint32_t</span> meshId, <span class="ph code_type">uint32_t</span> meshNodeId)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Connect mesh to a mesh node (i.e. set the node's mesh to the mesh</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">meshId:</strong>	The mesh id</li>
+
+<li class="li"><strong class="ph b">meshNodeId:</strong>	The mesh node id to connect to</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">void</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">connectMeshWithMeshNodes</strong>(<span class="ph code_type">uint32_t</span> meshId, <span class="ph code_type">uint32_t</span> beginMeshNodeId, <span class="ph code_type">uint32_t</span> endMeshNodeId)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Connect mesh to number of mesh nodes</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">endMeshNodeId:</strong>	End mesh node id (inclusive)</li>
+
+<li class="li"><strong class="ph b">meshId:</strong>	The mesh id</li>
+
+<li class="li"><strong class="ph b">beginMeshNodeId:</strong>	Begin mesh node id (inclusive)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">void</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">assignMaterialToMeshNodes</strong>(<span class="ph code_type">uint32_t</span> materialIndex, <span class="ph code_type">uint32_t</span> beginMeshNodeId, <span class="ph code_type">uint32_t</span> endMeshNodeId)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Assign material id to number of mesh nodes</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">endMeshNodeId:</strong>	end mesh node id (inclusive)</li>
+
+<li class="li"><strong class="ph b">beginMeshNodeId:</strong>	Begin mesh node id (inclusive)</li>
+
+<li class="li"><strong class="ph b">materialIndex:</strong>	Material id</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">uint32_t</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getNodeIdForMeshNodeId</strong>(<span class="ph code_type">uint32_t</span> meshNodeIndex)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the (global) Node Index of a specific MeshNode. This function is provided for completion, as NodeID == MeshNodeID</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">meshNodeIndex:</strong>	The Index of a Mesh Node that will be used to calculate the NodeID. Valid values: (0 to getNumMeshNodes()-1)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">std::vector&lt;Mesh&gt;::iterator</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">beginMeshes</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get an iterator to the beginning of the meshes.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">std::vector&lt;Mesh&gt;::iterator</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">endMeshes</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get an iterator past the end of the meshes.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">std::vector&lt;Mesh&gt;::const_iterator</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">beginMeshes</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get a const_iterator to the beginning of the meshes.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">std::vector&lt;Mesh&gt;::const_iterator</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">endMeshes</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get a const_iterator past the end of the meshes.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">uint32_t</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getNumNodes</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the total number of nodes (Meshes, Cameras, Lights, others (helpers etc)).</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">const Node &amp;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getNode</strong>(<span class="ph code_type">uint32_t</span> index)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the node with the specified index.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">index:</strong>	The index of the node to get</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">Node &amp;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getNode</strong>(<span class="ph code_type">uint32_t</span> index)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the node with the specified index.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">index:</strong>	The index of the node to get</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">uint32_t</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getNumTextures</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the number of distinct Textures in the scene.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">const Texture &amp;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getTexture</strong>(<span class="ph code_type">uint32_t</span> index)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the texture with the specified index.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">index:</strong>	The index of the texture to get</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">uint32_t</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getNumMaterials</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the number of distinct Materials in the scene.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">const Material &amp;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getMaterial</strong>(<span class="ph code_type">uint32_t</span> index)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the material with the specified index.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">index:</strong>	The index of material to get</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">uint32_t</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">addMaterial</strong>(<span class="ph code_type">Model::Material</span> material)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Add a material to this model, and gets its (just created) material id</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">material:</strong>	The the material to add to the materials of this model</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">Material &amp;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getMaterial</strong>(<span class="ph code_type">uint32_t</span> index)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the material with the specified index.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">index:</strong>	The index of material to get</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">uint32_t</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getNumFrames</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the total number of frames in the scene. The total number of usable animated frames is limited to exclude (numFrames - 1) but include any partial number up to (numFrames - 1). Example: If there are 100 frames of animation, the highest frame number allowed is 98, since that will blend between frames 98 and 99. (99 being of course the 100th frame.)</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">float</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getCurrentFrame</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the current frame of the scene.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">void</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">setFPS</strong>(<span class="ph code_type">float</span> fps)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set the expected FPS of the animation.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">fps:</strong>	FPS of the animation</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">float</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getFPS</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the FPS this animation was created for.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">void</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">setUserData</strong>(<span class="ph code_type">uint32_t</span> size, <span class="ph code_type">const char *</span> data)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set custom user data.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">data:</strong>	Pointer to the raw data. (size) bytes will be copied as-is from this pointer.</li>
+
+<li class="li"><strong class="ph b">size:</strong>	The size, in bytes, of the data.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">void</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">allocCameras</strong>(<span class="ph code_type">uint32_t</span> count)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Only used for custom model creation. Allocate an number of cameras.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">count:</strong>	Number of camera to allocate in this scene</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">void</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">allocLights</strong>(<span class="ph code_type">uint32_t</span> count)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Only used for custom model creation. Allocate a number of lights.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">count:</strong>	number of lights to allocate in this scene</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">void</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">allocMeshes</strong>(<span class="ph code_type">uint32_t</span> count)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Only used for custom model creation. Allocate a number of meshes.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">count:</strong>	number of meshes to allocate in this scene</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">void</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">allocNodes</strong>(<span class="ph code_type">uint32_t</span> count)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Only used for custom model creation. Allocate a number of nodes.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">count:</strong>	number of nodes to allocate in this scene</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">InternalData &amp;</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getInternalData</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get a reference to the internal data of this Model. Handle with care.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">void</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getCameraProperties</strong>(<span class="ph code_type">uint32_t</span> cameraIdx, <span class="ph code_type">float &amp;</span> fov, <span class="ph code_type">glm::vec3 &amp;</span> from, <span class="ph code_type">glm::vec3 &amp;</span> to, <span class="ph code_type">glm::vec3 &amp;</span> up, <span class="ph code_type">float</span> frameTimeInMs)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the properties of a camera. This is additional info on the class (remarks or documentation).</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">fov:</strong>	Camera field of view.</li>
+
+<li class="li"><strong class="ph b">to:</strong>	Camera target point in world.</li>
+
+<li class="li"><strong class="ph b">up:</strong>	Camera tilt up (roll) vector in world.</li>
+
+<li class="li"><strong class="ph b">frameTimeInMs:</strong>	The time in milli seconds to retrieve camera properties for.</li>
+
+<li class="li"><strong class="ph b">cameraIdx:</strong>	The index of the camera.</li>
+
+<li class="li"><strong class="ph b">from:</strong>	Camera position in world.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">void</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getCameraProperties</strong>(<span class="ph code_type">uint32_t</span> cameraIdx, <span class="ph code_type">float &amp;</span> fov, <span class="ph code_type">glm::vec3 &amp;</span> from, <span class="ph code_type">glm::vec3 &amp;</span> to, <span class="ph code_type">glm::vec3 &amp;</span> up, <span class="ph code_type">float &amp;</span> nearClip, <span class="ph code_type">float &amp;</span> farClip, <span class="ph code_type">float</span> frameTimeInMs)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the properties of a camera.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">fov:</strong>	Camera field of view in world.</li>
+
+<li class="li"><strong class="ph b">to:</strong>	Camera target point in world.</li>
+
+<li class="li"><strong class="ph b">farClip:</strong>	Camera far clipping plane distance</li>
+
+<li class="li"><strong class="ph b">up:</strong>	Camera tilt up (roll) vector in world.</li>
+
+<li class="li"><strong class="ph b">frameTimeInMs:</strong>	The time in milli seconds to retrieve camera properties for.</li>
+
+<li class="li"><strong class="ph b">cameraIdx:</strong>	The index of the camera.</li>
+
+<li class="li"><strong class="ph b">from:</strong>	Camera position in world.</li>
+
+<li class="li"><strong class="ph b">nearClip:</strong>	Camera near clipping plane distance</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">void</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getLightDirection</strong>(<span class="ph code_type">uint32_t</span> lightIdx, <span class="ph code_type">glm::vec3 &amp;</span> direction)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the direction of a spot or directional light.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">direction:</strong>	The direction of the light.</li>
+
+<li class="li"><strong class="ph b">lightIdx:</strong>	index of the light.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">void</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getLightPosition</strong>(<span class="ph code_type">uint32_t</span> lightIdx, <span class="ph code_type">glm::vec3 &amp;</span> position)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the position of a point or spot light.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">position:</strong>	The position of the light.</li>
+
+<li class="li"><strong class="ph b">lightIdx:</strong>	light index.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">void</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">getLightPosition</strong>(<span class="ph code_type">uint32_t</span> lightIdx, <span class="ph code_type">glm::vec4 &amp;</span> position)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the position of a point or spot light.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">position:</strong>	The position of the light.</li>
+
+<li class="li"><strong class="ph b">lightIdx:</strong>	light index.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">void</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">destroy</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Free the resources of this model.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">void</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">allocMeshNodes</strong>(<span class="ph code_type">uint32_t</span> no)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Allocate the specified number of mesh nodes.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">no:</strong>	The number of mesh nodes to allocate</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__23">int32_t</td>
+<td class="entry" headers="pvrassetsModel__entry__24"><p class="p"><strong class="ph b">addTexture</strong>(<span class="ph code_type">const Texture &amp;</span> tex)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Add new texture</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">tex:</strong>	 Texture to add</li>
+
+</ul>
+</td>
+	</tr>
+			</tbody></table>
+<table class="table"><caption><span class="table--title-label">Table 3. </span><span class="title">Private Properties</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvrassetsModel__entry__181">Type</th><th class="entry" id="pvrassetsModel__entry__182">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__181">std::vector&lt;float&gt;</td>
+<td class="entry" headers="pvrassetsModel__entry__182">cachedFrame</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__181">std::vector&lt;glm::mat4x4&gt;</td>
+<td class="entry" headers="pvrassetsModel__entry__182">worldMatrixFrameN</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__181">std::vector&lt;glm::mat4x4&gt;</td>
+<td class="entry" headers="pvrassetsModel__entry__182">worldMatrixFrameZero</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__181">InternalData</td>
+<td class="entry" headers="pvrassetsModel__entry__182">_data</td>
+	</tr>
+			</tbody></table>
+</div>
+
+<nav role="navigation" class="related-links"><ul class="ullinks"><li class="link ulchildlink"><strong><a href="../classes/pvrassetsModelNode.html">pvr::assets::Model::Node</a></strong><br>The Node represents a Mesh, Camera or Light. A Node has its own parenting, material, animation and custom user data. The tree-structure assumes transformational hierarchy (as usual), so parent transformations should be applied to children. Transformations are expressed through Animation objects (a static transform is an animation with a single frame). Note: Node ID and MeshID can sometimes be confusing: They will always be the same (when a MeshID makes sense) because Meshes are always laid out first in the internal list of Nodes.</li><li class="link ulchildlink"><strong><a href="../classes/pvrassetsModelMaterial.html">pvr::assets::Model::Material</a></strong><br>Class which stores model material info.</li><li class="link ulchildlink"><strong><a href="../classes/pvrassetsModelTexture.html">pvr::assets::Model::Texture</a></strong><br>Internal class which stores Texture information of the model (name).</li><li class="link ulchildlink"><strong><a href="../classes/pvrassetsModelInternalData.html">pvr::assets::Model::InternalData</a></strong><br>Struct containing the internal data of the Model.</li></ul><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../classes/pvrassets.html">pvr::assets</a></div></div></nav></article></main></div></div></div></div></div><div id="custom_nav" class="text-right hidden-sm hidden-xs hidden-print"><div class="well well-lg" style="margin-left:20px; margin-right:20px;"><footer role="contentinfo"><script src="../ditasearch.js"></script><footer xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="site-info  wh_footer" itemtype="https://schema.org/WPFooter" itemscope="" whc:version="21.0">
+
+  <div class="inside-site-info grid-container grid-parent footer-container  mx-auto">
+    <div class="copyright-bar">
+      <div class="elementor elementor-70634">
+        <div class="elementor-inner">
+          <div class="elementor-section-wrap">
+            <section class="elementor-element elementor-element-a126d69 elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a126d69" data-element_type="section">
+              <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-row">
+                  <div class="elementor-element elementor-element-c1f5a3a elementor-column elementor-col-50 elementor-top-column" data-id="c1f5a3a" data-element_type="column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-9f26949 elementor-widget elementor-widget-image" data-id="9f26949" data-element_type="widget" data-widget_type="image.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-image"> <a href="https://www.imgtec.com/"><img src="https://www.imgtec.com/wp-content/uploads/2019/10/Imagination_Logo_Secondary_Blk.svg" title="Imagination_Logo" alt="Imagination_Logo" class="lazyloading"></img></a></div>
+                          </div>
+                        </div>
+                        <div class="elementor-element elementor-element-4eb6939 elementor-widget elementor-widget-text-editor">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-text-editor elementor-clearfix">
+                              <div class="footer-copyright">© Imagination Technologies Limited. All rights reserved.<br></br><a href="https://www.imgtec.com/privacy-policy/">Privacy Policy</a> – <a href="https://www.imgtec.com/terms-and-conditions/">Terms &amp; Conditions</a> – <a href="https://www.imgtec.com/trademarks/">Trademarks</a> – <a href="https://www.imgtec.com/cookies/">Cookies</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="elementor-element elementor-element-01bb773 elementor-column elementor-col-50 elementor-top-column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-1c0e19c elementor-shape-square elementor-widget elementor-widget-social-icons" data-id="1c0e19c" data-element_type="widget" data-widget_type="social-icons.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-social-icons-wrapper"> <a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin" href="https://www.linkedin.com/company/imagination-technologies/" target="_blank"> <span class="elementor-screen-only">Linkedin</span> <i class="fab fa-linkedin"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-twitter" href="https://twitter.com/imaginationtech" target="_blank"> <span class="elementor-screen-only">Twitter</span> <i class="fab fa-twitter"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook" href="https://www.facebook.com/imgtec/" target="_blank"> <span class="elementor-screen-only">Facebook</span> <i class="fab fa-facebook"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-youtube" href="https://www.youtube.com/user/Imgtec/" target="_blank"> <span class="elementor-screen-only">Youtube</span> <i class="fab fa-youtube"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram" href="https://www.instagram.com/imaginationtech/" target="_blank"> <span class="elementor-screen-only">Instagram</span> <i class="fab fa-instagram"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-google-plus" href="https://plus.google.com/+ImaginationTechnologiesLtd" target="_blank"> <span class="elementor-screen-only">Google-plus</span> <i class="fab fa-google-plus"></i> </a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer></footer></div></div></div></body></html>

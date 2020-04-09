@@ -1,0 +1,558 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2020"><meta name="DC.rights.owner" content="(C) Copyright 2020"><meta name="DC.type" content="concept"><meta name="description" content="Mesh class. Represent a Mesh, a collection of primitives (usually, but not necessarily, triangles) together with their per-vertex information. A mesh's is a grouping where all vertices/primitives will have the same basic transformation (but can then be skinned) and material applied."><meta name="DC.relation" scheme="URI" content="../classes/pvrassets.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrassetsMeshFaceData.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrassetsMeshMeshInfo.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrassetsMeshInternalData.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrassetsMeshPredicateVertAttribMinOffset.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrassetsMeshVertexAttributeData.html"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="pvrassetsMesh"><link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/devcss.css"><title>pvr::assets::Mesh</title><head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="icon" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png" sizes="32x32" type="image/png">
+<link rel="shorcut icon" type="image/png" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png">
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head></head><body id="pvrassetsMesh"><header role="banner"><div class="ditasearch" data-searchroot="../"></div><header xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="navbar navbar-default wh_header" whc:version="21.0">
+    <div class="container-fluid  header-area">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="html5_logo_and_publication_title">
+		<a href="https://docs.imgtec.com" class="wh_logo hidden-xs">
+				<img src="https://www.imgtec.com/wp-content/uploads/2018/11/Imagination-logo-white.png"></img></a>
+		<p>Developer Documentation</p>
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <whc:webhelp_logo class="hidden-xs"></whc:webhelp_logo>
+                </div>
+                
+
+            </div>
+
+
+	
+
+		<whc:webhelp_search_input></whc:webhelp_search_input>
+        </div>
+
+		<!--<whc:webhelp_publication_title/>-->
+    </div>
+	</header></header><div class="container-fluid" id="content"><div class="row"><div class="wh_content_area doc_title"><h1>
+PVRAssets Manual
+
+</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../PVRAssets_intro.html">Introduction to PVRAssets</a><ul><li><a href="../PVRAssets_files.html">PVRAssets Files</a></li><li><a href="../PVRAssets_classes.html">PVRAssets Classes</a><ul><li><a href="../classes/pvr.html">pvr</a><ul><li><a href="../classes/pvrassets.html">pvr::assets</a><ul><li><a href="../classes/pvrassetsAnimationInstance.html">pvr::assets::AnimationInstance</a></li><li><a href="../classes/pvrassetsModel.html">pvr::assets::Model</a></li><li><a href="../classes/pvrassetsAnimationData.html">pvr::assets::AnimationData</a></li><li class="active"><a href="../classes/pvrassetsMesh.html">pvr::assets::Mesh</a><ul><li><a href="../classes/pvrassetsMeshFaceData.html">pvr::assets::Mesh::FaceData</a></li><li><a href="../classes/pvrassetsMeshMeshInfo.html">pvr::assets::Mesh::MeshInfo</a></li><li><a href="../classes/pvrassetsMeshInternalData.html">pvr::assets::Mesh::InternalData</a></li><li><a href="../classes/pvrassetsMeshPredicateVertAttribMinOffset.html">pvr::assets::Mesh::PredicateVertAttribMinOffset</a></li><li><a href="../classes/pvrassetsMeshVertexAttributeData.html">pvr::assets::Mesh::VertexAttributeData</a></li></ul></li><li><a href="../classes/pvrassetsLight.html">pvr::assets::Light</a></li><li><a href="../classes/pvrassetsCamera.html">pvr::assets::Camera</a></li><li><a href="../classes/pvrassetsKeyFrameData.html">pvr::assets::KeyFrameData</a></li><li><a href="../classes/pvrassetsSkeleton.html">pvr::assets::Skeleton</a></li></ul></li><li><a href="../classes/pvrtool.html">pvr::tool</a></li><li><a href="../classes/pvrVolume.html">pvr::Volume</a></li><li><a href="../classes/pvrShadowVolume.html">pvr::ShadowVolume</a></li><li><a href="../classes/pvrIndexedArray.html">pvr::IndexedArray</a></li></ul></li></ul></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1">pvr::assets::Mesh</h1>
+
+<div class="body conbody"><p class="shortdesc">Mesh class. Represent a Mesh, a collection of primitives (usually, but not necessarily, triangles) together with their per-vertex information. A mesh's is a grouping where all vertices/primitives will have the same basic transformation (but can then be skinned) and material applied.</p>
+
+<p class="p">Mesh class. Represent a Mesh, a collection of primitives (usually, but not necessarily, triangles) together with their per-vertex information. A mesh's is a grouping where all vertices/primitives will have the same basic transformation (but can then be skinned) and material applied.</p>
+<p class="p">Found in file: <a class="xref" href="../files/model/Mesh.html" title="Represent a Mesh, usually an object (collection of primitives) that use the same transformation (but can be">Mesh.h</a></p>
+<table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Classes</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvrassetsMesh__entry__1">Declaration Type</th><th class="entry" id="pvrassetsMesh__entry__2">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__1">struct</td>
+<td class="entry" headers="pvrassetsMesh__entry__2"><a class="xref" href="pvrassetsMeshInternalData.html" title="Raw internal structure of the Mesh.">pvr::assets::Mesh::InternalData</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__1">struct</td>
+<td class="entry" headers="pvrassetsMesh__entry__2"><a class="xref" href="pvrassetsMeshMeshInfo.html" title="Contains mesh information.">pvr::assets::Mesh::MeshInfo</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__1">class</td>
+<td class="entry" headers="pvrassetsMesh__entry__2"><a class="xref" href="pvrassetsMeshVertexAttributeData.html" title="Definition of a single VertexAttribute.">pvr::assets::Mesh::VertexAttributeData</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__1">class</td>
+<td class="entry" headers="pvrassetsMesh__entry__2"><a class="xref" href="pvrassetsMeshPredicateVertAttribMinOffset.html">pvr::assets::Mesh::PredicateVertAttribMinOffset</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__1">class</td>
+<td class="entry" headers="pvrassetsMesh__entry__2"><a class="xref" href="pvrassetsMeshFaceData.html" title="The FaceData class contains the information of the Indices that defines the Faces of a Mesh.">pvr::assets::Mesh::FaceData</a></td>
+	</tr>
+			</tbody></table>
+<table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Public Methods</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvrassetsMesh__entry__13">Return Type</th><th class="entry" id="pvrassetsMesh__entry__14">Name and Description</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">const FreeValue *</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getMeshSemantic</strong>(<span class="ph code_type">const StringHash &amp;</span> semantic)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Return the value of a Per-Mesh semantic as a FreeValue, null if it does not exist.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">semantic:</strong>	The semantic name to retrieve</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">const std::shared_ptr&lt;void&gt; &amp;</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getUserDataPtr</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the UserData of this mesh, if such user data exist.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">std::shared_ptr&lt;void&gt;</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getUserDataPtr</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the UserData of this mesh, if such user data exist.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">void</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">setUserDataPtr</strong>(<span class="ph code_type">const std::shared_ptr&lt;void&gt; &amp;</span> ptr)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set the UserData of this mesh (wrap the data into a std::shared_ptr and cast to Ref Counted void pointer.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">ptr:</strong>	The UserData. Must be wrapped in an appropriate std::shared_ptr, and then cast into a std::shared_ptr to void</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">void</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">setStride</strong>(<span class="ph code_type">uint32_t</span> index, <span class="ph code_type">uint32_t</span> stride)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set the stride of a Data block.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">index:</strong>	The ordinal of the data block (as it was defined by the addData call). If no block exists, it will be created along with all the ones before it, as blocks are always assumed to be continuous</li>
+
+<li class="li"><strong class="ph b">stride:</strong>	The stride that the block (index) will be set to.</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">int32_t</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">addData</strong>(<span class="ph code_type">const uint8_t *</span> data, <span class="ph code_type">uint32_t</span> size, <span class="ph code_type">uint32_t</span> stride)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Implicitly append a block of vertex data to the mesh and (optionally) populate it with data.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">stride:</strong>	The stride that the block index will be set to.</li>
+
+<li class="li"><strong class="ph b">size:</strong>	The ordinal of the data block. If no block exists, it will be created along with all the ones before it, as</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">int32_t</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">addData</strong>(<span class="ph code_type">const uint8_t *</span> data, <span class="ph code_type">uint32_t</span> size, <span class="ph code_type">uint32_t</span> stride, <span class="ph code_type">uint32_t</span> index)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Add a block of vertex data to the mesh at the specified index and (optionally) populate it with data.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">index:</strong>	The index where this block will be created on.</li>
+
+<li class="li"><strong class="ph b">stride:</strong>	The stride that the block index will be set to.</li>
+
+<li class="li"><strong class="ph b">size:</strong>	The ordinal of the data block. If no block exists, it will be created along with all the ones before it, as</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">void</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">removeData</strong>(<span class="ph code_type">uint32_t</span> index)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Delete a block of data.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">index:</strong>	The index of the block to delete</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">void</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">clearAllData</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Remove all data blocks.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">const void *</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getData</strong>(<span class="ph code_type">uint32_t</span> index)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get a pointer to the data of a specified Data block. Read only overload.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">index:</strong>	The index of the data block</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">uint8_t *</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getData</strong>(<span class="ph code_type">uint32_t</span> index)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get a pointer to the data of a specified Data block. Read/write overload.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">index:</strong>	The index of the data block</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">size_t</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getDataSize</strong>(<span class="ph code_type">uint32_t</span> index)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the size of the specified Data block.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">index:</strong>	The index of the data block</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">uint32_t</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getStride</strong>(<span class="ph code_type">uint32_t</span> index)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get distance in bytes from vertex in an array to the next.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">index:</strong>	The index of the data block whose stride to get</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">void</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">addFaces</strong>(<span class="ph code_type">const uint8_t *</span> data, <span class="ph code_type">uint32_t</span> size, <span class="ph code_type">const IndexType</span> indexType)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Add face information to the mesh.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">data:</strong>	A pointer to the face data</li>
+
+<li class="li"><strong class="ph b">indexType:</strong>	The actual datatype contained in (data). (16 or 32 bit)</li>
+
+<li class="li"><strong class="ph b">size:</strong>	The size, in bytes, of the face data</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">int32_t</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">addVertexAttribute</strong>(<span class="ph code_type">const VertexAttributeData &amp;</span> element, <span class="ph code_type">bool</span> forceReplace)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Add a vertex attribute to the mesh.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">forceReplace:</strong>	If set to true, the element will be replaced if it already exists. Otherwise, the insertion will fail.</li>
+
+<li class="li"><strong class="ph b">element:</strong>	The vertex attribute to add</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">int32_t</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">addVertexAttribute</strong>(<span class="ph code_type">const StringHash &amp;</span> semanticName, <span class="ph code_type">const DataType &amp;</span> type, <span class="ph code_type">uint32_t</span> width, <span class="ph code_type">uint32_t</span> offset, <span class="ph code_type">uint32_t</span> dataIndex, <span class="ph code_type">bool</span> forceReplace)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Add a vertex attribute to the mesh.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">semanticName:</strong>	The semantic that the vertex attribute to add represents</li>
+
+<li class="li"><strong class="ph b">dataIndex:</strong>	The DataBlock this Vertex Attribute belongs to</li>
+
+<li class="li"><strong class="ph b">type:</strong>	The DataType of the Vertex Attribute</li>
+
+<li class="li"><strong class="ph b">width:</strong>	The number of (type) values per Vertex Attribute</li>
+
+<li class="li"><strong class="ph b">offset:</strong>	The Offset of this Vertex Attribute from the start of its DataBlock</li>
+
+<li class="li"><strong class="ph b">forceReplace:</strong>	force replace the attribute</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">void</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">removeVertexAttribute</strong>(<span class="ph code_type">const StringHash &amp;</span> semanticName)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Remove a vertex attribute to the mesh.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">semanticName:</strong>	The semantic that the vertex attribute to remove has</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">void</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">removeAllVertexAttributes</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Remove all vertex attribute to the mesh.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">uint32_t</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getNumVertices</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the number of vertices that comprise this mesh.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">uint32_t</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getNumFaces</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the number of faces that comprise this mesh.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">uint32_t</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getNumIndices</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the number of indices that comprise this mesh. Takes TriangleStrips into consideration.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">uint32_t</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getNumElements</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the number of different vertex attributes that this mesh has.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">uint32_t</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getNumDataElements</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the number of vertex data blocks that this mesh has.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">uint32_t</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getNumBoneBatches</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the number of BoneBatches the bones of this mesh are organised into.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">PrimitiveTopology</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getPrimitiveType</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the primitive topology that the data in this Mesh represent.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">void</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">setPrimitiveType</strong>(<span class="ph code_type">const PrimitiveTopology &amp;</span> type)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set the primitive topology that the data in this Mesh represent.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">type:</strong>	The primitive topology that the data in this Mesh will represent (Triangles, TriangleStrips, TriangleFans, Patch etc.)</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">const MeshInfo &amp;</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getMeshInfo</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get information on this Mesh.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">MeshInfo &amp;</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getMeshInfo</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get information on this Mesh.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">int32_t</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getSkeletonId</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Retrieves the skeleton identifier (const).</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">const glm::mat4x4 &amp;</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getUnpackMatrix</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the Unpack Matrix of this Mesh. The unpack matrix is used for some exotic types of vertex position compression.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">void</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">setUnpackMatrix</strong>(<span class="ph code_type">const glm::mat4x4 &amp;</span> unpackMatrix)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set the Unpack Matrix of this Mesh. The unpack matrix is used for some exotic types of vertex position compression.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">unpackMatrix:</strong>	An unpack matrix</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">const std::vector&lt;StridedBuffer&gt; &amp;</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getVertexData</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get all DataBlocks of this Mesh.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">const StridedBuffer &amp;</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getVertexData</strong>(<span class="ph code_type">uint32_t</span> n)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get all DataBlocks of this Mesh.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">const FaceData &amp;</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getFaces</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get all face data of this mesh.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">FaceData &amp;</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getFaces</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get all face data of this mesh.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">uint32_t</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getNumBones</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the information of a VertexAttribute by its SemanticName.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">const VertexAttributeData *</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getVertexAttributeByName</strong>(<span class="ph code_type">const StringHash &amp;</span> semanticName)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the information of a VertexAttribute by its SemanticName (return NULL if not exist)</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">int32_t</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getVertexAttributeIndex</strong>(<span class="ph code_type">const char *</span> semanticName)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the Index of a VertexAttribute by its SemanticName.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">const VertexAttributeData *</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getVertexAttribute</strong>(<span class="ph code_type">int32_t</span> idx)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the information of a VertexAttribute by its SemanticName.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">uint32_t</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getVertexAttributesSize</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get number of vertex attributes.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">void</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">setVertexAttributeIndex</strong>(<span class="ph code_type">const char *</span> attributeName, <span class="ph code_type">size_t</span> userIndex)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Locate the specified Attribute in a specific position in the vertex attribute array. Can be used to sort the vertex attributes according to a specific order.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">userIndex:</strong>	The index to put this attribute to. If another attribute is there, indices will be swapped.</li>
+
+<li class="li"><strong class="ph b">attributeName:</strong>	The name of an attribute</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">VertexAttributeContainer &amp;</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getVertexAttributes</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get all the vertex attributes.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">const VertexAttributeContainer &amp;</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getVertexAttributes</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get all the vertex attributes.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">uint32_t</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getNumStrips</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the number of Triangle Strips (if any) that comprise this Mesh.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">const uint32_t *</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getStripLengths</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get an array containing the Triangle Strip lengths.</span></em></p>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">uint32_t</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getStripLength</strong>(<span class="ph code_type">uint32_t</span> strip)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get the length of the specified triangle strip.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">strip:</strong>	The index of the strip of which to return the length</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">void</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">setStripData</strong>(<span class="ph code_type">uint32_t</span> numStrips, <span class="ph code_type">const uint32_t *</span> lengths)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set the TriangleStrip number and lengths.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">lengths:</strong>	An array of size numStrips containing the length of each TriangleStrip, respectively</li>
+
+<li class="li"><strong class="ph b">numStrips:</strong>	The number of TriangleStrips</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">void</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">setNumVertices</strong>(<span class="ph code_type">uint32_t</span> numVertices)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set the total number of vertices. Will not change the actual Vertex Data.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">numVertices:</strong>	Set the number of vertices</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">void</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">setNumFaces</strong>(<span class="ph code_type">uint32_t</span> numFaces)</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Set the total number of faces. Will not change the actual Face Data.</span></em></p>
+<p class="p"><strong class="ph b">Parameters</strong></p>
+<ul class="ul">
+<li class="li"><strong class="ph b">numFaces:</strong>	Set the number of faces</li>
+
+</ul>
+</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__13">InternalData &amp;</td>
+<td class="entry" headers="pvrassetsMesh__entry__14"><p class="p"><strong class="ph b">getInternalData</strong>()</p>
+<p class="p"><em class="ph i"><span class="ph code_comment">Get a reference to the internal representation and data of this Mesh. Handle with care.</span></em></p>
+</td>
+	</tr>
+			</tbody></table>
+<table class="table"><caption><span class="table--title-label">Table 3. </span><span class="title">Private Properties</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvrassetsMesh__entry__115">Type</th><th class="entry" id="pvrassetsMesh__entry__116">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvrassetsMesh__entry__115">InternalData</td>
+<td class="entry" headers="pvrassetsMesh__entry__116">_data</td>
+	</tr>
+			</tbody></table>
+</div>
+
+<nav role="navigation" class="related-links"><ul class="ullinks"><li class="link ulchildlink"><strong><a href="../classes/pvrassetsMeshFaceData.html">pvr::assets::Mesh::FaceData</a></strong><br>The FaceData class contains the information of the Indices that defines the Faces of a Mesh.</li><li class="link ulchildlink"><strong><a href="../classes/pvrassetsMeshMeshInfo.html">pvr::assets::Mesh::MeshInfo</a></strong><br>Contains mesh information.</li><li class="link ulchildlink"><strong><a href="../classes/pvrassetsMeshInternalData.html">pvr::assets::Mesh::InternalData</a></strong><br>Raw internal structure of the Mesh.</li><li class="link ulchildlink"><strong><a href="../classes/pvrassetsMeshPredicateVertAttribMinOffset.html">pvr::assets::Mesh::PredicateVertAttribMinOffset</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrassetsMeshVertexAttributeData.html">pvr::assets::Mesh::VertexAttributeData</a></strong><br>Definition of a single VertexAttribute.</li></ul><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../classes/pvrassets.html">pvr::assets</a></div></div></nav></article></main></div></div></div></div></div><div id="custom_nav" class="text-right hidden-sm hidden-xs hidden-print"><div class="well well-lg" style="margin-left:20px; margin-right:20px;"><footer role="contentinfo"><script src="../ditasearch.js"></script><footer xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="site-info  wh_footer" itemtype="https://schema.org/WPFooter" itemscope="" whc:version="21.0">
+
+  <div class="inside-site-info grid-container grid-parent footer-container  mx-auto">
+    <div class="copyright-bar">
+      <div class="elementor elementor-70634">
+        <div class="elementor-inner">
+          <div class="elementor-section-wrap">
+            <section class="elementor-element elementor-element-a126d69 elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a126d69" data-element_type="section">
+              <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-row">
+                  <div class="elementor-element elementor-element-c1f5a3a elementor-column elementor-col-50 elementor-top-column" data-id="c1f5a3a" data-element_type="column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-9f26949 elementor-widget elementor-widget-image" data-id="9f26949" data-element_type="widget" data-widget_type="image.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-image"> <a href="https://www.imgtec.com/"><img src="https://www.imgtec.com/wp-content/uploads/2019/10/Imagination_Logo_Secondary_Blk.svg" title="Imagination_Logo" alt="Imagination_Logo" class="lazyloading"></img></a></div>
+                          </div>
+                        </div>
+                        <div class="elementor-element elementor-element-4eb6939 elementor-widget elementor-widget-text-editor">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-text-editor elementor-clearfix">
+                              <div class="footer-copyright">© Imagination Technologies Limited. All rights reserved.<br></br><a href="https://www.imgtec.com/privacy-policy/">Privacy Policy</a> – <a href="https://www.imgtec.com/terms-and-conditions/">Terms &amp; Conditions</a> – <a href="https://www.imgtec.com/trademarks/">Trademarks</a> – <a href="https://www.imgtec.com/cookies/">Cookies</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="elementor-element elementor-element-01bb773 elementor-column elementor-col-50 elementor-top-column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-1c0e19c elementor-shape-square elementor-widget elementor-widget-social-icons" data-id="1c0e19c" data-element_type="widget" data-widget_type="social-icons.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-social-icons-wrapper"> <a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin" href="https://www.linkedin.com/company/imagination-technologies/" target="_blank"> <span class="elementor-screen-only">Linkedin</span> <i class="fab fa-linkedin"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-twitter" href="https://twitter.com/imaginationtech" target="_blank"> <span class="elementor-screen-only">Twitter</span> <i class="fab fa-twitter"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook" href="https://www.facebook.com/imgtec/" target="_blank"> <span class="elementor-screen-only">Facebook</span> <i class="fab fa-facebook"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-youtube" href="https://www.youtube.com/user/Imgtec/" target="_blank"> <span class="elementor-screen-only">Youtube</span> <i class="fab fa-youtube"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram" href="https://www.instagram.com/imaginationtech/" target="_blank"> <span class="elementor-screen-only">Instagram</span> <i class="fab fa-instagram"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-google-plus" href="https://plus.google.com/+ImaginationTechnologiesLtd" target="_blank"> <span class="elementor-screen-only">Google-plus</span> <i class="fab fa-google-plus"></i> </a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer></footer></div></div></div></body></html>

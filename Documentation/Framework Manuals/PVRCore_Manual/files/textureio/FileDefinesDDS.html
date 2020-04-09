@@ -1,0 +1,256 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2020"><meta name="DC.rights.owner" content="(C) Copyright 2020"><meta name="DC.type" content="concept"><meta name="description" content="Defines used internally by the DDS reader."><meta name="DC.relation" scheme="URI" content="../../files/textureio_dir.html"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="FileDefinesDDS.h_Reference"><link rel="stylesheet" type="text/css" href="../../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../../css/devcss.css"><title>FileDefinesDDS.h Reference</title><head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="icon" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png" sizes="32x32" type="image/png">
+<link rel="shorcut icon" type="image/png" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png">
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head></head><body id="FileDefinesDDS.h_Reference"><header role="banner"><div class="ditasearch" data-searchroot="../../"></div><header xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="navbar navbar-default wh_header" whc:version="21.0">
+    <div class="container-fluid  header-area">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="html5_logo_and_publication_title">
+		<a href="https://docs.imgtec.com" class="wh_logo hidden-xs">
+				<img src="https://www.imgtec.com/wp-content/uploads/2018/11/Imagination-logo-white.png"></img></a>
+		<p>Developer Documentation</p>
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <whc:webhelp_logo class="hidden-xs"></whc:webhelp_logo>
+                </div>
+                
+
+            </div>
+
+
+	
+
+		<whc:webhelp_search_input></whc:webhelp_search_input>
+        </div>
+
+		<!--<whc:webhelp_publication_title/>-->
+    </div>
+	</header></header><div class="container-fluid" id="content"><div class="row"><div class="wh_content_area doc_title"><h1>
+PVRCore Manual
+
+</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../../PVRCore_intro.html">Introduction to PVRCore</a><ul><li><a href="../../PVRCore_files.html">PVRCore Files</a><ul><li><a href="../../files/glm.html">glm.h Reference</a></li><li><a href="../../files/PVRCore.html">PVRCore.h Reference</a></li><li><a href="../../files/Log.html">Log.h Reference</a></li><li><a href="../../files/Time_.html">Time_.h Reference</a></li><li><a href="../../files/Threading.html">Threading.h Reference</a></li><li><a href="../../files/Errors.html">Errors.h Reference</a></li><li><a href="../../files/Utils.html">Utils.h Reference</a></li><li><a href="../../files/RefCounted.html">RefCounted.h Reference</a></li><li><a href="../../files/IAssetProvider.html">IAssetProvider.h Reference</a></li><li><a href="../../files/strings_dir.html">strings</a></li><li><a href="../../files/Windows_dir.html">Windows</a></li><li><a href="../../files/pfx_dir.html">pfx</a></li><li><a href="../../files/cameras_dir.html">cameras</a></li><li><a href="../../files/texture_dir.html">texture</a></li><li><a href="../../files/Android_dir.html">Android</a></li><li><a href="../../files/math_dir.html">math</a></li><li><a href="../../files/stream_dir.html">stream</a></li><li><a href="../../files/commandline_dir.html">commandline</a></li><li><a href="../../files/types_dir.html">types</a></li><li><a href="../../files/textureio_dir.html">textureio</a><ul><li><a href="../../files/textureio/FileDefinesPVR.html">FileDefinesPVR.h Reference</a></li><li><a href="../../files/textureio/FileDefinesBMP.html">FileDefinesBMP.h Reference</a></li><li><a href="../../files/textureio/FileDefinesKTX.html">FileDefinesKTX.h Reference</a></li><li><a href="../../files/textureio/TGAWriter.html">TGAWriter.h Reference</a></li><li><a href="../../files/textureio/FileDefinesTGA.html">FileDefinesTGA.h Reference</a></li><li><a href="../../files/textureio/TextureReaderPVR.html">TextureReaderPVR.h Reference</a></li><li><a href="../../files/textureio/TextureReaderKTX.html">TextureReaderKTX.h Reference</a></li><li><a href="../../files/textureio/PaletteExpander.html">PaletteExpander.h Reference</a></li><li><a href="../../files/textureio/TextureReaderBMP.html">TextureReaderBMP.h Reference</a></li><li><a href="../../files/textureio/TextureReaderXNB.html">TextureReaderXNB.h Reference</a></li><li class="active"><a href="../../files/textureio/FileDefinesDDS.html">FileDefinesDDS.h Reference</a></li><li><a href="../../files/textureio/TextureReaderDDS.html">TextureReaderDDS.h Reference</a></li><li><a href="../../files/textureio/FileDefinesXNB.html">FileDefinesXNB.h Reference</a></li><li><a href="../../files/textureio/TextureIO.html">TextureIO.h Reference</a></li><li><a href="../../files/textureio/TextureReaderTGA.html">TextureReaderTGA.h Reference</a></li><li><a href="../../files/textureio/TextureWriterPVR.html">TextureWriterPVR.h Reference</a></li></ul></li></ul></li><li><a href="../../PVRCore_classes.html">PVRCore Classes</a></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1">FileDefinesDDS.h Reference</h1>
+
+<div class="body conbody"><p class="shortdesc">Defines used internally by the DDS reader.</p>
+
+<section class="section" id="FileDefinesDDS.h_Reference__overview"><h2 class="title sectiontitle">Overview</h2>
+	
+<p class="p"><strong class="ph b">Description</strong>: Defines used internally by the DDS reader.</p>
+</section>
+<section class="section">
+
+<table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Classes</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="FileDefinesDDS.h_Reference__entry__1">Declaration Type</th><th class="entry" id="FileDefinesDDS.h_Reference__entry__2">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__1">struct</td>
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__2"><a class="xref" href="../../classes/pvrtexture_ddsFileHeaderDX10.html" title="File header for DX10.">pvr::texture_dds::FileHeaderDX10</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__1">struct</td>
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__2"><a class="xref" href="../../classes/pvrtexture_ddsPixelFormat.html" title="Pixel format used in DDS files.">pvr::texture_dds::PixelFormat</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__1">class</td>
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__2"><a class="xref" href="../../classes/pvrtexture_ddsMakeFourCC.html" title="Make FourCC template.">pvr::texture_dds::MakeFourCC</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__1">struct</td>
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__2"><a class="xref" href="../../classes/pvrtexture_ddsFileHeader.html" title="File header format for DDS files.">pvr::texture_dds::FileHeader</a></td>
+	</tr>
+			</tbody></table>
+</section>
+<section class="section">
+
+<table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="FileDefinesDDS.h_Reference__entry__11">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><a class="xref" href="../../classes/pvrutils.html">pvr::utils</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><span class="xref">glm</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><span class="xref">pvr::texture_tga::ColorMap</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><a class="xref" href="../../classes/pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><span class="xref">pvr::strings</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><a class="xref" href="../../classes/pvrtexture_dds.html">pvr::texture_dds</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><span class="xref">pvr::async::impl</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><a class="xref" href="../../classes/pvrFreeValue.html" title="A Free Value View that is backed by a 64-byte statically allocated array: Enough to hold one item of any GPU-datatype, up to a mat4x4">pvr::FreeValue</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><a class="xref" href="../../classes/pvrasync.html">pvr::async</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><span class="xref">pvr::texture_bmp::CompressionMethod</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><span class="xref">impl</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><a class="xref" href="../../classes/pvrIsRefCountedType.html">pvr::IsRefCountedType</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><a class="xref" href="../../classes/pvreffect.html">pvr::effect</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><a class="xref" href="../../classes/pvreffectBufferDefinition.html" title="Information about a Buffer">pvr::effect::BufferDefinition</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><a class="xref" href="../../classes/pvrplatformCommandLineParser.html" title="This class parses, abstracts, stores and handles command line options passed on application launch.">pvr::platform::CommandLineParser</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><a class="xref" href="../../classes/pvrtexture_bmp.html">pvr::texture_bmp</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><span class="xref">pvr::assetReaders</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><a class="xref" href="../../classes/pvrGpuDatatypesHelper.html">pvr::GpuDatatypesHelper</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><span class="xref">pvr::texture_bmp::ColorSpace</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><a class="xref" href="../../classes/pvrplatform.html">pvr::platform</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><span class="xref">pvr::texture_bmp::HeaderSize</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><a class="xref" href="../../classes/pvrmath.html">pvr::math</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><a class="xref" href="../../classes/pvrplatformCommandLineParserParsedCommandLine.html" title="This class provides access to the command line arguments of a CommandLineParser. Its lifecycle is tied to the commandLineParser.">pvr::platform::CommandLineParser::ParsedCommandLine</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><a class="xref" href="../../classes/pvrtexture_legacy.html">pvr::texture_legacy</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><span class="xref">pvr::pfx</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><span class="xref">pvr::texture_ktx::OpenGLFormats</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><span class="xref">pvr::texture_tga::ImageType</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><a class="xref" href="../../classes/pvrtexture_tga.html">pvr::texture_tga</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><a class="xref" href="../../classes/pvrtexture_ktx.html">pvr::texture_ktx</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__11"><a class="xref" href="../../classes/pvrPixelFormat.html" title="The PixelFormat class fully defines a Pixel Format (channels, format, compression, bit width etc.).">pvr::PixelFormat</a></td>
+	</tr>
+			</tbody></table>
+</section>
+<section class="section">
+
+<table class="table"><caption><span class="table--title-label">Table 3. </span><span class="title">Enums</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="FileDefinesDDS.h_Reference__entry__43">Name</th><th class="entry" id="FileDefinesDDS.h_Reference__entry__44">Values</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__43">PixelFormatFlags</td>
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__44"><p class="p"><strong class="ph b">Name: </strong>e_alphaPixels   <strong class="ph b">Value: </strong>1</p><p class="p"><strong class="ph b">Name: </strong>e_alpha   <strong class="ph b">Value: </strong>2</p><p class="p"><strong class="ph b">Name: </strong>e_fourCC   <strong class="ph b">Value: </strong>4</p><p class="p"><strong class="ph b">Name: </strong>e_rgb   <strong class="ph b">Value: </strong>64</p><p class="p"><strong class="ph b">Name: </strong>e_yuv   <strong class="ph b">Value: </strong>512</p><p class="p"><strong class="ph b">Name: </strong>e_luminance   <strong class="ph b">Value: </strong>131072</p><p class="p"><strong class="ph b">Name: </strong>e_unknownBump1   <strong class="ph b">Value: </strong>262144</p><p class="p"><strong class="ph b">Name: </strong>e_unknownBump2   <strong class="ph b">Value: </strong>524288</p></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__43">Flags</td>
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__44"><p class="p"><strong class="ph b">Name: </strong>e_Capabilities   <strong class="ph b">Value: </strong>1</p><p class="p"><strong class="ph b">Name: </strong>e_height   <strong class="ph b">Value: </strong>2</p><p class="p"><strong class="ph b">Name: </strong>e_width   <strong class="ph b">Value: </strong>4</p><p class="p"><strong class="ph b">Name: </strong>e_pitch   <strong class="ph b">Value: </strong>8</p><p class="p"><strong class="ph b">Name: </strong>e_pixelFormat   <strong class="ph b">Value: </strong>4096</p><p class="p"><strong class="ph b">Name: </strong>e_numMipMaps   <strong class="ph b">Value: </strong>131072</p><p class="p"><strong class="ph b">Name: </strong>e_linearSize   <strong class="ph b">Value: </strong>524288</p><p class="p"><strong class="ph b">Name: </strong>e_depth   <strong class="ph b">Value: </strong>8388608</p></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__43">Capabilities1Flags</td>
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__44"><p class="p"><strong class="ph b">Name: </strong>e_complex   <strong class="ph b">Value: </strong>8</p><p class="p"><strong class="ph b">Name: </strong>e_texture   <strong class="ph b">Value: </strong>4096</p><p class="p"><strong class="ph b">Name: </strong>e_mipMaps   <strong class="ph b">Value: </strong>4194304</p></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__43">Capabilities2Flags</td>
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__44"><p class="p"><strong class="ph b">Name: </strong>e_cubeMap   <strong class="ph b">Value: </strong>512</p><p class="p"><strong class="ph b">Name: </strong>e_cubeMapPositiveX   <strong class="ph b">Value: </strong>1024</p><p class="p"><strong class="ph b">Name: </strong>e_cubeMapNegativeX   <strong class="ph b">Value: </strong>2048</p><p class="p"><strong class="ph b">Name: </strong>e_cubeMapPositiveY   <strong class="ph b">Value: </strong>4096</p><p class="p"><strong class="ph b">Name: </strong>e_cubeMapNegativeY   <strong class="ph b">Value: </strong>8192</p><p class="p"><strong class="ph b">Name: </strong>e_cubeMapPositiveZ   <strong class="ph b">Value: </strong>16384</p><p class="p"><strong class="ph b">Name: </strong>e_cubeMapNegativeZ   <strong class="ph b">Value: </strong>32768</p><p class="p"><strong class="ph b">Name: </strong>e_volume   <strong class="ph b">Value: </strong>2097152</p></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__43">TextureDimension</td>
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__44"><p class="p"><strong class="ph b">Name: </strong>e_texture1D   <strong class="ph b">Value: </strong>2</p><p class="p"><strong class="ph b">Name: </strong>e_texture2D   <strong class="ph b">Value: </strong>3</p><p class="p"><strong class="ph b">Name: </strong>e_texture3D   <strong class="ph b">Value: </strong>4</p></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__43">TextureMiscellaneousFlags</td>
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__44"><p class="p"><strong class="ph b">Name: </strong>e_textureCube   <strong class="ph b">Value: </strong>0x4 L</p></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__43">TextureMiscellaneousFlags2</td>
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__44"><p class="p"><strong class="ph b">Name: </strong>Unknown   <strong class="ph b">Value: </strong>0</p><p class="p"><strong class="ph b">Name: </strong>e_straight   <strong class="ph b">Value: </strong>1</p><p class="p"><strong class="ph b">Name: </strong>e_premultiplied   <strong class="ph b">Value: </strong>2</p><p class="p"><strong class="ph b">Name: </strong>e_opaque   <strong class="ph b">Value: </strong>3</p><p class="p"><strong class="ph b">Name: </strong>e_custom   <strong class="ph b">Value: </strong>4</p></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__43">D3DFormat</td>
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__44"><p class="p"><strong class="ph b">Name: </strong>D3DFMT_UNKNOWN   <strong class="ph b">Value: </strong>0</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_R8G8B8   <strong class="ph b">Value: </strong>20</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_A8R8G8B8   <strong class="ph b">Value: </strong>21</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_X8R8G8B8   <strong class="ph b">Value: </strong>22</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_R5G6B5   <strong class="ph b">Value: </strong>23</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_X1R5G5B5   <strong class="ph b">Value: </strong>24</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_A1R5G5B5   <strong class="ph b">Value: </strong>25</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_A4R4G4B4   <strong class="ph b">Value: </strong>26</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_R3G3B2   <strong class="ph b">Value: </strong>27</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_A8   <strong class="ph b">Value: </strong>28</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_A8R3G3B2   <strong class="ph b">Value: </strong>29</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_X4R4G4B4   <strong class="ph b">Value: </strong>30</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_A2B10G10R10   <strong class="ph b">Value: </strong>31</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_A8B8G8R8   <strong class="ph b">Value: </strong>32</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_X8B8G8R8   <strong class="ph b">Value: </strong>33</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_G16R16   <strong class="ph b">Value: </strong>34</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_A2R10G10B10   <strong class="ph b">Value: </strong>35</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_A16B16G16R16   <strong class="ph b">Value: </strong>36</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_A8P8   <strong class="ph b">Value: </strong>40</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_P8   <strong class="ph b">Value: </strong>41</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_L8   <strong class="ph b">Value: </strong>50</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_A8L8   <strong class="ph b">Value: </strong>51</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_A4L4   <strong class="ph b">Value: </strong>52</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_V8U8   <strong class="ph b">Value: </strong>60</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_L6V5U5   <strong class="ph b">Value: </strong>61</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_X8L8V8U8   <strong class="ph b">Value: </strong>62</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_Q8W8V8U8   <strong class="ph b">Value: </strong>63</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_V16U16   <strong class="ph b">Value: </strong>64</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_A2W10V10U10   <strong class="ph b">Value: </strong>67</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_L16   <strong class="ph b">Value: </strong>81</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_Q16W16V16U16   <strong class="ph b">Value: </strong>110</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_R16F   <strong class="ph b">Value: </strong>111</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_G16R16F   <strong class="ph b">Value: </strong>112</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_A16B16G16R16F   <strong class="ph b">Value: </strong>113</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_R32F   <strong class="ph b">Value: </strong>114</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_G32R32F   <strong class="ph b">Value: </strong>115</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_A32B32G32R32F   <strong class="ph b">Value: </strong>116</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_UYVY   <strong class="ph b">Value: </strong>MakeFourCC &lt; 'U'</p><p class="p"><strong class="ph b">Name: </strong>'Y'   <strong class="ph b">Value: </strong>118</p><p class="p"><strong class="ph b">Name: </strong>'V'   <strong class="ph b">Value: </strong>119</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_R8G8_B8G8   <strong class="ph b">Value: </strong>MakeFourCC &lt; 'R'</p><p class="p"><strong class="ph b">Name: </strong>'G'   <strong class="ph b">Value: </strong>121</p><p class="p"><strong class="ph b">Name: </strong>'B'   <strong class="ph b">Value: </strong>122</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_YUY2   <strong class="ph b">Value: </strong>MakeFourCC &lt; 'Y'</p><p class="p"><strong class="ph b">Name: </strong>'U'   <strong class="ph b">Value: </strong>124</p><p class="p"><strong class="ph b">Name: </strong>'Y'   <strong class="ph b">Value: </strong>125</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_G8R8_G8B8   <strong class="ph b">Value: </strong>MakeFourCC &lt; 'G'</p><p class="p"><strong class="ph b">Name: </strong>'R'   <strong class="ph b">Value: </strong>127</p><p class="p"><strong class="ph b">Name: </strong>'G'   <strong class="ph b">Value: </strong>128</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_DXT1   <strong class="ph b">Value: </strong>MakeFourCC &lt; 'D'</p><p class="p"><strong class="ph b">Name: </strong>'X'   <strong class="ph b">Value: </strong>130</p><p class="p"><strong class="ph b">Name: </strong>'T'   <strong class="ph b">Value: </strong>131</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_DXT2   <strong class="ph b">Value: </strong>MakeFourCC &lt; 'D'</p><p class="p"><strong class="ph b">Name: </strong>'X'   <strong class="ph b">Value: </strong>133</p><p class="p"><strong class="ph b">Name: </strong>'T'   <strong class="ph b">Value: </strong>134</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_DXT3   <strong class="ph b">Value: </strong>MakeFourCC &lt; 'D'</p><p class="p"><strong class="ph b">Name: </strong>'X'   <strong class="ph b">Value: </strong>136</p><p class="p"><strong class="ph b">Name: </strong>'T'   <strong class="ph b">Value: </strong>137</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_DXT4   <strong class="ph b">Value: </strong>MakeFourCC &lt; 'D'</p><p class="p"><strong class="ph b">Name: </strong>'X'   <strong class="ph b">Value: </strong>139</p><p class="p"><strong class="ph b">Name: </strong>'T'   <strong class="ph b">Value: </strong>140</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_DXT5   <strong class="ph b">Value: </strong>MakeFourCC &lt; 'D'</p><p class="p"><strong class="ph b">Name: </strong>'X'   <strong class="ph b">Value: </strong>142</p><p class="p"><strong class="ph b">Name: </strong>'T'   <strong class="ph b">Value: </strong>143</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_PVRTC2   <strong class="ph b">Value: </strong>MakeFourCC &lt; 'P'</p><p class="p"><strong class="ph b">Name: </strong>'T'   <strong class="ph b">Value: </strong>145</p><p class="p"><strong class="ph b">Name: </strong>'C'   <strong class="ph b">Value: </strong>146</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_PVRTC4   <strong class="ph b">Value: </strong>MakeFourCC &lt; 'P'</p><p class="p"><strong class="ph b">Name: </strong>'T'   <strong class="ph b">Value: </strong>148</p><p class="p"><strong class="ph b">Name: </strong>'C'   <strong class="ph b">Value: </strong>149</p><p class="p"><strong class="ph b">Name: </strong>D3DFMT_FORCE_DWORD   <strong class="ph b">Value: </strong>2147483647</p></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__43">DXGIFormat</td>
+<td class="entry" headers="FileDefinesDDS.h_Reference__entry__44"><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_UNKNOWN   <strong class="ph b">Value: </strong>0</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R32G32B32A32_FLOAT   <strong class="ph b">Value: </strong>2</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R32G32B32A32_UINT   <strong class="ph b">Value: </strong>3</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R32G32B32A32_SINT   <strong class="ph b">Value: </strong>4</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R32G32B32_FLOAT   <strong class="ph b">Value: </strong>6</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R32G32B32_UINT   <strong class="ph b">Value: </strong>7</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R32G32B32_SINT   <strong class="ph b">Value: </strong>8</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R16G16B16A16_FLOAT   <strong class="ph b">Value: </strong>10</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R16G16B16A16_UNORM   <strong class="ph b">Value: </strong>11</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R16G16B16A16_UINT   <strong class="ph b">Value: </strong>12</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R16G16B16A16_SNORM   <strong class="ph b">Value: </strong>13</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R16G16B16A16_SINT   <strong class="ph b">Value: </strong>14</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R32G32_FLOAT   <strong class="ph b">Value: </strong>16</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R32G32_UINT   <strong class="ph b">Value: </strong>17</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R32G32_SINT   <strong class="ph b">Value: </strong>18</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R10G10B10A2_UNORM   <strong class="ph b">Value: </strong>24</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R10G10B10A2_UINT   <strong class="ph b">Value: </strong>25</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R11G11B10_FLOAT   <strong class="ph b">Value: </strong>26</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R8G8B8A8_UNORM   <strong class="ph b">Value: </strong>28</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R8G8B8A8_UNORM_SRGB   <strong class="ph b">Value: </strong>29</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R8G8B8A8_UINT   <strong class="ph b">Value: </strong>30</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R8G8B8A8_SNORM   <strong class="ph b">Value: </strong>31</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R8G8B8A8_SINT   <strong class="ph b">Value: </strong>32</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R16G16_FLOAT   <strong class="ph b">Value: </strong>34</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R16G16_UNORM   <strong class="ph b">Value: </strong>35</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R16G16_UINT   <strong class="ph b">Value: </strong>36</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R16G16_SNORM   <strong class="ph b">Value: </strong>37</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R16G16_SINT   <strong class="ph b">Value: </strong>38</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R32_FLOAT   <strong class="ph b">Value: </strong>41</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R32_UINT   <strong class="ph b">Value: </strong>42</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R32_SINT   <strong class="ph b">Value: </strong>43</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R8G8_UNORM   <strong class="ph b">Value: </strong>49</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R8G8_UINT   <strong class="ph b">Value: </strong>50</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R8G8_SNORM   <strong class="ph b">Value: </strong>51</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R8G8_SINT   <strong class="ph b">Value: </strong>52</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R16_FLOAT   <strong class="ph b">Value: </strong>54</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R16_UNORM   <strong class="ph b">Value: </strong>56</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R16_UINT   <strong class="ph b">Value: </strong>57</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R16_SNORM   <strong class="ph b">Value: </strong>58</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R16_SINT   <strong class="ph b">Value: </strong>59</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R8_TYPELESS   <strong class="ph b">Value: </strong>60</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R8_UNORM   <strong class="ph b">Value: </strong>61</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R8_UINT   <strong class="ph b">Value: </strong>62</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R8_SNORM   <strong class="ph b">Value: </strong>63</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R8_SINT   <strong class="ph b">Value: </strong>64</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_A8_UNORM   <strong class="ph b">Value: </strong>65</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R1_UNORM   <strong class="ph b">Value: </strong>66</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R9G9B9E5_SHAREDEXP   <strong class="ph b">Value: </strong>67</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R8G8_B8G8_UNORM   <strong class="ph b">Value: </strong>68</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_G8R8_G8B8_UNORM   <strong class="ph b">Value: </strong>69</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_BC1_UNORM   <strong class="ph b">Value: </strong>71</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_BC1_UNORM_SRGB   <strong class="ph b">Value: </strong>72</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_BC2_UNORM   <strong class="ph b">Value: </strong>74</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_BC2_UNORM_SRGB   <strong class="ph b">Value: </strong>75</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_BC3_UNORM   <strong class="ph b">Value: </strong>77</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_BC3_UNORM_SRGB   <strong class="ph b">Value: </strong>78</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_BC4_UNORM   <strong class="ph b">Value: </strong>80</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_BC4_SNORM   <strong class="ph b">Value: </strong>81</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_BC5_UNORM   <strong class="ph b">Value: </strong>83</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_BC5_SNORM   <strong class="ph b">Value: </strong>84</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_B5G6R5_UNORM   <strong class="ph b">Value: </strong>85</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_B5G5R5A1_UNORM   <strong class="ph b">Value: </strong>86</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_B8G8R8A8_UNORM   <strong class="ph b">Value: </strong>87</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_B8G8R8X8_UNORM   <strong class="ph b">Value: </strong>88</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_R10G10B10_XR_BIAS_A2_UNORM   <strong class="ph b">Value: </strong>89</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_B8G8R8A8_UNORM_SRGB   <strong class="ph b">Value: </strong>91</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_B8G8R8X8_UNORM_SRGB   <strong class="ph b">Value: </strong>93</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_BC6H_UF16   <strong class="ph b">Value: </strong>95</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_BC6H_SF16   <strong class="ph b">Value: </strong>96</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_BC7_UNORM   <strong class="ph b">Value: </strong>98</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_BC7_UNORM_SRGB   <strong class="ph b">Value: </strong>99</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_YUY2   <strong class="ph b">Value: </strong>107</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_AI44   <strong class="ph b">Value: </strong>111</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_IA44   <strong class="ph b">Value: </strong>112</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_B4G4R4A4_UNORM   <strong class="ph b">Value: </strong>115</p><p class="p"><strong class="ph b">Name: </strong>DXGI_FORMAT_FORCE_UINT   <strong class="ph b">Value: </strong>0xffffffff UL</p></td>
+	</tr>
+			</tbody></table>
+</section>
+</div>
+ <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../files/textureio_dir.html">textureio</a></div></div></nav></article></main></div></div></div></div></div><div id="custom_nav" class="text-right hidden-sm hidden-xs hidden-print"><div class="well well-lg" style="margin-left:20px; margin-right:20px;"><footer role="contentinfo"><script src="../../ditasearch.js"></script><footer xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="site-info  wh_footer" itemtype="https://schema.org/WPFooter" itemscope="" whc:version="21.0">
+
+  <div class="inside-site-info grid-container grid-parent footer-container  mx-auto">
+    <div class="copyright-bar">
+      <div class="elementor elementor-70634">
+        <div class="elementor-inner">
+          <div class="elementor-section-wrap">
+            <section class="elementor-element elementor-element-a126d69 elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a126d69" data-element_type="section">
+              <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-row">
+                  <div class="elementor-element elementor-element-c1f5a3a elementor-column elementor-col-50 elementor-top-column" data-id="c1f5a3a" data-element_type="column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-9f26949 elementor-widget elementor-widget-image" data-id="9f26949" data-element_type="widget" data-widget_type="image.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-image"> <a href="https://www.imgtec.com/"><img src="https://www.imgtec.com/wp-content/uploads/2019/10/Imagination_Logo_Secondary_Blk.svg" title="Imagination_Logo" alt="Imagination_Logo" class="lazyloading"></img></a></div>
+                          </div>
+                        </div>
+                        <div class="elementor-element elementor-element-4eb6939 elementor-widget elementor-widget-text-editor">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-text-editor elementor-clearfix">
+                              <div class="footer-copyright">© Imagination Technologies Limited. All rights reserved.<br></br><a href="https://www.imgtec.com/privacy-policy/">Privacy Policy</a> – <a href="https://www.imgtec.com/terms-and-conditions/">Terms &amp; Conditions</a> – <a href="https://www.imgtec.com/trademarks/">Trademarks</a> – <a href="https://www.imgtec.com/cookies/">Cookies</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="elementor-element elementor-element-01bb773 elementor-column elementor-col-50 elementor-top-column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-1c0e19c elementor-shape-square elementor-widget elementor-widget-social-icons" data-id="1c0e19c" data-element_type="widget" data-widget_type="social-icons.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-social-icons-wrapper"> <a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin" href="https://www.linkedin.com/company/imagination-technologies/" target="_blank"> <span class="elementor-screen-only">Linkedin</span> <i class="fab fa-linkedin"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-twitter" href="https://twitter.com/imaginationtech" target="_blank"> <span class="elementor-screen-only">Twitter</span> <i class="fab fa-twitter"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook" href="https://www.facebook.com/imgtec/" target="_blank"> <span class="elementor-screen-only">Facebook</span> <i class="fab fa-facebook"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-youtube" href="https://www.youtube.com/user/Imgtec/" target="_blank"> <span class="elementor-screen-only">Youtube</span> <i class="fab fa-youtube"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram" href="https://www.instagram.com/imaginationtech/" target="_blank"> <span class="elementor-screen-only">Instagram</span> <i class="fab fa-instagram"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-google-plus" href="https://plus.google.com/+ImaginationTechnologiesLtd" target="_blank"> <span class="elementor-screen-only">Google-plus</span> <i class="fab fa-google-plus"></i> </a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer></footer></div></div></div></body></html>

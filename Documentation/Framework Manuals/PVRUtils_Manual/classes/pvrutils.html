@@ -1,0 +1,210 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2020"><meta name="DC.rights.owner" content="(C) Copyright 2020"><meta name="DC.type" content="concept"><meta name="DC.relation" scheme="URI" content="../classes/pvr.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsStructuredMemoryEntry.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsvma.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsModelGles.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsStructuredBufferViewElement.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsCreateSwapchainParameters.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsVertexAttributeInfo.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsQueuePopulateInfo.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsDeviceExtensions.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsQueueAccessInfo.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsVertexAttributeInfoGles.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsVertexConfiguration.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsImageUploadFuture_.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsInstanceExtensions.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsInstanceLayers.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsVertexInputBindingInfo.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsVertexAttributeInfoWithBinding.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsStructuredBufferView.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsStructuredMemoryDescription.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsImageUpdateInfo.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsVertexBindingInfoGles.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsOnScreenObjects.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsDebugUtilsCallbacks.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsImageApiAsyncUploader.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsVertexBindings_Name.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsVulkanVersion.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsTextureUploadResults.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrutilsVertexBindings.html"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="pvrutils"><link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/devcss.css"><title>pvr::utils</title><head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="icon" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png" sizes="32x32" type="image/png">
+<link rel="shorcut icon" type="image/png" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png">
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head></head><body id="pvrutils"><header role="banner"><div class="ditasearch" data-searchroot="../"></div><header xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="navbar navbar-default wh_header" whc:version="21.0">
+    <div class="container-fluid  header-area">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="html5_logo_and_publication_title">
+		<a href="https://docs.imgtec.com" class="wh_logo hidden-xs">
+				<img src="https://www.imgtec.com/wp-content/uploads/2018/11/Imagination-logo-white.png"></img></a>
+		<p>Developer Documentation</p>
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    <whc:webhelp_logo class="hidden-xs"></whc:webhelp_logo>
+                </div>
+                
+
+            </div>
+
+
+	
+
+		<whc:webhelp_search_input></whc:webhelp_search_input>
+        </div>
+
+		<!--<whc:webhelp_publication_title/>-->
+    </div>
+	</header></header><div class="container-fluid" id="content"><div class="row"><div class="wh_content_area doc_title"><h1>
+PVRUtils Manual
+
+</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../PVRUtils_intro.html">Introduction to PVRUtils</a><ul><li><a href="../PVRUtils_files.html">PVRUtils Files</a></li><li><a href="../PVRUtils_classes.html">PVRUtils Classes</a><ul><li><a href="../classes/clutils.html">clutils</a></li><li><a href="../classes/pvr.html">pvr</a><ul><li><a href="../classes/pvrui.html">pvr::ui</a></li><li class="active"><a href="../classes/pvrutils.html">pvr::utils</a><ul><li><a href="../classes/pvrutilsStructuredMemoryEntry.html">pvr::utils::StructuredMemoryEntry</a></li><li><a href="../classes/pvrutilsvma.html">pvr::utils::vma</a></li><li><a href="../classes/pvrutilsModelGles.html">pvr::utils::ModelGles</a></li><li><a href="../classes/pvrutilsStructuredBufferViewElement.html">pvr::utils::StructuredBufferViewElement</a></li><li><a href="../classes/pvrutilsCreateSwapchainParameters.html">pvr::utils::CreateSwapchainParameters</a></li><li><a href="../classes/pvrutilsVertexAttributeInfo.html">pvr::utils::VertexAttributeInfo</a></li><li><a href="../classes/pvrutilsQueuePopulateInfo.html">pvr::utils::QueuePopulateInfo</a></li><li><a href="../classes/pvrutilsDeviceExtensions.html">pvr::utils::DeviceExtensions</a></li><li><a href="../classes/pvrutilsQueueAccessInfo.html">pvr::utils::QueueAccessInfo</a></li><li><a href="../classes/pvrutilsVertexAttributeInfoGles.html">pvr::utils::VertexAttributeInfoGles</a></li><li><a href="../classes/pvrutilsVertexConfiguration.html">pvr::utils::VertexConfiguration</a></li><li><a href="../classes/pvrutilsImageUploadFuture_.html">pvr::utils::ImageUploadFuture_</a></li><li><a href="../classes/pvrutilsInstanceExtensions.html">pvr::utils::InstanceExtensions</a></li><li><a href="../classes/pvrutilsInstanceLayers.html">pvr::utils::InstanceLayers</a></li><li><a href="../classes/pvrutilsVertexInputBindingInfo.html">pvr::utils::VertexInputBindingInfo</a></li><li><a href="../classes/pvrutilsVertexAttributeInfoWithBinding.html">pvr::utils::VertexAttributeInfoWithBinding</a></li><li><a href="../classes/pvrutilsStructuredBufferView.html">pvr::utils::StructuredBufferView</a></li><li><a href="../classes/pvrutilsStructuredMemoryDescription.html">pvr::utils::StructuredMemoryDescription</a></li><li><a href="../classes/pvrutilsImageUpdateInfo.html">pvr::utils::ImageUpdateInfo</a></li><li><a href="../classes/pvrutilsVertexBindingInfoGles.html">pvr::utils::VertexBindingInfoGles</a></li><li><a href="../classes/pvrutilsOnScreenObjects.html">pvr::utils::OnScreenObjects</a></li><li><a href="../classes/pvrutilsDebugUtilsCallbacks.html">pvr::utils::DebugUtilsCallbacks</a></li><li><a href="../classes/pvrutilsImageApiAsyncUploader.html">pvr::utils::ImageApiAsyncUploader</a></li><li><a href="../classes/pvrutilsVertexBindings_Name.html">pvr::utils::VertexBindings_Name</a></li><li><a href="../classes/pvrutilsVulkanVersion.html">pvr::utils::VulkanVersion</a></li><li><a href="../classes/pvrutilsTextureUploadResults.html">pvr::utils::TextureUploadResults</a></li><li><a href="../classes/pvrutilsVertexBindings.html">pvr::utils::VertexBindings</a></li></ul></li><li><a href="../classes/pvrplatform.html">pvr::platform</a></li><li><a href="../classes/pvrMulti.html">pvr::Multi</a></li><li><a href="../classes/pvrGlError.html">pvr::GlError</a></li><li><a href="../classes/pvrGlExtensionNotSupportedError.html">pvr::GlExtensionNotSupportedError</a></li></ul></li></ul></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
+<h1 class="title topictitle1" id="ariaid-title1">pvr::utils</h1>
+<div class="body conbody">
+
+<table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvrutils__entry__1">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__1"><a class="xref" href="pvrutilsStructuredMemoryEntry.html" title="Defines a StructuredMemoryEntry element. A StructuredMemoryEntry defines an actual element entry in a structured buffer view. WARNING: Arrays of size 1 not supported - they are considered non-arrays. WARNING: Due to pointers to parents, no reallocations must *ever* happen. Once initialized, the lists must be final. WARNING: THE ENTIRE PUBLIC INTERFACE OF THIS CLASS EXCEPT FOR INIT, IS CONST. WARNING: IT IS NOT INTENDED FOR THIS CLASS TO BE EVER MODIFIABLE.">pvr::utils::StructuredMemoryEntry</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__1"><a class="xref" href="pvrutilsvma.html">pvr::utils::vma</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__1"><a class="xref" href="pvrutilsModelGles.html" title="The ModelGles class provides the functionality for creating all of the buffers (vbos and ibos) and textures required for basic rendering of a pvr::assets::Model using OpenGL ES.">pvr::utils::ModelGles</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__1"><span class="xref">pvr::utils::details</span></td>
+	</tr>
+			</tbody></table>
+<table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Classes</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvrutils__entry__6">Declaration Type</th><th class="entry" id="pvrutils__entry__7">Name</th></tr></thead><tbody class="tbody">
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">struct</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsVertexAttributeInfo.html" title="Contains a full description of a Vertex Attribute: Index, format, number of elements, offset in the buffer, optionally name. All values (except attributeName) must be set explicitly.">pvr::utils::VertexAttributeInfo</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">struct</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsQueuePopulateInfo.html" title="A structure encapsulating the set of queue flags required for a particular queue retrieved via the helper function 'createDeviceAndQueues'. Optionally additionally providing a surface will indicate that the queue must support presentation via the provided surface.">pvr::utils::QueuePopulateInfo</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">class</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsStructuredBufferView.html" title="A structured buffer view is a class that can be used to define an explicit structure to an object that is usually accessed as raw memory. For example, a GPU-side buffer is mapped to a void pointer, but a StructuredBufferView can be used to create a runtime structure for it, and set its entries one by one. Example usage for accessing a StructuredBufferView defined for the buffer bonesUbo defined below: struct Bone{ highp mat4 boneMatrix; highp mat3 boneMatrixIT; }; layout(std140, binding = i) uniform bonesUbo { mediump int BoneCount; // a name or index can be used to retrieve a particular element Bone bones[]; // elementArrayIndex is used to index into an arrays of elements } boneBuffer; getElementByName(&#34;BoneCount&#34;) = boneBuffer.BoneCount getElementByName(&#34;bones&#34;) = boneBuffer.Bone[0] getElementByName(&#34;bones&#34;, 1) = boneBuffer.Bone[1]">pvr::utils::StructuredBufferView</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">struct</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsDeviceExtensions.html" title="Container for a list of device extensions to be used for initiailising a device using the helper function 'createDeviceAndQueues'.">pvr::utils::DeviceExtensions</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">class</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsStructuredBufferViewElement.html" title="Defines a StructuredBufferViewElement. A StructuredBufferViewElement handles the public interface used for working with a StructuredMemoryEntry.">pvr::utils::StructuredBufferViewElement</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">struct</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsCreateSwapchainParameters.html" title="Parameter object for the createSwapchainRenderpassFramebuffers call. Defaults are sensible and immediately usable, can be used, but it is recommended to pass the Vulkan Memory Allocator if one is used in the application.">pvr::utils::CreateSwapchainParameters</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">struct</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsQueueAccessInfo.html" title="A structure encapsulating the family id and queue id of a particular queue retrieved via the helper function 'createDeviceAndQueues'. The family id corresponds to the family id the queue was retrieved from. The queue id corresponds to the particular queue index for the retrieved queue.">pvr::utils::QueueAccessInfo</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">struct</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsVertexAttributeInfoGles.html">pvr::utils::VertexAttributeInfoGles</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">struct</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsVertexConfiguration.html">pvr::utils::VertexConfiguration</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">struct</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsImageUpdateInfo.html" title="The ImageUpdateInfo struct.">pvr::utils::ImageUpdateInfo</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">struct</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsOnScreenObjects.html" title="Packaging for Swapchain, on screen Framebuffers, Renderpass, Attachments. Returned by createSwapchainRenderpassFramebuffers">pvr::utils::OnScreenObjects</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">struct</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsInstanceLayers.html" title="Container for a list of instance layers to be used for initiailising an instance using the helper function 'createInstanceAndSurface'.">pvr::utils::InstanceLayers</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">class</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsModelGles.html" title="The ModelGles class provides the functionality for creating all of the buffers (vbos and ibos) and textures required for basic rendering of a pvr::assets::Model using OpenGL ES.">pvr::utils::ModelGles</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">class</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsImageApiAsyncUploader.html" title="This class wraps a worker thread that uploads texture to the GPU asynchronously and returns futures to them. This class would normally be used with Texture Futures as well, in order to do both of the operations asynchronously.">pvr::utils::ImageApiAsyncUploader</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">class</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsStructuredMemoryEntry.html" title="Defines a StructuredMemoryEntry element. A StructuredMemoryEntry defines an actual element entry in a structured buffer view. WARNING: Arrays of size 1 not supported - they are considered non-arrays. WARNING: Due to pointers to parents, no reallocations must *ever* happen. Once initialized, the lists must be final. WARNING: THE ENTIRE PUBLIC INTERFACE OF THIS CLASS EXCEPT FOR INIT, IS CONST. WARNING: IT IS NOT INTENDED FOR THIS CLASS TO BE EVER MODIFIABLE.">pvr::utils::StructuredMemoryEntry</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">struct</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsVertexAttributeInfoWithBinding.html" title="A container struct carrying Vertex Attribute information (vertex layout, plus binding point)">pvr::utils::VertexAttributeInfoWithBinding</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">struct</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsDebugUtilsCallbacks.html" title="A simple wrapper structure which provides a more abstract representation of a set of debug utils messengers or debug callbacks when using either VK_EXT_debug_utils or VK_EXT_debug_report respectively.">pvr::utils::DebugUtilsCallbacks</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">struct</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsImageUploadFuture_.html" title="This class provides a wrapper for a Image upload future">pvr::utils::ImageUploadFuture_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">struct</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsVulkanVersion.html" title="The VulkanVersion structure provides an easy mechanism for constructing the Vulkan version for use when creating a Vulkan instance.">pvr::utils::VulkanVersion</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">struct</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsVertexBindings.html" title="Represents a shader Explicit binding, tying a Semantic name to an Attribute Index.">pvr::utils::VertexBindings</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">struct</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsInstanceExtensions.html" title="Container for a list of instance extensions to be used for initiailising an instance using the helper function 'createInstanceAndSurface'.">pvr::utils::InstanceExtensions</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">struct</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsTextureUploadResults.html" title="The TextureUploadResults structure provides the results for texture upload functions in a simple to use structure">pvr::utils::TextureUploadResults</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">class</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsStructuredMemoryDescription.html" title="Defines a memory element description. The element will be provided with a name, type and number of array elements. The element itself may also contain child memory elements">pvr::utils::StructuredMemoryDescription</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">struct</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsVertexBindingInfoGles.html">pvr::utils::VertexBindingInfoGles</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">struct</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsVertexInputBindingInfo.html" title="Information about a Buffer binding: Binding index, stride, (instance) step rate.">pvr::utils::VertexInputBindingInfo</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrutils__entry__6">struct</td>
+<td class="entry" headers="pvrutils__entry__7"><a class="xref" href="pvrutilsVertexBindings_Name.html" title="Represents a shader Reflective binding, tying a Semantic name to an Attribute variable name.">pvr::utils::VertexBindings_Name</a></td>
+	</tr>
+			</tbody></table>
+</div><nav role="navigation" class="related-links"><ul class="ullinks"><li class="link ulchildlink"><strong><a href="../classes/pvrutilsStructuredMemoryEntry.html">pvr::utils::StructuredMemoryEntry</a></strong><br>Defines a StructuredMemoryEntry element. A StructuredMemoryEntry defines an actual element entry in a structured buffer view. WARNING: Arrays of size 1 not supported - they are considered non-arrays. WARNING: Due to pointers to parents, no reallocations must *ever* happen. Once initialized, the lists must be final. WARNING: THE ENTIRE PUBLIC INTERFACE OF THIS CLASS EXCEPT FOR INIT, IS CONST. WARNING: IT IS NOT INTENDED FOR THIS CLASS TO BE EVER MODIFIABLE.</li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsvma.html">pvr::utils::vma</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsModelGles.html">pvr::utils::ModelGles</a></strong><br>The ModelGles class provides the functionality for creating all of the buffers (vbos and ibos) and textures required for basic rendering of a pvr::assets::Model using OpenGL ES.</li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsStructuredBufferViewElement.html">pvr::utils::StructuredBufferViewElement</a></strong><br>Defines a StructuredBufferViewElement. A StructuredBufferViewElement handles the public interface used for working with a StructuredMemoryEntry.</li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsCreateSwapchainParameters.html">pvr::utils::CreateSwapchainParameters</a></strong><br> Parameter object for the createSwapchainRenderpassFramebuffers call. Defaults are sensible and immediately usable, can be used, but it is recommended to pass the Vulkan Memory Allocator if one is used in the application.</li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsVertexAttributeInfo.html">pvr::utils::VertexAttributeInfo</a></strong><br>Contains a full description of a Vertex Attribute: Index, format, number of elements, offset in the buffer, optionally name. All values (except attributeName) must be set explicitly.</li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsQueuePopulateInfo.html">pvr::utils::QueuePopulateInfo</a></strong><br>A structure encapsulating the set of queue flags required for a particular queue retrieved via the helper function 'createDeviceAndQueues'. Optionally additionally providing a surface will indicate that the queue must support presentation via the provided surface.</li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsDeviceExtensions.html">pvr::utils::DeviceExtensions</a></strong><br>Container for a list of device extensions to be used for initiailising a device using the helper function 'createDeviceAndQueues'.</li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsQueueAccessInfo.html">pvr::utils::QueueAccessInfo</a></strong><br>A structure encapsulating the family id and queue id of a particular queue retrieved via the helper function 'createDeviceAndQueues'. The family id corresponds to the family id the queue was retrieved from. The queue id corresponds to the particular queue index for the retrieved queue.</li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsVertexAttributeInfoGles.html">pvr::utils::VertexAttributeInfoGles</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsVertexConfiguration.html">pvr::utils::VertexConfiguration</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsImageUploadFuture_.html">pvr::utils::ImageUploadFuture_</a></strong><br>This class provides a wrapper for a Image upload future</li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsInstanceExtensions.html">pvr::utils::InstanceExtensions</a></strong><br>Container for a list of instance extensions to be used for initiailising an instance using the helper function 'createInstanceAndSurface'.</li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsInstanceLayers.html">pvr::utils::InstanceLayers</a></strong><br>Container for a list of instance layers to be used for initiailising an instance using the helper function 'createInstanceAndSurface'.</li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsVertexInputBindingInfo.html">pvr::utils::VertexInputBindingInfo</a></strong><br>Information about a Buffer binding: Binding index, stride, (instance) step rate.</li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsVertexAttributeInfoWithBinding.html">pvr::utils::VertexAttributeInfoWithBinding</a></strong><br>A container struct carrying Vertex Attribute information (vertex layout, plus binding point)</li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsStructuredBufferView.html">pvr::utils::StructuredBufferView</a></strong><br>A structured buffer view is a class that can be used to define an explicit structure to an object that is usually accessed as raw memory. For example, a GPU-side buffer is mapped to a void pointer, but a StructuredBufferView can be used to create a runtime structure for it, and set its entries one by one. Example usage for accessing a StructuredBufferView defined for the buffer bonesUbo defined below: struct Bone{   highp mat4 boneMatrix;   highp mat3 boneMatrixIT; }; layout(std140, binding = i) uniform bonesUbo {   mediump int BoneCount; // a name or index can be used to retrieve a particular element   Bone bones[]; // elementArrayIndex is used to index into an arrays of elements } boneBuffer; getElementByName("BoneCount") = boneBuffer.BoneCount getElementByName("bones") = boneBuffer.Bone[0] getElementByName("bones", 1) = boneBuffer.Bone[1]</li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsStructuredMemoryDescription.html">pvr::utils::StructuredMemoryDescription</a></strong><br>Defines a memory element description. The element will be provided with a name, type and number of array elements. The element itself may also contain child memory elements</li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsImageUpdateInfo.html">pvr::utils::ImageUpdateInfo</a></strong><br>The ImageUpdateInfo struct.</li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsVertexBindingInfoGles.html">pvr::utils::VertexBindingInfoGles</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsOnScreenObjects.html">pvr::utils::OnScreenObjects</a></strong><br>Packaging for Swapchain, on screen Framebuffers, Renderpass, Attachments. Returned by createSwapchainRenderpassFramebuffers</li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsDebugUtilsCallbacks.html">pvr::utils::DebugUtilsCallbacks</a></strong><br>A simple wrapper structure which provides a more abstract representation of a set of debug utils messengers or debug callbacks when using either VK_EXT_debug_utils or VK_EXT_debug_report respectively.</li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsImageApiAsyncUploader.html">pvr::utils::ImageApiAsyncUploader</a></strong><br>This class wraps a worker thread that uploads texture to the GPU asynchronously and returns futures to them. This class would normally be used with Texture Futures as well, in order to do both of the operations asynchronously.</li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsVertexBindings_Name.html">pvr::utils::VertexBindings_Name</a></strong><br>Represents a shader Reflective binding, tying a Semantic name to an Attribute variable name.</li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsVulkanVersion.html">pvr::utils::VulkanVersion</a></strong><br>The VulkanVersion structure provides an easy mechanism for constructing the Vulkan version for use when creating a Vulkan instance.</li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsTextureUploadResults.html">pvr::utils::TextureUploadResults</a></strong><br>The TextureUploadResults structure provides the results for texture upload functions in a simple to use structure</li><li class="link ulchildlink"><strong><a href="../classes/pvrutilsVertexBindings.html">pvr::utils::VertexBindings</a></strong><br>Represents a shader Explicit binding, tying a Semantic name to an Attribute Index.</li></ul><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../classes/pvr.html">pvr</a></div></div></nav></article></main></div></div></div></div></div><div id="custom_nav" class="text-right hidden-sm hidden-xs hidden-print"><div class="well well-lg" style="margin-left:20px; margin-right:20px;"><footer role="contentinfo"><script src="../ditasearch.js"></script><footer xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="site-info  wh_footer" itemtype="https://schema.org/WPFooter" itemscope="" whc:version="21.0">
+
+  <div class="inside-site-info grid-container grid-parent footer-container  mx-auto">
+    <div class="copyright-bar">
+      <div class="elementor elementor-70634">
+        <div class="elementor-inner">
+          <div class="elementor-section-wrap">
+            <section class="elementor-element elementor-element-a126d69 elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a126d69" data-element_type="section">
+              <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-row">
+                  <div class="elementor-element elementor-element-c1f5a3a elementor-column elementor-col-50 elementor-top-column" data-id="c1f5a3a" data-element_type="column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-9f26949 elementor-widget elementor-widget-image" data-id="9f26949" data-element_type="widget" data-widget_type="image.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-image"> <a href="https://www.imgtec.com/"><img src="https://www.imgtec.com/wp-content/uploads/2019/10/Imagination_Logo_Secondary_Blk.svg" title="Imagination_Logo" alt="Imagination_Logo" class="lazyloading"></img></a></div>
+                          </div>
+                        </div>
+                        <div class="elementor-element elementor-element-4eb6939 elementor-widget elementor-widget-text-editor">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-text-editor elementor-clearfix">
+                              <div class="footer-copyright">© Imagination Technologies Limited. All rights reserved.<br></br><a href="https://www.imgtec.com/privacy-policy/">Privacy Policy</a> – <a href="https://www.imgtec.com/terms-and-conditions/">Terms &amp; Conditions</a> – <a href="https://www.imgtec.com/trademarks/">Trademarks</a> – <a href="https://www.imgtec.com/cookies/">Cookies</a></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="elementor-element elementor-element-01bb773 elementor-column elementor-col-50 elementor-top-column">
+                    <div class="elementor-column-wrap  elementor-element-populated">
+                      <div class="elementor-widget-wrap">
+                        <div class="elementor-element elementor-element-1c0e19c elementor-shape-square elementor-widget elementor-widget-social-icons" data-id="1c0e19c" data-element_type="widget" data-widget_type="social-icons.default">
+                          <div class="elementor-widget-container">
+                            <div class="elementor-social-icons-wrapper"> <a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin" href="https://www.linkedin.com/company/imagination-technologies/" target="_blank"> <span class="elementor-screen-only">Linkedin</span> <i class="fab fa-linkedin"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-twitter" href="https://twitter.com/imaginationtech" target="_blank"> <span class="elementor-screen-only">Twitter</span> <i class="fab fa-twitter"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook" href="https://www.facebook.com/imgtec/" target="_blank"> <span class="elementor-screen-only">Facebook</span> <i class="fab fa-facebook"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-youtube" href="https://www.youtube.com/user/Imgtec/" target="_blank"> <span class="elementor-screen-only">Youtube</span> <i class="fab fa-youtube"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram" href="https://www.instagram.com/imaginationtech/" target="_blank"> <span class="elementor-screen-only">Instagram</span> <i class="fab fa-instagram"></i> </a> <a class="elementor-icon elementor-social-icon elementor-social-icon-google-plus" href="https://plus.google.com/+ImaginationTechnologiesLtd" target="_blank"> <span class="elementor-screen-only">Google-plus</span> <i class="fab fa-google-plus"></i> </a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer></footer></div></div></div></body></html>
