@@ -4,7 +4,7 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="PowerVR Graphics Native SDK : C++ cross-platform 3D graphics SDK. Includes demos &amp; helper code (resource loading, matrix and vector maths etc.) to speed up development of OpenGL ES 1.x, 2.0 &amp; 3.x applications">
+    <meta name="description" content="PowerVR Graphics Native SDK : C++ cross-platform 3D graphics SDK. Includes demos &amp; helper code (resource loading, matrix and vector maths etc.) to speed up development of OpenGL ES 2.0 &amp; 3.x applications">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
@@ -21,28 +21,72 @@
 			<a href="http://www.powervrinsider.com" target="_blank"><img src="images/PVRlogo.png" width="20%" height="20%" /></a>
           </div>
 		   <h1 id="project_title">PowerVR Graphics SDK</h1>
-		   <h2 id="project_tagline">C++ cross-platform 3D graphics SDK. Includes demos &amp; helper code (resource loading, matrix and vector maths, etc.) to speed up development of OpenGL ES 1.x, 2.0 &amp; 3.x applications</h2>
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/powervr-graphics/Native_SDK/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/powervr-graphics/Native_SDK/tarball/master">Download this project as a tar.gz file</a>
-            </section>
+		   <h2 id="project_tagline">C++ cross-platform 3D graphics SDK. Includes demos &amp; helper code (resource loading, matrix and vector maths, etc.) to speed up development of OpenGL ES 2.0 &amp; 3.x applications</h2>
+            
         </header>
     </div>
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner" style="display: flex;">
-        <section id="mainy_content">
-        
-	  <br>
-<p>This repository contains documentation for the PowerVR SDK. </p>
+
+        <section id="docs_content">
+<div>
+  
+<h2>
+  <a name="" class="anchor" href="#whatissdk"><span class="octicon octicon-link"></span></a>What is the PowerVR SDK?
+</h2>
+<p>The SDK supports iOS, Android and Linux PowerVR devices. It also supports Windows, OS X and Linux PC emulation. Imagination's 
+  OpenGL ES emulation library, PVRVFrame, can be downloaded from our website <a href="https://www.imgtec.com/developers/powervr-sdk-tools/pvrvframe/">here</a>.</p>
+  <p>The SDK includes optimized example applications to demonstrate the most efficient ways of implementing common 3D graphics effects on PowerVR graphics cores.
+     It also includes a cross-platform OS and graphics API abstraction layer, and a library of helper code for resource loading, vector and matrix maths, text printing and more.</p>
+
+     <div>
+      <h3>
+        <a name="" class="anchor" href="#framework"><span class="octicon octicon-link"></span></a>Framework
+      </h3>
+      <p>The framework consists of separate libraries providing groups of functionality as modules. 
+        These modules are PVRCore, PVRAssets, PVRShell, PVRVK, PVRUtils and PVRCamera.</p>
+        <ul>
+        <li>PVRCore provides support for the other modules</li>
+        <li>PVRAssets provides code for accessing and manipulating application resources such as textures</li>
+        <li>PVRShell provides platform abstraction/entry point</li>
+          <li>PVRVk provides a useful abstraction and automation of the Vulkan API to speed up application development</li>
+            <li>PVRUtils provides functions for automating common tasks in application development</li>
+            <li>PVRCamera provides hardware Camera abstractions</li>
+      </ul>
+      </div>
+      <div>
+        <h3>
+          <a name="" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples
+        </h3>
+        <p>The examples provided in the SDK are fully commented, highly optimized C++ applications that cover a variety of rendering techniques. 
+          They are designed in a step-by-step tutorial style to gradually guide 
+          the most inexperienced graphics developers from a simple render of a single triangle to complex scenes that incorporate many objects, animations and shader effects.</p>
+        </div>
+        <div>
+          <h3>
+            <a name="" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Download the SDK
+          </h3>
+          <div style="display: flex;">
+            <a class="zip_download_link" href="https://github.com/powervr-graphics/Native_SDK/zipball/master">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="https://github.com/powervr-graphics/Native_SDK/tarball/master">Download this project as a tar.gz file</a>
+          </div>
+        </div>
+</div>
+<div>
+  <h2>
+    <a name="" class="anchor" href="#documentation"><span class="octicon octicon-link"></span></a>SDK Documentation</h2>
+  </h2>
+  <div>
+    <p>This repository contains documentation for the PowerVR SDK. </p>
 <p>Available documents:</p>
 <section id="side_toc">
           <ul>
             <li><a href="Documentation/SDKBrowser/Introduction.html">SDK Browser</a></li>
             <li>Framework Manuals
               <ul>
-                <li><a href="Documentation/Framework Manuals/PVRVK_Manual/PVRVK Manual.html">PVRVk</a></li>
+                <li><a href="Documentation/Framework Manuals/PVRVk_Manual/PVRVk Manual.html">PVRVk</a></li>
                 <li><a href="Documentation/Framework Manuals/PVRAssets_Manual/PVRAssets Manual.html">PVRAssets</a></li>
                 <li><a href="Documentation/Framework Manuals/PVRShell_Manual/PVRShell Manual.html">PVRShell</a></li>
                 <li><a href="Documentation/Framework Manuals/PVRCamera_Manual/PVRCamera Manual.html">PVRCamera</a></li>
@@ -53,43 +97,58 @@
             <li><a href="Documentation/SDKBrowser/Documentation.html">Reference Documentation</a></li>
           </ul>
         </section>
+  </div>
+  <div>
+    <h3>
+      <a name="" class="anchor" href="#sdkbrowser"><span class="octicon octicon-link"></span></a>SDK Browser</h2>
+    </h3>
+    <p>The SDK Browser provides an overview of the PowerVR SDK, including a introduction to its features and dependencies, instructions for building the SDK locally, a summary of the various modules which make up the SDK Framework, and a list of all of the available code examples.</p>
+    <h4>Setting up the SDK</h4>
+    <p>The SDK Browser provides a step-by-step guide to build and deploy the SDK examples for the various support operating systems. You can find this guide <a href="Documentation/SDKBrowser/Build.html">here</a>.</p>
+    </div>
+    <div>
+    <h3>
+      <a name="" class="anchor" href="#frameworkmanuals"><span class="octicon octicon-link"></a>Framework Manuals
+    </h3>
+    <p>The PowerVR SDK Framework is a collection of modules intended to make graphics application development much easier.</p>
+    <p>Each module has an associated reference manual which summarises the files and classes which make up the module.</p>
+    <ul>
+      <li><a href="Documentation/Framework Manuals/PVRVk_Manual/PVRVk Manual.html">PVRVk</a> - PVRVk provides a simplified abstraction of the Vulkan API.</li>
+      <li><a href="Documentation/Framework Manuals/PVRAssets_Manual/PVRAssets Manual.html">PVRAssets</a> - PVRAssets is a simple way to load and handle assets, in particular those in PowerVR formats.</li>
+      <li><a href="Documentation/Framework Manuals/PVRShell_Manual/PVRShell Manual.html">PVRShell</a> - PVRShell provides a basic structure for developing Vulkan and OpenGL ES applications.</li>
+      <li><a href="Documentation/Framework Manuals/PVRCamera_Manual/PVRCamera Manual.html">PVRCamera</a> - PVRCamera helps when developing with hardware camera.</li>
+      <li><a href="Documentation/Framework Manuals/PVRCore_Manual/PVRCore Manual.html">PVRCore</a> - PVRCore provides core which helps with performing common tasks, and links the other modules together.</li>
+      <li><a href="Documentation/Framework Manuals/PVRUtils_Manual/PVRUtils Manual.html">PVRUtils</a> - PVRUtils works directly with the rendering API by providing tools to simplify boilerplate API code</li>
+    </ul>
+    </div>
+    <div>
+    <h3>
+      <a name="" class="anchor" href="#referencedocumentation"><span class="octicon octicon-link"></a>Reference Documentation
+    </h3>
+    <p>The PowerVR SDK package contains a collection of reference documentation to help you develop effectively for PowerVR devices.</p>
+    <p>The SDK Browser gives a list of the available documentation along with links to access the individual documents in PDF form.</p>
+    <p>This list can be found <a href="Documentation/SDKBrowser/Documentation.html">here</a></p>
+    </div>
+    <div>
+      <h3>
+        <a name="" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Download the SDK Documenation
+      </h3>
+      <div style="display: flex;">
+        <a class="zip_download_link" href="https://github.com/powervr-graphics/powervr-graphics.github.io/zipball/master">Download this project as a .zip file</a>
+        <a class="tar_download_link" href="https://github.com/powervr-graphics/powervr-graphics.github.io/tarball/master">Download this project as a tar.gz file</a>
+      </div>
+    </div>
+  </div>
+
 <div>
-<h2>
-  <a name="" class="anchor" href="#whatissdk"><span class="octicon octicon-link"></span></a>What is the PowerVR SDK?
-</h2>
-<p>The SDK supports iOS, Android and Linux PowerVR devices. It also supports Windows, OS X and Linux PC emulation. Imagination's 
-  OpenGL ES emulation library, PVRVFrame, can be downloaded from our website <a href="https://www.imgtec.com/developers/powervr-sdk-tools/pvrvframe/">here</a>.</p>
-  <p>The SDK includes optimized example applications to demonstrate the most efficient ways of implementing common 3D graphics effects on PowerVR graphics cores.
-     It also includes a cross-platform OS and graphics API abstraction layer, and a library of helper code for resource loading, vector and matrix maths, text printing and more.</p>
+  <h2><a name="" class="" href="#support"><span class="octicon octicon-link"></span></a>Support</h2>
+  <p>If you have any questions about the SDK, PowerVR device optimisation/debugging or our tools, please contact us through our <a href="https://forums.imgtec.com/">public forum</a>.</p>
+  <p>If you would prefer to contact us confidentially, you can file a <a href="https://pvrsupport.imgtec.com/">support ticket</a>.</p>
 </div>
 <div>
-<h2>
-  <a name="" class="anchor" href="#sdkbrowser"><span class="octicon octicon-link"></span></a>SDK Browser</h2>
-</h2>
-<p>The SDK Browser provides an overview of the PowerVR SDK, including a introduction to its features and dependencies, instructions for building the SDK locally, a summary of the various modules which make up the SDK Framework, and a list of all of the available code examples.</p>
+  <h2><a name="" class="" href="#licence"><span class="octicon octicon-link"></span></a>License</h2>
 </div>
-<div>
-<h2>
-  <a name="" class="anchor" href="#frameworkmanuals"><span class="octicon octicon-link"></a>Framework Manuals
-</h2>
-<p>The PowerVR SDK Framework is a collection of modules intended to make graphics application development much easier.</p>
-<p>Each module has an associated reference manual which summarises the files and classes which make up the module.</p>
-<ul>
-  <li><a href="Documentation/Framework Manuals/PVRVK_Manual/PVRVK Manual.html">PVRVk</a> - PVRVk provides a simplified abstraction of the Vulkan API.</li>
-  <li><a href="Documentation/Framework Manuals/PVRAssets_Manual/PVRAssets Manual.html">PVRAssets</a> - PVRAssets is a simple way to load and handle assets, in particular those in PowerVR formats.</li>
-  <li><a href="Documentation/Framework Manuals/PVRShell_Manual/PVRShell Manual.html">PVRShell</a> - PVRShell provides a basic structure for developing Vulkan and OpenGL ES applications.</li>
-  <li><a href="Documentation/Framework Manuals/PVRCamera_Manual/PVRCamera Manual.html">PVRCamera</a> - PVRCamera helps when developing with hardware camera.</li>
-  <li><a href="Documentation/Framework Manuals/PVRCore_Manual/PVRCore Manual.html">PVRCore</a> - PVRCore provides core which helps with performing common tasks, and links the other modules together.</li>
-  <li><a href="Documentation/Framework Manuals/PVRUtils_Manual/PVRUtils Manual.html">PVRUtils</a> - PVRUtils works directly with the rendering API by providing tools to simplify boilerplate API code</li>
-</ul>
-</div>
-<div>
-<h2>
-  <a name="" class="anchor" href="#referencedocumentation"><span class="octicon octicon-link"></a>Reference Documentation
-</h2>
-<p>The PowerVR SDK package contains a collection of reference documentation to help you develop effectively for PowerVR devices.</p>
-<p>The SDK Browser gives a list of the available documentation along with links to access the individual documents in PDF form.</p>
-<p>This list can be found <a href="Documentation/SDKBrowser/Documentation.html">here</a></p>
+<p>The PowerVR SDK is distributed under the MIT license.<p>
 </div>
       </section>
       </section>
@@ -99,7 +158,7 @@
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">PowerVR Graphics Native SDK maintained by <a href="https://github.com/powervr-graphics">powervr-graphics</a></p>
+        <p class="copyright">PowerVR Graphics Native SDK maintained by <a href="https://github.com/powervr-graphics">Imagination Technologies</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
