@@ -48,12 +48,12 @@ PVRCore Manual
 
 <table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Classes</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="TextureLoadAsync.h_Reference__entry__1">Declaration Type</th><th class="entry" id="TextureLoadAsync.h_Reference__entry__2">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="TextureLoadAsync.h_Reference__entry__1">struct</td>
-<td class="entry" headers="TextureLoadAsync.h_Reference__entry__2"><a class="xref" href="../../classes/pvrasyncTextureLoadFuture_.html" title="A class wrapping the operations necessary to retrieve an asynchronously loaded texture, (e.g. querying if the load is complete, or blocking-wait get the result. It is a shared reference counted resource">pvr::async::TextureLoadFuture_</a></td>
-	</tr>
-	<tr class="row">
 <td class="entry" headers="TextureLoadAsync.h_Reference__entry__1">class</td>
 <td class="entry" headers="TextureLoadAsync.h_Reference__entry__2"><a class="xref" href="../../classes/pvrasyncTextureAsyncLoader.html" title="A class that loads Textures in a (single) different thread and provides futures to them. Create an instance of it, and then just call loadTextureAsync foreach texture to load. When each texture has completed loading, a callback may be called, otherwise you can use all the typical functionality of futures, such as querying if loading is comlete, or using a blocking wait to get the result">pvr::async::TextureAsyncLoader</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="TextureLoadAsync.h_Reference__entry__1">struct</td>
+<td class="entry" headers="TextureLoadAsync.h_Reference__entry__2"><a class="xref" href="../../classes/pvrasyncTextureLoadFuture_.html" title="A class wrapping the operations necessary to retrieve an asynchronously loaded texture, (e.g. querying if the load is complete, or blocking-wait get the result. It is a shared reference counted resource">pvr::async::TextureLoadFuture_</a></td>
 	</tr>
 			</tbody></table>
 </section>
@@ -61,43 +61,43 @@ PVRCore Manual
 
 <table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="TextureLoadAsync.h_Reference__entry__7">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="TextureLoadAsync.h_Reference__entry__7"><span class="xref">pvr::strings</span></td>
+<td class="entry" headers="TextureLoadAsync.h_Reference__entry__7"><span class="xref">pvr::async::impl</span></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="TextureLoadAsync.h_Reference__entry__7"><a class="xref" href="../../classes/pvreffect.html">pvr::effect</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="TextureLoadAsync.h_Reference__entry__7"><a class="xref" href="../../classes/pvreffectBufferDefinition.html" title="Information about a Buffer">pvr::effect::BufferDefinition</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="TextureLoadAsync.h_Reference__entry__7"><span class="xref">pvr::async::impl</span></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="TextureLoadAsync.h_Reference__entry__7"><a class="xref" href="../../classes/pvrasync.html">pvr::async</a></td>
-	</tr>
-	<tr class="row">
 <td class="entry" headers="TextureLoadAsync.h_Reference__entry__7"><span class="xref">pvr::pfx</span></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="TextureLoadAsync.h_Reference__entry__7"><a class="xref" href="../../classes/pvrutils.html">pvr::utils</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="TextureLoadAsync.h_Reference__entry__7"><a class="xref" href="../../classes/pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="TextureLoadAsync.h_Reference__entry__7"><span class="xref">glm</span></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="TextureLoadAsync.h_Reference__entry__7"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="TextureLoadAsync.h_Reference__entry__7"><span class="xref">impl</span></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="TextureLoadAsync.h_Reference__entry__7"><a class="xref" href="../../classes/pvrPixelFormat.html" title="The PixelFormat class fully defines a Pixel Format (channels, format, compression, bit width etc.).">pvr::PixelFormat</a></td>
+<td class="entry" headers="TextureLoadAsync.h_Reference__entry__7"><span class="xref">pvr::strings</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="TextureLoadAsync.h_Reference__entry__7"><a class="xref" href="../../classes/pvrutils.html">pvr::utils</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="TextureLoadAsync.h_Reference__entry__7"><a class="xref" href="../../classes/pvrIsRefCountedType.html">pvr::IsRefCountedType</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="TextureLoadAsync.h_Reference__entry__7"><a class="xref" href="../../classes/pvrasync.html">pvr::async</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="TextureLoadAsync.h_Reference__entry__7"><span class="xref">glm</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="TextureLoadAsync.h_Reference__entry__7"><a class="xref" href="../../classes/pvreffectBufferDefinition.html" title="Information about a Buffer">pvr::effect::BufferDefinition</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="TextureLoadAsync.h_Reference__entry__7"><a class="xref" href="../../classes/pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="TextureLoadAsync.h_Reference__entry__7"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="TextureLoadAsync.h_Reference__entry__7"><a class="xref" href="../../classes/pvrPixelFormat.html" title="The PixelFormat class fully defines a Pixel Format (channels, format, compression, bit width etc.).">pvr::PixelFormat</a></td>
 	</tr>
 			</tbody></table>
 </section>

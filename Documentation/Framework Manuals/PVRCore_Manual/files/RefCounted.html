@@ -49,7 +49,11 @@ PVRCore Manual
 <table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Classes</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="RefCounted.h_Reference__entry__1">Declaration Type</th><th class="entry" id="RefCounted.h_Reference__entry__2">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
 <td class="entry" headers="RefCounted.h_Reference__entry__1">class</td>
-<td class="entry" headers="RefCounted.h_Reference__entry__2"><a class="xref" href="../classes/pvrDereferenceable.html" title="DO NOT USE DIRECTLY. The RefCountedResource follows this class.">pvr::Dereferenceable</a></td>
+<td class="entry" headers="RefCounted.h_Reference__entry__2"><a class="xref" href="../classes/pvrRefCountedWeakReference.html" title="A RefCountedWeakReference is a &#34;Weak Reference&#34; to a Reference counted object.">pvr::RefCountedWeakReference</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="RefCounted.h_Reference__entry__1">struct</td>
+<td class="entry" headers="RefCounted.h_Reference__entry__2"><a class="xref" href="../classes/pvrIsRefCountedTypeSFINAE.html">pvr::IsRefCountedType::SFINAE</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="RefCounted.h_Reference__entry__1">struct</td>
@@ -60,12 +64,20 @@ PVRCore Manual
 <td class="entry" headers="RefCounted.h_Reference__entry__2"><a class="xref" href="../classes/pvrEmbeddedRefCountedResource.html" title="&#34;Embedded&#34; subset of the Reference counted smart pointer. See RefCountedResource. It can be used very similarly to the C++11 shared_ptr, but with some differences, especially as far as conversions go. The EmbeddedRefCountedResource is used when the user must not have access to the .construct(...) functions of the RefCountedResource (especially, when a class is designed around reference counting and cannot stand widthout it). A RefCountedResource is-a EmbeddedRefCountedResource and is safe to &#34;slice&#34; to it as well (see details).">pvr::EmbeddedRefCountedResource</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="RefCounted.h_Reference__entry__1">class</td>
-<td class="entry" headers="RefCounted.h_Reference__entry__2"><a class="xref" href="../classes/pvrEmbeddedRefCount.html" title="EmbeddedRefCount is the class that must be inherited from in order to have a class that automatically has refcounted members, with awareness and access to their ref counting by keeping their ref-counting bookkeeping entries embedded in the main class">pvr::EmbeddedRefCount</a></td>
+<td class="entry" headers="RefCounted.h_Reference__entry__1">union</td>
+<td class="entry" headers="RefCounted.h_Reference__entry__2"><a class="xref" href="../classes/pvrRefCountEntryIntrusiveunion.html">pvr::RefCountEntryIntrusive::union</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="RefCounted.h_Reference__entry__1">class</td>
-<td class="entry" headers="RefCounted.h_Reference__entry__2"><a class="xref" href="../classes/pvrRefCountedWeakReference.html" title="A RefCountedWeakReference is a &#34;Weak Reference&#34; to a Reference counted object.">pvr::RefCountedWeakReference</a></td>
+<td class="entry" headers="RefCounted.h_Reference__entry__2"><a class="xref" href="../classes/pvrDereferenceable.html" title="DO NOT USE DIRECTLY. The RefCountedResource follows this class.">pvr::Dereferenceable</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="RefCounted.h_Reference__entry__1">struct</td>
+<td class="entry" headers="RefCounted.h_Reference__entry__2"><a class="xref" href="../classes/pvrRefCountEntry.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. A &#34;simple&#34; Refcount entry keeps a user-provided pointer to the object together with the reference counts.">pvr::RefCountEntry</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="RefCounted.h_Reference__entry__1">struct</td>
+<td class="entry" headers="RefCounted.h_Reference__entry__2"><a class="xref" href="../classes/pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="RefCounted.h_Reference__entry__1">class</td>
@@ -73,27 +85,15 @@ PVRCore Manual
 	</tr>
 	<tr class="row">
 <td class="entry" headers="RefCounted.h_Reference__entry__1">struct</td>
-<td class="entry" headers="RefCounted.h_Reference__entry__2"><a class="xref" href="../classes/pvrIsRefCountedTypeSFINAE.html">pvr::IsRefCountedType::SFINAE</a></td>
+<td class="entry" headers="RefCounted.h_Reference__entry__2"><a class="xref" href="../classes/pvrRefcountEntryHoldervoid.html">pvr::RefcountEntryHolder&lt;void&gt;</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="RefCounted.h_Reference__entry__1">struct</td>
 <td class="entry" headers="RefCounted.h_Reference__entry__2"><a class="xref" href="../classes/pvrIRefCountEntry.html" title="An interface that represents a block of memory that will be doing the bookkeeping for an object that will be Reference Counted. This bit of memory holds the reference counts.">pvr::IRefCountEntry</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="RefCounted.h_Reference__entry__1">struct</td>
-<td class="entry" headers="RefCounted.h_Reference__entry__2"><a class="xref" href="../classes/pvrRefcountEntryHoldervoid.html">pvr::RefcountEntryHolder&lt;void&gt;</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="RefCounted.h_Reference__entry__1">struct</td>
-<td class="entry" headers="RefCounted.h_Reference__entry__2"><a class="xref" href="../classes/pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="RefCounted.h_Reference__entry__1">union</td>
-<td class="entry" headers="RefCounted.h_Reference__entry__2"><a class="xref" href="../classes/pvrRefCountEntryIntrusiveunion.html">pvr::RefCountEntryIntrusive::union</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="RefCounted.h_Reference__entry__1">struct</td>
-<td class="entry" headers="RefCounted.h_Reference__entry__2"><a class="xref" href="../classes/pvrRefCountEntry.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. A &#34;simple&#34; Refcount entry keeps a user-provided pointer to the object together with the reference counts.">pvr::RefCountEntry</a></td>
+<td class="entry" headers="RefCounted.h_Reference__entry__1">class</td>
+<td class="entry" headers="RefCounted.h_Reference__entry__2"><a class="xref" href="../classes/pvrEmbeddedRefCount.html" title="EmbeddedRefCount is the class that must be inherited from in order to have a class that automatically has refcounted members, with awareness and access to their ref counting by keeping their ref-counting bookkeeping entries embedded in the main class">pvr::EmbeddedRefCount</a></td>
 	</tr>
 			</tbody></table>
 </section>
@@ -101,25 +101,25 @@ PVRCore Manual
 
 <table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="RefCounted.h_Reference__entry__27">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="RefCounted.h_Reference__entry__27"><a class="xref" href="../classes/pvrasync.html">pvr::async</a></td>
+<td class="entry" headers="RefCounted.h_Reference__entry__27"><span class="xref">impl</span></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="RefCounted.h_Reference__entry__27"><a class="xref" href="../classes/pvrutils.html">pvr::utils</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="RefCounted.h_Reference__entry__27"><a class="xref" href="../classes/pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
+<td class="entry" headers="RefCounted.h_Reference__entry__27"><a class="xref" href="../classes/pvrIsRefCountedType.html">pvr::IsRefCountedType</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="RefCounted.h_Reference__entry__27"><a class="xref" href="../classes/pvrasync.html">pvr::async</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="RefCounted.h_Reference__entry__27"><span class="xref">glm</span></td>
 	</tr>
 	<tr class="row">
+<td class="entry" headers="RefCounted.h_Reference__entry__27"><a class="xref" href="../classes/pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
+	</tr>
+	<tr class="row">
 <td class="entry" headers="RefCounted.h_Reference__entry__27"><a class="xref" href="../classes/pvr.html">pvr</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="RefCounted.h_Reference__entry__27"><span class="xref">impl</span></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="RefCounted.h_Reference__entry__27"><a class="xref" href="../classes/pvrIsRefCountedType.html">pvr::IsRefCountedType</a></td>
 	</tr>
 			</tbody></table>
 </section>

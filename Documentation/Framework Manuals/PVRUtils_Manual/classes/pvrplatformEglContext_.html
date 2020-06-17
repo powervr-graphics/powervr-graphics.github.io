@@ -35,7 +35,7 @@
 	</header></header><div class="container-fluid" id="content"><div class="row"><div class="wh_content_area doc_title"><h1>
 PVRUtils Manual
 
-</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../PVRUtils_intro.html">Introduction to PVRUtils</a><ul><li><a href="../PVRUtils_files.html">PVRUtils Files</a></li><li><a href="../PVRUtils_classes.html">PVRUtils Classes</a><ul><li><a href="../classes/clutils.html">clutils</a></li><li><a href="../classes/pvr.html">pvr</a><ul><li><a href="../classes/pvrui.html">pvr::ui</a></li><li><a href="../classes/pvrutils.html">pvr::utils</a></li><li><a href="../classes/pvrplatform.html">pvr::platform</a><ul><li><a href="../classes/pvrplatformNativeWindowHandle_.html">pvr::platform::NativeWindowHandle_</a></li><li class="active"><a href="../classes/pvrplatformEglContext_.html">pvr::platform::EglContext_</a></li><li><a href="../classes/pvrplatformNativeDisplayHandle_.html">pvr::platform::NativeDisplayHandle_</a></li><li><a href="../classes/pvrplatformNativePlatformHandles_.html">pvr::platform::NativePlatformHandles_</a></li></ul></li><li><a href="../classes/pvrMulti.html">pvr::Multi</a></li><li><a href="../classes/pvrGlError.html">pvr::GlError</a></li><li><a href="../classes/pvrGlExtensionNotSupportedError.html">pvr::GlExtensionNotSupportedError</a></li></ul></li></ul></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
+</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../PVRUtils_intro.html">Introduction to PVRUtils</a><ul><li><a href="../PVRUtils_files.html">PVRUtils Files</a></li><li><a href="../PVRUtils_classes.html">PVRUtils Classes</a><ul><li><a href="../classes/clutils.html">clutils</a></li><li><a href="../classes/pvr.html">pvr</a><ul><li><a href="../classes/pvrui.html">pvr::ui</a></li><li><a href="../classes/pvrutils.html">pvr::utils</a></li><li><a href="../classes/pvrplatform.html">pvr::platform</a><ul><li class="active"><a href="../classes/pvrplatformEglContext_.html">pvr::platform::EglContext_</a></li><li><a href="../classes/pvrplatformNativePlatformHandles_.html">pvr::platform::NativePlatformHandles_</a></li><li><a href="../classes/pvrplatformNativeWindowHandle_.html">pvr::platform::NativeWindowHandle_</a></li><li><a href="../classes/pvrplatformNativeDisplayHandle_.html">pvr::platform::NativeDisplayHandle_</a></li></ul></li><li><a href="../classes/pvrGlError.html">pvr::GlError</a></li><li><a href="../classes/pvrGlExtensionNotSupportedError.html">pvr::GlExtensionNotSupportedError</a></li><li><a href="../classes/pvrMulti.html">pvr::Multi</a></li></ul></li></ul></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
 <h1 class="title topictitle1" id="ariaid-title1">pvr::platform::EglContext_</h1>
 
 <div class="body conbody"><p class="shortdesc">The EglContext context is the class wrapping all platform-specific objects required to power an OpenGL implementation (Displays, windows, configurations etc.).</p>
@@ -124,13 +124,13 @@ PVRUtils Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Initialize the EglPlatform Context object</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">maxVersion:</strong>	The maximum version of EGL platform context which must be initialised</li>
-
-<li class="li"><strong class="ph b">window:</strong>	The window specifies an EGLNativeWindowType which is used to create the windowing surface used by the EGL platform context</li>
+<li class="li"><strong class="ph b">minVersion:</strong>	The minimum version of EGL platform context which must be supported for initialisation to be successful</li>
 
 <li class="li"><strong class="ph b">attributes:</strong>	The DisplayAttributes structure specifies the configuration with which to use when initialising the EGL platform context</li>
 
-<li class="li"><strong class="ph b">minVersion:</strong>	The minimum version of EGL platform context which must be supported for initialisation to be successful</li>
+<li class="li"><strong class="ph b">window:</strong>	The window specifies an EGLNativeWindowType which is used to create the windowing surface used by the EGL platform context</li>
+
+<li class="li"><strong class="ph b">maxVersion:</strong>	The maximum version of EGL platform context which must be initialised</li>
 
 <li class="li"><strong class="ph b">display:</strong>	The display specifies an EGLDisplay which is used to create the windowing surface used by the EGL platform context</li>
 
@@ -144,7 +144,7 @@ PVRUtils Manual
 </td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="pvrplatformEglContext___entry__1">std::unique_ptr&amp;lt;EglContext_&gt;</td>
+<td class="entry" headers="pvrplatformEglContext___entry__1">std::unique_ptr&lt;EglContext_&gt;</td>
 <td class="entry" headers="pvrplatformEglContext___entry__2"><p class="p"><strong class="ph b">createSharedContextFromEGLContext</strong>()</p>
 <p class="p"><em class="ph i"><span class="ph code_comment">Creates an instance of a shared platform context</span></em></p>
 </td>

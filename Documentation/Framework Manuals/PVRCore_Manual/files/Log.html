@@ -102,9 +102,9 @@ PVRCore Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Logs a message using the default logger.</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">formatString:</strong>	A printf-style format std::string</li>
-
 <li class="li"><strong class="ph b">severity:</strong>	The severity of the message. Apart from being output into the message, the severity is used by the logger to discard log events less than a specified threshold. See setVerbosity(...)</li>
+
+<li class="li"><strong class="ph b">formatString:</strong>	A printf-style format std::string</li>
 
 </ul>
 </td>
@@ -131,9 +131,9 @@ PVRCore Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">If condition is false, logs a critical error, debug breaks if possible, and - on debug builds - throws an assertion. If you wish to completely compile it out on release, use the macro debug_assertion.</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">condition:</strong>	Pass the condition to assert here. If true, nothing happens. If false, asserts</li>
-
 <li class="li"><strong class="ph b">msg:</strong>	The message that will be logged if the asserted condition is false.</li>
+
+<li class="li"><strong class="ph b">condition:</strong>	Pass the condition to assert here. If true, nothing happens. If false, asserts</li>
 
 </ul>
 </td>

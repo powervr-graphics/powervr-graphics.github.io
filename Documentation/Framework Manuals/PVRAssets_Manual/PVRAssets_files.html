@@ -42,20 +42,32 @@ PVRAssets Manual
 
 <table class="table"><caption></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="PVRAssets_Files__entry__1">Name</th><th class="entry" id="PVRAssets_Files__entry__2">Description</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/IndexedArray.html" title="Implementation of a special kind of map that stores the data in a linear, contiguous store (std::vector interface),">IndexedArray</a></td>
-<td class="entry" headers="PVRAssets_Files__entry__2">Implementation of a special kind of map that stores the data in a linear, contiguous store (std::vector interface),</td>
+<td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/Volume.html" title="Contains an implementation of Volume generation.">Volume</a></td>
+<td class="entry" headers="PVRAssets_Files__entry__2">Contains an implementation of Volume generation.</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/fileio/PODReader.html" title="An AssetReader that reads POD format streams and creates pvr::assets::Model objects out of them.">PODReader</a></td>
+<td class="entry" headers="PVRAssets_Files__entry__2">An AssetReader that reads POD format streams and creates pvr::assets::Model objects out of them.</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/ShadowVolume.html" title="Contains an implementation of Shadow Volume generation.">ShadowVolume</a></td>
+<td class="entry" headers="PVRAssets_Files__entry__2">Contains an implementation of Shadow Volume generation.</td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/fileio/PODDefines.html" title="Contains Enumerations and Defines necessary to read POD model files.">PODDefines</a></td>
 <td class="entry" headers="PVRAssets_Files__entry__2">Contains Enumerations and Defines necessary to read POD model files.</td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/Geometry.html" title="Geometry helpers, such as skybox generations">Geometry</a></td>
-<td class="entry" headers="PVRAssets_Files__entry__2">Geometry helpers, such as skybox generations</td>
+<td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/BoundingBox.html" title="Functionality to extract and work with the Bounding Boxes of PVRAssets (meshes etc.)">BoundingBox</a></td>
+<td class="entry" headers="PVRAssets_Files__entry__2">Functionality to extract and work with the Bounding Boxes of PVRAssets (meshes etc.)</td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/model/Mesh.html" title="Represent a Mesh, usually an object (collection of primitives) that use the same transformation (but can be">Mesh</a></td>
-<td class="entry" headers="PVRAssets_Files__entry__2">Represent a Mesh, usually an object (collection of primitives) that use the same transformation (but can be</td>
+<td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/model/Light.html" title="Represents a Light in the scene (Model).">Light</a></td>
+<td class="entry" headers="PVRAssets_Files__entry__2">Represents a Light in the scene (Model).</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/model/Animation.html" title="Contains an Animation class.">Animation</a></td>
+<td class="entry" headers="PVRAssets_Files__entry__2">Contains an Animation class.</td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/PVRAssets.html" title="Include this file if you wish to use the PVRAssets functionality.">PVRAssets</a></td>
@@ -66,40 +78,28 @@ PVRAssets Manual
 <td class="entry" headers="PVRAssets_Files__entry__2">Internal helper classes</td>
 	</tr>
 	<tr class="row">
+<td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/model/Camera.html" title="Represents a Camera in the scene (Model.h).">Camera</a></td>
+<td class="entry" headers="PVRAssets_Files__entry__2">Represents a Camera in the scene (Model.h).</td>
+	</tr>
+	<tr class="row">
 <td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/fileio/GltfReader.html">GltfReader</a></td>
 <td class="entry" headers="PVRAssets_Files__entry__2"></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/BoundingBox.html" title="Functionality to extract and work with the Bounding Boxes of PVRAssets (meshes etc.)">BoundingBox</a></td>
-<td class="entry" headers="PVRAssets_Files__entry__2">Functionality to extract and work with the Bounding Boxes of PVRAssets (meshes etc.)</td>
+<td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/IndexedArray.html" title="Implementation of a special kind of map that stores the data in a linear, contiguous store (std::vector interface),">IndexedArray</a></td>
+<td class="entry" headers="PVRAssets_Files__entry__2">Implementation of a special kind of map that stores the data in a linear, contiguous store (std::vector interface),</td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/model/Mesh.html" title="Represent a Mesh, usually an object (collection of primitives) that use the same transformation (but can be">Mesh</a></td>
+<td class="entry" headers="PVRAssets_Files__entry__2">Represent a Mesh, usually an object (collection of primitives) that use the same transformation (but can be</td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/Model.html" title="Contains the class representing an entire Scene, or Model.">Model</a></td>
 <td class="entry" headers="PVRAssets_Files__entry__2">Contains the class representing an entire Scene, or Model.</td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/fileio/PODReader.html" title="An AssetReader that reads POD format streams and creates pvr::assets::Model objects out of them.">PODReader</a></td>
-<td class="entry" headers="PVRAssets_Files__entry__2">An AssetReader that reads POD format streams and creates pvr::assets::Model objects out of them.</td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/model/Camera.html" title="Represents a Camera in the scene (Model.h).">Camera</a></td>
-<td class="entry" headers="PVRAssets_Files__entry__2">Represents a Camera in the scene (Model.h).</td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/model/Animation.html" title="Contains an Animation class.">Animation</a></td>
-<td class="entry" headers="PVRAssets_Files__entry__2">Contains an Animation class.</td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/model/Light.html" title="Represents a Light in the scene (Model).">Light</a></td>
-<td class="entry" headers="PVRAssets_Files__entry__2">Represents a Light in the scene (Model).</td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/Volume.html" title="Contains an implementation of Volume generation.">Volume</a></td>
-<td class="entry" headers="PVRAssets_Files__entry__2">Contains an implementation of Volume generation.</td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/ShadowVolume.html" title="Contains an implementation of Shadow Volume generation.">ShadowVolume</a></td>
-<td class="entry" headers="PVRAssets_Files__entry__2">Contains an implementation of Shadow Volume generation.</td>
+<td class="entry" headers="PVRAssets_Files__entry__1"><a class="xref" href="files/Geometry.html" title="Geometry helpers, such as skybox generations">Geometry</a></td>
+<td class="entry" headers="PVRAssets_Files__entry__2">Geometry helpers, such as skybox generations</td>
 	</tr>
 			</tbody></table>
 </div>

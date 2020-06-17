@@ -35,7 +35,7 @@
 	</header></header><div class="container-fluid" id="content"><div class="row"><div class="wh_content_area doc_title"><h1>
 PVRCore Manual
 
-</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../PVRCore_intro.html">Introduction to PVRCore</a><ul><li><a href="../PVRCore_files.html">PVRCore Files</a></li><li><a href="../PVRCore_classes.html">PVRCore Classes</a><ul><li><a href="../classes/pvr.html">pvr</a></li><li><a href="../classes/Logger.html">Logger</a></li><li class="active"><a href="../classes/ILogger.html">ILogger</a></li></ul></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
+</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../PVRCore_intro.html">Introduction to PVRCore</a><ul><li><a href="../PVRCore_files.html">PVRCore Files</a></li><li><a href="../PVRCore_classes.html">PVRCore Classes</a><ul><li><a href="../classes/pvr.html">pvr</a></li><li class="active"><a href="../classes/ILogger.html">ILogger</a></li><li><a href="../classes/Logger.html">Logger</a></li></ul></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
 <h1 class="title topictitle1" id="ariaid-title1">ILogger</h1>
 
 <div class="body conbody"><p class="shortdesc">Represents an object capable of providing Logging functionality. This class is normally instantiated and configured, not inherited from. The components providing the Logging capability are contained in this class through interfaces, and as such can be replaced with custom components.</p>
@@ -71,9 +71,9 @@ PVRCore Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Functor operator used to allow an instance of this class to be called as a function. Logs a message using this logger's message handler.</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">formatString:</strong>	A printf-style format std::string</li>
-
 <li class="li"><strong class="ph b">severity:</strong>	The severity of the message. Apart from being output into the message, the severity is used by the logger to discard log events less than a specified threshold. See setVerbosity(...)</li>
+
+<li class="li"><strong class="ph b">formatString:</strong>	A printf-style format std::string</li>
 
 </ul>
 </td>
@@ -95,9 +95,9 @@ PVRCore Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Logs a message using this logger's message handler.</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">formatString:</strong>	A printf-style format std::string</li>
-
 <li class="li"><strong class="ph b">severity:</strong>	The severity of the message. Apart from being output into the message, the severity is used by the logger to discard log events less than a specified threshold. See setVerbosity(...)</li>
+
+<li class="li"><strong class="ph b">formatString:</strong>	A printf-style format std::string</li>
 
 </ul>
 </td>
@@ -119,11 +119,11 @@ PVRCore Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Varargs version of the "output" function.</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">formatString:</strong>	A printf-style format std::string</li>
-
 <li class="li"><strong class="ph b">severity:</strong>	The severity of the message. Apart from being output into the message, the severity is used by the logger to discard log events less than a specified threshold. See setVerbosity(...)</li>
 
 <li class="li"><strong class="ph b">argumentList:</strong>	Variable arguments list for the format std::string. Printf-style rules</li>
+
+<li class="li"><strong class="ph b">formatString:</strong>	A printf-style format std::string</li>
 
 </ul>
 </td>

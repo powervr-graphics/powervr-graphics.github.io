@@ -48,49 +48,49 @@ PVRAssets Manual
 
 <table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="PODDefines.h_Reference__entry__1">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrassetsModelMaterial.html" title="Class which stores model material info.">pvr::assets::Model::Material</a></td>
+<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrassetsModelNode.html" title="The Node represents a Mesh, Camera or Light. A Node has its own parenting, material, animation and custom user data. The tree-structure assumes transformational hierarchy (as usual), so parent transformations should be applied to children. Transformations are expressed through Animation objects (a static transform is an animation with a single frame). Note: Node ID and MeshID can sometimes be confusing: They will always be the same (when a MeshID makes sense) because Meshes are always laid out first in the internal list of Nodes.">pvr::assets::Model::Node</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="PODDefines.h_Reference__entry__1"><span class="xref">pvr::assets::utils</span></td>
+<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PODDefines.h_Reference__entry__1"><span class="xref">pvr::assets::helper</span></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrassetsModel.html" title="The Model class represents an entire Scene, or Model. It is mainly a Node structure, allowing various different kinds of data to be stored in the Nodes. The class contains a tree-like structure of Nodes. Each Node can be a Mesh node (containing a Mesh), Camera node or Light node. The tree-structure assumes transformational hierarchy (as usual). Transformations are expressed through Animation objects (a static transform is an animation with a single frame) There is an implicit order in the nodes - First in the array the Mesh nodes will be laid out, then Camera and Light nodes.">pvr::assets::Model</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrassets.html">pvr::assets</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrIndexedArray.html" title="A combination of array (std::vector) with associative container (std::map). Supports association of names with values, and retrieval by index.">pvr::IndexedArray</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrassetsAnimationData.html" title="Specifies animation data.">pvr::assets::AnimationData</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrassetsLight.html" title="Represents a Light source in the scene.">pvr::assets::Light</a></td>
+<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrShadowVolume.html" title="Represents data for handling Shadow volumes of a single Mesh.">pvr::ShadowVolume</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrVolume.html" title="Represents data for handling volumes of a single Mesh.">pvr::Volume</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrassetsCamera.html" title="Contains all information necessary to recreate a Camera in the scene.">pvr::assets::Camera</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PODDefines.h_Reference__entry__1"><span class="xref">pvr::pod</span></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrassetsModelNode.html" title="The Node represents a Mesh, Camera or Light. A Node has its own parenting, material, animation and custom user data. The tree-structure assumes transformational hierarchy (as usual), so parent transformations should be applied to children. Transformations are expressed through Animation objects (a static transform is an animation with a single frame). Note: Node ID and MeshID can sometimes be confusing: They will always be the same (when a MeshID makes sense) because Meshes are always laid out first in the internal list of Nodes.">pvr::assets::Model::Node</a></td>
+<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrassetsAnimationData.html" title="Specifies animation data.">pvr::assets::AnimationData</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PODDefines.h_Reference__entry__1"><span class="xref">pvr::tool::impl</span></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrShadowVolume.html" title="Represents data for handling Shadow volumes of a single Mesh.">pvr::ShadowVolume</a></td>
+<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrassetsMesh.html" title="Mesh class. Represent a Mesh, a collection of primitives (usually, but not necessarily, triangles) together with their per-vertex information. A mesh's is a grouping where all vertices/primitives will have the same basic transformation (but can then be skinned) and material applied.">pvr::assets::Mesh</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrassetsMesh.html" title="Mesh class. Represent a Mesh, a collection of primitives (usually, but not necessarily, triangles) together with their per-vertex information. A mesh's is a grouping where all vertices/primitives will have the same basic transformation (but can then be skinned) and material applied.">pvr::assets::Mesh</a></td>
+<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrassetsModelMaterial.html" title="Class which stores model material info.">pvr::assets::Model::Material</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PODDefines.h_Reference__entry__1"><span class="xref">pvr::pod</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrIndexedArray.html" title="A combination of array (std::vector) with associative container (std::map). Supports association of names with values, and retrieval by index.">pvr::IndexedArray</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrassetsLight.html" title="Represents a Light source in the scene.">pvr::assets::Light</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrassetsCamera.html" title="Contains all information necessary to recreate a Camera in the scene.">pvr::assets::Camera</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrassets.html">pvr::assets</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrtool.html">pvr::tool</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrassetsCameraInternalData.html" title="Raw internal structure of the Camera.">pvr::assets::Camera::InternalData</a></td>
@@ -99,10 +99,10 @@ PVRAssets Manual
 <td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrassetsAnimationInstance.html" title="A specific instance of an animation.">pvr::assets::AnimationInstance</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrtool.html">pvr::tool</a></td>
+<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvrassetsModel.html" title="The Model class represents an entire Scene, or Model. It is mainly a Node structure, allowing various different kinds of data to be stored in the Nodes. The class contains a tree-like structure of Nodes. Each Node can be a Mesh node (containing a Mesh), Camera node or Light node. The tree-structure assumes transformational hierarchy (as usual). Transformations are expressed through Animation objects (a static transform is an animation with a single frame) There is an implicit order in the nodes - First in the array the Mesh nodes will be laid out, then Camera and Light nodes.">pvr::assets::Model</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="PODDefines.h_Reference__entry__1"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
+<td class="entry" headers="PODDefines.h_Reference__entry__1"><span class="xref">pvr::assets::utils</span></td>
 	</tr>
 			</tbody></table>
 </section>

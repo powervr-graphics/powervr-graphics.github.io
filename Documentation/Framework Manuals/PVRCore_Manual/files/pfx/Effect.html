@@ -49,15 +49,7 @@ PVRCore Manual
 <table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Classes</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="Effect.h_Reference__entry__1">Declaration Type</th><th class="entry" id="Effect.h_Reference__entry__2">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
 <td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectUniformSemantic.html" title="A Reference to a Uniform semantic (a free-standing shader variable).">pvr::effect::UniformSemantic</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectBufferDefinitionEntry.html" title="A variable entry into the buffer definition">pvr::effect::BufferDefinition::Entry</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectBufferDefinition.html" title="Information about a Buffer">pvr::effect::BufferDefinition</a></td>
+<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectPass.html" title="One full collection of drawing into a specific render target, from start to finish. Comprised of one or more subpasses.">pvr::effect::Pass</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
@@ -65,47 +57,11 @@ PVRCore Manual
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectBufferRef.html" title="A Reference to a buffer object inside the effect. Can be accessed either in its entirety through a Semantic, or through the semantics of each of its elements.">pvr::effect::BufferRef</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectPipelineReference.html" title="A Reference to a pipeline definition (used in the composition of the effects)">pvr::effect::PipelineReference</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectTextureDefinition.html" title="Stores effect texture information.">pvr::effect::TextureDefinition</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectAttributeSemantic.html" title="A Reference to an Attribute semantic.">pvr::effect::AttributeSemantic</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectEffect.html" title="An entire effect with all its metadata. An effect is intended to describe an entire, possibly multipass, rendering configuration, for several different objects - potentially an entire scene - by defining all the targets, textures, buffers, different pipelines for different objects, as long as they fulfil some similar conceptual roles (see subpass groups). By using &#34;SEMANTICS&#34;, i.e. descriptions of different items of information that may be provided from outside (e.g. the model, the animation system, or other), it provides a clear interface for the application to provide this information and render automatically. For an implementation of a rendering system using that, see the RenderManager in Vulkan Utilities.">pvr::effect::Effect</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectPipelineDefinition.html" title="A definition of a pipeline object/configuration.">pvr::effect::PipelineDefinition</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
 <td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectShader.html" title="Store effect data from the shader block.">pvr::effect::Shader</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectSubpass.html" title="A collection of subpass groups that will be sequentially executed. The different groups can be used to set the drawing order within the same subpass.">pvr::effect::Subpass</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectPipelineCondition.html" title="A Condition that can be used to select a specific pipeline to render a specific object">pvr::effect::PipelineCondition</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectSubpassGroup.html" title="A collection of one or more pipelines, one of which should be conditionally picked per object to render this subpass.">pvr::effect::SubpassGroup</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectTextureReference.html" title="Stores effect texture information.">pvr::effect::TextureReference</a></td>
+<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectInputAttachmentRef.html" title="A Reference to an Input Attachment.">pvr::effect::InputAttachmentRef</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
@@ -113,15 +69,59 @@ PVRCore Manual
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectUniformSemantic.html" title="A Reference to a Uniform semantic (a free-standing shader variable).">pvr::effect::UniformSemantic</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectSubpass.html" title="A collection of subpass groups that will be sequentially executed. The different groups can be used to set the drawing order within the same subpass.">pvr::effect::Subpass</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectSubpassGroup.html" title="A collection of one or more pipelines, one of which should be conditionally picked per object to render this subpass.">pvr::effect::SubpassGroup</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectPipelineReference.html" title="A Reference to a pipeline definition (used in the composition of the effects)">pvr::effect::PipelineReference</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
 <td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectDescriptorRef.html" title="Base class for classes that represent semantic references to an image or buffer">pvr::effect::DescriptorRef</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectPass.html" title="One full collection of drawing into a specific render target, from start to finish. Comprised of one or more subpasses.">pvr::effect::Pass</a></td>
+<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectTextureDefinition.html" title="Stores effect texture information.">pvr::effect::TextureDefinition</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectInputAttachmentRef.html" title="A Reference to an Input Attachment.">pvr::effect::InputAttachmentRef</a></td>
+<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectEffect.html" title="An entire effect with all its metadata. An effect is intended to describe an entire, possibly multipass, rendering configuration, for several different objects - potentially an entire scene - by defining all the targets, textures, buffers, different pipelines for different objects, as long as they fulfil some similar conceptual roles (see subpass groups). By using &#34;SEMANTICS&#34;, i.e. descriptions of different items of information that may be provided from outside (e.g. the model, the animation system, or other), it provides a clear interface for the application to provide this information and render automatically. For an implementation of a rendering system using that, see the RenderManager in Vulkan Utilities.">pvr::effect::Effect</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectBufferDefinition.html" title="Information about a Buffer">pvr::effect::BufferDefinition</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectBufferDefinitionEntry.html" title="A variable entry into the buffer definition">pvr::effect::BufferDefinition::Entry</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectAttributeSemantic.html" title="A Reference to an Attribute semantic.">pvr::effect::AttributeSemantic</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectBufferRef.html" title="A Reference to a buffer object inside the effect. Can be accessed either in its entirety through a Semantic, or through the semantics of each of its elements.">pvr::effect::BufferRef</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectPipelineCondition.html" title="A Condition that can be used to select a specific pipeline to render a specific object">pvr::effect::PipelineCondition</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectTextureReference.html" title="Stores effect texture information.">pvr::effect::TextureReference</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Effect.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Effect.h_Reference__entry__2"><a class="xref" href="../../classes/pvreffectPipelineDefinition.html" title="A definition of a pipeline object/configuration.">pvr::effect::PipelineDefinition</a></td>
 	</tr>
 			</tbody></table>
 </section>
@@ -129,34 +129,34 @@ PVRCore Manual
 
 <table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="Effect.h_Reference__entry__41">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="Effect.h_Reference__entry__41"><span class="xref">pvr::strings</span></td>
-	</tr>
-	<tr class="row">
 <td class="entry" headers="Effect.h_Reference__entry__41"><a class="xref" href="../../classes/pvreffect.html">pvr::effect</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Effect.h_Reference__entry__41"><a class="xref" href="../../classes/pvreffectBufferDefinition.html" title="Information about a Buffer">pvr::effect::BufferDefinition</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Effect.h_Reference__entry__41"><a class="xref" href="../../classes/pvrasync.html">pvr::async</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Effect.h_Reference__entry__41"><a class="xref" href="../../classes/pvrutils.html">pvr::utils</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Effect.h_Reference__entry__41"><a class="xref" href="../../classes/pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Effect.h_Reference__entry__41"><span class="xref">glm</span></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Effect.h_Reference__entry__41"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Effect.h_Reference__entry__41"><span class="xref">impl</span></td>
 	</tr>
 	<tr class="row">
+<td class="entry" headers="Effect.h_Reference__entry__41"><span class="xref">pvr::strings</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Effect.h_Reference__entry__41"><a class="xref" href="../../classes/pvrutils.html">pvr::utils</a></td>
+	</tr>
+	<tr class="row">
 <td class="entry" headers="Effect.h_Reference__entry__41"><a class="xref" href="../../classes/pvrIsRefCountedType.html">pvr::IsRefCountedType</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Effect.h_Reference__entry__41"><a class="xref" href="../../classes/pvrasync.html">pvr::async</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Effect.h_Reference__entry__41"><span class="xref">glm</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Effect.h_Reference__entry__41"><a class="xref" href="../../classes/pvreffectBufferDefinition.html" title="Information about a Buffer">pvr::effect::BufferDefinition</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Effect.h_Reference__entry__41"><a class="xref" href="../../classes/pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Effect.h_Reference__entry__41"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
 	</tr>
 			</tbody></table>
 </section>

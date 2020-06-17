@@ -53,19 +53,19 @@ PVRCore Manual
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Threading.h_Reference__entry__1">class</td>
-<td class="entry" headers="Threading.h_Reference__entry__2"><a class="xref" href="../classes/pvrLockedQueue.html" title="A simple adapter for the BlockingConcurrentQueue that simplifies common use cases">pvr::LockedQueue</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Threading.h_Reference__entry__1">class</td>
-<td class="entry" headers="Threading.h_Reference__entry__2"><a class="xref" href="../classes/pvrasyncIFrameworkAsyncResult.html" title="An object that is intended to be used as an asynchronous return value. When you wish to perform a task in another thread, when &#34;kicking&#34; that task you should &#34;immediately&#34; (before the task is complete) return such an object, and use it to check when the task is complete, and retrieve its return value. Will provide both cleanup semantics (which should at least ensure the objects are safe to destroy and operations are pending on them), and functions to both query completion and (blockingly) get the return value. To implement this class, you must implement the abstract functions get_ (that actually waits for and returns the result, and _isComplete, which actually queries if the result is ready.">pvr::async::IFrameworkAsyncResult</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Threading.h_Reference__entry__1">class</td>
 <td class="entry" headers="Threading.h_Reference__entry__2"><a class="xref" href="../classes/pvrasyncIFrameworkCleanupObject.html" title="A wrapper object with explicit clean up semantics that is intended to be used as the return value in functions that may need to wrap multiple items. For example, it might be the return value for a texture upload function that returns both a texture object and the fence to know the operatio is complete, and the cleanup function might wait on the fence and then delete it. to void destroying useful resources, does NOT call cleanup in the destructor by default, but that can (should usually) be added to the destructor of the derived class. Implement the abstract cleanup_ function to clean up the resource, then use this object as the return value_comp from a function needing to return (for example) multiple transient values.">pvr::async::IFrameworkCleanupObject</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Threading.h_Reference__entry__1">class</td>
 <td class="entry" headers="Threading.h_Reference__entry__2"><a class="xref" href="../classes/pvrasyncAsyncScheduler.html" title="The AsyncScheduler is an abstract Scheduling system of a homogeneous task queue running on a background thread, i.e. a queue of work of a particular type. It provides its child classes wioth access to the actual queue and the synchronization semaphores in order to facilitate easier implementation. Specifically, it is expected that the user will provide functions to enqueue and dequeue work, while this class provides the running loop (actually executing the tasks, calling the callbacks etc">pvr::async::AsyncScheduler</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Threading.h_Reference__entry__1">class</td>
+<td class="entry" headers="Threading.h_Reference__entry__2"><a class="xref" href="../classes/pvrLockedQueue.html" title="A simple adapter for the BlockingConcurrentQueue that simplifies common use cases">pvr::LockedQueue</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Threading.h_Reference__entry__1">class</td>
+<td class="entry" headers="Threading.h_Reference__entry__2"><a class="xref" href="../classes/pvrasyncIFrameworkAsyncResult.html" title="An object that is intended to be used as an asynchronous return value. When you wish to perform a task in another thread, when &#34;kicking&#34; that task you should &#34;immediately&#34; (before the task is complete) return such an object, and use it to check when the task is complete, and retrieve its return value. Will provide both cleanup semantics (which should at least ensure the objects are safe to destroy and operations are pending on them), and functions to both query completion and (blockingly) get the return value. To implement this class, you must implement the abstract functions get_ (that actually waits for and returns the result, and _isComplete, which actually queries if the result is ready.">pvr::async::IFrameworkAsyncResult</a></td>
 	</tr>
 			</tbody></table>
 </section>
@@ -73,16 +73,16 @@ PVRCore Manual
 
 <table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="Threading.h_Reference__entry__13">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="Threading.h_Reference__entry__13"><a class="xref" href="../classes/pvr.html">pvr</a></td>
+<td class="entry" headers="Threading.h_Reference__entry__13"><a class="xref" href="../classes/pvrasync.html">pvr::async</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Threading.h_Reference__entry__13"><span class="xref">impl</span></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="Threading.h_Reference__entry__13"><a class="xref" href="../classes/pvrasync.html">pvr::async</a></td>
+<td class="entry" headers="Threading.h_Reference__entry__13"><span class="xref">glm</span></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="Threading.h_Reference__entry__13"><span class="xref">glm</span></td>
+<td class="entry" headers="Threading.h_Reference__entry__13"><a class="xref" href="../classes/pvr.html">pvr</a></td>
 	</tr>
 			</tbody></table>
 </section>

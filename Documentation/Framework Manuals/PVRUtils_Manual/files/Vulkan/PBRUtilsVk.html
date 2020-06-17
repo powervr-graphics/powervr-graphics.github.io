@@ -48,31 +48,31 @@ PVRUtils Manual
 
 <table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="PBRUtilsVk.h_Reference__entry__1">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="PBRUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimplPool_.html" title="An embedded ref counted Pool class">pvr::utils::vma::impl::Pool_</a></td>
+<td class="entry" headers="PBRUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvma.html">pvr::utils::vma</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="PBRUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutils.html">pvr::utils</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PBRUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PBRUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimpl.html">pvr::utils::vma::impl</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PBRUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimplAllocation_.html" title="The DeviceMemoryWrapper_. Class Just wraps the Vulkan device memory object allocated by the memory allocatpr. This class doesn't manages the creation and destruction of vulkan object. It only serves as the interface to device memory functions.">pvr::utils::vma::impl::Allocation_</a></td>
+<td class="entry" headers="PBRUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsStructuredMemoryEntry.html" title="Defines a StructuredMemoryEntry element. A StructuredMemoryEntry defines an actual element entry in a structured buffer view. WARNING: Arrays of size 1 not supported - they are considered non-arrays. WARNING: Due to pointers to parents, no reallocations must *ever* happen. Once initialized, the lists must be final. WARNING: THE ENTIRE PUBLIC INTERFACE OF THIS CLASS EXCEPT FOR INIT, IS CONST. WARNING: IT IS NOT INTENDED FOR THIS CLASS TO BE EVER MODIFIABLE.">pvr::utils::StructuredMemoryEntry</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PBRUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimplDeviceMemoryWrapper_.html" title="A wrapper for device memory">pvr::utils::vma::impl::DeviceMemoryWrapper_</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="PBRUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvma.html">pvr::utils::vma</a></td>
+<td class="entry" headers="PBRUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimpl.html">pvr::utils::vma::impl</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PBRUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutils.html">pvr::utils</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PBRUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimplPool_.html" title="An embedded ref counted Pool class">pvr::utils::vma::impl::Pool_</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PBRUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimplAllocator_.html">pvr::utils::vma::impl::Allocator_</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="PBRUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsStructuredMemoryEntry.html" title="Defines a StructuredMemoryEntry element. A StructuredMemoryEntry defines an actual element entry in a structured buffer view. WARNING: Arrays of size 1 not supported - they are considered non-arrays. WARNING: Due to pointers to parents, no reallocations must *ever* happen. Once initialized, the lists must be final. WARNING: THE ENTIRE PUBLIC INTERFACE OF THIS CLASS EXCEPT FOR INIT, IS CONST. WARNING: IT IS NOT INTENDED FOR THIS CLASS TO BE EVER MODIFIABLE.">pvr::utils::StructuredMemoryEntry</a></td>
+<td class="entry" headers="PBRUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimplAllocation_.html" title="The DeviceMemoryWrapper_. Class Just wraps the Vulkan device memory object allocated by the memory allocatpr. This class doesn't manages the creation and destruction of vulkan object. It only serves as the interface to device memory functions.">pvr::utils::vma::impl::Allocation_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PBRUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
 	</tr>
 			</tbody></table>
 </section>
@@ -84,17 +84,17 @@ PVRUtils Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Generates a mipmapped diffuse irradiance map.</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">mapNumSamples:</strong>	The number of samples to use when generating the diffuse irradiance map</li>
+<li class="li"><strong class="ph b">outputPixelFormat:</strong>	The format to use for the diffuse irradiance map generated using this function.</li>
 
 <li class="li"><strong class="ph b">environmentMap:</strong>	The source environment map to use in the generation</li>
+
+<li class="li"><strong class="ph b">mapSize:</strong>	The size of the map to generate</li>
 
 <li class="li"><strong class="ph b">outputVariableType:</strong>	The variable type to use for the generated irradiance map generated using this function.</li>
 
 <li class="li"><strong class="ph b">queue:</strong>	A queue to which command buffers containing commands for generating the diffuse irradiance map will be added.</li>
 
-<li class="li"><strong class="ph b">outputPixelFormat:</strong>	The format to use for the diffuse irradiance map generated using this function.</li>
-
-<li class="li"><strong class="ph b">mapSize:</strong>	The size of the map to generate</li>
+<li class="li"><strong class="ph b">mapNumSamples:</strong>	The number of samples to use when generating the diffuse irradiance map</li>
 
 </ul>
 </td>
@@ -105,21 +105,21 @@ PVRUtils Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Generate specular irradiance map. Each level of the specular mip map gets blurred corresponding to a roughness value from 0 to 1.0.</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">zeroRoughnessIsExternal:</strong>	Denotes that the source environment map itself will be used for the prefiltered environment map mip map level corresponding to a roughness of 0.</li>
-
-<li class="li"><strong class="ph b">mapNumSamples:</strong>	The number of samples to use when generating the prefiltered environment map</li>
-
 <li class="li"><strong class="ph b">numMipLevelsToDiscard:</strong>	Denotes the number of mip map levels to discard from the bottom of the chain. Generally using the last n mip maps may introduce artifacts.</li>
 
+<li class="li"><strong class="ph b">zeroRoughnessIsExternal:</strong>	Denotes that the source environment map itself will be used for the prefiltered environment map mip map level corresponding to a roughness of 0.</li>
+
+<li class="li"><strong class="ph b">outputPixelFormat:</strong>	The format to use for the diffuse irradiance map generated using this function.</li>
+
 <li class="li"><strong class="ph b">environmentMap:</strong>	The source environment map to use in the generation</li>
+
+<li class="li"><strong class="ph b">mapSize:</strong>	The size of the map to generate</li>
 
 <li class="li"><strong class="ph b">outputVariableType:</strong>	The variable type to use for the generated irradiance map generated using this function</li>
 
 <li class="li"><strong class="ph b">queue:</strong>	A queue to which command buffers containing commands for generating the diffuse irradiance map will be added.</li>
 
-<li class="li"><strong class="ph b">outputPixelFormat:</strong>	The format to use for the diffuse irradiance map generated using this function.</li>
-
-<li class="li"><strong class="ph b">mapSize:</strong>	The size of the map to generate</li>
+<li class="li"><strong class="ph b">mapNumSamples:</strong>	The number of samples to use when generating the prefiltered environment map</li>
 
 </ul>
 </td>

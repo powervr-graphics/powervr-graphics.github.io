@@ -48,18 +48,6 @@ PVRCore Manual
 
 <table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Classes</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="Types.h_Reference__entry__1">Declaration Type</th><th class="entry" id="Types.h_Reference__entry__2">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="Types.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Types.h_Reference__entry__2"><a class="xref" href="../../classes/pvrSwizzleChannels.html" title="The SwizzleChannels struct">pvr::SwizzleChannels</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Types.h_Reference__entry__1">class</td>
-<td class="entry" headers="Types.h_Reference__entry__2"><a class="xref" href="../../classes/pvrDisplayAttributes.html" title="Contains display configuration information (width, height, position, title, bpp etc.).">pvr::DisplayAttributes</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Types.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Types.h_Reference__entry__2"><a class="xref" href="../../classes/pvrVertexAttributeLayout.html" title="This class contains all the information of a Vertex Attribute's layout inside a block of memory, typically a Vertex Buffer Object. This informations is normally the DataType of the attribute, the Offset (from the beginning of the array) and the width (how many values of type DataType form an attribute).">pvr::VertexAttributeLayout</a></td>
-	</tr>
-	<tr class="row">
 <td class="entry" headers="Types.h_Reference__entry__1">class</td>
 <td class="entry" headers="Types.h_Reference__entry__2"><a class="xref" href="../../classes/pvrStridedBuffer.html" title="Representation of raw data. Used to store raw data that is logically grouped in blocks with a stride.">pvr::StridedBuffer</a></td>
 	</tr>
@@ -68,8 +56,20 @@ PVRCore Manual
 <td class="entry" headers="Types.h_Reference__entry__2"><a class="xref" href="../../classes/pvrStencilState.html" title="Pipeline Stencil state">pvr::StencilState</a></td>
 	</tr>
 	<tr class="row">
+<td class="entry" headers="Types.h_Reference__entry__1">class</td>
+<td class="entry" headers="Types.h_Reference__entry__2"><a class="xref" href="../../classes/pvrDisplayAttributes.html" title="Contains display configuration information (width, height, position, title, bpp etc.).">pvr::DisplayAttributes</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Types.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Types.h_Reference__entry__2"><a class="xref" href="../../classes/pvrSwizzleChannels.html" title="The SwizzleChannels struct">pvr::SwizzleChannels</a></td>
+	</tr>
+	<tr class="row">
 <td class="entry" headers="Types.h_Reference__entry__1">struct</td>
 <td class="entry" headers="Types.h_Reference__entry__2"><a class="xref" href="../../classes/pvrBlendingConfig.html" title="Add blending configuration for a color attachment. Some API's only support one blending state for all attachments, in which case the 1st such configuration will be used for all.">pvr::BlendingConfig</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Types.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Types.h_Reference__entry__2"><a class="xref" href="../../classes/pvrVertexAttributeLayout.html" title="This class contains all the information of a Vertex Attribute's layout inside a block of memory, typically a Vertex Buffer Object. This informations is normally the DataType of the attribute, the Offset (from the beginning of the array) and the width (how many values of type DataType form an attribute).">pvr::VertexAttributeLayout</a></td>
 	</tr>
 			</tbody></table>
 </section>
@@ -77,55 +77,55 @@ PVRCore Manual
 
 <table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="Types.h_Reference__entry__15">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="Types.h_Reference__entry__15"><span class="xref">pvr::strings</span></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Types.h_Reference__entry__15"><a class="xref" href="../../classes/pvreffect.html">pvr::effect</a></td>
-	</tr>
-	<tr class="row">
 <td class="entry" headers="Types.h_Reference__entry__15"><a class="xref" href="../../classes/pvrplatform.html">pvr::platform</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Types.h_Reference__entry__15"><a class="xref" href="../../classes/pvreffectBufferDefinition.html" title="Information about a Buffer">pvr::effect::BufferDefinition</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Types.h_Reference__entry__15"><span class="xref">pvr::async::impl</span></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="Types.h_Reference__entry__15"><a class="xref" href="../../classes/pvrmath.html">pvr::math</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Types.h_Reference__entry__15"><a class="xref" href="../../classes/pvrplatformCommandLineParserParsedCommandLine.html" title="This class provides access to the command line arguments of a CommandLineParser. Its lifecycle is tied to the commandLineParser.">pvr::platform::CommandLineParser::ParsedCommandLine</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Types.h_Reference__entry__15"><a class="xref" href="../../classes/pvrplatformCommandLineParser.html" title="This class parses, abstracts, stores and handles command line options passed on application launch.">pvr::platform::CommandLineParser</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Types.h_Reference__entry__15"><a class="xref" href="../../classes/pvrasync.html">pvr::async</a></td>
+<td class="entry" headers="Types.h_Reference__entry__15"><a class="xref" href="../../classes/pvreffect.html">pvr::effect</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Types.h_Reference__entry__15"><span class="xref">pvr::pfx</span></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="Types.h_Reference__entry__15"><a class="xref" href="../../classes/pvrutils.html">pvr::utils</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Types.h_Reference__entry__15"><a class="xref" href="../../classes/pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Types.h_Reference__entry__15"><span class="xref">glm</span></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Types.h_Reference__entry__15"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
+<td class="entry" headers="Types.h_Reference__entry__15"><a class="xref" href="../../classes/pvrplatformCommandLineParser.html" title="This class parses, abstracts, stores and handles command line options passed on application launch.">pvr::platform::CommandLineParser</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Types.h_Reference__entry__15"><span class="xref">impl</span></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="Types.h_Reference__entry__15"><a class="xref" href="../../classes/pvrPixelFormat.html" title="The PixelFormat class fully defines a Pixel Format (channels, format, compression, bit width etc.).">pvr::PixelFormat</a></td>
+<td class="entry" headers="Types.h_Reference__entry__15"><span class="xref">pvr::strings</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Types.h_Reference__entry__15"><a class="xref" href="../../classes/pvrplatformCommandLineParserParsedCommandLine.html" title="This class provides access to the command line arguments of a CommandLineParser. Its lifecycle is tied to the commandLineParser.">pvr::platform::CommandLineParser::ParsedCommandLine</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Types.h_Reference__entry__15"><a class="xref" href="../../classes/pvrutils.html">pvr::utils</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Types.h_Reference__entry__15"><a class="xref" href="../../classes/pvrIsRefCountedType.html">pvr::IsRefCountedType</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Types.h_Reference__entry__15"><a class="xref" href="../../classes/pvrasync.html">pvr::async</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Types.h_Reference__entry__15"><span class="xref">glm</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Types.h_Reference__entry__15"><a class="xref" href="../../classes/pvrmath.html">pvr::math</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Types.h_Reference__entry__15"><a class="xref" href="../../classes/pvreffectBufferDefinition.html" title="Information about a Buffer">pvr::effect::BufferDefinition</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Types.h_Reference__entry__15"><a class="xref" href="../../classes/pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Types.h_Reference__entry__15"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Types.h_Reference__entry__15"><a class="xref" href="../../classes/pvrPixelFormat.html" title="The PixelFormat class fully defines a Pixel Format (channels, format, compression, bit width etc.).">pvr::PixelFormat</a></td>
 	</tr>
 			</tbody></table>
 </section>
@@ -339,9 +339,9 @@ PVRCore Manual
 <ul class="ul">
 <li class="li"><strong class="ph b">magni:</strong>	The filtering mode that should be used for magnification</li>
 
-<li class="li"><strong class="ph b">mini:</strong>	The filtering mode that should be used for minification</li>
-
 <li class="li"><strong class="ph b">mip:</strong>	The filtering mode that should be used for mipmapping</li>
+
+<li class="li"><strong class="ph b">mini:</strong>	The filtering mode that should be used for minification</li>
 
 </ul>
 </td>
@@ -354,11 +354,11 @@ PVRCore Manual
 <ul class="ul">
 <li class="li"><strong class="ph b">magni:</strong>	The filtering mode that should be used for magnification</li>
 
-<li class="li"><strong class="ph b">mini:</strong>	The filtering mode that should be used for minification</li>
+<li class="li"><strong class="ph b">mip:</strong>	The filtering mode that should be used for mipmapping</li>
 
 <li class="li"><strong class="ph b">packed:</strong>	The packed sampler filter to unpack</li>
 
-<li class="li"><strong class="ph b">mip:</strong>	The filtering mode that should be used for mipmapping</li>
+<li class="li"><strong class="ph b">mini:</strong>	The filtering mode that should be used for minification</li>
 
 </ul>
 </td>
@@ -391,9 +391,9 @@ PVRCore Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Get a random Number between min and max</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">min:</strong>	Minimum number (inclusive)</li>
-
 <li class="li"><strong class="ph b">max:</strong>	Maximum number (inclusive)</li>
+
+<li class="li"><strong class="ph b">min:</strong>	Minimum number (inclusive)</li>
 
 </ul>
 </td>

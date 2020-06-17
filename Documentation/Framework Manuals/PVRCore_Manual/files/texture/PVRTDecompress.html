@@ -48,40 +48,40 @@ PVRCore Manual
 
 <table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="PVRTDecompress.h_Reference__entry__1">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="PVRTDecompress.h_Reference__entry__1"><span class="xref">pvr::strings</span></td>
-	</tr>
-	<tr class="row">
 <td class="entry" headers="PVRTDecompress.h_Reference__entry__1"><a class="xref" href="../../classes/pvreffect.html">pvr::effect</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRTDecompress.h_Reference__entry__1"><a class="xref" href="../../classes/pvreffectBufferDefinition.html" title="Information about a Buffer">pvr::effect::BufferDefinition</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRTDecompress.h_Reference__entry__1"><a class="xref" href="../../classes/pvrasync.html">pvr::async</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRTDecompress.h_Reference__entry__1"><span class="xref">pvr::pfx</span></td>
 	</tr>
 	<tr class="row">
+<td class="entry" headers="PVRTDecompress.h_Reference__entry__1"><span class="xref">impl</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRTDecompress.h_Reference__entry__1"><span class="xref">pvr::strings</span></td>
+	</tr>
+	<tr class="row">
 <td class="entry" headers="PVRTDecompress.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutils.html">pvr::utils</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="PVRTDecompress.h_Reference__entry__1"><a class="xref" href="../../classes/pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
+<td class="entry" headers="PVRTDecompress.h_Reference__entry__1"><a class="xref" href="../../classes/pvrIsRefCountedType.html">pvr::IsRefCountedType</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRTDecompress.h_Reference__entry__1"><a class="xref" href="../../classes/pvrasync.html">pvr::async</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRTDecompress.h_Reference__entry__1"><span class="xref">glm</span></td>
 	</tr>
 	<tr class="row">
+<td class="entry" headers="PVRTDecompress.h_Reference__entry__1"><a class="xref" href="../../classes/pvreffectBufferDefinition.html" title="Information about a Buffer">pvr::effect::BufferDefinition</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRTDecompress.h_Reference__entry__1"><a class="xref" href="../../classes/pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
+	</tr>
+	<tr class="row">
 <td class="entry" headers="PVRTDecompress.h_Reference__entry__1"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="PVRTDecompress.h_Reference__entry__1"><span class="xref">impl</span></td>
-	</tr>
-	<tr class="row">
 <td class="entry" headers="PVRTDecompress.h_Reference__entry__1"><a class="xref" href="../../classes/pvrPixelFormat.html" title="The PixelFormat class fully defines a Pixel Format (channels, format, compression, bit width etc.).">pvr::PixelFormat</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRTDecompress.h_Reference__entry__1"><a class="xref" href="../../classes/pvrIsRefCountedType.html">pvr::IsRefCountedType</a></td>
 	</tr>
 			</tbody></table>
 </section>
@@ -114,13 +114,13 @@ PVRCore Manual
 <ul class="ul">
 <li class="li"><strong class="ph b">mode:</strong>	The format of the data</li>
 
+<li class="li"><strong class="ph b">xDim:</strong>	X dimension of the texture</li>
+
 <li class="li"><strong class="ph b">yDim:</strong>	Y dimension of the texture</li>
 
 <li class="li"><strong class="ph b">srcData:</strong>	The ETC texture data to decompress</li>
 
 <li class="li"><strong class="ph b">dstData:</strong>	The decompressed texture data</li>
-
-<li class="li"><strong class="ph b">xDim:</strong>	X dimension of the texture</li>
 
 </ul>
 </td>

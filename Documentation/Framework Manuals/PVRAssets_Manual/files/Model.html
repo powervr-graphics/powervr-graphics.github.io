@@ -49,7 +49,31 @@ PVRAssets Manual
 <table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Classes</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="Model.h_Reference__entry__1">Declaration Type</th><th class="entry" id="Model.h_Reference__entry__2">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
 <td class="entry" headers="Model.h_Reference__entry__1">class</td>
+<td class="entry" headers="Model.h_Reference__entry__2"><a class="xref" href="../classes/pvrassetsModelNode.html" title="The Node represents a Mesh, Camera or Light. A Node has its own parenting, material, animation and custom user data. The tree-structure assumes transformational hierarchy (as usual), so parent transformations should be applied to children. Transformations are expressed through Animation objects (a static transform is an animation with a single frame). Note: Node ID and MeshID can sometimes be confusing: They will always be the same (when a MeshID makes sense) because Meshes are always laid out first in the internal list of Nodes.">pvr::assets::Model::Node</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Model.h_Reference__entry__1">class</td>
+<td class="entry" headers="Model.h_Reference__entry__2"><a class="xref" href="../classes/pvrassetsModelTexture.html" title="Internal class which stores Texture information of the model (name).">pvr::assets::Model::Texture</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Model.h_Reference__entry__1">class</td>
+<td class="entry" headers="Model.h_Reference__entry__2"><a class="xref" href="../classes/pvrassetsModelMaterialGLTFMetallicRoughnessSemantics.html" title="This class provides accessor for gltf metallic roughness semantics">pvr::assets::Model::Material::GLTFMetallicRoughnessSemantics</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Model.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Model.h_Reference__entry__2"><a class="xref" href="../classes/pvrassetsSkeleton.html" title="The skeleton structure encapsulates all that which is required to define a skeleton including name, a set of bones and matrices for transformations.">pvr::assets::Skeleton</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Model.h_Reference__entry__1">class</td>
 <td class="entry" headers="Model.h_Reference__entry__2"><a class="xref" href="../classes/pvrassetsModelMaterial.html" title="Class which stores model material info.">pvr::assets::Model::Material</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Model.h_Reference__entry__1">class</td>
+<td class="entry" headers="Model.h_Reference__entry__2"><a class="xref" href="../classes/pvrassetsModelMaterialDefaultMaterialSemantics.html" title="This class is provided for convenient compile-time access of the semantic values.">pvr::assets::Model::Material::DefaultMaterialSemantics</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Model.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Model.h_Reference__entry__2"><a class="xref" href="../classes/pvrassetsModelInternalData.html" title="Struct containing the internal data of the Model.">pvr::assets::Model::InternalData</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Model.h_Reference__entry__1">class</td>
@@ -61,39 +85,15 @@ PVRAssets Manual
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Model.h_Reference__entry__1">class</td>
-<td class="entry" headers="Model.h_Reference__entry__2"><a class="xref" href="../classes/pvrassetsModelMaterialDefaultMaterialSemantics.html" title="This class is provided for convenient compile-time access of the semantic values.">pvr::assets::Model::Material::DefaultMaterialSemantics</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Model.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Model.h_Reference__entry__2"><a class="xref" href="../classes/pvrassetsModelMaterialInternalData.html" title="Raw internal structure of the Material.">pvr::assets::Model::Material::InternalData</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Model.h_Reference__entry__1">class</td>
-<td class="entry" headers="Model.h_Reference__entry__2"><a class="xref" href="../classes/pvrassetsModelTexture.html" title="Internal class which stores Texture information of the model (name).">pvr::assets::Model::Texture</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Model.h_Reference__entry__1">class</td>
-<td class="entry" headers="Model.h_Reference__entry__2"><a class="xref" href="../classes/pvrassetsModelNode.html" title="The Node represents a Mesh, Camera or Light. A Node has its own parenting, material, animation and custom user data. The tree-structure assumes transformational hierarchy (as usual), so parent transformations should be applied to children. Transformations are expressed through Animation objects (a static transform is an animation with a single frame). Note: Node ID and MeshID can sometimes be confusing: They will always be the same (when a MeshID makes sense) because Meshes are always laid out first in the internal list of Nodes.">pvr::assets::Model::Node</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Model.h_Reference__entry__1">class</td>
-<td class="entry" headers="Model.h_Reference__entry__2"><a class="xref" href="../classes/pvrassetsModelMaterialGLTFMetallicRoughnessSemantics.html" title="This class provides accessor for gltf metallic roughness semantics">pvr::assets::Model::Material::GLTFMetallicRoughnessSemantics</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Model.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Model.h_Reference__entry__2"><a class="xref" href="../classes/pvrassetsSkeleton.html" title="The skeleton structure encapsulates all that which is required to define a skeleton including name, a set of bones and matrices for transformations.">pvr::assets::Skeleton</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Model.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Model.h_Reference__entry__2"><a class="xref" href="../classes/pvrassetsModelInternalData.html" title="Struct containing the internal data of the Model.">pvr::assets::Model::InternalData</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Model.h_Reference__entry__1">class</td>
 <td class="entry" headers="Model.h_Reference__entry__2"><a class="xref" href="../classes/pvrassetsModel.html" title="The Model class represents an entire Scene, or Model. It is mainly a Node structure, allowing various different kinds of data to be stored in the Nodes. The class contains a tree-like structure of Nodes. Each Node can be a Mesh node (containing a Mesh), Camera node or Light node. The tree-structure assumes transformational hierarchy (as usual). Transformations are expressed through Animation objects (a static transform is an animation with a single frame) There is an implicit order in the nodes - First in the array the Mesh nodes will be laid out, then Camera and Light nodes.">pvr::assets::Model</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Model.h_Reference__entry__1">struct</td>
 <td class="entry" headers="Model.h_Reference__entry__2"><a class="xref" href="../classes/pvrassetsModelNodeInternalData.html" title="Raw internal structure of the Node.">pvr::assets::Model::Node::InternalData</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Model.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Model.h_Reference__entry__2"><a class="xref" href="../classes/pvrassetsModelMaterialInternalData.html" title="Raw internal structure of the Material.">pvr::assets::Model::Material::InternalData</a></td>
 	</tr>
 			</tbody></table>
 </section>
@@ -101,10 +101,10 @@ PVRAssets Manual
 
 <table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="Model.h_Reference__entry__27">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="Model.h_Reference__entry__27"><a class="xref" href="../classes/pvrassetsModelMaterial.html" title="Class which stores model material info.">pvr::assets::Model::Material</a></td>
+<td class="entry" headers="Model.h_Reference__entry__27"><a class="xref" href="../classes/pvrassetsModelNode.html" title="The Node represents a Mesh, Camera or Light. A Node has its own parenting, material, animation and custom user data. The tree-structure assumes transformational hierarchy (as usual), so parent transformations should be applied to children. Transformations are expressed through Animation objects (a static transform is an animation with a single frame). Note: Node ID and MeshID can sometimes be confusing: They will always be the same (when a MeshID makes sense) because Meshes are always laid out first in the internal list of Nodes.">pvr::assets::Model::Node</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="Model.h_Reference__entry__27"><a class="xref" href="../classes/pvrassetsModelNode.html" title="The Node represents a Mesh, Camera or Light. A Node has its own parenting, material, animation and custom user data. The tree-structure assumes transformational hierarchy (as usual), so parent transformations should be applied to children. Transformations are expressed through Animation objects (a static transform is an animation with a single frame). Note: Node ID and MeshID can sometimes be confusing: They will always be the same (when a MeshID makes sense) because Meshes are always laid out first in the internal list of Nodes.">pvr::assets::Model::Node</a></td>
+<td class="entry" headers="Model.h_Reference__entry__27"><a class="xref" href="../classes/pvr.html">pvr</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Model.h_Reference__entry__27"><a class="xref" href="../classes/pvrassetsModel.html" title="The Model class represents an entire Scene, or Model. It is mainly a Node structure, allowing various different kinds of data to be stored in the Nodes. The class contains a tree-like structure of Nodes. Each Node can be a Mesh node (containing a Mesh), Camera node or Light node. The tree-structure assumes transformational hierarchy (as usual). Transformations are expressed through Animation objects (a static transform is an animation with a single frame) There is an implicit order in the nodes - First in the array the Mesh nodes will be laid out, then Camera and Light nodes.">pvr::assets::Model</a></td>
@@ -113,7 +113,7 @@ PVRAssets Manual
 <td class="entry" headers="Model.h_Reference__entry__27"><a class="xref" href="../classes/pvrassets.html">pvr::assets</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="Model.h_Reference__entry__27"><a class="xref" href="../classes/pvr.html">pvr</a></td>
+<td class="entry" headers="Model.h_Reference__entry__27"><a class="xref" href="../classes/pvrassetsModelMaterial.html" title="Class which stores model material info.">pvr::assets::Model::Material</a></td>
 	</tr>
 			</tbody></table>
 </section>

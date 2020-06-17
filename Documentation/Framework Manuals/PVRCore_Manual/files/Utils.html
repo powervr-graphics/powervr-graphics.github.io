@@ -48,19 +48,19 @@ PVRCore Manual
 
 <table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="Utils.h_Reference__entry__1">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="Utils.h_Reference__entry__1"><a class="xref" href="../classes/pvr.html">pvr</a></td>
+<td class="entry" headers="Utils.h_Reference__entry__1"><a class="xref" href="../classes/pvrasync.html">pvr::async</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Utils.h_Reference__entry__1"><span class="xref">impl</span></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="Utils.h_Reference__entry__1"><a class="xref" href="../classes/pvrutils.html">pvr::utils</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Utils.h_Reference__entry__1"><a class="xref" href="../classes/pvrasync.html">pvr::async</a></td>
-	</tr>
-	<tr class="row">
 <td class="entry" headers="Utils.h_Reference__entry__1"><span class="xref">glm</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Utils.h_Reference__entry__1"><a class="xref" href="../classes/pvr.html">pvr</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Utils.h_Reference__entry__1"><a class="xref" href="../classes/pvrutils.html">pvr::utils</a></td>
 	</tr>
 			</tbody></table>
 </section>
@@ -74,11 +74,11 @@ PVRCore Manual
 <ul class="ul">
 <li class="li"><strong class="ph b">g:</strong>	Blue channel (8 bit)</li>
 
-<li class="li"><strong class="ph b">r:</strong>	Red channel (8 bit)</li>
+<li class="li"><strong class="ph b">a:</strong>	Red channel (8 bit)</li>
 
 <li class="li"><strong class="ph b">b:</strong>	Red channel (8 bit)</li>
 
-<li class="li"><strong class="ph b">a:</strong>	Red channel (8 bit)</li>
+<li class="li"><strong class="ph b">r:</strong>	Red channel (8 bit)</li>
 
 </ul>
 </td>
@@ -91,11 +91,11 @@ PVRCore Manual
 <ul class="ul">
 <li class="li"><strong class="ph b">g:</strong>	Blue channel (normalized 0.0-1.0)</li>
 
-<li class="li"><strong class="ph b">r:</strong>	Red channel (normalized 0.0-1.0)</li>
+<li class="li"><strong class="ph b">a:</strong>	Red channel (normalized 0.0-1.0)</li>
 
 <li class="li"><strong class="ph b">b:</strong>	Red channel (normalized 0.0-1.0)</li>
 
-<li class="li"><strong class="ph b">a:</strong>	Red channel (normalized 0.0-1.0)</li>
+<li class="li"><strong class="ph b">r:</strong>	Red channel (normalized 0.0-1.0)</li>
 
 </ul>
 </td>
@@ -128,9 +128,9 @@ PVRCore Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Typed memset. Sets each byte of the destination object to a source value.</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">i:</strong>	The conversion of this object to unsigned char will be the value that is set to each byte.</li>
-
 <li class="li"><strong class="ph b">dst:</strong>	Reference to the object whose bytes we will set to the value</li>
+
+<li class="li"><strong class="ph b">i:</strong>	The conversion of this object to unsigned char will be the value that is set to each byte.</li>
 
 </ul>
 </td>

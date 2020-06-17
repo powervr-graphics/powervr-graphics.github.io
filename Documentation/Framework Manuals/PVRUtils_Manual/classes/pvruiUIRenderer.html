@@ -1,6 +1,6 @@
 <!DOCTYPE html
   SYSTEM "about:legacy-compat">
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2020"><meta name="DC.rights.owner" content="(C) Copyright 2020"><meta name="DC.type" content="concept"><meta name="description" content="Manages and render the sprites."><meta name="DC.relation" scheme="URI" content="../classes/pvrui.html"><meta name="DC.relation" scheme="URI" content="../classes/pvruiUIRendererUboMaterial.html"><meta name="DC.relation" scheme="URI" content="../classes/pvruiUIRendererProgramData.html"><meta name="DC.relation" scheme="URI" content="../classes/pvruiUIRendererUboMvp.html"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="pvruiUIRenderer"><link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/devcss.css"><title>pvr::ui::UIRenderer</title><head>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2020"><meta name="DC.rights.owner" content="(C) Copyright 2020"><meta name="DC.type" content="concept"><meta name="description" content="Manages and render the sprites."><meta name="DC.relation" scheme="URI" content="../classes/pvrui.html"><meta name="DC.relation" scheme="URI" content="../classes/pvruiUIRendererUboMaterial.html"><meta name="DC.relation" scheme="URI" content="../classes/pvruiUIRendererUboMvp.html"><meta name="DC.relation" scheme="URI" content="../classes/pvruiUIRendererProgramData.html"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="pvruiUIRenderer"><link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/devcss.css"><title>pvr::ui::UIRenderer</title><head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="icon" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png" sizes="32x32" type="image/png">
 <link rel="shorcut icon" type="image/png" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png">
@@ -35,7 +35,7 @@
 	</header></header><div class="container-fluid" id="content"><div class="row"><div class="wh_content_area doc_title"><h1>
 PVRUtils Manual
 
-</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../PVRUtils_intro.html">Introduction to PVRUtils</a><ul><li><a href="../PVRUtils_files.html">PVRUtils Files</a></li><li><a href="../PVRUtils_classes.html">PVRUtils Classes</a><ul><li><a href="../classes/clutils.html">clutils</a></li><li><a href="../classes/pvr.html">pvr</a><ul><li><a href="../classes/pvrui.html">pvr::ui</a><ul><li><a href="../classes/pvruiimpl.html">pvr::ui::impl</a></li><li class="active"><a href="../classes/pvruiUIRenderer.html">pvr::ui::UIRenderer</a><ul><li><a href="../classes/pvruiUIRendererUboMaterial.html">pvr::ui::UIRenderer::UboMaterial</a></li><li><a href="../classes/pvruiUIRendererProgramData.html">pvr::ui::UIRenderer::ProgramData</a></li><li><a href="../classes/pvruiUIRendererUboMvp.html">pvr::ui::UIRenderer::UboMvp</a></li></ul></li><li><a href="../classes/pvruiUIRendererInstanceMaxError.html">pvr::ui::UIRendererInstanceMaxError</a></li><li><a href="../classes/pvruiGLStateTracker.html">pvr::ui::GLStateTracker</a></li><li><a href="../classes/pvruiUIRendererError.html">pvr::ui::UIRendererError</a></li><li><a href="../classes/pvruiGLState.html">pvr::ui::GLState</a></li></ul></li><li><a href="../classes/pvrutils.html">pvr::utils</a></li><li><a href="../classes/pvrplatform.html">pvr::platform</a></li><li><a href="../classes/pvrMulti.html">pvr::Multi</a></li><li><a href="../classes/pvrGlError.html">pvr::GlError</a></li><li><a href="../classes/pvrGlExtensionNotSupportedError.html">pvr::GlExtensionNotSupportedError</a></li></ul></li></ul></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
+</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../PVRUtils_intro.html">Introduction to PVRUtils</a><ul><li><a href="../PVRUtils_files.html">PVRUtils Files</a></li><li><a href="../PVRUtils_classes.html">PVRUtils Classes</a><ul><li><a href="../classes/clutils.html">clutils</a></li><li><a href="../classes/pvr.html">pvr</a><ul><li><a href="../classes/pvrui.html">pvr::ui</a><ul><li class="active"><a href="../classes/pvruiUIRenderer.html">pvr::ui::UIRenderer</a><ul><li><a href="../classes/pvruiUIRendererUboMaterial.html">pvr::ui::UIRenderer::UboMaterial</a></li><li><a href="../classes/pvruiUIRendererUboMvp.html">pvr::ui::UIRenderer::UboMvp</a></li><li><a href="../classes/pvruiUIRendererProgramData.html">pvr::ui::UIRenderer::ProgramData</a></li></ul></li><li><a href="../classes/pvruiimpl.html">pvr::ui::impl</a></li><li><a href="../classes/pvruiUIRendererInstanceMaxError.html">pvr::ui::UIRendererInstanceMaxError</a></li><li><a href="../classes/pvruiGLState.html">pvr::ui::GLState</a></li><li><a href="../classes/pvruiUIRendererError.html">pvr::ui::UIRendererError</a></li><li><a href="../classes/pvruiGLStateTracker.html">pvr::ui::GLStateTracker</a></li></ul></li><li><a href="../classes/pvrutils.html">pvr::utils</a></li><li><a href="../classes/pvrplatform.html">pvr::platform</a></li><li><a href="../classes/pvrGlError.html">pvr::GlError</a></li><li><a href="../classes/pvrGlExtensionNotSupportedError.html">pvr::GlExtensionNotSupportedError</a></li><li><a href="../classes/pvrMulti.html">pvr::Multi</a></li></ul></li></ul></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
 <h1 class="title topictitle1" id="ariaid-title1">pvr::ui::UIRenderer</h1>
 
 <div class="body conbody"><p class="shortdesc">Manages and render the sprites.</p>
@@ -117,13 +117,13 @@ PVRUtils Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Initialize the UIRenderer with window dimensions. MUST BE called exactly once before use, after a valid graphics context is available (usually, during initView).</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">fullscreen:</strong>	Indicates whether the rendering is occuring in full screen mode.</li>
-
-<li class="li"><strong class="ph b">width:</strong>	The width of the screen used for rendering.</li>
-
 <li class="li"><strong class="ph b">height:</strong>	The height of the screen used for rendering</li>
 
+<li class="li"><strong class="ph b">fullscreen:</strong>	Indicates whether the rendering is occuring in full screen mode.</li>
+
 <li class="li"><strong class="ph b">isFrameBufferSRGB:</strong>	Indicates whether the rendering in to SRGB</li>
+
+<li class="li"><strong class="ph b">width:</strong>	The width of the screen used for rendering.</li>
 
 </ul>
 </td>
@@ -315,9 +315,9 @@ PVRUtils Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Create a font from a given texture (use PVRTexTool to create the font texture from a font file).</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">textureHeader:</strong>	A pvr::TextureHeader of the same object. Necessary for the texture metadata.</li>
-
 <li class="li"><strong class="ph b">texture:</strong>	An OpenGL ES texture handle. Must be 2D. It will be used directly.</li>
+
+<li class="li"><strong class="ph b">textureHeader:</strong>	A pvr::TextureHeader of the same object. Necessary for the texture metadata.</li>
 
 <li class="li"><strong class="ph b">sampler:</strong>	(Optional) A specific sampler object to use for this font.</li>
 
@@ -343,15 +343,15 @@ PVRUtils Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Create a pvr::ui::Image from an API texture. NOTE: Creating new image requires re-recording the commandbuffer</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">useMipmaps:</strong>	Specifies whether the image should use mip maps</li>
-
-<li class="li"><strong class="ph b">width:</strong>	The width of the texture.</li>
-
 <li class="li"><strong class="ph b">texture:</strong>	An OpenGL ES texture handle. Must be 2D. It will be used directly.</li>
+
+<li class="li"><strong class="ph b">height:</strong>	The height of the texture.</li>
 
 <li class="li"><strong class="ph b">sampler:</strong>	(Optional) A specific sampler object to use for this font.</li>
 
-<li class="li"><strong class="ph b">height:</strong>	The height of the texture.</li>
+<li class="li"><strong class="ph b">useMipmaps:</strong>	Specifies whether the image should use mip maps</li>
+
+<li class="li"><strong class="ph b">width:</strong>	The width of the texture.</li>
 
 </ul>
 </td>
@@ -375,17 +375,17 @@ PVRUtils Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Create a pvr::ui::Image from a Texture Atlas asset. NOTE: Creating new image requires re-recording the commandbuffer</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">uv:</strong>	Texture UV coordinate</li>
-
-<li class="li"><strong class="ph b">width:</strong>	 Texture Atlas width.</li>
-
-<li class="li"><strong class="ph b">texture:</strong>	An OpenGL ES texture handle. Must be 2D. It will be used directly.</li>
+<li class="li"><strong class="ph b">height:</strong>	 Texture Atlas height</li>
 
 <li class="li"><strong class="ph b">useMipmaps:</strong>	Specifies whether the image should use mip maps</li>
 
+<li class="li"><strong class="ph b">texture:</strong>	An OpenGL ES texture handle. Must be 2D. It will be used directly.</li>
+
+<li class="li"><strong class="ph b">width:</strong>	 Texture Atlas width.</li>
+
 <li class="li"><strong class="ph b">sampler:</strong>	A sampler used for this Image (Optional)</li>
 
-<li class="li"><strong class="ph b">height:</strong>	 Texture Atlas height</li>
+<li class="li"><strong class="ph b">uv:</strong>	Texture UV coordinate</li>
 
 </ul>
 </td>
@@ -608,15 +608,15 @@ PVRUtils Manual
 			</tbody></table>
 <table class="table"><caption><span class="table--title-label">Table 4. </span><span class="title">Private Properties</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvruiUIRenderer__entry__147">Type</th><th class="entry" id="pvruiUIRenderer__entry__148">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="pvruiUIRenderer__entry__147">std::vector&amp;lt;SpriteWeakRef&gt;</td>
+<td class="entry" headers="pvruiUIRenderer__entry__147">std::vector&lt;SpriteWeakRef&gt;</td>
 <td class="entry" headers="pvruiUIRenderer__entry__148">_sprites</td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="pvruiUIRenderer__entry__147">std::vector&amp;lt;TextElementWeakRef&gt;</td>
+<td class="entry" headers="pvruiUIRenderer__entry__147">std::vector&lt;TextElementWeakRef&gt;</td>
 <td class="entry" headers="pvruiUIRenderer__entry__148">_textElements</td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="pvruiUIRenderer__entry__147">std::vector&amp;lt;FontWeakRef&gt;</td>
+<td class="entry" headers="pvruiUIRenderer__entry__147">std::vector&lt;FontWeakRef&gt;</td>
 <td class="entry" headers="pvruiUIRenderer__entry__148">_fonts</td>
 	</tr>
 	<tr class="row">
@@ -698,7 +698,7 @@ PVRUtils Manual
 			</tbody></table>
 </div>
 
-<nav role="navigation" class="related-links"><ul class="ullinks"><li class="link ulchildlink"><strong><a href="../classes/pvruiUIRendererUboMaterial.html">pvr::ui::UIRenderer::UboMaterial</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvruiUIRendererProgramData.html">pvr::ui::UIRenderer::ProgramData</a></strong><br>Information used for uploading required info to the shaders (matrices, attributes etc).</li><li class="link ulchildlink"><strong><a href="../classes/pvruiUIRendererUboMvp.html">pvr::ui::UIRenderer::UboMvp</a></strong><br></li></ul><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../classes/pvrui.html">pvr::ui</a></div></div></nav></article></main></div></div></div></div></div><div id="custom_nav" class="text-right hidden-sm hidden-xs hidden-print"><div class="well well-lg" style="margin-left:20px; margin-right:20px;"><footer role="contentinfo"><script src="../ditasearch.js"></script><footer xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="site-info  wh_footer" itemtype="https://schema.org/WPFooter" itemscope="" whc:version="21.0">
+<nav role="navigation" class="related-links"><ul class="ullinks"><li class="link ulchildlink"><strong><a href="../classes/pvruiUIRendererUboMaterial.html">pvr::ui::UIRenderer::UboMaterial</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvruiUIRendererUboMvp.html">pvr::ui::UIRenderer::UboMvp</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvruiUIRendererProgramData.html">pvr::ui::UIRenderer::ProgramData</a></strong><br>Information used for uploading required info to the shaders (matrices, attributes etc).</li></ul><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../classes/pvrui.html">pvr::ui</a></div></div></nav></article></main></div></div></div></div></div><div id="custom_nav" class="text-right hidden-sm hidden-xs hidden-print"><div class="well well-lg" style="margin-left:20px; margin-right:20px;"><footer role="contentinfo"><script src="../ditasearch.js"></script><footer xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="site-info  wh_footer" itemtype="https://schema.org/WPFooter" itemscope="" whc:version="21.0">
 
   <div class="inside-site-info grid-container grid-parent footer-container  mx-auto">
     <div class="copyright-bar">

@@ -48,46 +48,46 @@ PVRCore Manual
 
 <table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="MathUtils.h_Reference__entry__1">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="MathUtils.h_Reference__entry__1"><span class="xref">pvr::strings</span></td>
+<td class="entry" headers="MathUtils.h_Reference__entry__1"><span class="xref">pvr::async::impl</span></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="MathUtils.h_Reference__entry__1"><a class="xref" href="../../classes/pvreffect.html">pvr::effect</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="MathUtils.h_Reference__entry__1"><a class="xref" href="../../classes/pvreffectBufferDefinition.html" title="Information about a Buffer">pvr::effect::BufferDefinition</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="MathUtils.h_Reference__entry__1"><span class="xref">pvr::async::impl</span></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="MathUtils.h_Reference__entry__1"><a class="xref" href="../../classes/pvrmath.html">pvr::math</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="MathUtils.h_Reference__entry__1"><a class="xref" href="../../classes/pvrasync.html">pvr::async</a></td>
-	</tr>
-	<tr class="row">
 <td class="entry" headers="MathUtils.h_Reference__entry__1"><span class="xref">pvr::pfx</span></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="MathUtils.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutils.html">pvr::utils</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="MathUtils.h_Reference__entry__1"><a class="xref" href="../../classes/pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="MathUtils.h_Reference__entry__1"><span class="xref">glm</span></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="MathUtils.h_Reference__entry__1"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="MathUtils.h_Reference__entry__1"><span class="xref">impl</span></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="MathUtils.h_Reference__entry__1"><a class="xref" href="../../classes/pvrPixelFormat.html" title="The PixelFormat class fully defines a Pixel Format (channels, format, compression, bit width etc.).">pvr::PixelFormat</a></td>
+<td class="entry" headers="MathUtils.h_Reference__entry__1"><span class="xref">pvr::strings</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="MathUtils.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutils.html">pvr::utils</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="MathUtils.h_Reference__entry__1"><a class="xref" href="../../classes/pvrIsRefCountedType.html">pvr::IsRefCountedType</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="MathUtils.h_Reference__entry__1"><a class="xref" href="../../classes/pvrasync.html">pvr::async</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="MathUtils.h_Reference__entry__1"><span class="xref">glm</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="MathUtils.h_Reference__entry__1"><a class="xref" href="../../classes/pvrmath.html">pvr::math</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="MathUtils.h_Reference__entry__1"><a class="xref" href="../../classes/pvreffectBufferDefinition.html" title="Information about a Buffer">pvr::effect::BufferDefinition</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="MathUtils.h_Reference__entry__1"><a class="xref" href="../../classes/pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="MathUtils.h_Reference__entry__1"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="MathUtils.h_Reference__entry__1"><a class="xref" href="../../classes/pvrPixelFormat.html" title="The PixelFormat class fully defines a Pixel Format (channels, format, compression, bit width etc.).">pvr::PixelFormat</a></td>
 	</tr>
 			</tbody></table>
 </section>
@@ -160,9 +160,9 @@ PVRCore Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Convert a normalized device coordinate (-1..1) to a number of pixels from the start (left or top)</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">ndc:</strong>	The normalised coordinate along the direction in question (same direction as screenSize)</li>
-
 <li class="li"><strong class="ph b">screenSize:</strong>	The size of the screen along the direction in question (same as ndc)</li>
+
+<li class="li"><strong class="ph b">ndc:</strong>	The normalised coordinate along the direction in question (same direction as screenSize)</li>
 
 </ul>
 </td>
@@ -186,11 +186,11 @@ PVRCore Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Performs quadratic interpolation between two points, beginning with a faster rate and slowing down.</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
+<li class="li"><strong class="ph b">end:</strong>	The end point</li>
+
 <li class="li"><strong class="ph b">start:</strong>	The starting point.</li>
 
 <li class="li"><strong class="ph b">factor:</strong>	Current LINEAR interpolation factor, from 0..1</li>
-
-<li class="li"><strong class="ph b">end:</strong>	The end point</li>
 
 </ul>
 </td>
@@ -201,11 +201,11 @@ PVRCore Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Performs quadratic interpolation between two points, beginning with a slow rate and speeding up.</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
+<li class="li"><strong class="ph b">end:</strong>	The end point</li>
+
 <li class="li"><strong class="ph b">start:</strong>	The starting point.</li>
 
 <li class="li"><strong class="ph b">factor:</strong>	Interpolation factor. At 0, returns start. At 1, returns end. Closer to 0, the rate of change is slower, closer to 1 faster.</li>
-
-<li class="li"><strong class="ph b">end:</strong>	The end point</li>
 
 </ul>
 </td>
@@ -216,15 +216,15 @@ PVRCore Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Performs line -to - plane intersection</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">planeNormal:</strong>	The normal of the plane</li>
+<li class="li"><strong class="ph b">origin:</strong>	The start point of the line</li>
 
 <li class="li"><strong class="ph b">dir:</strong>	The (positive) direction of the line</li>
 
-<li class="li"><strong class="ph b">planeOrigin:</strong>	Any point on the plane</li>
+<li class="li"><strong class="ph b">planeNormal:</strong>	The normal of the plane</li>
 
 <li class="li"><strong class="ph b">epsilon:</strong>	For any comparison calculations, any value smaller than that will be considered zero (otherwise, if two numbers difference is smaller than this, they are considered equal)</li>
 
-<li class="li"><strong class="ph b">origin:</strong>	The start point of the line</li>
+<li class="li"><strong class="ph b">planeOrigin:</strong>	Any point on the plane</li>
 
 </ul>
 </td>
@@ -246,17 +246,17 @@ PVRCore Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Calculated a tilted perspective projection matrix</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">aspect:</strong>	The aspect of the viewport</li>
-
-<li class="li"><strong class="ph b">near1:</strong>	The near clipping plane distance (trailing 1 to avoid win32 keyword)</li>
+<li class="li"><strong class="ph b">rotate:</strong>	Angle of tilt (rotation around the z axis), in radians</li>
 
 <li class="li"><strong class="ph b">api:</strong>	The graphics API for which this matrix will be created. It is used for the Framebuffer coordinate convention.</li>
 
-<li class="li"><strong class="ph b">rotate:</strong>	Angle of tilt (rotation around the z axis), in radians</li>
-
 <li class="li"><strong class="ph b">fovy:</strong>	The field of vision in the y axis</li>
 
+<li class="li"><strong class="ph b">aspect:</strong>	The aspect of the viewport</li>
+
 <li class="li"><strong class="ph b">far1:</strong>	The far clipping plane distance (trailing 1 to avoid win32 keyword)</li>
+
+<li class="li"><strong class="ph b">near1:</strong>	The near clipping plane distance (trailing 1 to avoid win32 keyword)</li>
 
 </ul>
 </td>
@@ -267,19 +267,19 @@ PVRCore Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Calculated a tilted perspective projection matrix</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">height:</strong>	The height of the viewport</li>
-
-<li class="li"><strong class="ph b">near1:</strong>	The near clipping plane distance</li>
-
 <li class="li"><strong class="ph b">width:</strong>	The width of the viewport</li>
-
-<li class="li"><strong class="ph b">api:</strong>	The graphics API for which this matrix will be created. It is used for things such as the Framebuffer coordinate conventions.</li>
 
 <li class="li"><strong class="ph b">rotate:</strong>	Angle of tilt (rotation around the z axis), in radians</li>
 
+<li class="li"><strong class="ph b">fovy:</strong>	The field of vision in the y axis</li>
+
+<li class="li"><strong class="ph b">api:</strong>	The graphics API for which this matrix will be created. It is used for things such as the Framebuffer coordinate conventions.</li>
+
+<li class="li"><strong class="ph b">near1:</strong>	The near clipping plane distance</li>
+
 <li class="li"><strong class="ph b">far1:</strong>	The far clipping plane distance</li>
 
-<li class="li"><strong class="ph b">fovy:</strong>	The field of vision in the y axis</li>
+<li class="li"><strong class="ph b">height:</strong>	The height of the viewport</li>
 
 </ul>
 </td>
@@ -290,17 +290,17 @@ PVRCore Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Calculated an orthographic projection tilted projection matrix</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">left:</strong>	The x coordinate of the left clipping plane</li>
-
-<li class="li"><strong class="ph b">top:</strong>	The y coordinate of the bottom clipping plane</li>
-
 <li class="li"><strong class="ph b">rotate:</strong>	Angle of tilt (rotation around the z axis), in radians</li>
 
 <li class="li"><strong class="ph b">right:</strong>	The x coordinate of the right clipping plane</li>
 
+<li class="li"><strong class="ph b">bottom:</strong>	The y coordinate of the bottom clipping plane</li>
+
 <li class="li"><strong class="ph b">api:</strong>	The graphics API for which this matrix will be created. It is used for things such as the Framebuffer coordinate conventions.</li>
 
-<li class="li"><strong class="ph b">bottom:</strong>	The y coordinate of the bottom clipping plane</li>
+<li class="li"><strong class="ph b">left:</strong>	The x coordinate of the left clipping plane</li>
+
+<li class="li"><strong class="ph b">top:</strong>	The y coordinate of the bottom clipping plane</li>
 
 </ul>
 </td>
@@ -346,9 +346,9 @@ PVRCore Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Generate the Pascal Triangle row for the given row and store and return its pascal triangle coefficinets along with the sum of the coefficients for the given row.</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">pascalCoefficients:</strong>	An empty vector capable of storing the pascal coefficients for the given row of the Pascal Triangle.</li>
-
 <li class="li"><strong class="ph b">row:</strong>	The row of the Pascal to generate coefficients with the first row being the 0th.</li>
+
+<li class="li"><strong class="ph b">pascalCoefficients:</strong>	An empty vector capable of storing the pascal coefficients for the given row of the Pascal Triangle.</li>
 
 </ul>
 </td>
@@ -376,15 +376,15 @@ PVRCore Manual
 <ul class="ul">
 <li class="li"><strong class="ph b">weights:</strong>	The returned by reference list of Gaussian Weights calculated using the Pascal Triangle.</li>
 
-<li class="li"><strong class="ph b">kernelSize:</strong>	The size of the kernel for which to generate Gaussian Weights and Gaussian Offsets. The size of the kernel is used to select the starting row of the Pascal Triangle.</li>
+<li class="li"><strong class="ph b">useLinearSamplerOptimization:</strong>	Specifies that the Gaussian Weights and Offsets returned will be modified prior to being returned so that they take advantage of Linear Texture Sampling which can provide a simple means of reducing the number of texture samples.</li>
 
 <li class="li"><strong class="ph b">minimumAcceptableCoefficient:</strong>	Only used when ignoreNegligibleCoefficients is true and specifies the minimum coefficient value which is deemed to be non-negligible and therefore can be used as one of the returned weights. If a row does not contain enough coefficients deemed to be non-negligible then the next row will be checked for values greater than the specified minimum acceptable coefficient. Take care when specifying larger values for the minimum acceptable coefficient along with larger kernel sizes as you can run out of available precision quite quickly.</li>
 
-<li class="li"><strong class="ph b">useLinearSamplerOptimization:</strong>	Specifies that the Gaussian Weights and Offsets returned will be modified prior to being returned so that they take advantage of Linear Texture Sampling which can provide a simple means of reducing the number of texture samples.</li>
-
-<li class="li"><strong class="ph b">offsets:</strong>	The returned by reference list of Gaussian Offsets calculated using the Pascal Triangle.</li>
+<li class="li"><strong class="ph b">kernelSize:</strong>	The size of the kernel for which to generate Gaussian Weights and Gaussian Offsets. The size of the kernel is used to select the starting row of the Pascal Triangle.</li>
 
 <li class="li"><strong class="ph b">truncateCoefficients:</strong>	Can be used in combination with "minimumAcceptableCoefficient" to ignore coefficients from the Pascal Triangle which are smaller than the given value and are therefore deemed to be negligible. If the starting row is found to have too few coefficients than are required for the kernel size then the next row of the Pascal Triangle will be scanned for a list of coefficients deemed to be non-negligible and so on.</li>
+
+<li class="li"><strong class="ph b">offsets:</strong>	The returned by reference list of Gaussian Offsets calculated using the Pascal Triangle.</li>
 
 </ul>
 </td>

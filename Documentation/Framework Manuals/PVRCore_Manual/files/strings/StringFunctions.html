@@ -48,28 +48,28 @@ PVRCore Manual
 
 <table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="StringFunctions.h_Reference__entry__1">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="StringFunctions.h_Reference__entry__1"><span class="xref">pvr::strings</span></td>
+<td class="entry" headers="StringFunctions.h_Reference__entry__1"><span class="xref">impl</span></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="StringFunctions.h_Reference__entry__1"><a class="xref" href="../../classes/pvrasync.html">pvr::async</a></td>
+<td class="entry" headers="StringFunctions.h_Reference__entry__1"><span class="xref">pvr::strings</span></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="StringFunctions.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutils.html">pvr::utils</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="StringFunctions.h_Reference__entry__1"><a class="xref" href="../../classes/pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
+<td class="entry" headers="StringFunctions.h_Reference__entry__1"><a class="xref" href="../../classes/pvrIsRefCountedType.html">pvr::IsRefCountedType</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="StringFunctions.h_Reference__entry__1"><a class="xref" href="../../classes/pvrasync.html">pvr::async</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="StringFunctions.h_Reference__entry__1"><span class="xref">glm</span></td>
 	</tr>
 	<tr class="row">
+<td class="entry" headers="StringFunctions.h_Reference__entry__1"><a class="xref" href="../../classes/pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
+	</tr>
+	<tr class="row">
 <td class="entry" headers="StringFunctions.h_Reference__entry__1"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="StringFunctions.h_Reference__entry__1"><span class="xref">impl</span></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="StringFunctions.h_Reference__entry__1"><a class="xref" href="../../classes/pvrIsRefCountedType.html">pvr::IsRefCountedType</a></td>
 	</tr>
 			</tbody></table>
 </section>
@@ -140,13 +140,13 @@ PVRCore Manual
 <ul class="ul">
 <li class="li"><strong class="ph b">limit:</strong>	A limit to the number of lines concatenated</li>
 
-<li class="li"><strong class="ph b">line:</strong>	Input start line number, outputs end line number</li>
+<li class="li"><strong class="ph b">outStr:</strong>	output text</li>
 
-<li class="li"><strong class="ph b">endStr:</strong>	End std::string: When this std::string is encountered, the procedure will stop.</li>
+<li class="li"><strong class="ph b">line:</strong>	Input start line number, outputs end line number</li>
 
 <li class="li"><strong class="ph b">lines:</strong>	Input text - one array element per line</li>
 
-<li class="li"><strong class="ph b">outStr:</strong>	output text</li>
+<li class="li"><strong class="ph b">endStr:</strong>	End std::string: When this std::string is encountered, the procedure will stop.</li>
 
 </ul>
 </td>
@@ -179,9 +179,9 @@ PVRCore Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Tests if a std::string starts with another std::string.</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">str:</strong>	The std::string whose beginning will be checked</li>
-
 <li class="li"><strong class="ph b">substr:</strong>	The sequence of characters to check if str starts with</li>
+
+<li class="li"><strong class="ph b">str:</strong>	The std::string whose beginning will be checked</li>
 
 </ul>
 </td>
@@ -192,9 +192,9 @@ PVRCore Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Tests if a std::string ends with another std::string.</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">str:</strong>	The std::string whose end will be checked.</li>
-
 <li class="li"><strong class="ph b">substr:</strong>	The sequence of characters to check if str ends with.</li>
+
+<li class="li"><strong class="ph b">str:</strong>	The std::string whose end will be checked.</li>
 
 </ul>
 </td>
@@ -218,9 +218,9 @@ PVRCore Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Separate a filename to name and extension</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">extension:</strong>	The extension part of the name (part after the last '.')</li>
-
 <li class="li"><strong class="ph b">filename:</strong>	The file part of the name (part before the last '.')</li>
+
+<li class="li"><strong class="ph b">extension:</strong>	The extension part of the name (part after the last '.')</li>
 
 <li class="li"><strong class="ph b">fileAndExtension:</strong>	A filename</li>
 

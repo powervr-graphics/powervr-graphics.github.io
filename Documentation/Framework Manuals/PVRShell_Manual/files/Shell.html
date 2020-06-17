@@ -49,11 +49,15 @@ PVRShell Manual
 <table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Classes</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="Shell.h_Reference__entry__1">Declaration Type</th><th class="entry" id="Shell.h_Reference__entry__2">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
 <td class="entry" headers="Shell.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Shell.h_Reference__entry__2"><a class="xref" href="../classes/pvrplatformShellPointerNormalisedLocation.html" title="Contains a pointer location in unsigned normalised coordinates (0..1).">pvr::platform::Shell::PointerNormalisedLocation</a></td>
+<td class="entry" headers="Shell.h_Reference__entry__2"><a class="xref" href="../classes/pvrplatformShellEvent.html" title="Contains all data of a system event.">pvr::platform::ShellEvent</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Shell.h_Reference__entry__1">class</td>
 <td class="entry" headers="Shell.h_Reference__entry__2"><a class="xref" href="../classes/pvrplatformShell.html" title="The PowerVR Shell (pvr::Shell) is the main class that the user will inherit his application from.">pvr::platform::Shell</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Shell.h_Reference__entry__1">class</td>
+<td class="entry" headers="Shell.h_Reference__entry__2"><a class="xref" href="../classes/pvrPointerLocation.html" title="Mouse pointer coordinates.">pvr::PointerLocation</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Shell.h_Reference__entry__1">struct</td>
@@ -61,19 +65,11 @@ PVRShell Manual
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Shell.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Shell.h_Reference__entry__2"><a class="xref" href="../classes/pvrConfigureEvent.html" title="A window configuration event (e.g. resize)">pvr::ConfigureEvent</a></td>
+<td class="entry" headers="Shell.h_Reference__entry__2"><a class="xref" href="../classes/pvrPointerLocationStore.html" title="A storage structure for the pointer location">pvr::PointerLocationStore</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Shell.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Shell.h_Reference__entry__2"><a class="xref" href="../classes/pvrplatformShellEvent.html" title="Contains all data of a system event.">pvr::platform::ShellEvent</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Shell.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Shell.h_Reference__entry__2"><a class="xref" href="../classes/pvrplatformShellPointingDeviceState.html" title="Contains the state of a pointing device (mouse, touch screen).">pvr::platform::Shell::PointingDeviceState</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Shell.h_Reference__entry__1">class</td>
-<td class="entry" headers="Shell.h_Reference__entry__2"><a class="xref" href="../classes/pvrPointerLocation.html" title="Mouse pointer coordinates.">pvr::PointerLocation</a></td>
+<td class="entry" headers="Shell.h_Reference__entry__2"><a class="xref" href="../classes/pvrplatformShellPointerNormalisedLocation.html" title="Contains a pointer location in unsigned normalised coordinates (0..1).">pvr::platform::Shell::PointerNormalisedLocation</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Shell.h_Reference__entry__1">union</td>
@@ -81,7 +77,11 @@ PVRShell Manual
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Shell.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Shell.h_Reference__entry__2"><a class="xref" href="../classes/pvrPointerLocationStore.html" title="A storage structure for the pointer location">pvr::PointerLocationStore</a></td>
+<td class="entry" headers="Shell.h_Reference__entry__2"><a class="xref" href="../classes/pvrplatformShellPointingDeviceState.html" title="Contains the state of a pointing device (mouse, touch screen).">pvr::platform::Shell::PointingDeviceState</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Shell.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Shell.h_Reference__entry__2"><a class="xref" href="../classes/pvrConfigureEvent.html" title="A window configuration event (e.g. resize)">pvr::ConfigureEvent</a></td>
 	</tr>
 			</tbody></table>
 </section>
@@ -89,16 +89,16 @@ PVRShell Manual
 
 <table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="Shell.h_Reference__entry__21">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="Shell.h_Reference__entry__21"><a class="xref" href="../classes/pvr.html">pvr</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Shell.h_Reference__entry__21"><a class="xref" href="../classes/pvrplatform.html">pvr::platform</a></td>
+<td class="entry" headers="Shell.h_Reference__entry__21"><a class="xref" href="../classes/pvrplatformShellEvent.html" title="Contains all data of a system event.">pvr::platform::ShellEvent</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Shell.h_Reference__entry__21"><a class="xref" href="../classes/pvrplatformShell.html" title="The PowerVR Shell (pvr::Shell) is the main class that the user will inherit his application from.">pvr::platform::Shell</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="Shell.h_Reference__entry__21"><a class="xref" href="../classes/pvrplatformShellEvent.html" title="Contains all data of a system event.">pvr::platform::ShellEvent</a></td>
+<td class="entry" headers="Shell.h_Reference__entry__21"><a class="xref" href="../classes/pvr.html">pvr</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Shell.h_Reference__entry__21"><a class="xref" href="../classes/pvrplatform.html">pvr::platform</a></td>
 	</tr>
 			</tbody></table>
 </section>

@@ -35,7 +35,7 @@
 	</header></header><div class="container-fluid" id="content"><div class="row"><div class="wh_content_area doc_title"><h1>
 PVRAssets Manual
 
-</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../PVRAssets_intro.html">Introduction to PVRAssets</a><ul><li><a href="../PVRAssets_files.html">PVRAssets Files</a></li><li><a href="../PVRAssets_classes.html">PVRAssets Classes</a><ul><li><a href="../classes/pvr.html">pvr</a><ul><li><a href="../classes/pvrassets.html">pvr::assets</a><ul><li><a href="../classes/pvrassetsAnimationInstance.html">pvr::assets::AnimationInstance</a></li><li class="active"><a href="../classes/pvrassetsModel.html">pvr::assets::Model</a><ul><li><a href="../classes/pvrassetsModelNode.html">pvr::assets::Model::Node</a></li><li><a href="../classes/pvrassetsModelMaterial.html">pvr::assets::Model::Material</a></li><li><a href="../classes/pvrassetsModelTexture.html">pvr::assets::Model::Texture</a></li><li><a href="../classes/pvrassetsModelInternalData.html">pvr::assets::Model::InternalData</a></li></ul></li><li><a href="../classes/pvrassetsAnimationData.html">pvr::assets::AnimationData</a></li><li><a href="../classes/pvrassetsMesh.html">pvr::assets::Mesh</a></li><li><a href="../classes/pvrassetsLight.html">pvr::assets::Light</a></li><li><a href="../classes/pvrassetsCamera.html">pvr::assets::Camera</a></li><li><a href="../classes/pvrassetsKeyFrameData.html">pvr::assets::KeyFrameData</a></li><li><a href="../classes/pvrassetsSkeleton.html">pvr::assets::Skeleton</a></li></ul></li><li><a href="../classes/pvrtool.html">pvr::tool</a></li><li><a href="../classes/pvrVolume.html">pvr::Volume</a></li><li><a href="../classes/pvrShadowVolume.html">pvr::ShadowVolume</a></li><li><a href="../classes/pvrIndexedArray.html">pvr::IndexedArray</a></li></ul></li></ul></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
+</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../PVRAssets_intro.html">Introduction to PVRAssets</a><ul><li><a href="../PVRAssets_files.html">PVRAssets Files</a></li><li><a href="../PVRAssets_classes.html">PVRAssets Classes</a><ul><li><a href="../classes/pvr.html">pvr</a><ul><li><a href="../classes/pvrIndexedArray.html">pvr::IndexedArray</a></li><li><a href="../classes/pvrtool.html">pvr::tool</a></li><li><a href="../classes/pvrVolume.html">pvr::Volume</a></li><li><a href="../classes/pvrShadowVolume.html">pvr::ShadowVolume</a></li><li><a href="../classes/pvrassets.html">pvr::assets</a><ul><li><a href="../classes/pvrassetsAnimationInstance.html">pvr::assets::AnimationInstance</a></li><li class="active"><a href="../classes/pvrassetsModel.html">pvr::assets::Model</a><ul><li><a href="../classes/pvrassetsModelNode.html">pvr::assets::Model::Node</a></li><li><a href="../classes/pvrassetsModelMaterial.html">pvr::assets::Model::Material</a></li><li><a href="../classes/pvrassetsModelTexture.html">pvr::assets::Model::Texture</a></li><li><a href="../classes/pvrassetsModelInternalData.html">pvr::assets::Model::InternalData</a></li></ul></li><li><a href="../classes/pvrassetsMesh.html">pvr::assets::Mesh</a></li><li><a href="../classes/pvrassetsAnimationData.html">pvr::assets::AnimationData</a></li><li><a href="../classes/pvrassetsCamera.html">pvr::assets::Camera</a></li><li><a href="../classes/pvrassetsLight.html">pvr::assets::Light</a></li><li><a href="../classes/pvrassetsSkeleton.html">pvr::assets::Skeleton</a></li><li><a href="../classes/pvrassetsKeyFrameData.html">pvr::assets::KeyFrameData</a></li></ul></li></ul></li></ul></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
 <h1 class="title topictitle1" id="ariaid-title1">pvr::assets::Model</h1>
 
 <div class="body conbody"><p class="shortdesc">The Model class represents an entire Scene, or Model. It is mainly a Node structure, allowing various different kinds of data to be stored in the Nodes. The class contains a tree-like structure of Nodes. Each Node can be a Mesh node (containing a Mesh), Camera node or Light node. The tree-structure assumes transformational hierarchy (as usual). Transformations are expressed through Animation objects (a static transform is an animation with a single frame) There is an implicit order in the nodes - First in the array the Mesh nodes will be laid out, then Camera and Light nodes.</p>
@@ -45,31 +45,11 @@ PVRAssets Manual
 <table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Classes</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvrassetsModel__entry__1">Declaration Type</th><th class="entry" id="pvrassetsModel__entry__2">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
 <td class="entry" headers="pvrassetsModel__entry__1">class</td>
-<td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelMaterial.html" title="Class which stores model material info.">pvr::assets::Model::Material</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="pvrassetsModel__entry__1">class</td>
-<td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelMaterialPODMetallicRoughnessSemantics.html" title="POD Metallic roughness semantics">pvr::assets::Model::Material::PODMetallicRoughnessSemantics</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="pvrassetsModel__entry__1">class</td>
-<td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelMaterialPBRSemantics.html" title="Base class for Physically-based-rendering(PBR) semantics">pvr::assets::Model::Material::PBRSemantics</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="pvrassetsModel__entry__1">class</td>
-<td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelMaterialDefaultMaterialSemantics.html" title="This class is provided for convenient compile-time access of the semantic values.">pvr::assets::Model::Material::DefaultMaterialSemantics</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="pvrassetsModel__entry__1">struct</td>
-<td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelMaterialInternalData.html" title="Raw internal structure of the Material.">pvr::assets::Model::Material::InternalData</a></td>
+<td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelNode.html" title="The Node represents a Mesh, Camera or Light. A Node has its own parenting, material, animation and custom user data. The tree-structure assumes transformational hierarchy (as usual), so parent transformations should be applied to children. Transformations are expressed through Animation objects (a static transform is an animation with a single frame). Note: Node ID and MeshID can sometimes be confusing: They will always be the same (when a MeshID makes sense) because Meshes are always laid out first in the internal list of Nodes.">pvr::assets::Model::Node</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="pvrassetsModel__entry__1">class</td>
 <td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelTexture.html" title="Internal class which stores Texture information of the model (name).">pvr::assets::Model::Texture</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="pvrassetsModel__entry__1">class</td>
-<td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelNode.html" title="The Node represents a Mesh, Camera or Light. A Node has its own parenting, material, animation and custom user data. The tree-structure assumes transformational hierarchy (as usual), so parent transformations should be applied to children. Transformations are expressed through Animation objects (a static transform is an animation with a single frame). Note: Node ID and MeshID can sometimes be confusing: They will always be the same (when a MeshID makes sense) because Meshes are always laid out first in the internal list of Nodes.">pvr::assets::Model::Node</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="pvrassetsModel__entry__1">class</td>
@@ -80,8 +60,28 @@ PVRAssets Manual
 <td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelInternalData.html" title="Struct containing the internal data of the Model.">pvr::assets::Model::InternalData</a></td>
 	</tr>
 	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__1">class</td>
+<td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelMaterial.html" title="Class which stores model material info.">pvr::assets::Model::Material</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__1">struct</td>
+<td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelMaterialInternalData.html" title="Raw internal structure of the Material.">pvr::assets::Model::Material::InternalData</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__1">class</td>
+<td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelMaterialPODMetallicRoughnessSemantics.html" title="POD Metallic roughness semantics">pvr::assets::Model::Material::PODMetallicRoughnessSemantics</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__1">class</td>
+<td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelMaterialPBRSemantics.html" title="Base class for Physically-based-rendering(PBR) semantics">pvr::assets::Model::Material::PBRSemantics</a></td>
+	</tr>
+	<tr class="row">
 <td class="entry" headers="pvrassetsModel__entry__1">struct</td>
 <td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelNodeInternalData.html" title="Raw internal structure of the Node.">pvr::assets::Model::Node::InternalData</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrassetsModel__entry__1">class</td>
+<td class="entry" headers="pvrassetsModel__entry__2"><a class="xref" href="pvrassetsModelMaterialDefaultMaterialSemantics.html" title="This class is provided for convenient compile-time access of the semantic values.">pvr::assets::Model::Material::DefaultMaterialSemantics</a></td>
 	</tr>
 			</tbody></table>
 <table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Public Methods</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvrassetsModel__entry__23">Return Type</th><th class="entry" id="pvrassetsModel__entry__24">Name and Description</th></tr></thead><tbody class="tbody">
@@ -242,9 +242,9 @@ PVRAssets Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Return the model-to-world matrix of a specified bone. Corresponds to the Model's current frame of animation. This version will use caching.</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">skinNodeID:</strong>	The node for which to return the world matrix</li>
-
 <li class="li"><strong class="ph b">boneId:</strong>	The bone for which to return the world matrix</li>
+
+<li class="li"><strong class="ph b">skinNodeID:</strong>	The node for which to return the world matrix</li>
 
 </ul>
 </td>
@@ -255,9 +255,9 @@ PVRAssets Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Transform a custom matrix with a node's parent's transformation. Allows a custom matrix to be applied to a node, while honoring the hierarchical transformations applied by its parent hierarchy.</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">localMatrix:</strong>	The matrix to transform</li>
-
 <li class="li"><strong class="ph b">nodeId:</strong>	The node whose parents will be applied to the transformation.</li>
+
+<li class="li"><strong class="ph b">localMatrix:</strong>	The matrix to transform</li>
 
 </ul>
 </td>
@@ -498,9 +498,9 @@ PVRAssets Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Connect mesh to a mesh node (i.e. set the node's mesh to the mesh</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">meshId:</strong>	The mesh id</li>
-
 <li class="li"><strong class="ph b">meshNodeId:</strong>	The mesh node id to connect to</li>
+
+<li class="li"><strong class="ph b">meshId:</strong>	The mesh id</li>
 
 </ul>
 </td>
@@ -513,9 +513,9 @@ PVRAssets Manual
 <ul class="ul">
 <li class="li"><strong class="ph b">endMeshNodeId:</strong>	End mesh node id (inclusive)</li>
 
-<li class="li"><strong class="ph b">meshId:</strong>	The mesh id</li>
-
 <li class="li"><strong class="ph b">beginMeshNodeId:</strong>	Begin mesh node id (inclusive)</li>
+
+<li class="li"><strong class="ph b">meshId:</strong>	The mesh id</li>
 
 </ul>
 </td>
@@ -689,9 +689,9 @@ PVRAssets Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Set custom user data.</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">data:</strong>	Pointer to the raw data. (size) bytes will be copied as-is from this pointer.</li>
-
 <li class="li"><strong class="ph b">size:</strong>	The size, in bytes, of the data.</li>
+
+<li class="li"><strong class="ph b">data:</strong>	Pointer to the raw data. (size) bytes will be copied as-is from this pointer.</li>
 
 </ul>
 </td>
@@ -752,17 +752,17 @@ PVRAssets Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Get the properties of a camera. This is additional info on the class (remarks or documentation).</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">fov:</strong>	Camera field of view.</li>
+<li class="li"><strong class="ph b">up:</strong>	Camera tilt up (roll) vector in world.</li>
 
 <li class="li"><strong class="ph b">to:</strong>	Camera target point in world.</li>
 
-<li class="li"><strong class="ph b">up:</strong>	Camera tilt up (roll) vector in world.</li>
-
-<li class="li"><strong class="ph b">frameTimeInMs:</strong>	The time in milli seconds to retrieve camera properties for.</li>
+<li class="li"><strong class="ph b">from:</strong>	Camera position in world.</li>
 
 <li class="li"><strong class="ph b">cameraIdx:</strong>	The index of the camera.</li>
 
-<li class="li"><strong class="ph b">from:</strong>	Camera position in world.</li>
+<li class="li"><strong class="ph b">frameTimeInMs:</strong>	The time in milli seconds to retrieve camera properties for.</li>
+
+<li class="li"><strong class="ph b">fov:</strong>	Camera field of view.</li>
 
 </ul>
 </td>
@@ -773,21 +773,21 @@ PVRAssets Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Get the properties of a camera.</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">fov:</strong>	Camera field of view in world.</li>
-
-<li class="li"><strong class="ph b">to:</strong>	Camera target point in world.</li>
-
 <li class="li"><strong class="ph b">farClip:</strong>	Camera far clipping plane distance</li>
 
 <li class="li"><strong class="ph b">up:</strong>	Camera tilt up (roll) vector in world.</li>
 
-<li class="li"><strong class="ph b">frameTimeInMs:</strong>	The time in milli seconds to retrieve camera properties for.</li>
-
-<li class="li"><strong class="ph b">cameraIdx:</strong>	The index of the camera.</li>
+<li class="li"><strong class="ph b">to:</strong>	Camera target point in world.</li>
 
 <li class="li"><strong class="ph b">from:</strong>	Camera position in world.</li>
 
 <li class="li"><strong class="ph b">nearClip:</strong>	Camera near clipping plane distance</li>
+
+<li class="li"><strong class="ph b">cameraIdx:</strong>	The index of the camera.</li>
+
+<li class="li"><strong class="ph b">frameTimeInMs:</strong>	The time in milli seconds to retrieve camera properties for.</li>
+
+<li class="li"><strong class="ph b">fov:</strong>	Camera field of view in world.</li>
 
 </ul>
 </td>

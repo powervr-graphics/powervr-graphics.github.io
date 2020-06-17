@@ -48,55 +48,85 @@ PVRVk Manual
 
 <table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="ExtensionsVk.h_Reference__entry__1">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplDescriptorSet_.html" title="Vulkan implementation of a DescriptorSet.">pvrvk::impl::DescriptorSet_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplInstance_.html" title="The Instance is a system-wide vulkan &#34;implementation&#34;, similar in concept to the &#34;installation&#34; of Vulkan libraries on a system. Contrast with the &#34;Physical Device&#34; which for example represents a particular driver implementing Vulkan for a specific Device. Conceptually, the Instance &#34;Forwards&#34; to the &#34;Physical Device / Device&#34;">pvrvk::impl::Instance_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplDisplay_.html" title="A display device can in some environments be used directly for Vulkan rendering without using intermediate windowing systems.">pvrvk::impl::Display_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><span class="xref">pvrvk::FrameworkCaps</span></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkWriteDescriptorSet.html" title="Contains information for an initialization/update of a descriptor set. This class contains both the update AND the descriptor set to be updated, so that multiple descriptor sets can be updated in a single call to Device::updateDescriptorSets">pvrvk::WriteDescriptorSet</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimpl.html">pvrvk::impl</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplXlibSurface_.html" title="An Xlib Surface.">pvrvk::impl::XlibSurface_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplDeviceMemory_.html" title="VkDeviceMemory wrapper">pvrvk::impl::DeviceMemory_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplRenderPass_.html" title="Vulkan implementation of the RenderPass class. Use through the Reference counted framework object pvrvk::api::RenderPass. RenderPass Compatibility: Framebuffers and graphics pipelines are created based on a specific render pass object. They must only be used with that render pass object, or one compatible with it. Two attachment references are compatible if they have matching format and sample count, Two arrays of attachment references are compatible if all corresponding pairs of attachments are compatible. If the arrays are of different lengths, attachment references not present in the smaller array are treated as unused. Two render passes that contain only a single subpass are compatible if their corresponding color, input, resolve, and depth/stencil attachment references are compatible. If two render passes contain more than one subpass, they are compatible if they are identical except for: - Initial and final image layout in attachment descriptions - Load and store operations in attachment descriptions - Image layout in attachment references A framebuffer is compatible with a render pass if it was created using the same render pass or a compatible render pass.">pvrvk::impl::RenderPass_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplDebugUtilsMessenger_.html" title="Vulkan DebugUtilsMessenger wrapper">pvrvk::impl::DebugUtilsMessenger_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplPipelineCache_.html" title="A PVRVk pipeline cache object which allows the result of pipeline construction to be reused between pipelines and between runs of an application">pvrvk::impl::PipelineCache_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplWaylandSurface_.html" title="A Wayland Surface.">pvrvk::impl::WaylandSurface_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplXcbSurface_.html" title="An Xcb Surface.">pvrvk::impl::XcbSurface_</a></td>
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplBuffer_.html" title="Vulkan implementation of the Buffer.">pvrvk::impl::Buffer_</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplDescriptorSetLayout_.html" title="Constructor. . Vulkan implementation of a DescriptorSet.">pvrvk::impl::DescriptorSetLayout_</a></td>
 	</tr>
 	<tr class="row">
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplDisplayMode_.html" title="Each display has one or more supported modes associated with it by default. These are called the display modes.">pvrvk::impl::DisplayMode_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplShaderModule_.html" title="Vulkan shader module wrapper">pvrvk::impl::ShaderModule_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvk.html">pvrvk</a></td>
+	</tr>
+	<tr class="row">
 <td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplGraphicsPipeline_.html" title="A Graphics Pipeline is a PVRVk adapter to a Vulkan Pipeline to a pipeline created for VK_PIPELINE_BINDING_POINT_COMPUTE, and as such only supports the part of Vulkan that is supported for Graphics pipelines.">pvrvk::impl::GraphicsPipeline_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplWaylandSurface_.html" title="A Wayland Surface.">pvrvk::impl::WaylandSurface_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplBufferView_.html" title="pvrvk implementation of a BufferView.">pvrvk::impl::BufferView_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplDescriptorPool_.html" title="A descriptor pool - an object used to allocate (and recycle) Descriptor Sets.">pvrvk::impl::DescriptorPool_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><span class="xref">pvrvk::Extensions</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplAndroidSurface_.html" title="An Android Surface.">pvrvk::impl::AndroidSurface_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplRenderPass_.html" title="Vulkan implementation of the RenderPass class. Use through the Reference counted framework object pvrvk::api::RenderPass. RenderPass Compatibility: Framebuffers and graphics pipelines are created based on a specific render pass object. They must only be used with that render pass object, or one compatible with it. Two attachment references are compatible if they have matching format and sample count, Two arrays of attachment references are compatible if all corresponding pairs of attachments are compatible. If the arrays are of different lengths, attachment references not present in the smaller array are treated as unused. Two render passes that contain only a single subpass are compatible if their corresponding color, input, resolve, and depth/stencil attachment references are compatible. If two render passes contain more than one subpass, they are compatible if they are identical except for: - Initial and final image layout in attachment descriptions - Load and store operations in attachment descriptions - Image layout in attachment references A framebuffer is compatible with a render pass if it was created using the same render pass or a compatible render pass.">pvrvk::impl::RenderPass_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplDisplayPlaneSurface_.html" title="A DisplayPlane Surface.">pvrvk::impl::DisplayPlaneSurface_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplMacOSSurface_.html" title="A MacOS Surface.">pvrvk::impl::MacOSSurface_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplDeviceMemory_.html" title="VkDeviceMemory wrapper">pvrvk::impl::DeviceMemory_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplXlibSurface_.html" title="An Xlib Surface.">pvrvk::impl::XlibSurface_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkDescriptorSetLayoutCreateInfo.html" title="Contains all information required to create a Descriptor Set Layout. This is the number of Textures, Samplers, Uniform Buffer Objects, and Shader Storage Buffer Objects bound for any shader stage.">pvrvk::DescriptorSetLayoutCreateInfo</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><span class="xref">pvrvk::internal</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplQueryPool_.html" title="Vulkan implementation of the Query Pool class. Destroying the query pool will also destroy the queries allocated from this pool">pvrvk::impl::QueryPool_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplDebugUtilsMessenger_.html" title="Vulkan DebugUtilsMessenger wrapper">pvrvk::impl::DebugUtilsMessenger_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><span class="xref">pvrvk::GpuDatatypesHelper</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplXcbSurface_.html" title="An Xcb Surface.">pvrvk::impl::XcbSurface_</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><span class="xref">pvrvk::Layers</span></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkDescriptorSetLayoutCreateInfo.html" title="Contains all information required to create a Descriptor Set Layout. This is the number of Textures, Samplers, Uniform Buffer Objects, and Shader Storage Buffer Objects bound for any shader stage.">pvrvk::DescriptorSetLayoutCreateInfo</a></td>
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplSampler_.html" title="SamplerVk_ implementation that wraps the vulkan sampler">pvrvk::impl::Sampler_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplDevice_.html" title="GpuDevice implementation that supports Vulkan">pvrvk::impl::Device_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplDisplay_.html" title="A display device can in some environments be used directly for Vulkan rendering without using intermediate windowing systems.">pvrvk::impl::Display_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplEvent_.html" title="Vulkan implementation of the Event class. Event can be used by the host to do fine-grained synchronization of commands, and it can be signalled either from the host (calling set()) or the device (submitting a setEvent() command).">pvrvk::impl::Event_</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplSwapchain_.html" title="The Swapchain is the object wrapping the on - screen rendering Framebuffer images (aka front/backbuffers)">pvrvk::impl::Swapchain_</a></td>
@@ -105,70 +135,40 @@ PVRVk Manual
 <td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplDebugReportCallback_.html" title="Vulkan DebugReportCallback wrapper">pvrvk::impl::DebugReportCallback_</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplBuffer_.html" title="Vulkan implementation of the Buffer.">pvrvk::impl::Buffer_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplWin32Surface_.html" title="An Win32 Surface.">pvrvk::impl::Win32Surface_</a></td>
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplComputePipeline_.html">pvrvk::impl::ComputePipeline_</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplPhysicalDevice_.html" title="The representation of an entire actual, physical GPU device (as opposed to Device, which is a local, logical part of it). A Physical device is &#34;determined&#34;, or &#34;found&#34;, or &#34;enumerated&#34;, (while a logical device is &#34;created&#34;). You can use the physical device to create logical Devices, determine Extensions etc. See Vulkan spec.">pvrvk::impl::PhysicalDevice_</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><span class="xref">pvrvk::GpuDatatypesHelper</span></td>
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplFence_.html" title="Vulkan implementation of the Fence class Fence can be used by the host to determine completion of execution of subimmisions to queues. The host can be polled for the fence signal .">pvrvk::impl::Fence_</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><span class="xref">pvrvk::Extensions</span></td>
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplDescriptorSet_.html" title="Vulkan implementation of a DescriptorSet.">pvrvk::impl::DescriptorSet_</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplDisplayMode_.html" title="Each display has one or more supported modes associated with it by default. These are called the display modes.">pvrvk::impl::DisplayMode_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplDevice_.html" title="GpuDevice implementation that supports Vulkan">pvrvk::impl::Device_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplDisplayPlaneSurface_.html" title="A DisplayPlane Surface.">pvrvk::impl::DisplayPlaneSurface_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplDescriptorPool_.html" title="A descriptor pool - an object used to allocate (and recycle) Descriptor Sets.">pvrvk::impl::DescriptorPool_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplAndroidSurface_.html" title="An Android Surface.">pvrvk::impl::AndroidSurface_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><span class="xref">pvrvk::internal</span></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplBufferView_.html" title="pvrvk implementation of a BufferView.">pvrvk::impl::BufferView_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplSemaphore_.html" title="Vulkan implementation of the Semaphore class. Use to &#34;serialize&#34; access between CommandBuffer submissions and /Queues">pvrvk::impl::Semaphore_</a></td>
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplWin32Surface_.html" title="An Win32 Surface.">pvrvk::impl::Win32Surface_</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplQueue_.html" title="Wraps vulkan queue object.">pvrvk::impl::Queue_</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplShaderModule_.html" title="Vulkan shader module wrapper">pvrvk::impl::ShaderModule_</a></td>
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplInstance_.html" title="The Instance is a system-wide vulkan &#34;implementation&#34;, similar in concept to the &#34;installation&#34; of Vulkan libraries on a system. Contrast with the &#34;Physical Device&#34; which for example represents a particular driver implementing Vulkan for a specific Device. Conceptually, the Instance &#34;Forwards&#34; to the &#34;Physical Device / Device&#34;">pvrvk::impl::Instance_</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplSampler_.html" title="SamplerVk_ implementation that wraps the vulkan sampler">pvrvk::impl::Sampler_</a></td>
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimpl.html">pvrvk::impl</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplComputePipeline_.html">pvrvk::impl::ComputePipeline_</a></td>
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><span class="xref">pvrvk::FrameworkCaps</span></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvk.html">pvrvk</a></td>
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkWriteDescriptorSet.html" title="Contains information for an initialization/update of a descriptor set. This class contains both the update AND the descriptor set to be updated, so that multiple descriptor sets can be updated in a single call to Device::updateDescriptorSets">pvrvk::WriteDescriptorSet</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplMacOSSurface_.html" title="A MacOS Surface.">pvrvk::impl::MacOSSurface_</a></td>
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplPipelineCache_.html" title="A PVRVk pipeline cache object which allows the result of pipeline construction to be reused between pipelines and between runs of an application">pvrvk::impl::PipelineCache_</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplEvent_.html" title="Vulkan implementation of the Event class. Event can be used by the host to do fine-grained synchronization of commands, and it can be signalled either from the host (calling set()) or the device (submitting a setEvent() command).">pvrvk::impl::Event_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplQueryPool_.html" title="Vulkan implementation of the Query Pool class. Destroying the query pool will also destroy the queries allocated from this pool">pvrvk::impl::QueryPool_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplFence_.html" title="Vulkan implementation of the Fence class Fence can be used by the host to determine completion of execution of subimmisions to queues. The host can be polled for the fence signal .">pvrvk::impl::Fence_</a></td>
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__1"><a class="xref" href="../classes/pvrvkimplSemaphore_.html" title="Vulkan implementation of the Semaphore class. Use to &#34;serialize&#34; access between CommandBuffer submissions and /Queues">pvrvk::impl::Semaphore_</a></td>
 	</tr>
 			</tbody></table>
 </section>
@@ -176,20 +176,20 @@ PVRVk Manual
 <table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Functions</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="ExtensionsVk.h_Reference__entry__43">Return Type</th><th class="entry" id="ExtensionsVk.h_Reference__entry__44">Name and Description</th></tr></thead><tbody class="tbody">
 	<tr class="row">
 <td class="entry" headers="ExtensionsVk.h_Reference__entry__43">extern VulkanExtensionList</td>
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__44"><p class="p"><strong class="ph b">filterExtensions</strong>(<span class="ph code_type">const std::vector&amp;lt;pvrvk::ExtensionProperties&gt; &amp;</span> extensionProperties, <span class="ph code_type">const VulkanExtensionList &amp;</span> extensionsToEnable)</p>
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__44"><p class="p"><strong class="ph b">filterExtensions</strong>(<span class="ph code_type">const std::vector&lt;pvrvk::ExtensionProperties&gt; &amp;</span> extensionProperties, <span class="ph code_type">const VulkanExtensionList &amp;</span> extensionsToEnable)</p>
 <p class="p"><em class="ph i"><span class="ph code_comment">Filter the extensions</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">extensionsToEnable:</strong>	Extensions to enable</li>
-
 <li class="li"><strong class="ph b">extensionProperties:</strong>	Extension properties</li>
+
+<li class="li"><strong class="ph b">extensionsToEnable:</strong>	Extensions to enable</li>
 
 </ul>
 </td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="ExtensionsVk.h_Reference__entry__43">void</td>
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__44"><p class="p"><strong class="ph b">enumerateInstanceExtensions</strong>(<span class="ph code_type">std::vector&amp;lt;ExtensionProperties&gt; &amp;</span> outExtensions)</p>
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__44"><p class="p"><strong class="ph b">enumerateInstanceExtensions</strong>(<span class="ph code_type">std::vector&lt;ExtensionProperties&gt; &amp;</span> outExtensions)</p>
 <p class="p"><em class="ph i"><span class="ph code_comment">Get list of all supported instance extension properties</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
@@ -200,7 +200,7 @@ PVRVk Manual
 	</tr>
 	<tr class="row">
 <td class="entry" headers="ExtensionsVk.h_Reference__entry__43">void</td>
-<td class="entry" headers="ExtensionsVk.h_Reference__entry__44"><p class="p"><strong class="ph b">enumerateInstanceExtensions</strong>(<span class="ph code_type">std::vector&amp;lt;ExtensionProperties&gt; &amp;</span> outExtensions, <span class="ph code_type">const std::string &amp;</span> layerName)</p>
+<td class="entry" headers="ExtensionsVk.h_Reference__entry__44"><p class="p"><strong class="ph b">enumerateInstanceExtensions</strong>(<span class="ph code_type">std::vector&lt;ExtensionProperties&gt; &amp;</span> outExtensions, <span class="ph code_type">const std::string &amp;</span> layerName)</p>
 <p class="p"><em class="ph i"><span class="ph code_comment">Get list of all supported instance extension properties for a given layer</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">

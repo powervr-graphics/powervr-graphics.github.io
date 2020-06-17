@@ -52,16 +52,16 @@ PVRCore Manual
 <td class="entry" headers="AxisAlignedBox.h_Reference__entry__2"><a class="xref" href="../../classes/pvrmathAxisAlignedBox.html" title="This class provides functionality to handle 3 dimensional Axis Aligned Boxes. Center-halfextent representation.">pvr::math::AxisAlignedBox</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="AxisAlignedBox.h_Reference__entry__1">struct</td>
-<td class="entry" headers="AxisAlignedBox.h_Reference__entry__2"><a class="xref" href="../../classes/pvrmathFrustum.html" title="This class provides functionality to handle the volume enclosed by 6 planes, normally the viewing frustum. The planes are represented in Hessian Normal Form (normal, distance) as vec4( (xyz):[normal], w:[distance from 0,0,0] )">pvr::math::Frustum</a></td>
+<td class="entry" headers="AxisAlignedBox.h_Reference__entry__1">class</td>
+<td class="entry" headers="AxisAlignedBox.h_Reference__entry__2"><a class="xref" href="../../classes/pvrmathAxisAlignedBoxMinMax.html">pvr::math::AxisAlignedBoxMinMax</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="AxisAlignedBox.h_Reference__entry__1">struct</td>
 <td class="entry" headers="AxisAlignedBox.h_Reference__entry__2"><a class="xref" href="../../classes/pvrmathViewingFrustum.html" title="This class provides specialized functionality for when a frustum is a &#34;normal&#34;viewing frustum, that is, the following conditions hold (The conditions ARE NOT checked) Note: A &#34;frustum side&#34; of a plane means &#34;the quadrilateral of the plane that is enclosed by the 4 other planes not opposite to it&#34; &#34;Opposite&#34; means the &#34;other&#34; side of the frustum (minusX is opposit plusX). 1) Opposite Frustum sides do not intersect (their planes may do so outside the frustum) 2) The frustum is &#34;opening&#34;, or at least not &#34;closing&#34; accross the z axis accross all directions, meaning that the any point of the projection of the negative Z side of the frustum on the positive Z plane, is inside or on the positive Z side of the frustum. 3) Any point of a positive(negative) part of the frustum has a larger(smaller) corresponding coordinate than its opposite part 4) All plane normals point INTO of the frustum These optimizations allow us to greatly reduce the calculations for a viewing frustum.">pvr::math::ViewingFrustum</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="AxisAlignedBox.h_Reference__entry__1">class</td>
-<td class="entry" headers="AxisAlignedBox.h_Reference__entry__2"><a class="xref" href="../../classes/pvrmathAxisAlignedBoxMinMax.html">pvr::math::AxisAlignedBoxMinMax</a></td>
+<td class="entry" headers="AxisAlignedBox.h_Reference__entry__1">struct</td>
+<td class="entry" headers="AxisAlignedBox.h_Reference__entry__2"><a class="xref" href="../../classes/pvrmathFrustum.html" title="This class provides functionality to handle the volume enclosed by 6 planes, normally the viewing frustum. The planes are represented in Hessian Normal Form (normal, distance) as vec4( (xyz):[normal], w:[distance from 0,0,0] )">pvr::math::Frustum</a></td>
 	</tr>
 			</tbody></table>
 </section>
@@ -69,46 +69,46 @@ PVRCore Manual
 
 <table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="AxisAlignedBox.h_Reference__entry__11">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><span class="xref">pvr::strings</span></td>
+<td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><span class="xref">pvr::async::impl</span></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><a class="xref" href="../../classes/pvreffect.html">pvr::effect</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><a class="xref" href="../../classes/pvreffectBufferDefinition.html" title="Information about a Buffer">pvr::effect::BufferDefinition</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><span class="xref">pvr::async::impl</span></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><a class="xref" href="../../classes/pvrmath.html">pvr::math</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><a class="xref" href="../../classes/pvrasync.html">pvr::async</a></td>
-	</tr>
-	<tr class="row">
 <td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><span class="xref">pvr::pfx</span></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><a class="xref" href="../../classes/pvrutils.html">pvr::utils</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><a class="xref" href="../../classes/pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><span class="xref">glm</span></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><span class="xref">impl</span></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><a class="xref" href="../../classes/pvrPixelFormat.html" title="The PixelFormat class fully defines a Pixel Format (channels, format, compression, bit width etc.).">pvr::PixelFormat</a></td>
+<td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><span class="xref">pvr::strings</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><a class="xref" href="../../classes/pvrutils.html">pvr::utils</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><a class="xref" href="../../classes/pvrIsRefCountedType.html">pvr::IsRefCountedType</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><a class="xref" href="../../classes/pvrasync.html">pvr::async</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><span class="xref">glm</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><a class="xref" href="../../classes/pvrmath.html">pvr::math</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><a class="xref" href="../../classes/pvreffectBufferDefinition.html" title="Information about a Buffer">pvr::effect::BufferDefinition</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><a class="xref" href="../../classes/pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="AxisAlignedBox.h_Reference__entry__11"><a class="xref" href="../../classes/pvrPixelFormat.html" title="The PixelFormat class fully defines a Pixel Format (channels, format, compression, bit width etc.).">pvr::PixelFormat</a></td>
 	</tr>
 			</tbody></table>
 </section>
@@ -146,11 +146,11 @@ PVRCore Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Retrieve the viewing frustum from a projection matrix</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
+<li class="li"><strong class="ph b">projection_from_world:</strong>	The projection matrix</li>
+
 <li class="li"><strong class="ph b">frustum_out:</strong>	The viewing frustum</li>
 
 <li class="li"><strong class="ph b">api:</strong>	The Graphics API for which to get the planes. Used to infer and use the underlying Device coordinate system.</li>
-
-<li class="li"><strong class="ph b">projection_from_world:</strong>	The projection matrix</li>
 
 </ul>
 </td>
@@ -161,11 +161,11 @@ PVRCore Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Retrieves the point at which 3 planes intersect</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
+<li class="li"><strong class="ph b">p1:</strong>	Plane 1</li>
+
 <li class="li"><strong class="ph b">p0:</strong>	Plane 0</li>
 
 <li class="li"><strong class="ph b">p2:</strong>	Plane 2</li>
-
-<li class="li"><strong class="ph b">p1:</strong>	Plane 1</li>
 
 </ul>
 </td>

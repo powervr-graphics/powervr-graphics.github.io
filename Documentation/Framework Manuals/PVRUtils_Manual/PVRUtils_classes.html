@@ -42,32 +42,12 @@ PVRUtils Manual
 
 <table class="table"><caption></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="PVRUtils_Classes__entry__1">Declaration Type</th><th class="entry" id="PVRUtils_Classes__entry__2">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/clutilsOpenCLError.html" title="A simple std::runtime_error wrapper for throwing exceptions when receiving OpenCL errors.">clutils::OpenCLError</a></td>
-	</tr>
-	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsVertexAttributeInfo.html" title="Contains a full description of a Vertex Attribute: Index, format, number of elements, offset in the buffer, optionally name. All values (except attributeName) must be set explicitly.">pvr::utils::VertexAttributeInfo</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsQueuePopulateInfo.html" title="A structure encapsulating the set of queue flags required for a particular queue retrieved via the helper function 'createDeviceAndQueues'. Optionally additionally providing a surface will indicate that the queue must support presentation via the provided surface.">pvr::utils::QueuePopulateInfo</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaDefragmentationInfo.html" title="Optional configuration parameters to be passed to function vmaDefragment().">pvr::utils::vma::DefragmentationInfo</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplFont_CharacterUV.html" title="struct containing the UV's corresponding to the UV coordinates of a character of a Font.">pvr::ui::impl::Font_::CharacterUV</a></td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplFont_Header.html">pvr::ui::impl::Font_::Header</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsStructuredBufferView.html" title="A structured buffer view is a class that can be used to define an explicit structure to an object that is usually accessed as raw memory. For example, a GPU-side buffer is mapped to a void pointer, but a StructuredBufferView can be used to create a runtime structure for it, and set its entries one by one. Example usage for accessing a StructuredBufferView defined for the buffer bonesUbo defined below: struct Bone{ highp mat4 boneMatrix; highp mat3 boneMatrixIT; }; layout(std140, binding = i) uniform bonesUbo { mediump int BoneCount; // a name or index can be used to retrieve a particular element Bone bones[]; // elementArrayIndex is used to index into an arrays of elements } boneBuffer; getElementByName(&#34;BoneCount&#34;) = boneBuffer.BoneCount getElementByName(&#34;bones&#34;) = boneBuffer.Bone[0] getElementByName(&#34;bones&#34;, 1) = boneBuffer.Bone[1]">pvr::utils::StructuredBufferView</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaimplAllocation_make_shared_enabler.html">pvr::utils::vma::impl::Allocation_::make_shared_enabler</a></td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplText_make_shared_enabler.html">pvr::ui::impl::Text_::make_shared_enabler</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
@@ -75,107 +55,7 @@ PVRUtils Manual
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplPixelGroup_make_shared_enabler.html">pvr::ui::impl::PixelGroup_::make_shared_enabler</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsDeviceExtensions.html" title="Container for a list of device extensions to be used for initiailising a device using the helper function 'createDeviceAndQueues'.">pvr::utils::DeviceExtensions</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaimplAllocation_.html" title="The DeviceMemoryWrapper_. Class Just wraps the Vulkan device memory object allocated by the memory allocatpr. This class doesn't manages the creation and destruction of vulkan object. It only serves as the interface to device memory functions.">pvr::utils::vma::impl::Allocation_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplPixelGroup_.html" title="This class is wrapped into the pvr::ui::Group reference counted Framework Object. Use to apply a transformation to several Sprites and render them together (for example, layout some sprites to form a UI and then apply translation or rotation effects to all of them to change the page).">pvr::ui::impl::PixelGroup_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiUIRendererProgramData.html" title="Information used for uploading required info to the shaders (matrices, attributes etc).">pvr::ui::UIRenderer::ProgramData</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsModelGlesApiMeshGles.html" title="The ApiMeshGles structure handles the encapsulation of all buffers (vbos and ibos) for a particular mesh of a model.">pvr::utils::ModelGles::ApiMeshGles</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsStructuredBufferViewElement.html" title="Defines a StructuredBufferViewElement. A StructuredBufferViewElement handles the public interface used for working with a StructuredMemoryEntry.">pvr::utils::StructuredBufferViewElement</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiGLStateTracker.html" title="The GLStateTracker structure extends the functionality set out by the GLState structure to additionally help in determining what state has been changed. The UIRenderer then makes use of this structure to check what state must be changed, set UIRenderer state appropriately and reset the state after the UIRenderer has finished its rendering.">pvr::ui::GLStateTracker</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsCreateSwapchainParameters.html" title="Parameter object for the createSwapchainRenderpassFramebuffers call. Defaults are sensible and immediately usable, can be used, but it is recommended to pass the Vulkan Memory Allocator if one is used in the application.">pvr::utils::CreateSwapchainParameters</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsQueueAccessInfo.html" title="A structure encapsulating the family id and queue id of a particular queue retrieved via the helper function 'createDeviceAndQueues'. The family id corresponds to the family id the queue was retrieved from. The queue id corresponds to the particular queue index for the retrieved queue.">pvr::utils::QueueAccessInfo</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsVertexAttributeInfoGles.html">pvr::utils::VertexAttributeInfoGles</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplSprite_.html" title="Base sprite class. Use through the Sprite framework object. Represents something that can be rendered with the UIRenderer. Texts, Images, Groups are all sprites (Fonts too although it would only be used as a sprite to display the entire font's glyphs).">pvr::ui::impl::Sprite_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
 <td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplI2dComponent.html" title="A component that can be positioned in 2D using 2d position, scale, rotation and anchored using its center or corners.">pvr::ui::impl::I2dComponent</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplImage_MvpData.html" title="Holds data specific to rendering a particular sprite in particular its model view project matrix.">pvr::ui::impl::Image_::MvpData</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiUIRendererUboMvp.html">pvr::ui::UIRenderer::UboMvp</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsVertexConfiguration.html">pvr::utils::VertexConfiguration</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplVertex.html" title="UIRenderer vertex format.">pvr::ui::impl::Vertex</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaStatInfo.html" title="Calculated statistics of memory usage in entire allocator.">pvr::utils::vma::StatInfo</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplText_MaterialUboData.html">pvr::ui::impl::Text_::MaterialUboData</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplImage_.html" title="Use this class through the reference counted Framework Object pvr::ui::Image. Represents a 2D Image (aka Texture). Can be used like all Sprites and additionally contains methods required for working with Images.">pvr::ui::impl::Image_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplTextElement_make_shared_enabler.html">pvr::ui::impl::TextElement_::make_shared_enabler</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplFont_Header.html">pvr::ui::impl::Font_::Header</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsImageUpdateInfo.html" title="The ImageUpdateInfo struct.">pvr::utils::ImageUpdateInfo</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsOnScreenObjects.html" title="Packaging for Swapchain, on screen Framebuffers, Renderpass, Attachments. Returned by createSwapchainRenderpassFramebuffers">pvr::utils::OnScreenObjects</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsInstanceLayers.html" title="Container for a list of instance layers to be used for initiailising an instance using the helper function 'createInstanceAndSurface'.">pvr::utils::InstanceLayers</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsModelGles.html" title="The ModelGles class provides the functionality for creating all of the buffers (vbos and ibos) and textures required for basic rendering of a pvr::assets::Model using OpenGL ES.">pvr::utils::ModelGles</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
@@ -183,31 +63,47 @@ PVRUtils Manual
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaimplDeviceMemoryWrapper_.html" title="A wrapper for device memory">pvr::utils::vma::impl::DeviceMemoryWrapper_</a></td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrMulti.html" title="A small statically allocated array This class represents a small array of items. The array is statically allocated, and has at most 255 items, usually 8. It is not meant to (and cannot) be used to store large numbers of items (use a std::vector instead), rather it is meant to hold small tuples of items. The PowerVR framework utilizes this class to store tuples of one-per-swap-image items">pvr::Multi</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsCreateSwapchainParameters.html" title="Parameter object for the createSwapchainRenderpassFramebuffers call. Defaults are sensible and immediately usable, can be used, but it is recommended to pass the Vulkan Memory Allocator if one is used in the application.">pvr::utils::CreateSwapchainParameters</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrplatformNativeDisplayHandle_.html" title="Forward-declare and smart pointer friendly handle to an EGL display">pvr::platform::NativeDisplayHandle_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplFont_KerningPair.html">pvr::ui::impl::Font_::KerningPair</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplText_MaterialUboData.html">pvr::ui::impl::Text_::MaterialUboData</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiUIRenderer.html" title="Manages and render the sprites.">pvr::ui::UIRenderer</a></td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplGroup_.html" title="Abstract container for sprites. See MatrixGroup or PixelGroup. A group contains references to a number of sprites, allowing hierarchical transformations to be applied to them">pvr::ui::impl::Group_</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsStructuredMemoryEntry.html" title="Defines a StructuredMemoryEntry element. A StructuredMemoryEntry defines an actual element entry in a structured buffer view. WARNING: Arrays of size 1 not supported - they are considered non-arrays. WARNING: Due to pointers to parents, no reallocations must *ever* happen. Once initialized, the lists must be final. WARNING: THE ENTIRE PUBLIC INTERFACE OF THIS CLASS EXCEPT FOR INIT, IS CONST. WARNING: IT IS NOT INTENDED FOR THIS CLASS TO BE EVER MODIFIABLE.">pvr::utils::StructuredMemoryEntry</a></td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/clutilsOpenCLError.html" title="A simple std::runtime_error wrapper for throwing exceptions when receiving OpenCL errors.">clutils::OpenCLError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplImage_make_shared_enabler.html">pvr::ui::impl::Image_::make_shared_enabler</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplFont_.html" title="Use this class through the reference counted Framework Object pvr::ui::Font. Is an Image_ containing font characters along with the metadata necessary for rendering text with them. Although it can be used like an Image_, this does not make some sense since it would just display the characters as a texture atlas. Text objects will contain a reference to a Font to render with.">pvr::ui::impl::Font_</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiUIRendererUboMaterial.html">pvr::ui::UIRenderer::UboMaterial</a></td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsDeviceExtensions.html" title="Container for a list of device extensions to be used for initiailising a device using the helper function 'createDeviceAndQueues'.">pvr::utils::DeviceExtensions</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsVertexAttributeInfoWithBinding.html" title="A container struct carrying Vertex Attribute information (vertex layout, plus binding point)">pvr::utils::VertexAttributeInfoWithBinding</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaStats.html" title="General statistics from current state of Allocator.">pvr::utils::vma::Stats</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsDebugUtilsCallbacks.html" title="A simple wrapper structure which provides a more abstract representation of a set of debug utils messengers or debug callbacks when using either VK_EXT_debug_utils or VK_EXT_debug_report respectively.">pvr::utils::DebugUtilsCallbacks</a></td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiUIRendererProgramData.html" title="Information used for uploading required info to the shaders (matrices, attributes etc).">pvr::ui::UIRenderer::ProgramData</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
@@ -219,143 +115,15 @@ PVRUtils Manual
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplFont_.html" title="Use this class through the reference counted Framework Object pvr::ui::Font. Is an Image_ containing font characters along with the metadata necessary for rendering text with them. Although it can be used like an Image_, this does not make some sense since it would just display the characters as a texture atlas. Text objects will contain a reference to a Font to render with.">pvr::ui::impl::Font_</a></td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsStructuredMemoryEntry.html" title="Defines a StructuredMemoryEntry element. A StructuredMemoryEntry defines an actual element entry in a structured buffer view. WARNING: Arrays of size 1 not supported - they are considered non-arrays. WARNING: Due to pointers to parents, no reallocations must *ever* happen. Once initialized, the lists must be final. WARNING: THE ENTIRE PUBLIC INTERFACE OF THIS CLASS EXCEPT FOR INIT, IS CONST. WARNING: IT IS NOT INTENDED FOR THIS CLASS TO BE EVER MODIFIABLE.">pvr::utils::StructuredMemoryEntry</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplFont_CharMetrics.html" title="struct representing the metrics of a character of a Font.">pvr::ui::impl::Font_::CharMetrics</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplImage_make_shared_enabler.html">pvr::ui::impl::Image_::make_shared_enabler</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaimplAllocator_make_shared_enabler.html">pvr::utils::vma::impl::Allocator_::make_shared_enabler</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplGroup_.html" title="Abstract container for sprites. See MatrixGroup or PixelGroup. A group contains references to a number of sprites, allowing hierarchical transformations to be applied to them">pvr::ui::impl::Group_</a></td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiUIRendererUboMaterial.html">pvr::ui::UIRenderer::UboMaterial</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaAllocatorCreateInfo.html" title="The AllocatorCreateInfo struct specifies the way in which a VmaAllocator will be created.">pvr::utils::vma::AllocatorCreateInfo</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrplatformNativeDisplayHandle_.html" title="Forward-declare and smart pointer friendly handle to an EGL display">pvr::platform::NativeDisplayHandle_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaimplPool_make_shared_enabler.html">pvr::utils::vma::impl::Pool_::make_shared_enabler</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplImage_MaterialUboData.html" title="Holds data specific to rendering a particular sprite in particular its color and alpha mode.">pvr::ui::impl::Image_::MaterialUboData</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplGroup_SpriteEntryEquals.html">pvr::ui::impl::Group_::SpriteEntryEquals</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplMatrixGroup_.html" title="This class is wrapped into the pvr::ui::Group reference counted Framework Object. Use to apply a transformation to several Sprites and render them together (for example, layout some sprites to form a UI and then apply translation or rotation effects to all of them to change the page).">pvr::ui::impl::MatrixGroup_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaDefragmentationStats.html" title="Statistics returned by function vmaDefragment().">pvr::utils::vma::DefragmentationStats</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrGlError.html" title="A simple std::runtime_error wrapper for OpenGLES error codes.">pvr::GlError</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaimplDeviceMemoryWrapper_make_shared_enabler.html">pvr::utils::vma::impl::DeviceMemoryWrapper_::make_shared_enabler</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaPoolStats.html" title="Describes parameter of existing `VmaPool`.">pvr::utils::vma::PoolStats</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiUIRendererError.html" title="A simple std::runtime_error wrapper for UIRenderer error codes.">pvr::ui::UIRendererError</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaimplAllocator_.html">pvr::utils::vma::impl::Allocator_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplText_MvpData.html">pvr::ui::impl::Text_::MvpData</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplImage_MvpUboData.html" title="Holds data specific to rendering a particular sprite in particular its model view project matrix.">pvr::ui::impl::Image_::MvpUboData</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsVulkanVersion.html" title="The VulkanVersion structure provides an easy mechanism for constructing the Vulkan version for use when creating a Vulkan instance.">pvr::utils::VulkanVersion</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsVertexBindings.html" title="Represents a shader Explicit binding, tying a Semantic name to an Attribute Index.">pvr::utils::VertexBindings</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrMulti.html" title="A small statically allocated array This class represents a small array of items. The array is statically allocated, and has at most 255 items, usually 8. It is not meant to (and cannot) be used to store large numbers of items (use a std::vector instead), rather it is meant to hold small tuples of items. The PowerVR framework utilizes this class to store tuples of one-per-swap-image items">pvr::Multi</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaimplPool_.html" title="An embedded ref counted Pool class">pvr::utils::vma::impl::Pool_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiUIRendererInstanceMaxError.html" title="A simple extension of a UIRendererError used to throwing errors due to reaching the maximum number of instances supported by a UIRenderer.">pvr::ui::UIRendererInstanceMaxError</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsStructuredMemoryEntryIsEqual.html">pvr::utils::StructuredMemoryEntry::IsEqual</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsInstanceExtensions.html" title="Container for a list of instance extensions to be used for initiailising an instance using the helper function 'createInstanceAndSurface'.">pvr::utils::InstanceExtensions</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplMatrixGroup_make_shared_enabler.html">pvr::ui::impl::MatrixGroup_::make_shared_enabler</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplText_make_shared_enabler.html">pvr::ui::impl::Text_::make_shared_enabler</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplFont_KerningPair.html">pvr::ui::impl::Font_::KerningPair</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsTextureUploadResults.html" title="The TextureUploadResults structure provides the results for texture upload functions in a simple to use structure">pvr::utils::TextureUploadResults</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplTextElement_.html" title="The TextElement class should be used through the reference counted Framework Object pvr::ui::TextElement. The TextElement_ class handles the implementation specifics for creating, managing and rendering text elements to the screen including buffer creation, updates and deletion as well as the rendering of the text element.">pvr::ui::impl::TextElement_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrplatformNativePlatformHandles_.html" title="Forward-declare and smart pointer friendly handle to all the objects that EGL needs to identify a rendering context.">pvr::platform::NativePlatformHandles_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsStructuredMemoryDescription.html" title="Defines a memory element description. The element will be provided with a name, type and number of array elements. The element itself may also contain child memory elements">pvr::utils::StructuredMemoryDescription</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrplatformNativeWindowHandle_.html" title="Forward-declare and smart pointer friendly handle to an EGL window">pvr::platform::NativeWindowHandle_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaPoolCreateInfo.html" title="PoolCreateInfo">pvr::utils::vma::PoolCreateInfo</a></td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsVertexAttributeInfoGles.html">pvr::utils::VertexAttributeInfoGles</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
@@ -363,11 +131,115 @@ PVRUtils Manual
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsVertexInputBindingInfo.html" title="Information about a Buffer binding: Binding index, stride, (instance) step rate.">pvr::utils::VertexInputBindingInfo</a></td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsVertexBindings_Name.html" title="Represents a shader Reflective binding, tying a Semantic name to an Attribute variable name.">pvr::utils::VertexBindings_Name</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplImage_MaterialUboData.html" title="Holds data specific to rendering a particular sprite in particular its color and alpha mode.">pvr::ui::impl::Image_::MaterialUboData</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
 <td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrGlExtensionNotSupportedError.html" title="A simple std::runtime_error wrapper for OpenGLES extension not supported error codes.">pvr::GlExtensionNotSupportedError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplFont_CharMetrics.html" title="struct representing the metrics of a character of a Font.">pvr::ui::impl::Font_::CharMetrics</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiGLState.html" title="The GLState structure is designed and used to hold the current OpenGL ES state. The UIRenderer then makes use of this structure to efficiently and as optimally as possibly only change the state which is necessary to be changed when carrying out rendering commands.">pvr::ui::GLState</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsVertexConfiguration.html">pvr::utils::VertexConfiguration</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaPoolCreateInfo.html" title="PoolCreateInfo">pvr::utils::vma::PoolCreateInfo</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplSprite_.html" title="Base sprite class. Use through the Sprite framework object. Represents something that can be rendered with the UIRenderer. Texts, Images, Groups are all sprites (Fonts too although it would only be used as a sprite to display the entire font's glyphs).">pvr::ui::impl::Sprite_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiUIRendererError.html" title="A simple std::runtime_error wrapper for UIRenderer error codes.">pvr::ui::UIRendererError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsQueueAccessInfo.html" title="A structure encapsulating the family id and queue id of a particular queue retrieved via the helper function 'createDeviceAndQueues'. The family id corresponds to the family id the queue was retrieved from. The queue id corresponds to the particular queue index for the retrieved queue.">pvr::utils::QueueAccessInfo</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaPoolStats.html" title="Describes parameter of existing `VmaPool`.">pvr::utils::vma::PoolStats</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsVertexAttributeInfoWithBinding.html" title="A container struct carrying Vertex Attribute information (vertex layout, plus binding point)">pvr::utils::VertexAttributeInfoWithBinding</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsImageUpdateInfo.html" title="The ImageUpdateInfo struct.">pvr::utils::ImageUpdateInfo</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsVulkanVersion.html" title="The VulkanVersion structure provides an easy mechanism for constructing the Vulkan version for use when creating a Vulkan instance.">pvr::utils::VulkanVersion</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiUIRenderer.html" title="Manages and render the sprites.">pvr::ui::UIRenderer</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaimplPool_make_shared_enabler.html">pvr::utils::vma::impl::Pool_::make_shared_enabler</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaimplPool_.html" title="An embedded ref counted Pool class">pvr::utils::vma::impl::Pool_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrplatformEglContext_.html" title="The EglContext context is the class wrapping all platform-specific objects required to power an OpenGL implementation (Displays, windows, configurations etc.).">pvr::platform::EglContext_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaimplAllocation_.html" title="The DeviceMemoryWrapper_. Class Just wraps the Vulkan device memory object allocated by the memory allocatpr. This class doesn't manages the creation and destruction of vulkan object. It only serves as the interface to device memory functions.">pvr::utils::vma::impl::Allocation_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaimplDeviceMemoryWrapper_.html" title="A wrapper for device memory">pvr::utils::vma::impl::DeviceMemoryWrapper_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplPixelGroup_make_shared_enabler.html">pvr::ui::impl::PixelGroup_::make_shared_enabler</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplFont_CharacterUV.html" title="struct containing the UV's corresponding to the UV coordinates of a character of a Font.">pvr::ui::impl::Font_::CharacterUV</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplMatrixGroup_make_shared_enabler.html">pvr::ui::impl::MatrixGroup_::make_shared_enabler</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsStructuredBufferViewElement.html" title="Defines a StructuredBufferViewElement. A StructuredBufferViewElement handles the public interface used for working with a StructuredMemoryEntry.">pvr::utils::StructuredBufferViewElement</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrplatformNativePlatformHandles_.html" title="Forward-declare and smart pointer friendly handle to all the objects that EGL needs to identify a rendering context.">pvr::platform::NativePlatformHandles_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplTextElement_make_shared_enabler.html">pvr::ui::impl::TextElement_::make_shared_enabler</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiUIRendererUboMvp.html">pvr::ui::UIRenderer::UboMvp</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsModelGlesApiMeshGles.html" title="The ApiMeshGles structure handles the encapsulation of all buffers (vbos and ibos) for a particular mesh of a model.">pvr::utils::ModelGles::ApiMeshGles</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
@@ -375,23 +247,151 @@ PVRUtils Manual
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsVertexBindings_Name.html" title="Represents a shader Reflective binding, tying a Semantic name to an Attribute variable name.">pvr::utils::VertexBindings_Name</a></td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrplatformNativeWindowHandle_.html" title="Forward-declare and smart pointer friendly handle to an EGL window">pvr::platform::NativeWindowHandle_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplMatrixGroup_.html" title="This class is wrapped into the pvr::ui::Group reference counted Framework Object. Use to apply a transformation to several Sprites and render them together (for example, layout some sprites to form a UI and then apply translation or rotation effects to all of them to change the page).">pvr::ui::impl::MatrixGroup_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaimplAllocator_make_shared_enabler.html">pvr::utils::vma::impl::Allocator_::make_shared_enabler</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplGroup_SpriteEntryEquals.html">pvr::ui::impl::Group_::SpriteEntryEquals</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaDefragmentationInfo.html" title="Optional configuration parameters to be passed to function vmaDefragment().">pvr::utils::vma::DefragmentationInfo</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaimplDeviceMemoryWrapper_make_shared_enabler.html">pvr::utils::vma::impl::DeviceMemoryWrapper_::make_shared_enabler</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsDebugUtilsCallbacks.html" title="A simple wrapper structure which provides a more abstract representation of a set of debug utils messengers or debug callbacks when using either VK_EXT_debug_utils or VK_EXT_debug_report respectively.">pvr::utils::DebugUtilsCallbacks</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplImage_MvpData.html" title="Holds data specific to rendering a particular sprite in particular its model view project matrix.">pvr::ui::impl::Image_::MvpData</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplVertex.html" title="UIRenderer vertex format.">pvr::ui::impl::Vertex</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
 <td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplFont_make_shared_enabler.html">pvr::ui::impl::Font_::make_shared_enabler</a></td>
 	</tr>
 	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsInstanceLayers.html" title="Container for a list of instance layers to be used for initiailising an instance using the helper function 'createInstanceAndSurface'.">pvr::utils::InstanceLayers</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsOnScreenObjects.html" title="Packaging for Swapchain, on screen Framebuffers, Renderpass, Attachments. Returned by createSwapchainRenderpassFramebuffers">pvr::utils::OnScreenObjects</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsVertexAttributeInfo.html" title="Contains a full description of a Vertex Attribute: Index, format, number of elements, offset in the buffer, optionally name. All values (except attributeName) must be set explicitly.">pvr::utils::VertexAttributeInfo</a></td>
+	</tr>
+	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrplatformEglContext_.html" title="The EglContext context is the class wrapping all platform-specific objects required to power an OpenGL implementation (Displays, windows, configurations etc.).">pvr::platform::EglContext_</a></td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaimplAllocator_.html">pvr::utils::vma::impl::Allocator_</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
 <td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaDeviceMemoryCallbacks.html" title="The DeviceMemoryCallbacks struct defines a set of callbacks that the library will call for `vkAllocateMemory` and `vkFreeMemory`. Provided for informative purpose, e.g. to gather statistics about number of allocations or total amount of memory allocated in Vulkan. Used in AllocatorCreateInfo::pDeviceMemoryCallbacks.">pvr::utils::vma::DeviceMemoryCallbacks</a></td>
 	</tr>
 	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplTextElement_.html" title="The TextElement class should be used through the reference counted Framework Object pvr::ui::TextElement. The TextElement_ class handles the implementation specifics for creating, managing and rendering text elements to the screen including buffer creation, updates and deletion as well as the rendering of the text element.">pvr::ui::impl::TextElement_</a></td>
+	</tr>
+	<tr class="row">
 <td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiGLState.html" title="The GLState structure is designed and used to hold the current OpenGL ES state. The UIRenderer then makes use of this structure to efficiently and as optimally as possibly only change the state which is necessary to be changed when carrying out rendering commands.">pvr::ui::GLState</a></td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaAllocatorCreateInfo.html" title="The AllocatorCreateInfo struct specifies the way in which a VmaAllocator will be created.">pvr::utils::vma::AllocatorCreateInfo</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsVertexInputBindingInfo.html" title="Information about a Buffer binding: Binding index, stride, (instance) step rate.">pvr::utils::VertexInputBindingInfo</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsVertexBindings.html" title="Represents a shader Explicit binding, tying a Semantic name to an Attribute Index.">pvr::utils::VertexBindings</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaStatInfo.html" title="Calculated statistics of memory usage in entire allocator.">pvr::utils::vma::StatInfo</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplPixelGroup_.html" title="This class is wrapped into the pvr::ui::Group reference counted Framework Object. Use to apply a transformation to several Sprites and render them together (for example, layout some sprites to form a UI and then apply translation or rotation effects to all of them to change the page).">pvr::ui::impl::PixelGroup_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiGLStateTracker.html" title="The GLStateTracker structure extends the functionality set out by the GLState structure to additionally help in determining what state has been changed. The UIRenderer then makes use of this structure to check what state must be changed, set UIRenderer state appropriately and reset the state after the UIRenderer has finished its rendering.">pvr::ui::GLStateTracker</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaStats.html" title="General statistics from current state of Allocator.">pvr::utils::vma::Stats</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrGlError.html" title="A simple std::runtime_error wrapper for OpenGLES error codes.">pvr::GlError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsTextureUploadResults.html" title="The TextureUploadResults structure provides the results for texture upload functions in a simple to use structure">pvr::utils::TextureUploadResults</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiUIRendererInstanceMaxError.html" title="A simple extension of a UIRendererError used to throwing errors due to reaching the maximum number of instances supported by a UIRenderer.">pvr::ui::UIRendererInstanceMaxError</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsModelGles.html" title="The ModelGles class provides the functionality for creating all of the buffers (vbos and ibos) and textures required for basic rendering of a pvr::assets::Model using OpenGL ES.">pvr::utils::ModelGles</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplImage_.html" title="Use this class through the reference counted Framework Object pvr::ui::Image. Represents a 2D Image (aka Texture). Can be used like all Sprites and additionally contains methods required for working with Images.">pvr::ui::impl::Image_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsQueuePopulateInfo.html" title="A structure encapsulating the set of queue flags required for a particular queue retrieved via the helper function 'createDeviceAndQueues'. Optionally additionally providing a surface will indicate that the queue must support presentation via the provided surface.">pvr::utils::QueuePopulateInfo</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsStructuredMemoryDescription.html" title="Defines a memory element description. The element will be provided with a name, type and number of array elements. The element itself may also contain child memory elements">pvr::utils::StructuredMemoryDescription</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaimplAllocation_make_shared_enabler.html">pvr::utils::vma::impl::Allocation_::make_shared_enabler</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsvmaDefragmentationStats.html" title="Statistics returned by function vmaDefragment().">pvr::utils::vma::DefragmentationStats</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplImage_MvpUboData.html" title="Holds data specific to rendering a particular sprite in particular its model view project matrix.">pvr::ui::impl::Image_::MvpUboData</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvruiimplText_MvpData.html">pvr::ui::impl::Text_::MvpData</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsInstanceExtensions.html" title="Container for a list of instance extensions to be used for initiailising an instance using the helper function 'createInstanceAndSurface'.">pvr::utils::InstanceExtensions</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">class</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsStructuredBufferView.html" title="A structured buffer view is a class that can be used to define an explicit structure to an object that is usually accessed as raw memory. For example, a GPU-side buffer is mapped to a void pointer, but a StructuredBufferView can be used to create a runtime structure for it, and set its entries one by one. Example usage for accessing a StructuredBufferView defined for the buffer bonesUbo defined below: struct Bone{ highp mat4 boneMatrix; highp mat3 boneMatrixIT; }; layout(std140, binding = i) uniform bonesUbo { mediump int BoneCount; // a name or index can be used to retrieve a particular element Bone bones[]; // elementArrayIndex is used to index into an arrays of elements } boneBuffer; getElementByName(&#34;BoneCount&#34;) = boneBuffer.BoneCount getElementByName(&#34;bones&#34;) = boneBuffer.Bone[0] getElementByName(&#34;bones&#34;, 1) = boneBuffer.Bone[1]">pvr::utils::StructuredBufferView</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRUtils_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRUtils_Classes__entry__2"><a class="xref" href="classes/pvrutilsStructuredMemoryEntryIsEqual.html">pvr::utils::StructuredMemoryEntry::IsEqual</a></td>
 	</tr>
 			</tbody></table>
 </div>

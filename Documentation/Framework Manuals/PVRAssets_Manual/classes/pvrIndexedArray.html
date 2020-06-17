@@ -1,6 +1,6 @@
 <!DOCTYPE html
   SYSTEM "about:legacy-compat">
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2020"><meta name="DC.rights.owner" content="(C) Copyright 2020"><meta name="DC.type" content="concept"><meta name="description" content="A combination of array (std::vector) with associative container (std::map). Supports association of names with values, and retrieval by index."><meta name="DC.relation" scheme="URI" content="../classes/pvr.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrIndexedArrayStorageItem_.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrIndexedArrayiterator.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrIndexedArrayDictionaryEntry.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrIndexedArrayconst_iterator.html"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="pvrIndexedArray"><link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/devcss.css"><title>pvr::IndexedArray</title><head>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2020"><meta name="DC.rights.owner" content="(C) Copyright 2020"><meta name="DC.type" content="concept"><meta name="description" content="A combination of array (std::vector) with associative container (std::map). Supports association of names with values, and retrieval by index."><meta name="DC.relation" scheme="URI" content="../classes/pvr.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrIndexedArrayiterator.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrIndexedArrayStorageItem_.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrIndexedArrayDictionaryEntry.html"><meta name="DC.relation" scheme="URI" content="../classes/pvrIndexedArrayconst_iterator.html"><meta name="DC.format" content="HTML5"><meta name="DC.identifier" content="pvrIndexedArray"><link rel="stylesheet" type="text/css" href="../css/commonltr.css"><link rel="stylesheet" type="text/css" href="../css/devcss.css"><title>pvr::IndexedArray</title><head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="icon" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png" sizes="32x32" type="image/png">
 <link rel="shorcut icon" type="image/png" href="https://www.imgtec.com/wp-content/uploads/2018/09/cropped-favicon-2-32x32.png">
@@ -35,7 +35,7 @@
 	</header></header><div class="container-fluid" id="content"><div class="row"><div class="wh_content_area doc_title"><h1>
 PVRAssets Manual
 
-</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../PVRAssets_intro.html">Introduction to PVRAssets</a><ul><li><a href="../PVRAssets_files.html">PVRAssets Files</a></li><li><a href="../PVRAssets_classes.html">PVRAssets Classes</a><ul><li><a href="../classes/pvr.html">pvr</a><ul><li><a href="../classes/pvrassets.html">pvr::assets</a></li><li><a href="../classes/pvrtool.html">pvr::tool</a></li><li><a href="../classes/pvrVolume.html">pvr::Volume</a></li><li><a href="../classes/pvrShadowVolume.html">pvr::ShadowVolume</a></li><li class="active"><a href="../classes/pvrIndexedArray.html">pvr::IndexedArray</a><ul><li><a href="../classes/pvrIndexedArrayStorageItem_.html">pvr::IndexedArray::StorageItem_</a></li><li><a href="../classes/pvrIndexedArrayiterator.html">pvr::IndexedArray::iterator</a></li><li><a href="../classes/pvrIndexedArrayDictionaryEntry.html">pvr::IndexedArray::DictionaryEntry</a></li><li><a href="../classes/pvrIndexedArrayconst_iterator.html">pvr::IndexedArray::const_iterator</a></li></ul></li></ul></li></ul></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
+</h1></div></div><div class="row"><div class="wh_content_area"><div class="row"><nav role="navigation" id="wh_publication_toc" class="col-lg-3 col-md-3 d-none d-md-block d-print-none" style="padding-right:0px;"><nav class="col-md-12 " role="toc"><div class="well well-lg "><ul class="bs-docs-sidenav wh_publication_toc"><li><a href="../PVRAssets_intro.html">Introduction to PVRAssets</a><ul><li><a href="../PVRAssets_files.html">PVRAssets Files</a></li><li><a href="../PVRAssets_classes.html">PVRAssets Classes</a><ul><li><a href="../classes/pvr.html">pvr</a><ul><li class="active"><a href="../classes/pvrIndexedArray.html">pvr::IndexedArray</a><ul><li><a href="../classes/pvrIndexedArrayiterator.html">pvr::IndexedArray::iterator</a></li><li><a href="../classes/pvrIndexedArrayStorageItem_.html">pvr::IndexedArray::StorageItem_</a></li><li><a href="../classes/pvrIndexedArrayDictionaryEntry.html">pvr::IndexedArray::DictionaryEntry</a></li><li><a href="../classes/pvrIndexedArrayconst_iterator.html">pvr::IndexedArray::const_iterator</a></li></ul></li><li><a href="../classes/pvrtool.html">pvr::tool</a></li><li><a href="../classes/pvrVolume.html">pvr::Volume</a></li><li><a href="../classes/pvrShadowVolume.html">pvr::ShadowVolume</a></li><li><a href="../classes/pvrassets.html">pvr::assets</a></li></ul></li></ul></li></ul></li></ul></div></nav></nav><div class="col-lg-8 col-md-8 col-sm-12" id="wh_topic_body"><div class=" wh_topic_content body "><main role="main"></main><article role="article" aria-labelledby="ariaid-title1"></article><main class="col-md-12" role="main"><article role="article" aria-labelledby="ariaid-title1">
 <h1 class="title topictitle1" id="ariaid-title1">pvr::IndexedArray</h1>
 
 <div class="body conbody"><p class="shortdesc">A combination of array (std::vector) with associative container (std::map). Supports association of names with values, and retrieval by index.</p>
@@ -44,12 +44,12 @@ PVRAssets Manual
 <p class="p">Found in file: <a class="xref" href="../files/IndexedArray.html" title="Implementation of a special kind of map that stores the data in a linear, contiguous store (std::vector interface),">IndexedArray.h</a></p>
 <table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Classes</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="pvrIndexedArray__entry__1">Declaration Type</th><th class="entry" id="pvrIndexedArray__entry__2">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="pvrIndexedArray__entry__1">struct</td>
-<td class="entry" headers="pvrIndexedArray__entry__2"><a class="xref" href="pvrIndexedArrayStorageItem_.html">pvr::IndexedArray::StorageItem_</a></td>
-	</tr>
-	<tr class="row">
 <td class="entry" headers="pvrIndexedArray__entry__1">class</td>
 <td class="entry" headers="pvrIndexedArray__entry__2"><a class="xref" href="pvrIndexedArrayiterator.html" title="An (modifiable) Linear iterator of the IndexedArray class. Will linearly iterate the backing store skipping empy spots. Unordered.">pvr::IndexedArray::iterator</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="pvrIndexedArray__entry__1">struct</td>
+<td class="entry" headers="pvrIndexedArray__entry__2"><a class="xref" href="pvrIndexedArrayStorageItem_.html">pvr::IndexedArray::StorageItem_</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="pvrIndexedArray__entry__1">struct</td>
@@ -139,9 +139,9 @@ PVRAssets Manual
 <ul class="ul">
 <li class="li"><strong class="ph b">where:</strong>	The index where to insert the new item</li>
 
-<li class="li"><strong class="ph b">key:</strong>	The Key of the new item</li>
-
 <li class="li"><strong class="ph b">val:</strong>	The Value of the new item</li>
+
+<li class="li"><strong class="ph b">key:</strong>	The Key of the new item</li>
 
 </ul>
 </td>
@@ -152,9 +152,9 @@ PVRAssets Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Insert an item at the first possible spot in the backing array. If key exists, will update the value.</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">key:</strong>	The Key of the new item</li>
-
 <li class="li"><strong class="ph b">val:</strong>	The Value of the new item</li>
+
+<li class="li"><strong class="ph b">key:</strong>	The Key of the new item</li>
 
 </ul>
 </td>
@@ -267,9 +267,9 @@ PVRAssets Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Move a specific item (identified by a key) to a specific index in the list. If an item is already in this spot in the list, their positions are swapped.</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">key:</strong>	The key of the item to relocate.</li>
-
 <li class="li"><strong class="ph b">index:</strong>	The index where to relocate the item.</li>
+
+<li class="li"><strong class="ph b">key:</strong>	The key of the item to relocate.</li>
 
 </ul>
 </td>
@@ -303,7 +303,7 @@ PVRAssets Manual
 			</tbody></table>
 </div>
 
-<nav role="navigation" class="related-links"><ul class="ullinks"><li class="link ulchildlink"><strong><a href="../classes/pvrIndexedArrayStorageItem_.html">pvr::IndexedArray::StorageItem_</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrIndexedArrayiterator.html">pvr::IndexedArray::iterator</a></strong><br>An (modifiable) Linear iterator of the IndexedArray class. Will linearly iterate the backing store skipping empy spots. Unordered.</li><li class="link ulchildlink"><strong><a href="../classes/pvrIndexedArrayDictionaryEntry.html">pvr::IndexedArray::DictionaryEntry</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrIndexedArrayconst_iterator.html">pvr::IndexedArray::const_iterator</a></strong><br>An (constant) Linear iterator of the IndexedArray class. Will linearly iterate the backing store skipping empy spots. Unordered.</li></ul><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../classes/pvr.html">pvr</a></div></div></nav></article></main></div></div></div></div></div><div id="custom_nav" class="text-right hidden-sm hidden-xs hidden-print"><div class="well well-lg" style="margin-left:20px; margin-right:20px;"><footer role="contentinfo"><script src="../ditasearch.js"></script><footer xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="site-info  wh_footer" itemtype="https://schema.org/WPFooter" itemscope="" whc:version="21.0">
+<nav role="navigation" class="related-links"><ul class="ullinks"><li class="link ulchildlink"><strong><a href="../classes/pvrIndexedArrayiterator.html">pvr::IndexedArray::iterator</a></strong><br>An (modifiable) Linear iterator of the IndexedArray class. Will linearly iterate the backing store skipping empy spots. Unordered.</li><li class="link ulchildlink"><strong><a href="../classes/pvrIndexedArrayStorageItem_.html">pvr::IndexedArray::StorageItem_</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrIndexedArrayDictionaryEntry.html">pvr::IndexedArray::DictionaryEntry</a></strong><br></li><li class="link ulchildlink"><strong><a href="../classes/pvrIndexedArrayconst_iterator.html">pvr::IndexedArray::const_iterator</a></strong><br>An (constant) Linear iterator of the IndexedArray class. Will linearly iterate the backing store skipping empy spots. Unordered.</li></ul><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../classes/pvr.html">pvr</a></div></div></nav></article></main></div></div></div></div></div><div id="custom_nav" class="text-right hidden-sm hidden-xs hidden-print"><div class="well well-lg" style="margin-left:20px; margin-right:20px;"><footer role="contentinfo"><script src="../ditasearch.js"></script><footer xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" class="site-info  wh_footer" itemtype="https://schema.org/WPFooter" itemscope="" whc:version="21.0">
 
   <div class="inside-site-info grid-container grid-parent footer-container  mx-auto">
     <div class="copyright-bar">

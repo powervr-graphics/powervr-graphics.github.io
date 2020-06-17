@@ -48,16 +48,40 @@ PVRUtils Manual
 
 <table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="ConvertToPVRVkTypes.h_Reference__entry__1">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
+<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvruiimplTextElement_.html" title="The TextElement class should be used through the reference counted Framework Object pvr::ui::TextElement. The TextElement_ class handles the implementation specifics for creating, managing and rendering text elements to the screen including buffer creation, updates and deletion as well as the rendering of the text element.">pvr::ui::impl::TextElement_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvruiimplGroup_.html" title="Abstract container for sprites. See MatrixGroup or PixelGroup. A group contains references to a number of sprites, allowing hierarchical transformations to be applied to them">pvr::ui::impl::Group_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvma.html">pvr::utils::vma</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsStructuredMemoryEntry.html" title="Defines a StructuredMemoryEntry element. A StructuredMemoryEntry defines an actual element entry in a structured buffer view. WARNING: Arrays of size 1 not supported - they are considered non-arrays. WARNING: Due to pointers to parents, no reallocations must *ever* happen. Once initialized, the lists must be final. WARNING: THE ENTIRE PUBLIC INTERFACE OF THIS CLASS EXCEPT FOR INIT, IS CONST. WARNING: IT IS NOT INTENDED FOR THIS CLASS TO BE EVER MODIFIABLE.">pvr::utils::StructuredMemoryEntry</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvruiimplPixelGroup_.html" title="This class is wrapped into the pvr::ui::Group reference counted Framework Object. Use to apply a transformation to several Sprites and render them together (for example, layout some sprites to form a UI and then apply translation or rotation effects to all of them to change the page).">pvr::ui::impl::PixelGroup_</a></td>
+	</tr>
+	<tr class="row">
 <td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvruiimplImage_.html" title="Use this class through the reference counted Framework Object pvr::ui::Image. Represents a 2D Image (aka Texture). Can be used like all Sprites and additionally contains methods required for working with Images.">pvr::ui::impl::Image_</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimplPool_.html" title="An embedded ref counted Pool class">pvr::utils::vma::impl::Pool_</a></td>
+<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimplDeviceMemoryWrapper_.html" title="A wrapper for device memory">pvr::utils::vma::impl::DeviceMemoryWrapper_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimpl.html">pvr::utils::vma::impl</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvruiimplMatrixGroup_.html" title="This class is wrapped into the pvr::ui::Group reference counted Framework Object. Use to apply a transformation to several Sprites and render them together (for example, layout some sprites to form a UI and then apply translation or rotation effects to all of them to change the page).">pvr::ui::impl::MatrixGroup_</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvrui.html">pvr::ui</a></td>
+<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutils.html">pvr::utils</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvruiimplFont_.html" title="Use this class through the reference counted Framework Object pvr::ui::Font. Is an Image_ containing font characters along with the metadata necessary for rendering text with them. Although it can be used like an Image_, this does not make some sense since it would just display the characters as a texture atlas. Text objects will contain a reference to a Font to render with.">pvr::ui::impl::Font_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvruiUIRenderer.html" title="Manages and render the sprites.">pvr::ui::UIRenderer</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvruiimpl.html">pvr::ui::impl</a></td>
@@ -66,46 +90,22 @@ PVRUtils Manual
 <td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvruiimplText_.html" title="Use this class through the reference counted Framework Object pvr::ui::Text. Represents some text that can be rendered as a normal Sprite_ and additionally contains the necessary text manipulation functions.">pvr::ui::impl::Text_</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutils.html">pvr::utils</a></td>
+<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimplPool_.html" title="An embedded ref counted Pool class">pvr::utils::vma::impl::Pool_</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvruiimplFont_.html" title="Use this class through the reference counted Framework Object pvr::ui::Font. Is an Image_ containing font characters along with the metadata necessary for rendering text with them. Although it can be used like an Image_, this does not make some sense since it would just display the characters as a texture atlas. Text objects will contain a reference to a Font to render with.">pvr::ui::impl::Font_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimpl.html">pvr::utils::vma::impl</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><span class="xref">pvr::utils::details</span></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimplAllocation_.html" title="The DeviceMemoryWrapper_. Class Just wraps the Vulkan device memory object allocated by the memory allocatpr. This class doesn't manages the creation and destruction of vulkan object. It only serves as the interface to device memory functions.">pvr::utils::vma::impl::Allocation_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimplDeviceMemoryWrapper_.html" title="A wrapper for device memory">pvr::utils::vma::impl::DeviceMemoryWrapper_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvma.html">pvr::utils::vma</a></td>
+<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvrui.html">pvr::ui</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimplAllocator_.html">pvr::utils::vma::impl::Allocator_</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvruiUIRenderer.html" title="Manages and render the sprites.">pvr::ui::UIRenderer</a></td>
+<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimplAllocation_.html" title="The DeviceMemoryWrapper_. Class Just wraps the Vulkan device memory object allocated by the memory allocatpr. This class doesn't manages the creation and destruction of vulkan object. It only serves as the interface to device memory functions.">pvr::utils::vma::impl::Allocation_</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvruiimplGroup_.html" title="Abstract container for sprites. See MatrixGroup or PixelGroup. A group contains references to a number of sprites, allowing hierarchical transformations to be applied to them">pvr::ui::impl::Group_</a></td>
+<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><span class="xref">pvr::utils::details</span></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsStructuredMemoryEntry.html" title="Defines a StructuredMemoryEntry element. A StructuredMemoryEntry defines an actual element entry in a structured buffer view. WARNING: Arrays of size 1 not supported - they are considered non-arrays. WARNING: Due to pointers to parents, no reallocations must *ever* happen. Once initialized, the lists must be final. WARNING: THE ENTIRE PUBLIC INTERFACE OF THIS CLASS EXCEPT FOR INIT, IS CONST. WARNING: IT IS NOT INTENDED FOR THIS CLASS TO BE EVER MODIFIABLE.">pvr::utils::StructuredMemoryEntry</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvruiimplTextElement_.html" title="The TextElement class should be used through the reference counted Framework Object pvr::ui::TextElement. The TextElement_ class handles the implementation specifics for creating, managing and rendering text elements to the screen including buffer creation, updates and deletion as well as the rendering of the text element.">pvr::ui::impl::TextElement_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvruiimplPixelGroup_.html" title="This class is wrapped into the pvr::ui::Group reference counted Framework Object. Use to apply a transformation to several Sprites and render them together (for example, layout some sprites to form a UI and then apply translation or rotation effects to all of them to change the page).">pvr::ui::impl::PixelGroup_</a></td>
+<td class="entry" headers="ConvertToPVRVkTypes.h_Reference__entry__1"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
 	</tr>
 			</tbody></table>
 </section>
@@ -185,9 +185,9 @@ PVRUtils Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Convert to pvrvk format</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">width:</strong>	The Width of the data type</li>
-
 <li class="li"><strong class="ph b">dataType:</strong>	Type of the data(Float32, Int32 etc)</li>
+
+<li class="li"><strong class="ph b">width:</strong>	The Width of the data type</li>
 
 </ul>
 </td>
@@ -198,11 +198,11 @@ PVRUtils Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Convert to pvrvk pixel format</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">format:</strong>	Pixel format</li>
-
 <li class="li"><strong class="ph b">colorSpace:</strong>	Color space of the format (lRGB, sRGB)</li>
 
 <li class="li"><strong class="ph b">dataType:</strong>	Type of the data (SignedByte, SignedInteger etc)</li>
+
+<li class="li"><strong class="ph b">format:</strong>	Pixel format</li>
 
 </ul>
 </td>
@@ -213,11 +213,11 @@ PVRUtils Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Created a packed sampler filter</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
+<li class="li"><strong class="ph b">mini:</strong>	The minification filter</li>
+
 <li class="li"><strong class="ph b">magni:</strong>	The magnification filter</li>
 
 <li class="li"><strong class="ph b">mip:</strong>	The sampler mipmap mode</li>
-
-<li class="li"><strong class="ph b">mini:</strong>	The minification filter</li>
 
 </ul>
 </td>
@@ -228,13 +228,13 @@ PVRUtils Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Unpack a packed sampler filter</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">magni:</strong>	The magnification filter</li>
+<li class="li"><strong class="ph b">mini:</strong>	The minification filter</li>
 
-<li class="li"><strong class="ph b">mip:</strong>	The sampler mipmap mode</li>
+<li class="li"><strong class="ph b">magni:</strong>	The magnification filter</li>
 
 <li class="li"><strong class="ph b">packed:</strong>	The packed sampler filter</li>
 
-<li class="li"><strong class="ph b">mini:</strong>	The minification filter</li>
+<li class="li"><strong class="ph b">mip:</strong>	The sampler mipmap mode</li>
 
 </ul>
 </td>
@@ -256,13 +256,13 @@ PVRUtils Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Convert to pvrvk pixel format</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">format:</strong>	Pixel format</li>
+<li class="li"><strong class="ph b">outIsCompressedFormat:</strong>	Return if its a compressed format</li>
 
 <li class="li"><strong class="ph b">colorSpace:</strong>	Color space of the format (lRGB, sRGB)</li>
 
 <li class="li"><strong class="ph b">dataType:</strong>	TYpe of the data (SignedByte, SignedInteger etc)</li>
 
-<li class="li"><strong class="ph b">outIsCompressedFormat:</strong>	Return if its a compressed format</li>
+<li class="li"><strong class="ph b">format:</strong>	Pixel format</li>
 
 </ul>
 </td>

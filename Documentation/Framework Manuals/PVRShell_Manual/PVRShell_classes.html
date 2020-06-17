@@ -42,16 +42,8 @@ PVRShell Manual
 
 <table class="table"><caption></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="PVRShell_Classes__entry__1">Declaration Type</th><th class="entry" id="PVRShell_Classes__entry__2">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="PVRShell_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRShell_Classes__entry__2"><a class="xref" href="classes/pvrplatformWindowsOSData.html" title="OS specific data for windows">pvr::platform::WindowsOSData</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRShell_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRShell_Classes__entry__2"><a class="xref" href="classes/pvrplatformShellData.html" title="Internal. Contains and tracks internal data necessary to power the pvr::Shell.">pvr::platform::ShellData</a></td>
-	</tr>
-	<tr class="row">
 <td class="entry" headers="PVRShell_Classes__entry__1">class</td>
-<td class="entry" headers="PVRShell_Classes__entry__2"><a class="xref" href="classes/pvrplatformStateMachine.html" title="The StateMachine controlling the PowerVR Shell. Provides the application main loop and callbacks.">pvr::platform::StateMachine</a></td>
+<td class="entry" headers="PVRShell_Classes__entry__2"><a class="xref" href="classes/pvrPointerLocation.html" title="Mouse pointer coordinates.">pvr::PointerLocation</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRShell_Classes__entry__1">struct</td>
@@ -59,7 +51,27 @@ PVRShell Manual
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRShell_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRShell_Classes__entry__2"><a class="xref" href="classes/pvrplatformShellPrivatePointerState.html">pvr::platform::Shell::PrivatePointerState</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRShell_Classes__entry__1">class</td>
+<td class="entry" headers="PVRShell_Classes__entry__2"><a class="xref" href="classes/pvrplatformStateMachine.html" title="The StateMachine controlling the PowerVR Shell. Provides the application main loop and callbacks.">pvr::platform::StateMachine</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRShell_Classes__entry__1">struct</td>
 <td class="entry" headers="PVRShell_Classes__entry__2"><a class="xref" href="classes/pvrplatformShellPointerNormalisedLocation.html" title="Contains a pointer location in unsigned normalised coordinates (0..1).">pvr::platform::Shell::PointerNormalisedLocation</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRShell_Classes__entry__1">class</td>
+<td class="entry" headers="PVRShell_Classes__entry__2"><a class="xref" href="classes/pvrplatformInternalOS.html">pvr::platform::InternalOS</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRShell_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRShell_Classes__entry__2"><a class="xref" href="classes/pvrConfigureEvent.html" title="A window configuration event (e.g. resize)">pvr::ConfigureEvent</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRShell_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRShell_Classes__entry__2"><a class="xref" href="classes/pvrplatformShellEvent.html" title="Contains all data of a system event.">pvr::platform::ShellEvent</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRShell_Classes__entry__1">class</td>
@@ -67,19 +79,19 @@ PVRShell Manual
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRShell_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRShell_Classes__entry__2"><a class="xref" href="classes/pvrplatformShellPrivatePointerState.html">pvr::platform::Shell::PrivatePointerState</a></td>
+<td class="entry" headers="PVRShell_Classes__entry__2"><a class="xref" href="classes/pvrplatformWindowsOSData.html" title="OS specific data for windows">pvr::platform::WindowsOSData</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRShell_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRShell_Classes__entry__2"><a class="xref" href="classes/pvrConfigureEvent.html" title="A window configuration event (e.g. resize)">pvr::ConfigureEvent</a></td>
+<td class="entry" headers="PVRShell_Classes__entry__2"><a class="xref" href="classes/pvrplatformShellOSCapabilities.html" title="Capabilities that may be different between platforms.">pvr::platform::ShellOS::Capabilities</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="PVRShell_Classes__entry__1">struct</td>
+<td class="entry" headers="PVRShell_Classes__entry__2"><a class="xref" href="classes/pvrPointerLocationStore.html" title="A storage structure for the pointer location">pvr::PointerLocationStore</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRShell_Classes__entry__1">union</td>
 <td class="entry" headers="PVRShell_Classes__entry__2"><a class="xref" href="classes/pvrplatformShellEventunion.html" title="Unnamed union storing the event data. Depending on event type, different members can/should be accessed">pvr::platform::ShellEvent::union</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRShell_Classes__entry__1">class</td>
-<td class="entry" headers="PVRShell_Classes__entry__2"><a class="xref" href="classes/pvrplatformInternalOS.html">pvr::platform::InternalOS</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRShell_Classes__entry__1">class</td>
@@ -91,19 +103,7 @@ PVRShell Manual
 	</tr>
 	<tr class="row">
 <td class="entry" headers="PVRShell_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRShell_Classes__entry__2"><a class="xref" href="classes/pvrplatformShellOSCapabilities.html" title="Capabilities that may be different between platforms.">pvr::platform::ShellOS::Capabilities</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRShell_Classes__entry__1">class</td>
-<td class="entry" headers="PVRShell_Classes__entry__2"><a class="xref" href="classes/pvrPointerLocation.html" title="Mouse pointer coordinates.">pvr::PointerLocation</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRShell_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRShell_Classes__entry__2"><a class="xref" href="classes/pvrplatformShellEvent.html" title="Contains all data of a system event.">pvr::platform::ShellEvent</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="PVRShell_Classes__entry__1">struct</td>
-<td class="entry" headers="PVRShell_Classes__entry__2"><a class="xref" href="classes/pvrPointerLocationStore.html" title="A storage structure for the pointer location">pvr::PointerLocationStore</a></td>
+<td class="entry" headers="PVRShell_Classes__entry__2"><a class="xref" href="classes/pvrplatformShellData.html" title="Internal. Contains and tracks internal data necessary to power the pvr::Shell.">pvr::platform::ShellData</a></td>
 	</tr>
 			</tbody></table>
 </div>

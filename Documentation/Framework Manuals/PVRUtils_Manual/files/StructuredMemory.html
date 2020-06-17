@@ -48,16 +48,12 @@ PVRUtils Manual
 
 <table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Classes</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="StructuredMemory.h_Reference__entry__1">Declaration Type</th><th class="entry" id="StructuredMemory.h_Reference__entry__2">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="StructuredMemory.h_Reference__entry__1">class</td>
-<td class="entry" headers="StructuredMemory.h_Reference__entry__2"><a class="xref" href="../classes/pvrutilsStructuredBufferViewElement.html" title="Defines a StructuredBufferViewElement. A StructuredBufferViewElement handles the public interface used for working with a StructuredMemoryEntry.">pvr::utils::StructuredBufferViewElement</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="StructuredMemory.h_Reference__entry__1">class</td>
-<td class="entry" headers="StructuredMemory.h_Reference__entry__2"><a class="xref" href="../classes/pvrutilsStructuredMemoryEntry.html" title="Defines a StructuredMemoryEntry element. A StructuredMemoryEntry defines an actual element entry in a structured buffer view. WARNING: Arrays of size 1 not supported - they are considered non-arrays. WARNING: Due to pointers to parents, no reallocations must *ever* happen. Once initialized, the lists must be final. WARNING: THE ENTIRE PUBLIC INTERFACE OF THIS CLASS EXCEPT FOR INIT, IS CONST. WARNING: IT IS NOT INTENDED FOR THIS CLASS TO BE EVER MODIFIABLE.">pvr::utils::StructuredMemoryEntry</a></td>
-	</tr>
-	<tr class="row">
 <td class="entry" headers="StructuredMemory.h_Reference__entry__1">struct</td>
 <td class="entry" headers="StructuredMemory.h_Reference__entry__2"><a class="xref" href="../classes/pvrutilsStructuredMemoryEntryIsEqual.html">pvr::utils::StructuredMemoryEntry::IsEqual</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="StructuredMemory.h_Reference__entry__1">class</td>
+<td class="entry" headers="StructuredMemory.h_Reference__entry__2"><a class="xref" href="../classes/pvrutilsStructuredBufferView.html" title="A structured buffer view is a class that can be used to define an explicit structure to an object that is usually accessed as raw memory. For example, a GPU-side buffer is mapped to a void pointer, but a StructuredBufferView can be used to create a runtime structure for it, and set its entries one by one. Example usage for accessing a StructuredBufferView defined for the buffer bonesUbo defined below: struct Bone{ highp mat4 boneMatrix; highp mat3 boneMatrixIT; }; layout(std140, binding = i) uniform bonesUbo { mediump int BoneCount; // a name or index can be used to retrieve a particular element Bone bones[]; // elementArrayIndex is used to index into an arrays of elements } boneBuffer; getElementByName(&#34;BoneCount&#34;) = boneBuffer.BoneCount getElementByName(&#34;bones&#34;) = boneBuffer.Bone[0] getElementByName(&#34;bones&#34;, 1) = boneBuffer.Bone[1]">pvr::utils::StructuredBufferView</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="StructuredMemory.h_Reference__entry__1">class</td>
@@ -65,7 +61,11 @@ PVRUtils Manual
 	</tr>
 	<tr class="row">
 <td class="entry" headers="StructuredMemory.h_Reference__entry__1">class</td>
-<td class="entry" headers="StructuredMemory.h_Reference__entry__2"><a class="xref" href="../classes/pvrutilsStructuredBufferView.html" title="A structured buffer view is a class that can be used to define an explicit structure to an object that is usually accessed as raw memory. For example, a GPU-side buffer is mapped to a void pointer, but a StructuredBufferView can be used to create a runtime structure for it, and set its entries one by one. Example usage for accessing a StructuredBufferView defined for the buffer bonesUbo defined below: struct Bone{ highp mat4 boneMatrix; highp mat3 boneMatrixIT; }; layout(std140, binding = i) uniform bonesUbo { mediump int BoneCount; // a name or index can be used to retrieve a particular element Bone bones[]; // elementArrayIndex is used to index into an arrays of elements } boneBuffer; getElementByName(&#34;BoneCount&#34;) = boneBuffer.BoneCount getElementByName(&#34;bones&#34;) = boneBuffer.Bone[0] getElementByName(&#34;bones&#34;, 1) = boneBuffer.Bone[1]">pvr::utils::StructuredBufferView</a></td>
+<td class="entry" headers="StructuredMemory.h_Reference__entry__2"><a class="xref" href="../classes/pvrutilsStructuredMemoryEntry.html" title="Defines a StructuredMemoryEntry element. A StructuredMemoryEntry defines an actual element entry in a structured buffer view. WARNING: Arrays of size 1 not supported - they are considered non-arrays. WARNING: Due to pointers to parents, no reallocations must *ever* happen. Once initialized, the lists must be final. WARNING: THE ENTIRE PUBLIC INTERFACE OF THIS CLASS EXCEPT FOR INIT, IS CONST. WARNING: IT IS NOT INTENDED FOR THIS CLASS TO BE EVER MODIFIABLE.">pvr::utils::StructuredMemoryEntry</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="StructuredMemory.h_Reference__entry__1">class</td>
+<td class="entry" headers="StructuredMemory.h_Reference__entry__2"><a class="xref" href="../classes/pvrutilsStructuredBufferViewElement.html" title="Defines a StructuredBufferViewElement. A StructuredBufferViewElement handles the public interface used for working with a StructuredMemoryEntry.">pvr::utils::StructuredBufferViewElement</a></td>
 	</tr>
 			</tbody></table>
 </section>
@@ -73,10 +73,10 @@ PVRUtils Manual
 
 <table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="StructuredMemory.h_Reference__entry__13">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="StructuredMemory.h_Reference__entry__13"><a class="xref" href="../classes/pvrutilsStructuredMemoryEntry.html" title="Defines a StructuredMemoryEntry element. A StructuredMemoryEntry defines an actual element entry in a structured buffer view. WARNING: Arrays of size 1 not supported - they are considered non-arrays. WARNING: Due to pointers to parents, no reallocations must *ever* happen. Once initialized, the lists must be final. WARNING: THE ENTIRE PUBLIC INTERFACE OF THIS CLASS EXCEPT FOR INIT, IS CONST. WARNING: IT IS NOT INTENDED FOR THIS CLASS TO BE EVER MODIFIABLE.">pvr::utils::StructuredMemoryEntry</a></td>
+<td class="entry" headers="StructuredMemory.h_Reference__entry__13"><a class="xref" href="../classes/pvrutils.html">pvr::utils</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="StructuredMemory.h_Reference__entry__13"><a class="xref" href="../classes/pvrutils.html">pvr::utils</a></td>
+<td class="entry" headers="StructuredMemory.h_Reference__entry__13"><a class="xref" href="../classes/pvrutilsStructuredMemoryEntry.html" title="Defines a StructuredMemoryEntry element. A StructuredMemoryEntry defines an actual element entry in a structured buffer view. WARNING: Arrays of size 1 not supported - they are considered non-arrays. WARNING: Due to pointers to parents, no reallocations must *ever* happen. Once initialized, the lists must be final. WARNING: THE ENTIRE PUBLIC INTERFACE OF THIS CLASS EXCEPT FOR INIT, IS CONST. WARNING: IT IS NOT INTENDED FOR THIS CLASS TO BE EVER MODIFIABLE.">pvr::utils::StructuredMemoryEntry</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="StructuredMemory.h_Reference__entry__13"><a class="xref" href="../classes/pvr.html">pvr</a></td>

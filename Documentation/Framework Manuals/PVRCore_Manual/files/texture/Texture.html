@@ -49,7 +49,19 @@ PVRCore Manual
 <table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Classes</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="Texture.h_Reference__entry__1">Declaration Type</th><th class="entry" id="Texture.h_Reference__entry__2">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
 <td class="entry" headers="Texture.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Texture.h_Reference__entry__2"><a class="xref" href="../../classes/pvrImageRange.html" title="Represents a specific 3-D range in an image (an orthogonal cuboid anywhere in the image)">pvr::ImageRange</a></td>
+<td class="entry" headers="Texture.h_Reference__entry__2"><a class="xref" href="../../classes/pvrGenericExtent3D.html" title="Contains a 3D Integer size (width, height, depth)">pvr::GenericExtent3D</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Texture.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Texture.h_Reference__entry__2"><a class="xref" href="../../classes/pvrImageSubresourceRange.html" title="Represents a subresource range: A specified range of Array Layers and Mipmap levels of specific aspect of an image">pvr::ImageSubresourceRange</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Texture.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Texture.h_Reference__entry__2"><a class="xref" href="../../classes/pvrImageStorageFormat.html" title="Extends the ImageDataFormat with mipmaps and number of Samples.">pvr::ImageStorageFormat</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Texture.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Texture.h_Reference__entry__2"><a class="xref" href="../../classes/pvrGenericOffset2D.html" title="The GenericOffset2D contains a 16-bit 2D offset (offsetX, offsetY)">pvr::GenericOffset2D</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Texture.h_Reference__entry__1">class</td>
@@ -61,31 +73,7 @@ PVRCore Manual
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Texture.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Texture.h_Reference__entry__2"><a class="xref" href="../../classes/pvrImageStorageFormat.html" title="Extends the ImageDataFormat with mipmaps and number of Samples.">pvr::ImageStorageFormat</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Texture.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Texture.h_Reference__entry__2"><a class="xref" href="../../classes/pvrGenericExtent3D.html" title="Contains a 3D Integer size (width, height, depth)">pvr::GenericExtent3D</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Texture.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Texture.h_Reference__entry__2"><a class="xref" href="../../classes/pvrCompressedImageDataFormat.html" title="Describes a Compressed format. Compressed formats provide less information than the uncompressed format, as they can only be accessed &#34;black box&#34;.">pvr::CompressedImageDataFormat</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Texture.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Texture.h_Reference__entry__2"><a class="xref" href="../../classes/pvrImageSubresourceRange.html" title="Represents a subresource range: A specified range of Array Layers and Mipmap levels of specific aspect of an image">pvr::ImageSubresourceRange</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Texture.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Texture.h_Reference__entry__2"><a class="xref" href="../../classes/pvrGenericOffset2D.html" title="The GenericOffset2D contains a 16-bit 2D offset (offsetX, offsetY)">pvr::GenericOffset2D</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Texture.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Texture.h_Reference__entry__2"><a class="xref" href="../../classes/pvrGenericOffset3D.html" title="The GenericOffset3D contains the offsets in 3 dimension (offsetX, offsetY, offsetZ)">pvr::GenericOffset3D</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Texture.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Texture.h_Reference__entry__2"><a class="xref" href="../../classes/pvrImageSubresource.html" title="Describes a single &#34;layer&#34; of an image: a single array layer of a single mip level, or the offset of a layer range.">pvr::ImageSubresource</a></td>
+<td class="entry" headers="Texture.h_Reference__entry__2"><a class="xref" href="../../classes/pvrImageLayersSize.html" title="Structure describes the number of array levels and mip levels an image contains">pvr::ImageLayersSize</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Texture.h_Reference__entry__1">struct</td>
@@ -93,7 +81,11 @@ PVRCore Manual
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Texture.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Texture.h_Reference__entry__2"><a class="xref" href="../../classes/pvrImageLayersSize.html" title="Structure describes the number of array levels and mip levels an image contains">pvr::ImageLayersSize</a></td>
+<td class="entry" headers="Texture.h_Reference__entry__2"><a class="xref" href="../../classes/pvrImageRange.html" title="Represents a specific 3-D range in an image (an orthogonal cuboid anywhere in the image)">pvr::ImageRange</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Texture.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Texture.h_Reference__entry__2"><a class="xref" href="../../classes/pvrCompressedImageDataFormat.html" title="Describes a Compressed format. Compressed formats provide less information than the uncompressed format, as they can only be accessed &#34;black box&#34;.">pvr::CompressedImageDataFormat</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Texture.h_Reference__entry__1">struct</td>
@@ -101,11 +93,19 @@ PVRCore Manual
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Texture.h_Reference__entry__1">struct</td>
-<td class="entry" headers="Texture.h_Reference__entry__2"><a class="xref" href="../../classes/pvrImageStorageFormatCompressed.html" title="Describes a Compressed format. Compressed formats provide less information than the uncompressed format, as they can only be accessed &#34;black box&#34;.">pvr::ImageStorageFormatCompressed</a></td>
+<td class="entry" headers="Texture.h_Reference__entry__2"><a class="xref" href="../../classes/pvrImageSubresource.html" title="Describes a single &#34;layer&#34; of an image: a single array layer of a single mip level, or the offset of a layer range.">pvr::ImageSubresource</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Texture.h_Reference__entry__1">struct</td>
 <td class="entry" headers="Texture.h_Reference__entry__2"><a class="xref" href="../../classes/pvrImageDataFormat.html" title="Represents an image format, including pixel format(channels/bits per channel), datatype and colorspace.">pvr::ImageDataFormat</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Texture.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Texture.h_Reference__entry__2"><a class="xref" href="../../classes/pvrImageStorageFormatCompressed.html" title="Describes a Compressed format. Compressed formats provide less information than the uncompressed format, as they can only be accessed &#34;black box&#34;.">pvr::ImageStorageFormatCompressed</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Texture.h_Reference__entry__1">struct</td>
+<td class="entry" headers="Texture.h_Reference__entry__2"><a class="xref" href="../../classes/pvrGenericOffset3D.html" title="The GenericOffset3D contains the offsets in 3 dimension (offsetX, offsetY, offsetZ)">pvr::GenericOffset3D</a></td>
 	</tr>
 			</tbody></table>
 </section>
@@ -113,40 +113,40 @@ PVRCore Manual
 
 <table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="Texture.h_Reference__entry__33">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="Texture.h_Reference__entry__33"><span class="xref">pvr::strings</span></td>
-	</tr>
-	<tr class="row">
 <td class="entry" headers="Texture.h_Reference__entry__33"><a class="xref" href="../../classes/pvreffect.html">pvr::effect</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Texture.h_Reference__entry__33"><a class="xref" href="../../classes/pvreffectBufferDefinition.html" title="Information about a Buffer">pvr::effect::BufferDefinition</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Texture.h_Reference__entry__33"><a class="xref" href="../../classes/pvrasync.html">pvr::async</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Texture.h_Reference__entry__33"><span class="xref">pvr::pfx</span></td>
 	</tr>
 	<tr class="row">
+<td class="entry" headers="Texture.h_Reference__entry__33"><span class="xref">impl</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Texture.h_Reference__entry__33"><span class="xref">pvr::strings</span></td>
+	</tr>
+	<tr class="row">
 <td class="entry" headers="Texture.h_Reference__entry__33"><a class="xref" href="../../classes/pvrutils.html">pvr::utils</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="Texture.h_Reference__entry__33"><a class="xref" href="../../classes/pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
+<td class="entry" headers="Texture.h_Reference__entry__33"><a class="xref" href="../../classes/pvrIsRefCountedType.html">pvr::IsRefCountedType</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Texture.h_Reference__entry__33"><a class="xref" href="../../classes/pvrasync.html">pvr::async</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="Texture.h_Reference__entry__33"><span class="xref">glm</span></td>
 	</tr>
 	<tr class="row">
+<td class="entry" headers="Texture.h_Reference__entry__33"><a class="xref" href="../../classes/pvreffectBufferDefinition.html" title="Information about a Buffer">pvr::effect::BufferDefinition</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="Texture.h_Reference__entry__33"><a class="xref" href="../../classes/pvrRefCountEntryIntrusive.html" title="DO NOT USE DIRECTLY. The RefCountedResource uses this class when required. An Intrusive Refcount entry stores the object on the same block of memory as the reference counts.">pvr::RefCountEntryIntrusive</a></td>
+	</tr>
+	<tr class="row">
 <td class="entry" headers="Texture.h_Reference__entry__33"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="Texture.h_Reference__entry__33"><span class="xref">impl</span></td>
-	</tr>
-	<tr class="row">
 <td class="entry" headers="Texture.h_Reference__entry__33"><a class="xref" href="../../classes/pvrPixelFormat.html" title="The PixelFormat class fully defines a Pixel Format (channels, format, compression, bit width etc.).">pvr::PixelFormat</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="Texture.h_Reference__entry__33"><a class="xref" href="../../classes/pvrIsRefCountedType.html">pvr::IsRefCountedType</a></td>
 	</tr>
 			</tbody></table>
 </section>
@@ -183,9 +183,9 @@ PVRCore Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Produces a floating point value based on the uint32_t value, the mantissa bits and exponent bits</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">hasSign:</strong>	Specifies whether the float has a sign bit</li>
-
 <li class="li"><strong class="ph b">exponentBits:</strong>	The exponent bits</li>
+
+<li class="li"><strong class="ph b">hasSign:</strong>	Specifies whether the float has a sign bit</li>
 
 <li class="li"><strong class="ph b">exponentBias:</strong>	The exponent bias</li>
 
@@ -213,7 +213,9 @@ PVRCore Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Converts an x, y and z direction to a texture coordinate of a particular cubemap face.</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">y:</strong>	The y component of te direction.</li>
+<li class="li"><strong class="ph b">face:</strong>	The cubemap face enumeration retrieved using the x, y, z direction.</li>
+
+<li class="li"><strong class="ph b">z:</strong>	The z component of te direction.</li>
 
 <li class="li"><strong class="ph b">x:</strong>	The x component of te direction.</li>
 
@@ -221,9 +223,7 @@ PVRCore Manual
 
 <li class="li"><strong class="ph b">u:</strong>	The u component of the texture coordinate retrieved.</li>
 
-<li class="li"><strong class="ph b">face:</strong>	The cubemap face enumeration retrieved using the x, y, z direction.</li>
-
-<li class="li"><strong class="ph b">z:</strong>	The z component of te direction.</li>
+<li class="li"><strong class="ph b">y:</strong>	The y component of te direction.</li>
 
 </ul>
 </td>

@@ -49,14 +49,6 @@ PVRVk Manual
 <table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Classes</span></caption><colgroup><col><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="QueueVk.h_Reference__entry__1">Declaration Type</th><th class="entry" id="QueueVk.h_Reference__entry__2">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
 <td class="entry" headers="QueueVk.h_Reference__entry__1">struct</td>
-<td class="entry" headers="QueueVk.h_Reference__entry__2"><a class="xref" href="../classes/pvrvkSparseMemoryBind.html" title="Containes memory bind data for SparseImageMemoryBind and SparseBufferMemoryBindInfo.">pvrvk::SparseMemoryBind</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="QueueVk.h_Reference__entry__1">struct</td>
-<td class="entry" headers="QueueVk.h_Reference__entry__2"><a class="xref" href="../classes/pvrvkSparseImageMemoryBindInfo.html" title="Bind memory sparse image blocks of image objects created with the VK_IMAGE_CREATE_SPARSE_RESIDENCY_BIT flag">pvrvk::SparseImageMemoryBindInfo</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="QueueVk.h_Reference__entry__1">struct</td>
 <td class="entry" headers="QueueVk.h_Reference__entry__2"><a class="xref" href="../classes/pvrvkSparseImageMemoryBind.html" title="Bind memory to sparse image which has been created with pvrvk::ImageCreateFlags::e_SPARSE_BINDING_BIT flag">pvrvk::SparseImageMemoryBind</a></td>
 	</tr>
 	<tr class="row">
@@ -64,16 +56,8 @@ PVRVk Manual
 <td class="entry" headers="QueueVk.h_Reference__entry__2"><a class="xref" href="../classes/pvrvkSparseBufferMemoryBindInfo.html" title="Bind memory to sparse buffer object which has been created with VK_BUFFER_CREATE_SPARSE_BINDING_BIT flag">pvrvk::SparseBufferMemoryBindInfo</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="QueueVk.h_Reference__entry__1">class</td>
-<td class="entry" headers="QueueVk.h_Reference__entry__2"><a class="xref" href="../classes/pvrvkimplQueue_make_shared_enabler.html">pvrvk::impl::Queue_::make_shared_enabler</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="QueueVk.h_Reference__entry__1">class</td>
-<td class="entry" headers="QueueVk.h_Reference__entry__2"><a class="xref" href="../classes/pvrvkimplQueue_.html" title="Wraps vulkan queue object.">pvrvk::impl::Queue_</a></td>
-	</tr>
-	<tr class="row">
 <td class="entry" headers="QueueVk.h_Reference__entry__1">struct</td>
-<td class="entry" headers="QueueVk.h_Reference__entry__2"><a class="xref" href="../classes/pvrvkPresentInfo.html" title="Swapchain present info. Containes information for presentation such as swapchains, swapchain indices and wait semaphores">pvrvk::PresentInfo</a></td>
+<td class="entry" headers="QueueVk.h_Reference__entry__2"><a class="xref" href="../classes/pvrvkSparseImageMemoryBindInfo.html" title="Bind memory sparse image blocks of image objects created with the VK_IMAGE_CREATE_SPARSE_RESIDENCY_BIT flag">pvrvk::SparseImageMemoryBindInfo</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="QueueVk.h_Reference__entry__1">struct</td>
@@ -85,6 +69,22 @@ PVRVk Manual
 	</tr>
 	<tr class="row">
 <td class="entry" headers="QueueVk.h_Reference__entry__1">struct</td>
+<td class="entry" headers="QueueVk.h_Reference__entry__2"><a class="xref" href="../classes/pvrvkPresentInfo.html" title="Swapchain present info. Containes information for presentation such as swapchains, swapchain indices and wait semaphores">pvrvk::PresentInfo</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="QueueVk.h_Reference__entry__1">struct</td>
+<td class="entry" headers="QueueVk.h_Reference__entry__2"><a class="xref" href="../classes/pvrvkSparseMemoryBind.html" title="Containes memory bind data for SparseImageMemoryBind and SparseBufferMemoryBindInfo.">pvrvk::SparseMemoryBind</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="QueueVk.h_Reference__entry__1">class</td>
+<td class="entry" headers="QueueVk.h_Reference__entry__2"><a class="xref" href="../classes/pvrvkimplQueue_make_shared_enabler.html">pvrvk::impl::Queue_::make_shared_enabler</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="QueueVk.h_Reference__entry__1">class</td>
+<td class="entry" headers="QueueVk.h_Reference__entry__2"><a class="xref" href="../classes/pvrvkimplQueue_.html" title="Wraps vulkan queue object.">pvrvk::impl::Queue_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="QueueVk.h_Reference__entry__1">struct</td>
 <td class="entry" headers="QueueVk.h_Reference__entry__2"><a class="xref" href="../classes/pvrvkSubmitInfo.html" title="Queue submit info. Contains the commandbuffers to be summited to the queue.">pvrvk::SubmitInfo</a></td>
 	</tr>
 			</tbody></table>
@@ -93,70 +93,70 @@ PVRVk Manual
 
 <table class="table"><caption><span class="table--title-label">Table 2. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="QueueVk.h_Reference__entry__23">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
-<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplInstance_.html" title="The Instance is a system-wide vulkan &#34;implementation&#34;, similar in concept to the &#34;installation&#34; of Vulkan libraries on a system. Contrast with the &#34;Physical Device&#34; which for example represents a particular driver implementing Vulkan for a specific Device. Conceptually, the Instance &#34;Forwards&#34; to the &#34;Physical Device / Device&#34;">pvrvk::impl::Instance_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplDisplay_.html" title="A display device can in some environments be used directly for Vulkan rendering without using intermediate windowing systems.">pvrvk::impl::Display_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="QueueVk.h_Reference__entry__23"><span class="xref">pvrvk::FrameworkCaps</span></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimpl.html">pvrvk::impl</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplXlibSurface_.html" title="An Xlib Surface.">pvrvk::impl::XlibSurface_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplDeviceMemory_.html" title="VkDeviceMemory wrapper">pvrvk::impl::DeviceMemory_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplDebugUtilsMessenger_.html" title="Vulkan DebugUtilsMessenger wrapper">pvrvk::impl::DebugUtilsMessenger_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplPipelineCache_.html" title="A PVRVk pipeline cache object which allows the result of pipeline construction to be reused between pipelines and between runs of an application">pvrvk::impl::PipelineCache_</a></td>
+<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvk.html">pvrvk</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplWaylandSurface_.html" title="A Wayland Surface.">pvrvk::impl::WaylandSurface_</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplXcbSurface_.html" title="An Xcb Surface.">pvrvk::impl::XcbSurface_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplWin32Surface_.html" title="An Win32 Surface.">pvrvk::impl::Win32Surface_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="QueueVk.h_Reference__entry__23"><span class="xref">pvrvk::GpuDatatypesHelper</span></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplDevice_.html" title="GpuDevice implementation that supports Vulkan">pvrvk::impl::Device_</a></td>
+<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplAndroidSurface_.html" title="An Android Surface.">pvrvk::impl::AndroidSurface_</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplDisplayPlaneSurface_.html" title="A DisplayPlane Surface.">pvrvk::impl::DisplayPlaneSurface_</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplAndroidSurface_.html" title="An Android Surface.">pvrvk::impl::AndroidSurface_</a></td>
+<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplMacOSSurface_.html" title="A MacOS Surface.">pvrvk::impl::MacOSSurface_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplDeviceMemory_.html" title="VkDeviceMemory wrapper">pvrvk::impl::DeviceMemory_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplXlibSurface_.html" title="An Xlib Surface.">pvrvk::impl::XlibSurface_</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="QueueVk.h_Reference__entry__23"><span class="xref">pvrvk::internal</span></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplSemaphore_.html" title="Vulkan implementation of the Semaphore class. Use to &#34;serialize&#34; access between CommandBuffer submissions and /Queues">pvrvk::impl::Semaphore_</a></td>
+<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplDebugUtilsMessenger_.html" title="Vulkan DebugUtilsMessenger wrapper">pvrvk::impl::DebugUtilsMessenger_</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplQueue_.html" title="Wraps vulkan queue object.">pvrvk::impl::Queue_</a></td>
+<td class="entry" headers="QueueVk.h_Reference__entry__23"><span class="xref">pvrvk::GpuDatatypesHelper</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplXcbSurface_.html" title="An Xcb Surface.">pvrvk::impl::XcbSurface_</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplSampler_.html" title="SamplerVk_ implementation that wraps the vulkan sampler">pvrvk::impl::Sampler_</a></td>
 	</tr>
 	<tr class="row">
+<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplDevice_.html" title="GpuDevice implementation that supports Vulkan">pvrvk::impl::Device_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplDisplay_.html" title="A display device can in some environments be used directly for Vulkan rendering without using intermediate windowing systems.">pvrvk::impl::Display_</a></td>
+	</tr>
+	<tr class="row">
 <td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplComputePipeline_.html">pvrvk::impl::ComputePipeline_</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvk.html">pvrvk</a></td>
+<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplWin32Surface_.html" title="An Win32 Surface.">pvrvk::impl::Win32Surface_</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplMacOSSurface_.html" title="A MacOS Surface.">pvrvk::impl::MacOSSurface_</a></td>
+<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplQueue_.html" title="Wraps vulkan queue object.">pvrvk::impl::Queue_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplInstance_.html" title="The Instance is a system-wide vulkan &#34;implementation&#34;, similar in concept to the &#34;installation&#34; of Vulkan libraries on a system. Contrast with the &#34;Physical Device&#34; which for example represents a particular driver implementing Vulkan for a specific Device. Conceptually, the Instance &#34;Forwards&#34; to the &#34;Physical Device / Device&#34;">pvrvk::impl::Instance_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimpl.html">pvrvk::impl</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="QueueVk.h_Reference__entry__23"><span class="xref">pvrvk::FrameworkCaps</span></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplPipelineCache_.html" title="A PVRVk pipeline cache object which allows the result of pipeline construction to be reused between pipelines and between runs of an application">pvrvk::impl::PipelineCache_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="QueueVk.h_Reference__entry__23"><a class="xref" href="../classes/pvrvkimplSemaphore_.html" title="Vulkan implementation of the Semaphore class. Use to &#34;serialize&#34; access between CommandBuffer submissions and /Queues">pvrvk::impl::Semaphore_</a></td>
 	</tr>
 			</tbody></table>
 </section>

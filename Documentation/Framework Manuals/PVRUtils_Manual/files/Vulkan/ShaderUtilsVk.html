@@ -48,37 +48,37 @@ PVRUtils Manual
 
 <table class="table"><caption><span class="table--title-label">Table 1. </span><span class="title">Namespaces</span></caption><colgroup><col></colgroup><thead class="thead"><tr class="row"><th class="entry" id="ShaderUtilsVk.h_Reference__entry__1">Name</th></tr></thead><tbody class="tbody">
 	<tr class="row">
+<td class="entry" headers="ShaderUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvma.html">pvr::utils::vma</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ShaderUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsStructuredMemoryEntry.html" title="Defines a StructuredMemoryEntry element. A StructuredMemoryEntry defines an actual element entry in a structured buffer view. WARNING: Arrays of size 1 not supported - they are considered non-arrays. WARNING: Due to pointers to parents, no reallocations must *ever* happen. Once initialized, the lists must be final. WARNING: THE ENTIRE PUBLIC INTERFACE OF THIS CLASS EXCEPT FOR INIT, IS CONST. WARNING: IT IS NOT INTENDED FOR THIS CLASS TO BE EVER MODIFIABLE.">pvr::utils::StructuredMemoryEntry</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ShaderUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimplDeviceMemoryWrapper_.html" title="A wrapper for device memory">pvr::utils::vma::impl::DeviceMemoryWrapper_</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ShaderUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimpl.html">pvr::utils::vma::impl</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ShaderUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutils.html">pvr::utils</a></td>
+	</tr>
+	<tr class="row">
+<td class="entry" headers="ShaderUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvruiUIRenderer.html" title="Manages and render the sprites.">pvr::ui::UIRenderer</a></td>
+	</tr>
+	<tr class="row">
 <td class="entry" headers="ShaderUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimplPool_.html" title="An embedded ref counted Pool class">pvr::utils::vma::impl::Pool_</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="ShaderUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrui.html">pvr::ui</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="ShaderUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutils.html">pvr::utils</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ShaderUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ShaderUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimpl.html">pvr::utils::vma::impl</a></td>
+<td class="entry" headers="ShaderUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimplAllocator_.html">pvr::utils::vma::impl::Allocator_</a></td>
 	</tr>
 	<tr class="row">
 <td class="entry" headers="ShaderUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimplAllocation_.html" title="The DeviceMemoryWrapper_. Class Just wraps the Vulkan device memory object allocated by the memory allocatpr. This class doesn't manages the creation and destruction of vulkan object. It only serves as the interface to device memory functions.">pvr::utils::vma::impl::Allocation_</a></td>
 	</tr>
 	<tr class="row">
-<td class="entry" headers="ShaderUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimplDeviceMemoryWrapper_.html" title="A wrapper for device memory">pvr::utils::vma::impl::DeviceMemoryWrapper_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ShaderUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvma.html">pvr::utils::vma</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ShaderUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsvmaimplAllocator_.html">pvr::utils::vma::impl::Allocator_</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ShaderUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvruiUIRenderer.html" title="Manages and render the sprites.">pvr::ui::UIRenderer</a></td>
-	</tr>
-	<tr class="row">
-<td class="entry" headers="ShaderUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvrutilsStructuredMemoryEntry.html" title="Defines a StructuredMemoryEntry element. A StructuredMemoryEntry defines an actual element entry in a structured buffer view. WARNING: Arrays of size 1 not supported - they are considered non-arrays. WARNING: Due to pointers to parents, no reallocations must *ever* happen. Once initialized, the lists must be final. WARNING: THE ENTIRE PUBLIC INTERFACE OF THIS CLASS EXCEPT FOR INIT, IS CONST. WARNING: IT IS NOT INTENDED FOR THIS CLASS TO BE EVER MODIFIABLE.">pvr::utils::StructuredMemoryEntry</a></td>
+<td class="entry" headers="ShaderUtilsVk.h_Reference__entry__1"><a class="xref" href="../../classes/pvr.html">pvr</a></td>
 	</tr>
 			</tbody></table>
 </section>
@@ -90,17 +90,17 @@ PVRUtils Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Load a ShaderModule from shader source using glslang.</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">defines:</strong>	A number of preprocessor definitions that will be passed to the shader</li>
-
-<li class="li"><strong class="ph b">numDefines:</strong>	The number of defines</li>
+<li class="li"><strong class="ph b">device:</strong>	A device from which to create the ShaderModule</li>
 
 <li class="li"><strong class="ph b">flags:</strong>	A set of pvrvk::ShaderModuleCreateFlags controlling how the ShaderModule will be created</li>
 
 <li class="li"><strong class="ph b">shaderStageFlags:</strong>	The type (stage) of the shader (vertex, fragment...)</li>
 
+<li class="li"><strong class="ph b">defines:</strong>	A number of preprocessor definitions that will be passed to the shader</li>
+
 <li class="li"><strong class="ph b">shaderSource:</strong>	A string containing the shader source text data</li>
 
-<li class="li"><strong class="ph b">device:</strong>	A device from which to create the ShaderModule</li>
+<li class="li"><strong class="ph b">numDefines:</strong>	The number of defines</li>
 
 </ul>
 </td>
@@ -111,17 +111,17 @@ PVRUtils Manual
 <p class="p"><em class="ph i"><span class="ph code_comment">Load a ShaderModule from shader source using glslang.</span></em></p>
 <p class="p"><strong class="ph b">Parameters</strong></p>
 <ul class="ul">
-<li class="li"><strong class="ph b">defines:</strong>	A number of preprocessor definitions that will be passed to the shader</li>
-
-<li class="li"><strong class="ph b">numDefines:</strong>	The number of defines</li>
+<li class="li"><strong class="ph b">device:</strong>	A device from which to create the ShaderModule</li>
 
 <li class="li"><strong class="ph b">flags:</strong>	A set of pvrvk::ShaderModuleCreateFlags controlling how the ShaderModule will be created</li>
 
 <li class="li"><strong class="ph b">shaderStageFlags:</strong>	The type (stage) of the shader (vertex, fragment...)</li>
 
+<li class="li"><strong class="ph b">defines:</strong>	A number of preprocessor definitions that will be passed to the shader</li>
+
 <li class="li"><strong class="ph b">shaderSource:</strong>	A stream containing the shader source text data</li>
 
-<li class="li"><strong class="ph b">device:</strong>	A device from which to create the ShaderModule</li>
+<li class="li"><strong class="ph b">numDefines:</strong>	The number of defines</li>
 
 </ul>
 </td>
