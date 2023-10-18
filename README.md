@@ -1,3 +1,1 @@
-# [https://powervr-graphics.github.io/](https://powervr-graphics.github.io/)
-
-This is the hosting repository for the PowerVR Graphics SDK Documentation page (the HTMLs, not the source files the HTML is generated from).
+This is repository is not longer active. For the PowerVR Graphics SDK Documentation, see https://docs.imgtec.com/sdk-documentation/html/introduction.html.
